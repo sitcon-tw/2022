@@ -9,6 +9,7 @@
     "nuxt3": "latest"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "sass": "^1.50.1"
   }
 }
