@@ -87,19 +87,17 @@ const title = ref('SITCON 2022 - Call for Papers')
 .稿件徵求中
   display: flex
   justify-content: flex-end
-  margin: 7vh 3vw
+  margin: 7vh
   @media screen and (max-width: 1280px)
-    margin: 6vh 4vw
+    margin: 6vh
   @media screen and (max-width: 768px)
-    margin: 3vh 3vw
+    margin: 3vh
   img
-    width: 70%
+    width: 33em
     @media screen and (max-width: 1280px)
-      width: 60%
+      width: 28em
     @media screen and (max-width: 768px)
-      width: 45%
-    @media screen and (max-width: 650px)
-      width: 45vw
+      width: 15em
 
 .round-btns
   display: grid
@@ -111,14 +109,17 @@ const title = ref('SITCON 2022 - Call for Papers')
 
 .prev-sites
   display: grid
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
 
 .rad-btns
   display: inline-flex
+  flex-wrap: wrap
   *
     margin-right: 64px
-  @media screen and (max-width: 768px)
-    margin-right: 45px
+    @media screen and (max-width: 768px)
+      margin: 0 auto
+      margin-bottom: 20px
+
 
 .cat-background
   background-image: url(/imgs/cfp/cat.png)
