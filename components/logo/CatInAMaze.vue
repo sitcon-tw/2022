@@ -19,7 +19,7 @@
   @media screen and (max-width: 1280px)
     font-size: 36px
   @media screen and (max-width: 768px)
-    font-size: 30px
+    font-size: 20px
     font-weight: 700
 
   .sitcon-x

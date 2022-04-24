@@ -47,7 +47,6 @@
     padding: 16px 0
   .timer-item
     width: calc(100% / 4)
-    padding: 0 24px
     text-align: center
     &:not(:first-child)
       border-left: 1px solid rgba(222, 222, 222, var(--alpha))
