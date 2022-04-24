@@ -30,4 +30,6 @@ export default {
       letter-spacing: 0.1em
     &:hover
       background-color: transparent
+    @media screen and (max-width: 768px)
+        font-size: 18px
 </style>
