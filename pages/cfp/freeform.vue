@@ -1,5 +1,5 @@
  <template>
-  <div>
+  <div class="maze-background">
 
     <Head>
       <Title>{{ title }}</Title>
