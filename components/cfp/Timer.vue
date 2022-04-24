@@ -69,7 +69,6 @@
 <script>
 export default {
   data() {
-
     return {
       endedTime: new Date('2022-06-05T05:04:00+08:00'),
       dd: '88',
@@ -78,6 +77,9 @@ export default {
       ss: '88',
       timer: null
     }
+  },
+  created() {
+    this.countdown()
   },
   mounted() {
     this.timer = setInterval(this.countdown, 1000)

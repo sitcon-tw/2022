@@ -51,7 +51,7 @@
       <div class="item">
         <div class="date">
           <div class="month">八月</div>
-          <div class="day">00</div>
+          <div class="day">??</div>
         </div>
         <div class="title">
           試講
@@ -106,6 +106,7 @@
         line-height: 1
         border-right: 1px solid #eee
         padding-right: 10px
+        width: 50px
         .month
           font-size: 16px
           text-align: right
@@ -115,6 +116,7 @@
             font-weight: 500
         .day
           font-size: 36px
+          text-align: right
           @media screen and (max-width: 768px)
             font-size: 30px
       .title
