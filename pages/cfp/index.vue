@@ -67,6 +67,8 @@ const title = ref('SITCON 2022 - Call for Papers')
 .container
   width: calc(100% - 64px)
   padding: 40px 64px
+  max-width: 1152px
+  margin: 0 auto
   @media screen and (max-width: 1024px)
     padding: 40px 20px
     width: calc(100% - 40px)
