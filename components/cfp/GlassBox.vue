@@ -46,7 +46,7 @@ export default {
     width: calc(100% - 40px)
     margin: 18px auto
   .cfp-glass-box__content
-    p
+    p,ul
       line-height: 2em
       font-size: 16px
       color: #32E0C4
