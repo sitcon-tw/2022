@@ -14,7 +14,7 @@ export default {
 <style lang="sass" scoped>
   a
     margin: 0 auto
-    padding: 0 15px
+    padding: 0 20px
     display: block
     width: max-content
     white-space: nowrap
@@ -32,4 +32,5 @@ export default {
       background-color: transparent
     @media screen and (max-width: 768px)
         font-size: 18px
+        padding: 0 15px
 </style>
