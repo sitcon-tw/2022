@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "name": "sitcon-2022",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
