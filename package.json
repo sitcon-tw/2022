@@ -6,10 +6,13 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "nuxt3": "latest"
+    "nuxi": "^3.0.0-rc.1",
+    "nuxt": "npm:nuxt3@latest",
+    "ufo": "^0.8.3"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "sass": "^1.50.1"
+    "sass": "^1.50.1",
+    "vue": "^3.2.33"
   }
 }
