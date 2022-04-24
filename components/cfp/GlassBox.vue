@@ -27,7 +27,7 @@ export default {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85)
   backdrop-filter: blur(30px)
 
-  max-width: 960px
+  max-width: 1152px
   width: calc(100% - 64px)
   padding: 40px 64px
 
