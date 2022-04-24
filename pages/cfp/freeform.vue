@@ -1,4 +1,7 @@
 <template>
-  <cfp-block-title>大河馬</cfp-block-title>
-  <Footer />
+  <div>
+
+    <cfp-block-title>大河馬</cfp-block-title>
+    <Footer />
+  </div>
 </template>
