@@ -15,4 +15,8 @@ export default defineNuxtConfig({
     'normalize.css/normalize.css',
     '~/assets/sass/main.sass'
   ],
+  plugins: [
+    '~/plugins/vue-gtag.client.js',
+    '~/plugins/vue-analytics.client.js',
+  ]
 })
