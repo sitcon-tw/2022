@@ -13,8 +13,10 @@ export default {
 </script>
 <style lang="sass" scoped>
   a
+    margin: 0 auto
+    padding: 0 15px
     display: block
-    width: 100%
+    width: max-content
     white-space: nowrap
     text-align: center
     font-size: 24px
@@ -22,9 +24,8 @@ export default {
     background-color: #32E0C4
     border: 1px solid #32E0C4
     text-decoration: none
-    max-width: 175px
     font-weight: 700
-    border-radius: 50px
+    border-radius: 10px
     span
       letter-spacing: 0.1em
     &:hover
