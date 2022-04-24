@@ -55,6 +55,7 @@ const active = ref(false)
       transform: translate(calc(var(--padding-y) * -2), -25%) rotate(225deg)
       transition: all .2s ease
       flex-shrink: 0
+      border-radius: calc(var(--arrow-size) / 6) 0 0 0
   .question-box__content
     --padding-x: 24px
     --padding-y: 48px
