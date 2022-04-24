@@ -1,11 +1,25 @@
 <template>
   <div class="main-title">
-    <div class="sitcon-x">SITCON<span class="x">X</span></div>
+    <div class="sitcon-x">SITCON<span class="x" @click="xModal = true">X</span></div>
     <div class="cat">
       Cat in a Maze
     </div>
+    <modal v-model="xModal">
+      <template v-slot:header>
+        <h3>custom header</h3>
+      </template>
+    </modal>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      xModal: false
+    }
+  }
+}
+</script>
 <style lang="sass" scoped>
 
 .main-title
