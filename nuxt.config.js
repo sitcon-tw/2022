@@ -11,6 +11,7 @@ export default defineNuxtConfig({
       ],
     }
   },
+  modules: ['nuxt-jsonld'],
   css: [
     'normalize.css/normalize.css',
     '~/assets/sass/main.sass'

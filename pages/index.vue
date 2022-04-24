@@ -1,6 +1,10 @@
 <template>
 
 </template>
+<script setup>
+import jsonldData from '@/assets/jsonld.js'
+useJsonld(jsonldData); 
+</script>
 <script>
 export default {
   // redirect to  '/cfp'
