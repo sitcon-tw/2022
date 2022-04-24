@@ -22,7 +22,10 @@ export default {
 <style lang="sass">
 
 .cfp-glass-box
-  background: rgba(0, 0, 0, 0.5)
+  --background-opacity: 0.5
+  @supports not (backdrop-filter: blur(30px))
+    --background-opacity: 0.85
+  background: rgba(0, 0, 0, var(--background-opacity))
   border: 1px solid rgba(222, 222, 222, 0.2)
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85)
   backdrop-filter: blur(30px)

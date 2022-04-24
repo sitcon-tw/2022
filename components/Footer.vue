@@ -39,7 +39,10 @@
 <style lang="sass" scoped>
 
 footer
-  background-color: rgba(0,0,0,.75)
+  --background-opacity: .75
+  @supports not (backdrop-filter: blur(30px))
+    --background-opacity: .85
+  background-color: rgba(0, 0, 0, var(--background-opacity))
   border-top: 1px solid rgba(222, 222, 222, 0.2)
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85)
   backdrop-filter: blur(30px)
