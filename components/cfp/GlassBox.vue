@@ -50,4 +50,9 @@ export default {
       line-height: 2em
       font-size: 16px
       color: #32E0C4
+      a
+        font-weight: 700
+        color: #fff
+      strong
+        color: #EEEEEE
 </style>
