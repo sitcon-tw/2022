@@ -1,4 +1,38 @@
 <template>
 
+  <Head>
+    <Title>{{ title }}</Title>
+    <Meta name="description" :content="title" />
+  </Head>
+  <cfp-glass-box first-child>
+    <cfp-block-title>大河馬</cfp-block-title>
+    <p>segksngb;bs gegege geg eg eg eg </p>
+  </cfp-glass-box>
+  <cfp-glass-box>
+    <cfp-block-title>大河馬</cfp-block-title>
+    <p>segksngb;bs gegege geg eg eg eg </p>
+  </cfp-glass-box>
+  <cfp-glass-box last-child>
+    <cfp-block-title>Q&A</cfp-block-title>
+    <cfp-question-box>
+      <template v-slot:title>哪裡可以看到大河馬？</template>
+      動物園都可以看到大河馬
+    </cfp-question-box>
+    <cfp-question-box>
+      <template v-slot:title>哪裡可以看到大河馬？</template>
+      動物園都可以看到大河馬
+    </cfp-question-box>
+    <cfp-question-box>
+      <template v-slot:title>哪裡可以看到大河馬？</template>
+      動物園都可以看到大河馬
+    </cfp-question-box>
+    <cfp-question-box>
+      <template v-slot:title>哪裡可以看到大河馬？</template>
+      動物園都可以看到大河馬
+    </cfp-question-box>
+  </cfp-glass-box>
   <Footer />
 </template>
+<script setup>
+const title = ref('SITCON 2022 - 一般議程')
+</script>
