@@ -21,7 +21,7 @@
 
       <br>
     </div>
-    <cfp-glass-box first-child>
+    <cfp-glass-box>
       <h3>關於 SITCON</h3>
       <p>SITCON 學生計算機年會自 2013 年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。</p>
       <p>在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每人皆能在與大家的聊天與討論之中，找到自己的方向、熱情。</p>
@@ -42,8 +42,8 @@
     </cfp-glass-box>
 
     <cfp-glass-box class="cat-background">
-      <h3>2022 年會主題</h3>
-      <h1>Cat in a Maze</h1>
+      <h3 class="margin-0">2022 年會主題</h3>
+      <h1 class="margin-0">Cat in a Maze</h1>
       <p>Cat in a Maze 參考自 Rat in a Maze 這道經典演算法題目。題目描述一隻老鼠要走迷宮，在給定了迷宮形狀的前提下，要努力找出走出迷宮的出路。「Rat in a Maze」這句話切實地反映了劇烈動盪時代下的學生們在面對未來的生涯發展時，猶如一隻無法逃避、勢必得進入體制這一迷宮的老鼠。</p>
       <h3 class="text-center">但是⋯⋯我們真的只能當老鼠嗎？</h3>
       <p><span>不如，像貓咪一樣思考？以貓咪的個性，第一直覺想到的會是遇到迷宮時，直接破壞迷宮離開，或者是使用我們想不到的方式解決迷宮。同時貓咪相較於老鼠，對一切事物充滿好奇、敢於探索未知事物，不畏強權挑戰一切，是貓咪獨特的個性。<br>
@@ -67,7 +67,6 @@ const title = ref('SITCON 2022 - Call for Papers')
 .container
   width: calc(100% - 64px)
   padding: 40px 64px
-  margin: 0 auto
   @media screen and (max-width: 1024px)
     padding: 40px 20px
     width: calc(100% - 40px)
@@ -82,6 +81,7 @@ const title = ref('SITCON 2022 - Call for Papers')
       font-size: 20px
       gap: 32px
   .logos
+    width: 100%
     white-space: nowrap
 
 .稿件徵求中
@@ -100,6 +100,7 @@ const title = ref('SITCON 2022 - Call for Papers')
       width: 15em
 
 .round-btns
+  width: 100%
   display: grid
   grid-row: 1
   direction: rtl
@@ -113,10 +114,15 @@ const title = ref('SITCON 2022 - Call for Papers')
 
 .rad-btns
   display: inline-flex
-  flex-wrap: wrap
+  flex-wrap: nowrap
+  @media screen and (max-width: 500px)
+    flex-direction: column
+    flex-wrap: wrap
+    width: 100%
   *
     margin-right: 64px
-    @media screen and (max-width: 768px)
+    @media screen and (max-width: 500px)
+      margin-right: auto
       margin: 0 auto
       margin-bottom: 20px
 
@@ -124,4 +130,10 @@ const title = ref('SITCON 2022 - Call for Papers')
   background-image: url(/imgs/cfp/cat.png)
   background-position: bottom right
   background-repeat: no-repeat
+
+.margin-0
+  margin: 0
+
+.cfp-glass-box
+  border-radius: 25px
 </style>
