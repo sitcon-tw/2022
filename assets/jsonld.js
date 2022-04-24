@@ -101,7 +101,7 @@ export default {
       "priceCurrency": "TWD",
       "availability": "InStock",
       "url": "https://ocf.neticrm.tw/civicrm/contribute/transact?reset=1&id=55",
-      "validFrom": "2022-04-17T00:00+08:00"
+      "validFrom": "2022-04-17T00:00+08:00",
       "validThrough": "2022-09-04T17:00:00.000+08:00"
     }
   ],
