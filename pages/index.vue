@@ -1,2 +1,11 @@
-<template>  大河馬
+<template>
+
 </template>
+<script>
+export default {
+  // redirect to  '/cfp'
+  created() {
+    this.$router.push('/cfp')
+  }
+}
+</script>
