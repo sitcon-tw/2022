@@ -3,7 +3,7 @@ import { defineNuxtConfig } from 'nuxt'
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   app: {
-    baseURL: './',
+    baseURL: '/2022/',
     head: {
       titleTemplate: '%s  | SITCON 2022 學生計算機年會 | Students\' Information Technology Conference',
       link: [
