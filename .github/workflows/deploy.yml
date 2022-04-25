@@ -27,6 +27,10 @@ jobs:
       run: npm install
     - name: Generate Pages
       run: npm run generate 
+    # move /2022/index.html to /index.html
+    # https://github.com/nuxt/framework/issues/4581 workaround
+    - name: Move index.html
+      run: mv ./dist/2022/index.html ./dist/index.html
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
