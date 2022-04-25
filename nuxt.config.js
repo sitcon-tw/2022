@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from 'nuxt'
-
+import path from 'path'
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   app: {
@@ -22,6 +22,13 @@ export default defineNuxtConfig({
     'normalize.css/normalize.css',
     '~/assets/sass/main.sass'
   ],
+  vite: {
+    resolve: {
+      alias: {
+        "/2022": path.resolve(__dirname, "./public"),
+      },
+    },
+  },
   nitro: { prerender: { routes: ['/2022/'] } },
   plugins: [
     '~/plugins/vue-gtag.client.js',

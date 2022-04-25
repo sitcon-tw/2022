@@ -13,22 +13,22 @@
         <div class="title">社群媒體</div>
         <div class="social-media-items">
           <a href="https://sitcon.org/fb" target="_blank" class="social-media-item">
-            <img src="/imgs/social-media/facebook.svg" alt="Facebook">
+            <img src="/2022/imgs/social-media/facebook.svg" alt="Facebook">
           </a>
           <a href="https://sitcon.org/twitter" target="_blank" class="social-media-item">
-            <img src="/imgs/social-media/twitter.svg" alt="Twitter">
+            <img src="/2022/imgs/social-media/twitter.svg" alt="Twitter">
           </a>
           <a href="https://sitcon.org/instagram" target="_blank" class="social-media-item">
-            <img src="/imgs/social-media/instagram.svg" alt="Instagram">
+            <img src="/2022/imgs/social-media/instagram.svg" alt="Instagram">
           </a>
           <a href="https://sitcon.org/tg" target="_blank" class="social-media-item">
-            <img src="/imgs/social-media/telegram.svg" alt="Telegram">
+            <img src="/2022/imgs/social-media/telegram.svg" alt="Telegram">
           </a>
           <a href="https://sitcon.org/yt" target="_blank" class="social-media-item">
-            <img src="/imgs/social-media/youtube.svg" alt="YouTube">
+            <img src="/2022/imgs/social-media/youtube.svg" alt="YouTube">
           </a>
           <a href="https://sitcon.org/flickr" target="_blank" class="social-media-item">
-            <img src="/imgs/social-media/flickr.svg" alt="Flickr">
+            <img src="/2022/imgs/social-media/flickr.svg" alt="Flickr">
           </a>
         </div>
 
@@ -42,10 +42,10 @@ footer
   --background-opacity: .75
   @supports not (backdrop-filter: blur(30px))
     --background-opacity: .85
-  background-color: rgba(0, 0, 0, var(--background-opacity))
-  border-top: 1px solid rgba(222, 222, 222, 0.2)
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85)
-  backdrop-filter: blur(30px)
+    background-color: rgba(0, 0, 0, var(--background-opacity))
+    border-top: 1px solid rgba(222, 222, 222, 0.2)
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85)
+    backdrop-filter: blur(30px)
   .container
     max-width: 960px
     margin: 0 auto
