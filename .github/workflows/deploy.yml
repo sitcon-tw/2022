@@ -28,7 +28,7 @@ jobs:
     - name: Generate Pages
       run: npm run generate
       env:
-        BASE_URL: https://sitcon.org/2022/
+        NUXT_APP_BASE_URL: https://sitcon.org/2022/
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
