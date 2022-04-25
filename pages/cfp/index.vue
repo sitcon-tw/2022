@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cfp-main-page">
 
     <Head>
       <Title>{{ title }}</Title>
@@ -64,6 +64,14 @@ const title = ref('Call for Papers')
 </script>
 <style lang="sass" scoped>
 
+.cfp-main-page
+  background-image: url(/imgs/cfp/CFP_desktop_mainPage.jpg)
+  background-position: top -100px center
+  background-size: contain
+  background-color: black
+  background-repeat: no-repeat
+  @media screen and (max-width: 768px)
+    background-position: top 100px center
 .container
   width: calc(100% - 64px)
   padding: 40px 64px
