@@ -60,7 +60,7 @@
   </div>
 </template>
 <script setup>
-const title = ref('SITCON 2022 - Call for Papers')
+const title = ref('Call for Papers')
 </script>
 <style lang="sass" scoped>
 
