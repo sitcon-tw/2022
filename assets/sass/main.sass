@@ -5,19 +5,30 @@ body,html
   line-height: 2
   font-size: 16px
   @media screen and (max-width: 768px)
-    font-size: 14px 
+    font-size: 14px
+
+.container
+  width: calc(100% - 64px)
+  max-width: 1152px
+  margin: 0 auto
+  @media screen and (max-width: 1151px)
+    padding: 40px 64px
+  @media screen and (max-width: 1024px)
+    padding: 40px 20px
+    width: calc(100% - 40px)
+    margin: 18px auto
 *
   box-sizing: border-box
 h1, h2, h3, h4, h5, h6
   font-weight: 900
   margin: .5em 0
-h1 
-  font-size: 48px 
+h1
+  font-size: 48px
   @media screen and (max-width: 1280px)
     font-size: 36px
   @media screen and (max-width: 768px)
     font-size: 30px
-h2 
+h2
   font-size: 36px
   @media screen and (max-width: 1280px)
     font-size: 32px
@@ -30,14 +41,14 @@ h3
   @media screen and (max-width: 768px)
     font-size: 20px
 
-ul 
+ul
   list-style: none
   padding: 0
   margin: 0
   li
     margin-bottom: 10px
     position: relative
-    padding-left: 8px 
+    padding-left: 8px
     &::before
       content: ""
       position: absolute
@@ -45,13 +56,13 @@ ul
       left: 0
       width: 5px
       height: 1em
-      background-color: #fff 
+      background-color: #fff
 strong
   font-weight: 900
 .text-center
   text-align: center
 a
-  color: #fff 
+  color: #fff
 .maze-background
   background-color: #333333
   background-image: url(/imgs/cfp/cfp_maze_pattern.png)

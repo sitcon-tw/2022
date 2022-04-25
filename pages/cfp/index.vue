@@ -14,10 +14,7 @@
         <img src="/2022/imgs/cfp/稿件徵求中.svg">
       </div>
 
-      <div class="round-btns">
-        <cfp-round-btn to="/cfp/normal" content="一般議程" />
-        <cfp-round-btn to="/cfp/freeform" content="開放式議程" />
-      </div>
+      <cfp-date-links />
 
       <br>
     </div>
@@ -66,23 +63,15 @@ const title = ref('Call for Papers')
 
 .cfp-main-page
   background-image: url(/imgs/cfp/CFP_desktop_mainPage.jpg)
-  background-position: top -100px center
-  background-size: contain
+  background-position: top -10vw center
+  background-size: cover
   background-color: black
   background-repeat: no-repeat
   @media screen and (max-width: 768px)
-    background-position: top 100px center
+    background-position: top -200px center
 .container
-  width: calc(100% - 64px)
-  padding: 40px 64px
-  max-width: 1152px
-  margin: 0 auto
-  @media screen and (max-width: 1024px)
-    padding: 40px 20px
-    width: calc(100% - 40px)
-    margin: 18px auto
-  @media screen and (max-width: 650px)
-    padding: 40px 5vw
+  @media screen and (max-width: 768px)
+    padding-bottom: 0
   ::v-deep(.main-title)
     justify-content: flex-end
     gap: 96px

@@ -40,12 +40,12 @@
 
 footer
   --background-opacity: .75
+  background-color: rgba(0, 0, 0, var(--background-opacity))
+  border-top: 1px solid rgba(222, 222, 222, 0.2)
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85)
+  backdrop-filter: blur(30px)
   @supports not (backdrop-filter: blur(30px))
     --background-opacity: .85
-    background-color: rgba(0, 0, 0, var(--background-opacity))
-    border-top: 1px solid rgba(222, 222, 222, 0.2)
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85)
-    backdrop-filter: blur(30px)
   .container
     max-width: 960px
     margin: 0 auto

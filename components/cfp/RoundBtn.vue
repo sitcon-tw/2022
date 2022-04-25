@@ -1,14 +1,14 @@
 <template>
   <component :href="href || null" :to="to || null" :is="to ? 'router-link' : 'a'" class="round-btn">
-    <span>
-      {{ content }}
-    </span>
+
+    <slot />
+
   </component>
 </template>
 
 <script>
 export default {
-  props: ['href', 'to', 'content']
+  props: ['href', 'to']
 }
 </script>
 <style lang="sass" scoped>
@@ -18,17 +18,23 @@ export default {
   width: 100%
   white-space: nowrap
   text-align: center
-  font-size: 24px
+  font-size: 36px
+  font-weight: 900
   color: #fff
   background-color: #32E0C4
   border: 1px solid #32E0C4
   text-decoration: none
-  max-width: 175px
+  padding: .75em 1.5em
+  line-height: 1
   font-weight: 700
-  border-radius: 50px
+  border-radius: 100em
   cursor: pointer
-  span
-    letter-spacing: 0.1em
+  letter-spacing: 0.1em
+  transition: all 0.3s ease
+  margin-bottom: .5em
+  @media screen and (max-width: 768px)
+    font-size: 16px
+    padding: .5em 1em
   &:hover
     background-color: transparent
 </style>
