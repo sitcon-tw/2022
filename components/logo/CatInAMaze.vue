@@ -78,10 +78,15 @@ export default {
       transition: all .2s ease
       cursor: pointer
       display: inline-block
+      -webkit-text-stroke: 1px transparent
+      text-stroke: 1px transparent
       &:hover
-        transform: scale(.9)
+        transform: scale(1.2)
+        color: transparent
+        -webkit-text-stroke: 1px #fff
+        text-stroke: 1px #fff
       &:active
-        transform: scale(.8)
+        transform: scale(1)
 .modal-frame
   color: #53A99B
   max-width: 500px
