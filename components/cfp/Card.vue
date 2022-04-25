@@ -40,6 +40,8 @@ const props = defineProps({
     margin-top: .5em
     line-height: 1.5em
     transition: all 0.3s ease
+    @media screen and (max-width: 768px)
+      font-size: 14px
     &.text-center
       text-align: center
 

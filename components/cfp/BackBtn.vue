@@ -6,13 +6,16 @@
 <style lang="sass" scoped>
 
 .back-btn
-  width: 70px
+  --size: 70px
+  width: var(--size)
   display: block
   background-image: url('/imgs/cfp/back.svg')
-  background-size: 70px auto
+  background-size: var(--size) auto
   background-repeat: no-repeat
+  @media screen and (max-width: 768px)
+    --size: 40px
   img
-    width: 70px
+    width: var(--size)
     opacity: 0
   &:hover
     background-image: url('/imgs/cfp/back-hover.svg')
