@@ -6,8 +6,6 @@
       <Meta name="description" :content="title" />
     </Head>
     <div class="cfp-main-page">
-
-
       <div class="container">
         <div class="logos">
           <logo-sitcon />
@@ -16,10 +14,7 @@
         <div class="稿件徵求中">
           <img src="/2022/imgs/cfp/稿件徵求中.svg">
         </div>
-
         <cfp-date-links />
-
-        <br>
       </div>
       <cfp-rounded-glass-box>
         <h3>關於 SITCON</h3>
@@ -67,13 +62,14 @@ const title = ref('Call for Papers')
 
 .cfp-main-page
   background-image: url(/imgs/cfp/CFP_desktop_mainPage.jpg)
-  background-position: top -10vw center
+  background-position: top -12vw center
   background-size: cover
   background-color: black
   background-repeat: no-repeat
   @media screen and (max-width: 768px)
     background-position: top -200px center
 .container
+  padding-top: 64px
   @media screen and (max-width: 768px)
     padding-bottom: 0
   ::v-deep(.main-title)
