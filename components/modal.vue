@@ -49,7 +49,7 @@ export default {
   cursor: default
   max-width: 700px
   margin: 0px auto
-  padding: 20px 30px
+  padding: 16px 24px
   background-color: #fff
   border-radius: 48px
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33)
