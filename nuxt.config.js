@@ -4,6 +4,7 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   app: {
     head: {
+      titleTemplate: '%s  | SITCON 2022 學生計算機年會 | Students\' Information Technology Conference',
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },

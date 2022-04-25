@@ -135,5 +135,5 @@
   </div>
 </template>
 <script setup>
-const title = ref('SITCON 2022 - 一般議程')
+const title = ref('一般議程')
 </script>
