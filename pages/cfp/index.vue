@@ -15,8 +15,8 @@
       </div>
 
       <div class="round-btns">
-        <cfp-round-btn href="/cfp/normal" content="一般議程" />
-        <cfp-round-btn href="/cfp/freeform" content="開放式議程" />
+        <cfp-round-btn to="/cfp/normal" content="一般議程" />
+        <cfp-round-btn to="/cfp/freeform" content="開放式議程" />
       </div>
 
       <br>
