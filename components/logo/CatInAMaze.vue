@@ -5,9 +5,27 @@
       Cat in a Maze
     </div>
     <modal v-model="xModal">
-      <template v-slot:header>
-        <h3>custom header</h3>
-      </template>
+
+      <div class="modal-frame">
+        <div class="modal-header">
+          <h2 class="text-center title"><span class="clickable" @click="xModal = false">X</span>，代表什麼 ？</h2>
+
+        </div>
+        <div class="modal-content">
+          <div class="selections">
+            <div class="selection-item">（A）英文字母</div>
+            <div class="selection-item">（B）羅馬數字</div>
+            <div class="selection-item">（C）象形文字</div>
+            <div class="selection-item">（D）笛卡兒積</div>
+          </div>
+          <h3>這個問題的答案，<br>
+            就如同人生中其他許許多多的問題般，<br>
+            沒有正確與否，只有你認不認同。
+          </h3>
+        </div>
+      </div>
+
+
     </modal>
   </div>
 </template>
@@ -64,4 +82,35 @@ export default {
         transform: scale(.9)
       &:active
         transform: scale(.8)
+.modal-frame
+  color: #53A99B
+  max-width: 500px
+  margin: 0 auto
+  .modal-header
+    position: relative
+    border-bottom: 3px solid #32E0C4
+
+  .modal-content
+    padding: 1em
+    .selections
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      font-size: 24px
+      gap: 1em 2em
+
+      @media screen and (max-width: 768px)
+        font-size: 16px
+      .selection-item
+        display: block
+        font-weight: 700
+        &:hover
+          background-color: transparent
+    h3
+      font-size: 24px
+      font-weight: 900
+      color: #32E0C4
+      margin-top: 1em
+      margin-bottom: 1em
+      @media screen and (max-width: 768px)
+        font-size: 16px
 </style>

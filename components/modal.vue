@@ -1,31 +1,13 @@
 <template>
   <Teleport to="body">
     <transition name="modal">
-      <div class="modal-mask" v-if="modelValue">
+      <div class="modal-mask" v-if="modelValue" @click="$emit('update:modelValue', false)">
         <div class="modal-wrapper">
-          <div class="modal-container">
-
-            <div class="modal-header">
-              <slot name="header">
-                default header
-              </slot>
+          <div class="modal-container" @click.stop="">
+            <div class="close" @click="$emit('update:modelValue', false)">
+              <img src="/2022/imgs/cfp/close.svg" />
             </div>
-
-            <div class="modal-body">
-              <slot name="body">
-                default body
-              </slot>
-            </div>
-
-            <div class="modal-footer">
-              <slot name="footer">
-                default footer
-                <button class="modal-default-button" @click="$emit('update:modelValue', false)">
-                  OK
-                </button>
-              </slot>
-            </div>
-
+            <slot />
           </div>
         </div>
       </div>
@@ -33,7 +15,7 @@
   </Teleport>
 </template>
 
-<script  >
+<script >
 export default {
   props: {
     modelValue: {
@@ -58,28 +40,44 @@ export default {
   transition: opacity 0.3s ease
   font-size: 14px
   color: #000
-
+  cursor: pointer
 .modal-wrapper
   display: table-cell
   vertical-align: middle
-
 .modal-container
-  width: 500px
+  width: 700px
+  cursor: default
+  max-width: calc(100% - 60px)
   margin: 0px auto
   padding: 20px 30px
   background-color: #fff
-  border-radius: 2px
+  border-radius: 48px
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33)
   transition: all 0.3s ease
   position: sticky
   top: 0
+  position: relative
 
-.modal-header h3
-  margin-top: 0
-  color: #42b983
+  .close
+    position: absolute
+    top: 24px
+    right: 24px
+    cursor: pointer
+    --size: 36px
+    transition: all .2s ease
+    @media screen and (max-width: 768px)
+      --size: 24px
+    img
+      width: var(--size)
+      height: var(--size)
+    &:hover
+      cursor: pointer
+      opacity: .8
+      transform: scale(.9)
+    &:active
+      opacity: .6
+      transform: scale(.8)
 
-.modal-body
-  margin: 20px 0
 // animation 
 .modal-enter-from, .modal-leave-to
   opacity: 0
