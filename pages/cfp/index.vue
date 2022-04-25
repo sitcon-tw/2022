@@ -27,10 +27,10 @@
       <p>在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每人皆能在與大家的聊天與討論之中，找到自己的方向、熱情。</p>
       <h3>SITCON 歷年網站</h3>
       <div class="prev-sites">
-        <cfp-prev-site src="/imgs/cfp/prev-sites/2021.png" href="#">SITCON 2021</cfp-prev-site>
-        <cfp-prev-site src="/imgs/cfp/prev-sites/2020.png" href="#">SITCON 2020</cfp-prev-site>
-        <cfp-prev-site src="/imgs/cfp/prev-sites/2019.png" href="#">SITCON 2019</cfp-prev-site>
-        <cfp-prev-site src="/imgs/cfp/prev-sites/2018.png" href="#">SITCON 2018</cfp-prev-site>
+        <cfp-prev-site src="/imgs/cfp/prev-sites/2021.png" href="https://sitcon.org/2021/">SITCON 2021</cfp-prev-site>
+        <cfp-prev-site src="/imgs/cfp/prev-sites/2020.png" href="https://sitcon.org/2020/">SITCON 2020</cfp-prev-site>
+        <cfp-prev-site src="/imgs/cfp/prev-sites/2019.png" href="https://sitcon.org/2019/">SITCON 2019</cfp-prev-site>
+        <cfp-prev-site src="/imgs/cfp/prev-sites/2018.png" href="https://sitcon.org/2018/">SITCON 2018</cfp-prev-site>
       </div>
       <h3>參與討論</h3>
       <p>SITCON 是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱 SITCON 的郵件論壇並貢獻你的想法！</p>
