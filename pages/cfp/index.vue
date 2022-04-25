@@ -132,7 +132,7 @@ const title = ref('SITCON 2022 - Call for Papers')
       margin-bottom: 20px
 
 .cat-background
-  @media screen and (min-width: 769px)
+  @media screen and (min-width: 960px)
     background-image: url(/imgs/cfp/cat.png)
     background-position: bottom 20px right 100px
     background-repeat: no-repeat
