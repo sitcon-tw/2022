@@ -1,5 +1,7 @@
 <template>
-
+  <div>
+    2022
+  </div>
 </template>
 <script setup>
 import jsonldData from '@/assets/jsonld.js'
