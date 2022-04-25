@@ -133,10 +133,27 @@ const title = ref('SITCON 2022 - Call for Papers')
 
 .cat-background
   @media screen and (min-width: 960px)
-    background-image: url(/imgs/cfp/cat.png)
-    background-position: bottom 20px right 100px
-    background-repeat: no-repeat
-    background-size: auto 250px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      bottom: 20px
+      right: 100px
+      width: 212px
+      height: 212px
+      background-image: url(/imgs/cfp/cat.png)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: bottom right
+      animation: floating-cat-animation 10s ease-in-out infinite
+
+@keyframes floating-cat-animation
+  from
+    transform: translateY(0px)
+  65%
+    transform: translateY(-20px)
+  to
+    transform: translateY(0px)
 
 .margin-0
   margin: 0
