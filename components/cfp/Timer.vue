@@ -70,10 +70,10 @@ export default {
   data() {
     return {
       endedTime: new Date('2022-06-05T05:04:00+08:00'),
-      dd: '88',
-      hh: '88',
-      mm: '88',
-      ss: '88',
+      dd: '00',
+      hh: '00',
+      mm: '00',
+      ss: '00',
       timer: null
     }
   },
