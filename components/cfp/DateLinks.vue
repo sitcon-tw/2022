@@ -17,9 +17,7 @@
 <style lang="sass" scoped>
 
 .date-links
-  display: flex
-  // space-around
-  justify-content: space-between
+  position: relative
   .date
     line-height: 1
     color: #32E0C4
@@ -31,4 +29,8 @@
       @media screen and (max-width: 768px)
         background-color: transparent
         height: 8px
+  .links
+    position: absolute
+    top: 0
+    right: 0
 </style>
