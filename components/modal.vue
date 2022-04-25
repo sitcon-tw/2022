@@ -45,9 +45,9 @@ export default {
   display: table-cell
   vertical-align: middle
 .modal-container
-  width: 700px
+  width: calc(100% - 60px)
   cursor: default
-  max-width: calc(100% - 60px)
+  max-width: 700px
   margin: 0px auto
   padding: 20px 30px
   background-color: #fff
