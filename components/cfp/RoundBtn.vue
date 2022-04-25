@@ -1,19 +1,19 @@
 <template>
-  <a :href="href">
+  <component :href="href || null" :to="to || null" :is="to ? 'router-link' : 'a'" class="round-btn">
     <span>
       {{ content }}
     </span>
-  </a>
+  </component>
 </template>
 
 <script>
 export default {
-  props: ['href', 'content']
+  props: ['href', 'to', 'content']
 }
 </script>
 <style lang="sass" scoped>
 
-a
+.round-btn
   display: block
   width: 100%
   white-space: nowrap
@@ -26,6 +26,7 @@ a
   max-width: 175px
   font-weight: 700
   border-radius: 50px
+  cursor: pointer
   span
     letter-spacing: 0.1em
   &:hover
