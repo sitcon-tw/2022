@@ -1,6 +1,6 @@
 <template>
   <div>
-    2022
+
   </div>
 </template>
 <script setup>
