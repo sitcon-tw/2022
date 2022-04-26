@@ -47,7 +47,7 @@
         <p>SITCON 的舉辦，除了有賴眾多志工的努力，也需要金錢的支持。<br>如果您認同 SITCON 的理念，歡迎以行動支持 SITCON 的運作，讓更多交流產生！</p>
         <p>企業合作歡迎聯繫 <a href="mailto:contact@sitcon.org">contact@sitcon.org</a></p>
         <div class="rad-btns">
-          <cfp-rad-btn href="#" content="個人贊助方案" />
+          <cfp-rad-btn href="https://ocf.neticrm.tw/civicrm/contribute/transact?reset=1&id=55" content="個人贊助方案" />
         </div>
       </cfp-rounded-glass-box>
 
