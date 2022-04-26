@@ -1,10 +1,7 @@
 <template>
   <div>
-
     <a class="submission-btn" :href="href" target="_blank" @mouseenter="showConfetti">
-      <span>
-        我要投稿
-      </span>
+      我 要 投 稿
     </a>
     <transition name="fade-out">
       <ConfettiExplosion v-if="isShow" :duration="duration + 1000" :force="0.75" />
@@ -47,9 +44,6 @@ export default {
   max-width: 200px
   margin: 0 auto
   font-weight: 700
-  span
-    letter-spacing: 0.5em
-    margin-right: -0.5em
   &:hover
     background-color: transparent
 </style>
