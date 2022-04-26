@@ -5,7 +5,7 @@
         <div class="modal-wrapper">
           <div class="modal-container" @click.stop="">
             <div class="close" @click="$emit('update:modelValue', false)">
-              <image src="public/imgs/cfp/close.svg" />
+              <img :src="'/2022/imgs/cfp/close.svg'" />
             </div>
             <slot />
           </div>

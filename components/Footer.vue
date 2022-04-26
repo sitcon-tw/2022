@@ -13,22 +13,22 @@
         <div class="title">社群媒體</div>
         <div class="social-media-items">
           <a href="https://sitcon.org/fb" target="_blank" class="social-media-item">
-            <image src="/2022/imgs/social-media/facebook.svg" alt="Facebook" />
+            <img :src="'/2022/imgs/social-media/facebook.svg'" alt="Facebook" />
           </a>
           <a href="https://sitcon.org/twitter" target="_blank" class="social-media-item">
-            <image src="/2022/imgs/social-media/twitter.svg" alt="Twitter" />
+            <img :src="'/2022/imgs/social-media/twitter.svg'" alt="Twitter" />
           </a>
           <a href="https://sitcon.org/instagram" target="_blank" class="social-media-item">
-            <image src="/2022/imgs/social-media/instagram.svg" alt="Instagram" />
+            <img :src="'/2022/imgs/social-media/instagram.svg'" alt="Instagram" />
           </a>
           <a href="https://sitcon.org/tg" target="_blank" class="social-media-item">
-            <image src="/2022/imgs/social-media/telegram.svg" alt="Telegram" />
+            <img :src="'/2022/imgs/social-media/telegram.svg'" alt="Telegram" />
           </a>
           <a href="https://sitcon.org/yt" target="_blank" class="social-media-item">
-            <image src="/2022/imgs/social-media/youtube.svg" alt="YouTube" />
+            <img :src="'/2022/imgs/social-media/youtube.svg'" alt="YouTube" />
           </a>
           <a href="https://sitcon.org/flickr" target="_blank" class="social-media-item">
-            <image src="/2022/imgs/social-media/flickr.svg" alt="Flickr" />
+            <img :src="'/2022/imgs/social-media/flickr.svg'" alt="Flickr" />
           </a>
         </div>
 
