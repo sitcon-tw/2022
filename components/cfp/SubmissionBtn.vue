@@ -11,11 +11,7 @@
 </template>
 
 <script>
-import ConfettiExplosion from "vue-confetti-explosion";
 export default {
-  components: {
-    ConfettiExplosion
-  },
   props: ['href'],
   data() {
     return {
@@ -37,9 +33,6 @@ export default {
 </script>
 <style lang="sass" scoped>
 
-.container
-  margin: 0 auto
-  pointer-events: none !important
 .submission-btn
   display: block
   width: 100%

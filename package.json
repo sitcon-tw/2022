@@ -16,7 +16,6 @@
     "nuxt-jsonld": "^2.0.3",
     "sass": "^1.50.1",
     "vue": "^3.2.33",
-    "vue-confetti-explosion": "^1.0.1",
     "vue-gtag-next": "^1.14.0",
     "vue3-analytics": "^1.0.0"
   }
