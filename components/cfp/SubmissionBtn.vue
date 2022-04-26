@@ -6,7 +6,9 @@
         我要投稿
       </span>
     </a>
-    <ConfettiExplosion v-if="isShow" :duration="duration" :force="0.75" />
+    <transition name="fade-out">
+      <ConfettiExplosion v-if="isShow" :duration="duration + 1000" :force="0.75" />
+    </transition>
   </div>
 </template>
 
