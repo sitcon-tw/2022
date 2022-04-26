@@ -29,10 +29,10 @@
         </div>
         <h3>參與討論</h3>
         <p>SITCON 是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱 SITCON 的郵件論壇並貢獻你的想法！</p>
-        <p>若你想進一步了解過往討論的內容，也歡迎在 HackMD 上查看 SITCON 2022 的會議記錄。</p>
+        <p>若你想進一步了解過往討論的內容，也歡迎到 GitLab 上查看 SITCON 2022 的籌備歷程。</p>
         <div class="rad-btns">
-          <cfp-rad-btn href="#" content="SITCON 郵件論壇" />
-          <cfp-rad-btn href="#" content="籌備會議紀錄" />
+          <cfp-rad-btn href="https://groups.google.com/g/sitcon-general/" content="SITCON 郵件論壇" />
+          <cfp-rad-btn href="https://gitlab.com/sitcon-tw/2022/2022-board/-/issues" content="籌備歷程紀錄" />
         </div>
       </cfp-rounded-glass-box>
 
