@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <a class="submission-btn" :href="href" target="_blank" @mouseover="showConfetti">
+    <a class="submission-btn" :href="href" target="_blank" @mouseenter="showConfetti">
       <span>
         我要投稿
       </span>
@@ -36,9 +36,10 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+
 .container
   margin: 0 auto
-  point-events: none
+  pointer-events: none !important
 .submission-btn
   display: block
   width: 100%
