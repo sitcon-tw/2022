@@ -11,9 +11,13 @@
           <logo-sitcon />
           <logo-cat-in-a-maze />
         </div>
-        <div class="call-for-paper">
-          <img :src="'/2022/imgs/cfp/call-for-paper.svg'" />
-        </div>
+        <h1 class="call-for-paper">
+          <div class="corner" />
+          <div class="corner" />
+          <div class="corner" />
+          <div class="corner" />
+          稿件徵求中！
+        </h1>
         <cfp-date-links />
       </div>
       <cfp-rounded-glass-box>
@@ -84,19 +88,41 @@ const title = ref('Call for Papers')
     white-space: nowrap
 
 .call-for-paper
-  display: flex
-  justify-content: flex-end
-  margin: 7vh
-  @media screen and (max-width: 1280px)
-    margin: 6vh
+  margin: 7vh 0
+  margin-left: auto
+  padding: .5em 2em
+  width: 10em
+  color: #32e0c4
+  font-weight: 900
+  text-align: center
+  display: block
+  position: relative
+  line-height: 1
   @media screen and (max-width: 768px)
-    margin: 3vh
-  img
-    width: 33em
-    @media screen and (max-width: 1280px)
-      width: 28em
-    @media screen and (max-width: 768px)
-      width: 15em
+    padding: .5em 1em
+    padding-right: 1em
+    width: 9em
+  .corner
+    position: absolute
+    height: .7em
+    width: .7em
+    background-image: url(/imgs/cfp/corner.svg)
+    background-size: contain
+    &:nth-child(1)
+      top: -10px
+      left: -10px
+    &:nth-child(2)
+      top: -10px
+      right: -10px
+      transform: rotate(90deg)
+    &:nth-child(3)
+      bottom: -10px
+      left: -10px
+      transform: rotate(270deg)
+    &:nth-child(4)
+      bottom: -10px
+      right: -10px
+      transform: rotate(180deg)
 
 .round-btns
   width: 100%
