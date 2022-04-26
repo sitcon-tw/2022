@@ -145,23 +145,7 @@
         <cfp-submission-notice />
       </cfp-glass-box>
       <cfp-glass-box last-child>
-        <cfp-block-title>Q&A</cfp-block-title>
-        <cfp-question-box>
-          <template v-slot:title>哪裡可以看到大河馬？</template>
-          動物園都可以看到大河馬
-        </cfp-question-box>
-        <cfp-question-box>
-          <template v-slot:title>哪裡可以看到大河馬？</template>
-          動物園都可以看到大河馬
-        </cfp-question-box>
-        <cfp-question-box>
-          <template v-slot:title>哪裡可以看到大河馬？</template>
-          動物園都可以看到大河馬
-        </cfp-question-box>
-        <cfp-question-box>
-          <template v-slot:title>哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？</template>
-          動物園都可以看到大河馬
-        </cfp-question-box>
+        <cfp-question-answer />
       </cfp-glass-box>
       <Footer />
     </div>
