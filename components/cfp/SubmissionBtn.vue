@@ -1,18 +1,44 @@
 <template>
-  <a class="submission-btn" :href="href" target="_blank">
-    <span>
-      我要投稿
-    </span>
-  </a>
+  <div>
+
+    <a class="submission-btn" :href="href" target="_blank" @mouseover="showConfetti">
+      <span>
+        我要投稿
+      </span>
+    </a>
+    <ConfettiExplosion v-if="isShow" :duration="duration" :force="0.75" />
+  </div>
 </template>
 
 <script>
+import ConfettiExplosion from "vue-confetti-explosion";
 export default {
-  props: ['href']
+  components: {
+    ConfettiExplosion
+  },
+  props: ['href'],
+  data() {
+    return {
+      isShow: false,
+      duration: 3000
+    }
+  },
+  methods: {
+    showConfetti() {
+      if (!this.isShow) {
+        this.isShow = true;
+        setTimeout(() => {
+          this.isShow = false;
+        }, this.duration);
+      }
+    }
+  }
 }
 </script>
 <style lang="sass" scoped>
-
+.container
+  margin: 0 auto
+  point-events: none
 .submission-btn
   display: block
   width: 100%

@@ -6,7 +6,7 @@
       <Meta name="description" :content="title" />
     </Head>
     <div class="cfp-main-page">
-      <div class="container">
+      <div class="cfp-container">
         <div class="logos">
           <logo-sitcon />
           <logo-cat-in-a-maze />
@@ -68,7 +68,7 @@ const title = ref('Call for Papers')
   background-repeat: no-repeat
   @media screen and (max-width: 768px)
     background-position: top -200px center
-.container
+.cfp-container
   padding-top: 64px
   @media screen and (max-width: 768px)
     padding-bottom: 0
