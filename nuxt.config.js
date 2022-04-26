@@ -29,7 +29,16 @@ export default defineNuxtConfig({
       },
     },
   },
-  nitro: { prerender: { routes: ['/2022/'] } },
+  nitro: {
+    prerender: {
+      routes: [
+        '/2022/',
+        '/2022/cfp/',
+        '/2022/cfp/normal',
+        '/2022/cfp/freeform',
+      ]
+    }
+  },
   plugins: [
     '~/plugins/vue-gtag.client.js',
     '~/plugins/vue-analytics.client.js',

@@ -27,12 +27,12 @@ jobs:
       run: npm install
     - name: Generate Pages
       run: npm run generate 
-    # 1. move /2022/index.html to /index.html
+    # 1. move /2022/ all files to /
     # https://github.com/nuxt/framework/issues/4581 workaround 
     # 2. copy /index.html as /404.html & /200.html
     - name: Fixed index.html
       run: |
-        mv ./dist/2022/index.html ./dist/index.html
+        mv ./dist/2022/* ./dist/
         cp ./dist/index.html ./dist/404.html 
         cp ./dist/index.html ./dist/200.html
     - name: Deploy to GitHub Pages
