@@ -4,7 +4,7 @@
       我 要 投 稿
     </a>
     <transition name="fade-out">
-      <ConfettiExplosion v-if="isShow" :duration="duration + 1000" :force="0.75" />
+      <ConfettiExplosion v-if="isShow" :duration="duration + 1500" :force="0.75" />
     </transition>
   </div>
 </template>
