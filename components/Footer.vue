@@ -47,7 +47,7 @@ footer
   @supports not (backdrop-filter: blur(30px))
     --background-opacity: .85
   .footer-container
-    max-width: 960px
+    max-width: calc(1152px - 65px * 2)
     margin: 0 auto
     padding: 56px 0
     display: grid
