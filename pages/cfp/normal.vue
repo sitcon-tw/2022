@@ -104,14 +104,45 @@
             行為守則(Code of Conduct) </a>，共同創造一個友善的環境。 </p>
       </cfp-glass-box>
       <cfp-glass-box>
-        <cfp-block-title>大河馬</cfp-block-title>
-        <p>segksngb;bs gegege geg eg eg eg </p>
+        <cfp-block-title>投稿格式</cfp-block-title>
+        <p>各議程類型的投稿格式相同，除標示為公開之資訊會對外公布外，其餘僅供審稿委員於審稿時閱讀。</p>
+
+        <h3>稿件資訊</h3>
         <ul>
-          <li>
-            <strong>大河馬：</strong>蓬蓬鬆餅
+          <li>投稿類型：<strong>必填</strong>、<strong>公開</strong>。請寫明所欲投稿為何種議程類型（Presentation、Double Espresso、Espresso）。</li>
+          <li>題目 Title：<strong>必填</strong>、<strong>公開</strong>。請不要超出 20 字。</li>
+          <li>摘要 Abstract：<strong>必填</strong>、<strong>公開</strong>。建議含標點符號 150–250 字，使用於宣傳與網站公告。</li>
+          <li>演講大綱 Outline：<strong>必填</strong>。請說明議程的內容大綱與時間分配。若為多位講者共同分享，請說明各個講者如何分配演講內容。</li>
+          <li>目標聽眾 Target Audience：<strong>必填</strong>。請說明您期待該議程的目標聽眾，為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。<br>
+            在這邊為您提供過往兩年的會眾比例：<br>
+              <ul>
+                <li>大學生：55%</li>
+                <li>高中生：25%</li>
+                <li>研究生：10%</li>
+                <li>社會人士：10%</li>
+              </ul>
           </li>
-          <li>哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？哪裡可以看到大河馬？</li>
+          <li>先備知識 Prior Knowledge：<strong>必填</strong>、<strong>公開</strong>。請說明該議程的與會者所需具備的先備知識。例如：「能理解 Python 基礎語法」、「能熟練運用 Class 與 OOP」等。</li>
+          <li>詳細說明 Description：<strong>必填</strong>。不限字數，請說明這個議程您認為重要的相關細節，以利審稿委員更瞭解您的議程。</li>
+          <li>附件 Attachment：<strong>選填</strong>。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您的議程的附件，請再三確認是否有開啟共用權限。</li>
         </ul>
+
+        <cfp-submission-persional-info />
+        <br>
+
+        <cfp-block-title>審稿方式</cfp-block-title>
+        <p>
+          稿件均經議程組形式審查，交予該領域之審稿委員審稿。審稿委員由 SITCON 工作人員、業界人士及學界人士組成。<br>
+          審稿委員將針對以下項目進行篩選：
+        </p>
+        <ul>
+          <li>稿件內容：知識分享、經驗案例、想法觀點是否獨特等。</li>
+          <li>表達能力：提供的資料是否有條理、文句暢通，以及提供資料之完整度。完整的資料能讓審稿委員更清楚了解演講細節。</li>
+          <li>適合聽眾：稿件是否適合 SITCON 大多數的與會者。經我們評估比較熱門的議程，將安排在較大的演講廳。</li>
+        </ul>
+
+        <br>
+        <cfp-submission-notice />
       </cfp-glass-box>
       <cfp-glass-box last-child>
         <cfp-block-title>Q&A</cfp-block-title>
