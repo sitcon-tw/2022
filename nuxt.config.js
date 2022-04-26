@@ -10,7 +10,11 @@ export default defineNuxtConfig({
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap', crossorigin: true }
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap', crossorigin: true },
+        // preload imgs
+        { rel: 'preload', href: 'https://sitcon.org/2022/imgs/cfp/back-hover.svg', as: 'image' },
+        { rel: 'preload', href: 'https://sitcon.org/2022/imgs/cfp/cfp_maze_pattern.png', as: 'image' },
+        { rel: 'preload', href: 'https://sitcon.org/2022/imgs/cfp/CFP_desktop_mainPage.jpg', as: 'image' },
       ],
       base: {
         href: '/2022/'
