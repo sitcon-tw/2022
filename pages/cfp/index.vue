@@ -12,7 +12,7 @@
           <logo-cat-in-a-maze />
         </div>
         <div class="稿件徵求中">
-          <img src="/2022/imgs/cfp/稿件徵求中.svg">
+          <image src="/2022/imgs/cfp/稿件徵求中.svg" />
         </div>
         <cfp-date-links />
       </div>
