@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="container">
+    <div class="footer-container">
       <div class="name footer-item">
         <div class="title">學生計算機年會</div>
         <div class="subtitle">Students' Information Technology Conference</div>
@@ -46,7 +46,7 @@ footer
   backdrop-filter: blur(30px)
   @supports not (backdrop-filter: blur(30px))
     --background-opacity: .85
-  .container
+  .footer-container
     max-width: 960px
     margin: 0 auto
     padding: 56px 0
