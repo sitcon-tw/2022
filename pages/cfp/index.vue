@@ -141,18 +141,14 @@ const title = ref('Call for Papers')
     grid-template-columns: repeat(2,1fr)
 
 .rad-btns
-  display: inline-flex
-  flex-wrap: nowrap
-  @media screen and (max-width: 500px)
+  display: flex
+  gap: 24px
+  align-items: flex-start
+  margin-top: 36px
+  @media screen and (max-width: 768px)
+    margin: 16px 0
+    gap: 12px
     flex-direction: column
-    flex-wrap: wrap
-    width: 100%
-  *
-    margin-right: 64px
-    @media screen and (max-width: 500px)
-      margin-right: auto
-      margin: 0 auto
-      margin-bottom: 20px
 
 .cat-background
   @media screen and (min-width: 960px)
