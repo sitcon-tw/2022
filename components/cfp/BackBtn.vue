@@ -1,6 +1,6 @@
 <template>
   <router-link to="/cfp" class="back-btn">
-    <image src="/2022/imgs/cfp/back-hover.svg" alt="back" />
+    <img :src="'/2022/imgs/cfp/back-hover.svg'" alt="back" />
   </router-link>
 </template>
 <style lang="sass" scoped>

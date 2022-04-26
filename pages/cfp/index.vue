@@ -11,8 +11,8 @@
           <logo-sitcon />
           <logo-cat-in-a-maze />
         </div>
-        <div class="稿件徵求中">
-          <image src="/2022/imgs/cfp/稿件徵求中.svg" />
+        <div class="call-for-paper">
+          <img :src="'/2022/imgs/cfp/call-for-paper.svg'" />
         </div>
         <cfp-date-links />
       </div>
@@ -83,7 +83,7 @@ const title = ref('Call for Papers')
     width: 100%
     white-space: nowrap
 
-.稿件徵求中
+.call-for-paper
   display: flex
   justify-content: flex-end
   margin: 7vh
