@@ -1,6 +1,6 @@
 <template>
-  <div class="question-box" :class="{ active }" @click="active = !active">
-    <div class="question-box__title">
+  <div class="question-box" :class="{ active }">
+    <div class="question-box__title" @click="active = !active">
       <slot name="title"></slot>
       <div class="arrow" />
     </div>
