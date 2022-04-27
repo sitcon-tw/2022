@@ -36,5 +36,6 @@ export default {
     font-size: 16px
     padding: .5em 1em
   &:hover
+    color: #32E0C4
     background-color: transparent
 </style>

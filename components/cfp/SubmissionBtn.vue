@@ -45,5 +45,6 @@ export default {
   margin: 0 auto
   font-weight: 700
   &:hover
+    color: #32E0C4
     background-color: transparent
 </style>
