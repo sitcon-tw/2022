@@ -25,7 +25,7 @@
       height: 100px
       width: 1px
       background-color: #32E0C4
-      margin-left: 60px
+      margin-left: 26px
       @media screen and (max-width: 768px)
         background-color: transparent
         height: 8px
