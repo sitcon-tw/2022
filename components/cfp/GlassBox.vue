@@ -23,8 +23,6 @@ export default {
 
 .cfp-glass-box
   --background-opacity: 0.5
-  @supports not (backdrop-filter: blur(15px))
-    --background-opacity: 0.85
   background: rgba(0, 0, 0, var(--background-opacity))
   border: 1px solid rgba(222, 222, 222, 0.2)
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85)
@@ -36,6 +34,8 @@ export default {
 
   margin: 36px auto
   border-radius: 10px
+  @supports not (backdrop-filter: blur(15px))
+    --background-opacity: 0.85
   &.first-child
     margin-top: 0
     border-radius: 0px 0px 10px 10px
@@ -53,6 +53,8 @@ export default {
       line-height: 2em
       font-size: 16px
       color: #32E0C4
+      @media screen and (max-width: 768px)
+        font-size: 13px
       a
         font-weight: 700
         color: #fff
