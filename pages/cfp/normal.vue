@@ -38,65 +38,104 @@
         <h3>Presentation</h3>
         <p>Presentation 包含完整 30 分鐘的議程與 10 分鐘的問答時間，<strong>共 40 分鐘</strong>，讓您有充分的時間展示想法、描述經歷、和與會者交流。</p>
         <cfp-cards>
-          <cfp-card href="https://sitcon.org/2020/agenda/14e76dd3-d03b-4a67-843c-f0fe9beae35c" src="/2022/imgs/cfp/prev-sessions/aomXTCTlIW4.jpg" target="_blank">
+          <cfp-agenda-card href="https://youtu.be/5YjbEE-E2HA" src="/2022/imgs/cfp/prev-sessions/5YjbEE-E2HA.jpg" target="_blank">
+            How to hack CSGO 破壞他人遊戲體驗從這裡開始
+            （<a href="https://sitcon.org/2021/agenda/97b49c22-89b5-4c66-94d4-108b36db0c19" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/_lNPRlt6c2E" src="/2022/imgs/cfp/prev-sessions/_lNPRlt6c2E.jpg" target="_blank">
+            關於 CTF 的那些事
+            （<a href="https://sitcon.org/2021/agenda/7a88857e-7d50-4d9c-a656-2d99feef6198" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/0YMG2n_wwXU" src="/2022/imgs/cfp/prev-sessions/0YMG2n_wwXU.jpg" target="_blank">
+            NLP 陪聊 AI 培育法
+            （<a href="https://sitcon.org/2021/agenda/80e71005-50f9-4e5a-bbc7-e4c6c4eeae9b" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/paJ0AlW6h-I" src="/2022/imgs/cfp/prev-sessions/paJ0AlW6h-I.jpg" target="_blank">
+            網路維運，在台灣怎麼玩？打造全台最大家用網路！
+            （<a href="https://sitcon.org/2021/agenda/3fe74d93-2ab5-4c42-8b49-b5b92973f4aa" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/aomXTCTlIW4" src="/2022/imgs/cfp/prev-sessions/aomXTCTlIW4.jpg" target="_blank">
             CDN 網站攻擊 - 這次換駭客當鬼來抓你了
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2020/agenda/bdcf60d1-4ea7-4485-bc64-a6252eabc19f" src="/2022/imgs/cfp/prev-sessions/1gFBx16AlMc.jpg" target="_blank">
+            （<a href="https://sitcon.org/2020/agenda/14e76dd3-d03b-4a67-843c-f0fe9beae35c" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/1gFBx16AlMc" src="/2022/imgs/cfp/prev-sessions/1gFBx16AlMc.jpg" target="_blank">
             第一次做密室逃脫就上手
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2019/agenda/7a67f4fb-b6f4-4595-b9af-527b3024c8f8" src="/2022/imgs/cfp/prev-sessions/qYxdomoMEf8.jpg" target="_blank">
+            （<a href="https://sitcon.org/2020/agenda/bdcf60d1-4ea7-4485-bc64-a6252eabc19f" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/qYxdomoMEf8" src="/2022/imgs/cfp/prev-sessions/qYxdomoMEf8.jpg" target="_blank">
             從學校到業界，工程師作為職業的現實
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2019/agenda/64ed212c-f1a9-40df-a84e-5f7411d4c887" src="/2022/imgs/cfp/prev-sessions/SkUuK731XGY.jpg" target="_blank">
+            （<a href="https://sitcon.org/2019/agenda/7a67f4fb-b6f4-4595-b9af-527b3024c8f8" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/SkUuK731XGY" src="/2022/imgs/cfp/prev-sessions/SkUuK731XGY.jpg" target="_blank">
             黑客、社團、資訊魔法學習大總匯
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2018/#/agenda/sub/d946b6e1-d826-4c64-86a4-bf013bcc0c06" src="/2022/imgs/cfp/prev-sessions/85bW97XI4i0.jpg" target="_blank">
+            （<a href="https://sitcon.org/2019/agenda/64ed212c-f1a9-40df-a84e-5f7411d4c887" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/85bW97XI4i0" src="/2022/imgs/cfp/prev-sessions/85bW97XI4i0.jpg" target="_blank">
             奔跑吧！台北：遊戲開發經驗分享
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2018/#/agenda/sub/35598abf-4efe-48fc-93a4-3d539e6f6c47" src="/2022/imgs/cfp/prev-sessions/8xrYLc4num8.jpg" target="_blank">
+            （<a href="https://sitcon.org/2018/#/agenda/sub/d946b6e1-d826-4c64-86a4-bf013bcc0c06" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/8xrYLc4num8" src="/2022/imgs/cfp/prev-sessions/8xrYLc4num8.jpg" target="_blank">
             Club Mate 與德國駭客精神：34C3 大會實錄
-          </cfp-card>
-          <cfp-card href="https://www.youtube.com/watch?v=msrsjX8mddE" src="/2022/imgs/cfp/prev-sessions/msrsjX8mddE.jpg" target="_blank">
+            （<a href="https://sitcon.org/2018/#/agenda/sub/35598abf-4efe-48fc-93a4-3d539e6f6c47" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/msrsjX8mddE" src="/2022/imgs/cfp/prev-sessions/msrsjX8mddE.jpg" target="_blank">
             開發學校雲端服務的奇技淫巧
-          </cfp-card>
+          </cfp-agenda-card>
         </cfp-cards>
         <h3>Double Espresso</h3>
         <p>Double Espresso <strong>為 20 分鐘的議程</strong>，相對於僅 10 分鐘的 Espresso，讓您有餘裕補充想法，和與會者進行問答。</p>
         <cfp-cards>
-          <cfp-card href="https://sitcon.org/2021/agenda/32b8d488-7d5b-4c0e-9efe-aee6321062b9" src="/2022/imgs/cfp/prev-sessions/Y_d6ZPQR9ag.jpg" target="_blank">
+          <cfp-agenda-card href="https://youtu.be/Y_d6ZPQR9ag" src="/2022/imgs/cfp/prev-sessions/Y_d6ZPQR9ag.jpg" target="_blank">
             會斷線的才叫網路——20 分鐘學會宿網 Debug
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2021/agenda/3b4ad32d-97e5-4313-9ff5-faa4dc0ca566" src="/2022/imgs/cfp/prev-sessions/BTjVqA-CadM.jpg" target="_blank">
+            （<a href="https://sitcon.org/2021/agenda/32b8d488-7d5b-4c0e-9efe-aee6321062b9" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/BTjVqA-CadM" src="/2022/imgs/cfp/prev-sessions/BTjVqA-CadM.jpg" target="_blank">
             我沒有網頁開發基礎，最後卻完成一份專案？
-          </cfp-card>
+            （<a href="https://sitcon.org/2021/agenda/3b4ad32d-97e5-4313-9ff5-faa4dc0ca566" target="_blank">簡介</a>）
+          </cfp-agenda-card>
         </cfp-cards>
         <h3>Espresso</h3>
         <p>Espresso <strong>僅有 10 分鐘</strong>，挑戰最為濃縮與精華的議程，為與會者帶來短而精緻的知識洗禮。</p>
         <cfp-cards>
-          <cfp-card href="https://sitcon.org/2020/agenda/32ba951d-3cfb-4461-ae6a-5ddbab693b8b" src="/2022/imgs/cfp/prev-sessions/MfiKAOBrPpk.jpg" target="_blank">
+          <cfp-agenda-card href="https://youtu.be/y3EM5GHigTY" src="/2022/imgs/cfp/prev-sessions/y3EM5GHigTY.jpg" target="_blank">
+            PHP 是世界上最棒的語言，但我做了一個比它更棒的！
+            （<a href="https://sitcon.org/2021/agenda/bb826e6d-8544-4101-8811-13032bd9a4fd" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/I07gX4YlYrE" src="/2022/imgs/cfp/prev-sessions/I07gX4YlYrE.jpg" target="_blank">
+            喜歡打街機？做一台放家裡打r
+            （<a href="https://sitcon.org/2021/agenda/2b210726-c5b0-4094-a591-fccb51f0ee55" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/MfiKAOBrPpk" src="/2022/imgs/cfp/prev-sessions/MfiKAOBrPpk.jpg" target="_blank">
             我也能讓 Python 幫忙操控電腦嗎？
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2020/agenda/0fe7e40c-4a84-4363-9e60-4188d81ccecc" src="/2022/imgs/cfp/prev-sessions/NGqXSCFvZ3M.jpg" target="_blank">
+            （<a href="https://sitcon.org/2020/agenda/32ba951d-3cfb-4461-ae6a-5ddbab693b8b" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/NGqXSCFvZ3M" src="/2022/imgs/cfp/prev-sessions/NGqXSCFvZ3M.jpg" target="_blank">
             我只是個學生，架個網站不想花錢
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2020/agenda/58ec7c4a-ede5-44c5-8b46-e33471543fa1" src="/2022/imgs/cfp/prev-sessions/CEPVFcZMeQg.jpg" target="_blank">
+            （<a href="https://sitcon.org/2020/agenda/0fe7e40c-4a84-4363-9e60-4188d81ccecc" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/CEPVFcZMeQg" src="/2022/imgs/cfp/prev-sessions/CEPVFcZMeQg.jpg" target="_blank">
             校園資安實務 - DNS
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2019/agenda/f60637a1-0ccb-4c02-b1b0-be7a6a393d87" src="/2022/imgs/cfp/prev-sessions/GFfaD-kVe_A.jpg" target="_blank">
+            （<a href="https://sitcon.org/2020/agenda/58ec7c4a-ede5-44c5-8b46-e33471543fa1" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/GFfaD-kVe_A" src="/2022/imgs/cfp/prev-sessions/GFfaD-kVe_A.jpg" target="_blank">
             淺談社會網路分析
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2019/agenda/7959ab0b-cdfa-40bc-8566-099477abb195/" src="/2022/imgs/cfp/prev-sessions/kD-jGfDZGGo.jpg" target="_blank">
+            （<a href="https://sitcon.org/2019/agenda/f60637a1-0ccb-4c02-b1b0-be7a6a393d87" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/kD-jGfDZGGo" src="/2022/imgs/cfp/prev-sessions/kD-jGfDZGGo.jpg" target="_blank">
             你所不知道的維基 - Wikidata
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2019/agenda/0b49bfce-a147-4702-a5b9-87eb2dfa5135/" src="/2022/imgs/cfp/prev-sessions/iZz5au-vVHk.jpg" target="_blank">
+            （<a href="https://sitcon.org/2019/agenda/7959ab0b-cdfa-40bc-8566-099477abb195" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/iZz5au-vVHk" src="/2022/imgs/cfp/prev-sessions/iZz5au-vVHk.jpg" target="_blank">
             AI for the Art in a Box
-          </cfp-card>
-          <cfp-card href="https://sitcon.org/2018/#/agenda/sub/f3c6853d-2b0e-464c-8837-9411455961d8" src="/2022/imgs/cfp/prev-sessions/H5o5Oa_nbqs.jpg" target="_blank">
+            （<a href="https://sitcon.org/2019/agenda/0b49bfce-a147-4702-a5b9-87eb2dfa5135" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/H5o5Oa_nbqs" src="/2022/imgs/cfp/prev-sessions/H5o5Oa_nbqs.jpg" target="_blank">
             深度學習如何深度學習
-          </cfp-card>
-          <cfp-card href="https://www.youtube.com/watch?v=ryLLzSwQ54w" src="/2022/imgs/cfp/prev-sessions/ryLLzSwQ54w.jpg" target="_blank">
+            （<a href="https://sitcon.org/2018/#/agenda/sub/f3c6853d-2b0e-464c-8837-9411455961d8" target="_blank">簡介</a>）
+          </cfp-agenda-card>
+          <cfp-agenda-card href="https://youtu.be/ryLLzSwQ54w" src="/2022/imgs/cfp/prev-sessions/ryLLzSwQ54w.jpg" target="_blank">
             格鬥遊戲 AI 開發經驗談
-          </cfp-card>
+          </cfp-agenda-card>
         </cfp-cards>
 
         <cfp-block-title style="margin-top: 56px">Code of Conduct 行為準則</cfp-block-title>
