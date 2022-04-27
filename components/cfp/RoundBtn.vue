@@ -1,5 +1,5 @@
 <template>
-  <component :href="href || to || null" :to="to || null" :is="to ? 'router-link' : 'a'" class="round-btn">
+  <component :href="href || null" :to="to || null" :is="to ? 'router-link' : 'a'" class="round-btn">
 
     <slot />
 
