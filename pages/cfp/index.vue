@@ -72,6 +72,7 @@ const title = ref('Call for Papers')
   background-repeat: no-repeat
   @media screen and (max-width: 768px)
     background-position: top -200px center
+    background-image: url(/imgs/cfp/CFP_mobile_mainpage.jpg)
 .cfp-container
   padding-top: 64px
   @media screen and (max-width: 768px)
