@@ -25,5 +25,6 @@ export default {
   @media screen and (max-width: 768px)
     font-size: 18px
   &:hover
+    color: #32E0C4
     background-color: transparent
 </style>
