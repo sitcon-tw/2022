@@ -16,6 +16,7 @@
   background-color: #fff
   padding: .16em .32em
   color: #000
+  margin-top: .25em
   @media screen and (max-width: 1280px)
     font-size: 36px
   @media screen and (max-width: 768px)
