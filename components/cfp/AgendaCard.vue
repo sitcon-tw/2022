@@ -15,6 +15,7 @@ const props = defineProps({
 })
 </script>
 <style lang="sass" scoped>
+
 .card
   text-decoration: none
   display: block
@@ -36,6 +37,10 @@ const props = defineProps({
     margin-top: .5em
     line-height: 1.5em
     transition: all 0.3s ease
+    :deep(a)
+      color: #32E0C4
+      &:hover
+        color: #fff
     @media screen and (max-width: 768px)
       font-size: 14px
 </style>
