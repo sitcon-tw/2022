@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="timer-title text-spacing">距離投稿截止還有：</div>
+    <div class="timer-title end-time">距離投稿截止還有：</div>
     <div class="timer">
       <div class="timer-item">
         <div class="timer-number">{{ dd }}</div>
@@ -31,10 +31,12 @@
   font-weight: 100
   margin: 16px 0
   letter-spacing: 0.05em
-  &.text-spacing
+  &.end-time
     letter-spacing: 0.5em
     @media screen and (max-width: 768px)
-      letter-spacing: 0.05em
+      letter-spacing: 0.2em
+      font-size: 10px
+
 .timer
   --alpha: 0.5
   display: flex
