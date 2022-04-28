@@ -21,6 +21,11 @@
       <Meta property="twitter:title" :content="title" />
       <Meta property="twitter:description" :content="description" />
       <Meta property="twitter:image" :content="image" />
+
+      <!-- Icon -->
+      <Link rel="icon" href="/imgs/cfp/CFP_favicon.ico" sizes="any" />
+      <Link rel="icon" href="/imgs/cfp/CFP_favicon.png" sizes="any" />
+      <Link rel="icon" href="/imgs/cfp/CFP_favicon.svg" type="image/svg+xml" />
     </Head>
     <div class="maze-background">
       <cfp-glass-box first-child>
