@@ -19,8 +19,7 @@
         <div class="timer-label">SECONDS</div>
       </div>
     </div>
-    <div class="timer-title">截止日期：即日起至 6 月 5 日（日）日出</div>
-
+    <div class="timer-title">截止日期：即日起至 {{ endedTime.getMonth() + 1 }} 月 {{ endedTime.getDate() }} 日（日）{{ endedTime.getHours() }}:{{ endedTime.getMinutes() }}</div>
   </div>
 </template>
 <style lang="sass" scoped>
@@ -69,9 +68,14 @@
 </style>
 <script>
 export default {
+  props: {
+    endedTime: {
+      type: Date,
+      default: new Date('2022-06-05T23:59:59+08:00')
+    }
+  },
   data() {
     return {
-      endedTime: new Date('2022-06-05T05:04:00+08:00'),
       dd: '00',
       hh: '00',
       mm: '00',
