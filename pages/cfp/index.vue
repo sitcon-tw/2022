@@ -2,8 +2,25 @@
   <div>
 
     <Head>
+      <!-- Primary Meta Tags -->
       <Title>{{ title }}</Title>
-      <Meta name="description" :content="title" />
+      <Meta name="title" :content="title" />
+      <Meta name="description" :content="description" />
+
+      <!-- Open Graph / Facebook -->
+      <Meta property="og:type" content="website" />
+      <Meta property="og:url" content="https://sitcon.org/2022/cfp/" />
+      <Meta property="og:site_name" content="SITCON 2022" />
+      <Meta property="og:title" :content="title" />
+      <Meta property="og:description" :content="description" />
+      <Meta property="og:image" :content="image" />
+
+      <!-- Twitter -->
+      <Meta property="twitter:card" content="summary_large_image" />
+      <Meta property="twitter:url" content="https://sitcon.org/2022/cfp/" />
+      <Meta property="twitter:title" :content="title" />
+      <Meta property="twitter:description" :content="description" />
+      <Meta property="twitter:image" :content="image" />
     </Head>
     <div class="cfp-main-page">
       <div class="cfp-container">
@@ -61,6 +78,8 @@
 </template>
 <script setup>
 const title = ref('Call for Papers')
+const description = ref('SITCON is the annual conference.')
+const image = ref('https://sitcon.org/2022/imgs/cfp/cat.png')
 </script>
 <style lang="sass" scoped>
 
