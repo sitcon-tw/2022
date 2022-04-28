@@ -3,7 +3,7 @@
 
     <Head>
       <!-- Primary Meta Tags -->
-      <Title>{{ title }}</Title>
+      <Title>{{ pageTitle }}</Title>
       <Meta name="title" :content="title" />
       <Meta name="description" :content="description" />
 
@@ -213,7 +213,8 @@
   </div>
 </template>
 <script setup>
-const title = ref('一般議程')
-const description = ref('SITCON is the annual conference.')
+const pageTitle = ref('一般議程')
+const title = ref('SITCON X：一般議程徵稿')
+const description = ref('一般議程依據時長分為 Presentation（四十分鐘）、Double Expresso（二十分鐘）與 Espresso （十分鐘）三種。SITCON 作為學生展現自己的舞台，我們期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是一同探討學生相關議題等。')
 const image = ref('https://sitcon.org/2022/imgs/cfp/cfp-og.png')
 </script>
