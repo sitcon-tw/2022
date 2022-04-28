@@ -8,5 +8,5 @@ export default defineNuxtPlugin((nuxtApp) => {
     includes: [
       { id: 'GTM-NPVBCDZ' }
     ]
-  })
+  }, nuxtApp.vueApp.router)
 })
