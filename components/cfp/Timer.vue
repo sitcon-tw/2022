@@ -19,7 +19,7 @@
         <div class="timer-label">SECONDS</div>
       </div>
     </div>
-    <div class="timer-title">截止日期：即日起至6月5日（日）日出</div>
+    <div class="timer-title">截止日期：即日起至 6 月 5 日（日）日出</div>
 
   </div>
 </template>
