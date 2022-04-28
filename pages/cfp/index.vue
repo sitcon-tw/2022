@@ -23,9 +23,9 @@
       <Meta property="twitter:image" :content="image" />
 
       <!-- Icon -->
-      <Link rel="icon" href="/imgs/cfp/CFP_favicon.ico" sizes="any" />
-      <Link rel="icon" href="/imgs/cfp/CFP_favicon.png" sizes="any" />
-      <Link rel="icon" href="/imgs/cfp/CFP_favicon.svg" type="image/svg+xml" />
+      <Link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.ico" sizes="any" />
+      <Link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.png" sizes="any" />
+      <Link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.svg" type="image/svg+xml" />
     </Head>
     <div class="cfp-main-page">
       <div class="cfp-container">
