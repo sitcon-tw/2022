@@ -210,5 +210,5 @@
 <script setup>
 const title = ref('一般議程')
 const description = ref('SITCON is the annual conference.')
-const image = ref('https://sitcon.org/2022/imgs/cfp/cat.png')
+const image = ref('https://sitcon.org/2022/imgs/cfp/cfp-og.png')
 </script>
