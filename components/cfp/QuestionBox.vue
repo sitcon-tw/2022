@@ -20,12 +20,13 @@ const active = ref(false)
 .question-box
   font-weight: 500
   font-size: 16px
-  line-height: 1.5
   margin: 20px 0
 
   @media screen and (max-width: 768px)
     font-size: 14px
   .question-box__title
+    line-height: 1.5
+
     --padding-y: 16px
     --arrow-size: 24px
     background: #222222
