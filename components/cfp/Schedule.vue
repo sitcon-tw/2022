@@ -37,8 +37,6 @@
           一般議程錄取通知
         </div>
       </div>
-    </div>
-    <div class="col">
       <div class="item">
         <div class="date">
           <div class="month">七月</div>
@@ -48,13 +46,23 @@
           開放式議程錄取通知
         </div>
       </div>
+    </div>
+    <div class="col">
       <div class="item">
-        <div class="date">
-          <div class="month">八月</div>
-          <div class="day">??</div>
+        <div class="date non-digit-day">
+          <div class="month">七月</div>
+          <div class="day">下旬</div>
         </div>
         <div class="title">
-          試講
+          第一次試講
+        </div>
+      </div>
+      <div class="item">
+        <div class="date non-digit-day">
+          <div class="day">八月</div>
+        </div>
+        <div class="title">
+          第二次試講
         </div>
       </div>
       <div class="item">
@@ -102,11 +110,13 @@
       .date
         display: flex
         flex-direction: column
+        justify-content: center
         font-weight: 900
         line-height: 1
         border-right: 1px solid #eee
         padding-right: 10px
-        width: 50px
+        width: 70px
+        min-height: 52px
         .month
           font-size: 16px
           text-align: right
@@ -114,6 +124,10 @@
           @media screen and (max-width: 768px)
             font-size: 14px
             font-weight: 500
+        &.non-digit-day .day
+          font-size: 24px
+          @media screen and (max-width: 768px)
+            font-size: 16px
         .day
           font-size: 36px
           text-align: right
