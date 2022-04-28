@@ -38,8 +38,8 @@ export default defineNuxtConfig({
       routes: [
         '/2022/',
         '/2022/cfp/',
-        '/2022/cfp/normal',
-        '/2022/cfp/freeform',
+        '/2022/cfp/standard',
+        '/2022/cfp/undefined',
       ]
     }
   },
