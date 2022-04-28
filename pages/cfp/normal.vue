@@ -2,8 +2,25 @@
   <div>
 
     <Head>
+      <!-- Primary Meta Tags -->
       <Title>{{ title }}</Title>
-      <Meta name="description" :content="title" />
+      <Meta name="title" :content="title" />
+      <Meta name="description" :content="description" />
+
+      <!-- Open Graph / Facebook -->
+      <Meta property="og:type" content="website" />
+      <Meta property="og:url" content="https://sitcon.org/2022/cfp/" />
+      <Meta property="og:site_name" content="SITCON 2022" />
+      <Meta property="og:title" :content="title" />
+      <Meta property="og:description" :content="description" />
+      <Meta property="og:image" :content="image" />
+
+      <!-- Twitter -->
+      <Meta property="twitter:card" content="summary_large_image" />
+      <Meta property="twitter:url" content="https://sitcon.org/2022/cfp/" />
+      <Meta property="twitter:title" :content="title" />
+      <Meta property="twitter:description" :content="description" />
+      <Meta property="twitter:image" :content="image" />
     </Head>
 
     <div class="maze-background">
@@ -154,12 +171,12 @@
           <li>演講大綱 Outline：<strong>必填</strong>。請說明議程的內容大綱與時間分配。若為多位講者共同分享，請說明各個講者如何分配演講內容。</li>
           <li>目標聽眾 Target Audience：<strong>必填</strong>。請說明您期待該議程的目標聽眾，為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。<br>
             在這邊為您提供過往兩年的會眾比例：<br>
-              <ul>
-                <li>大學生：55%</li>
-                <li>高中生：25%</li>
-                <li>研究生：10%</li>
-                <li>社會人士：10%</li>
-              </ul>
+            <ul>
+              <li>大學生：55%</li>
+              <li>高中生：25%</li>
+              <li>研究生：10%</li>
+              <li>社會人士：10%</li>
+            </ul>
           </li>
           <li>先備知識 Prior Knowledge：<strong>必填</strong>、<strong>公開</strong>。請說明該議程的與會者所需具備的先備知識。例如：「能理解 Python 基礎語法」、「能熟練運用 Class 與 OOP」等。</li>
           <li>詳細說明 Description：<strong>必填</strong>。不限字數，請說明這個議程您認為重要的相關細節，以利審稿委員更瞭解您的議程。</li>
@@ -192,4 +209,6 @@
 </template>
 <script setup>
 const title = ref('一般議程')
+const description = ref('SITCON is the annual conference.')
+const image = ref('https://sitcon.org/2022/imgs/cfp/cat.png')
 </script>
