@@ -16,7 +16,7 @@
           <div class="day">05</div>
         </div>
         <div class="title">
-          一般議程投稿<strong>截止</strong>
+          一般議程投稿截止
         </div>
       </div>
       <div class="item">
@@ -25,7 +25,7 @@
           <div class="day">26</div>
         </div>
         <div class="title">
-          開放式議程投稿<strong>截止</strong>
+          開放式議程投稿截止
         </div>
       </div>
       <div class="item">
