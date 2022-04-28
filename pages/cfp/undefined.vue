@@ -47,9 +47,7 @@
           對於還在猶豫的講者們，<strong>以下是提供給各位參考的幾種議程形式範例：</strong>
         </p>
         <cfp-session-type-card />
-        <cfp-block-title>Code of Conduct 行為準則</cfp-block-title>
-        <p>SITCON 歡迎不同身分、來自不同背景的與會者，我們鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快的參加 SITCON，我們要求所有參與者閱讀年會的<a href="https://sitcon.org/code-of-conduct/" target="_blank">
-            行為準則(Code of Conduct) </a>，共同創造一個友善的環境。 </p>
+        <coc />
       </cfp-glass-box>
       <cfp-glass-box>
         <cfp-block-title>投稿格式</cfp-block-title>
