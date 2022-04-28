@@ -41,15 +41,15 @@
         <cfp-block-title>議程種類</cfp-block-title>
         <cfp-agenda-type />
         <cfp-block-title>什麼是開放式議程？</cfp-block-title>
-        <p>在追求創新的時代，我們為講者提供了開放式議程這個選項，跳脫講者對聽眾<strong>單向的演講（陳述）</strong>，開放式議程更加強調主講者和與會者的雙向交流。SITCON 作為學生展現自己的舞台，我們期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是一同探討學生相關議題等。
+        <p>在追求創新的時代，我們為講者提供了開放式議程這個選項，跳脫講者對聽眾單向的演講（陳述），開放式議程更加強調主講者和與會者的<strong>雙向交流</strong>。SITCON 作為學生展現自己的舞台，我們期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是一同探討學生相關議題等。
           <br>
           <br>
-          對於還在猶豫的講者們，<strong>以下是提供給各位參考的幾種議程形式範例：</strong>
+          對於還在猶豫的講者們，以下是提供給各位參考的幾種議程形式範例：
         </p>
         <cfp-session-type-card />
         <cfp-block-title>Code of Conduct 行為準則</cfp-block-title>
         <p>SITCON 歡迎不同身分、來自不同背景的與會者，我們鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快的參加 SITCON，我們要求所有參與者閱讀年會的<a href="https://sitcon.org/code-of-conduct/" target="_blank">
-            行為守則(Code of Conduct) </a>，共同創造一個友善的環境。 </p>
+            行為準則(Code of Conduct) </a>，共同創造一個友善的環境。 </p>
       </cfp-glass-box>
       <cfp-glass-box>
         <cfp-block-title>投稿格式</cfp-block-title>
@@ -76,9 +76,9 @@
           審稿委員將針對以下項目進行篩選：
         </p>
         <ul>
-          <li>稿件內容：講者是否熟悉這個題目、和會眾的交流效果、可執行性等等。</li>
-          <li>表達能力：提供的資料是否有條理、文句暢通，提供資料（尤其是稿件的詳細說明）之完整度。我們偏好完整的資料，讓審稿委員更清楚了解演講細節。</li>
-          <li>適合聽眾：稿件是否適合 SITCON 大多數的與會者討論。</li>
+          <li><strong>稿件內容</strong>：講者是否熟悉這個題目、和會眾的交流效果、可執行性等等。</li>
+          <li><strong>表達能力</strong>：提供的資料是否有條理、文句暢通，提供資料（尤其是稿件的詳細說明）之完整度。我們偏好完整的資料，讓審稿委員更清楚了解演講細節。</li>
+          <li><strong>適合聽眾</strong>：稿件是否適合 SITCON 大多數的與會者討論。</li>
         </ul>
 
         <br>

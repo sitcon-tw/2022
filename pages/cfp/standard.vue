@@ -162,7 +162,7 @@
 
         <cfp-block-title style="margin-top: 56px">Code of Conduct 行為準則</cfp-block-title>
         <p>SITCON 歡迎不同身分、來自不同背景的與會者，我們鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快的參加 SITCON，我們要求所有參與者閱讀年會的<a href="https://sitcon.org/code-of-conduct/" target="_blank">
-            行為守則(Code of Conduct) </a>，共同創造一個友善的環境。 </p>
+            行為準則(Code of Conduct) </a>，共同創造一個友善的環境。 </p>
       </cfp-glass-box>
       <cfp-glass-box>
         <cfp-block-title>投稿格式</cfp-block-title>
@@ -197,9 +197,9 @@
           審稿委員將針對以下項目進行篩選：
         </p>
         <ul>
-          <li>稿件內容：知識分享、經驗案例、想法觀點是否獨特等。</li>
-          <li>表達能力：提供的資料是否有條理、文句暢通，以及提供資料之完整度。完整的資料能讓審稿委員更清楚了解演講細節。</li>
-          <li>適合聽眾：稿件是否適合 SITCON 大多數的與會者。經我們評估比較熱門的議程，將安排在較大的演講廳。</li>
+          <li><strong>稿件內容</strong>：知識分享、經驗案例、想法觀點是否獨特等。</li>
+          <li><strong>表達能力</strong>：提供的資料是否有條理、文句暢通，以及提供資料之完整度。完整的資料能讓審稿委員更清楚了解演講細節。</li>
+          <li><strong>適合聽眾</strong>：稿件是否適合 SITCON 大多數的與會者。經我們評估比較熱門的議程，將安排在較大的演講廳。</li>
         </ul>
 
         <br>
