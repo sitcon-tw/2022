@@ -6,4 +6,6 @@
     </p>
 </template>
 <style lang="sass" scoped>
+a
+    word-break: keep-all
 </style>
