@@ -9,8 +9,8 @@
 
     </div>
     <div class="links">
-      <cfp-round-btn to="/cfp/normal">一般議程</cfp-round-btn>
-      <cfp-round-btn to="/cfp/freeform">開放式議程</cfp-round-btn>
+      <cfp-round-btn to="/cfp/standard">一般議程</cfp-round-btn>
+      <cfp-round-btn to="/cfp/undefined">開放式議程</cfp-round-btn>
     </div>
   </div>
 </template>
