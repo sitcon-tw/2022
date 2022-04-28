@@ -134,6 +134,7 @@ const image = ref('https://sitcon.org/2022/imgs/cfp/cfp-og.png')
     width: .7em
     background-image: url(/imgs/cfp/corner.svg)
     background-size: contain
+    background-repeat: no-repeat
     &:nth-child(1)
       top: -10px
       left: -10px
