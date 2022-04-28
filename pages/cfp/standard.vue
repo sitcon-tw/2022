@@ -35,7 +35,7 @@
         <h1 class="text-center">一般議程</h1>
         <cfp-divider />
         <cfp-timer />
-        <cfp-submission-btn href="https://pancake.gnehs.net/" />
+        <cfp-submission-btn href="https://forms.gle/Hqp9Gn1sAiwDP3mK7" />
         <cfp-divider />
         <cfp-block-title>重要時程</cfp-block-title>
         <cfp-schedule />
