@@ -1,9 +1,11 @@
-import VueGtag from 'vue-gtag-next'
+import VueGtag from 'vue-gtag'
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(VueGtag, {
-    property: [
-      { id: 'UA-34467841-1' },
+    config: {
+      id: "UA-34467841-1",
+    },
+    includes: [
       { id: 'GTM-NPVBCDZ' }
     ]
   })
