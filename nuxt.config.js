@@ -45,6 +45,5 @@ export default defineNuxtConfig({
   },
   plugins: [
     '~/plugins/vue-gtag.client.js',
-    '~/plugins/vue-analytics.client.js',
   ]
 })
