@@ -21,7 +21,15 @@ export default defineNuxtConfig({
       }
     }
   },
-  modules: ['nuxt-jsonld'],
+  meta: {
+    script: [
+      { src: 'https://www.googletagmanager.com/gtag/js?id=UA-34467841-1', async: true },
+      { children: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-34467841-1');` },
+    ]
+  },
+  modules: [
+    'nuxt-jsonld'
+  ],
   css: [
     'normalize.css/normalize.css',
     '~/assets/sass/main.sass'
@@ -42,8 +50,5 @@ export default defineNuxtConfig({
         '/2022/cfp/undefined',
       ]
     }
-  },
-  plugins: [
-    '~/plugins/vue-gtag.client.js',
-  ]
+  }
 })
