@@ -43,17 +43,8 @@
         <cfp-agenda-type />
         <cfp-block-title>投稿主題</cfp-block-title>
         <p>SITCON 作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。<br>
-          任何與資訊科技、電腦技術相關的講題，我們都非常歡迎投稿！
-          除此之外，您也可以透過參與投稿者小聚或前往 SITCON 歷年網站（
-          <a href="https://sitcon.org/2013/" target="_blank">2013</a>、
-          <a href="https://sitcon.org/2014/" target="_blank">2014</a>、
-          <a href="https://sitcon.org/2015/" target="_blank">2015</a>、
-          <a href="https://sitcon.org/2016/" target="_blank">2016</a>、
-          <a href="https://sitcon.org/2017/" target="_blank">2017</a>、
-          <a href="https://sitcon.org/2018/" target="_blank">2018</a>、
-          <a href="https://sitcon.org/2019/" target="_blank">2019</a>、
-          <a href="https://sitcon.org/2020/" target="_blank">2020</a>、
-          <a href="https://sitcon.org/2021/" target="_blank">2021</a> ）查看過去的議程。
+          任何與資訊科技、電腦技術相關的講題，我們都非常歡迎投稿！<br>
+          除此之外，您也可以透過參與投稿者小聚或前往 SITCON 歷年網站（<a href="https://sitcon.org/2013/" target="_blank">2013</a>、<a href="https://sitcon.org/2014/" target="_blank">2014</a>、<a href="https://sitcon.org/2015/" target="_blank">2015</a>、<a href="https://sitcon.org/2016/" target="_blank">2016</a>、<a href="https://sitcon.org/2017/" target="_blank">2017</a>、<a href="https://sitcon.org/2018/" target="_blank">2018</a>、<a href="https://sitcon.org/2019/" target="_blank">2019</a>、<a href="https://sitcon.org/2020/" target="_blank">2020</a>、<a href="https://sitcon.org/2021/" target="_blank">2021</a>）查看過去的議程。
           <br><br>
           以下是我們選出以往的優良議程，提供給您參考：
         </p>
