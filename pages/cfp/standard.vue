@@ -41,7 +41,7 @@
         <cfp-schedule />
         <cfp-block-title>議程種類</cfp-block-title>
         <cfp-agenda-type />
-        <cfp-block-title>投稿主題範例</cfp-block-title>
+        <cfp-block-title>投稿主題</cfp-block-title>
         <p>SITCON 作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。<br>
           任何與資訊科技、電腦技術相關的講題，我們都非常歡迎投稿！
           除此之外，您也可以透過參與投稿者小聚或前往 SITCON 歷年網站（

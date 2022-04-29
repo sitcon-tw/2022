@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="session-type-card">
-      <div class="title">經驗分享形式</div>
+      <div class="title">經驗交流形式</div>
       <div class="description">不同於一般議程，在開放式議程中的經驗分享可以變得十分多元，我們期待講者透過分享自己在資訊領域遇到的難題和解決方式，並以此為開端，與聽眾碰撞出更多的論點與討論。例如：學測還是特殊選材？我如何在學科與術科中做選擇？
       </div>
     </div>
