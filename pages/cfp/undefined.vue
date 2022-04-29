@@ -47,7 +47,7 @@
           對於還在猶豫的講者們，以下是提供給各位參考的幾種議程形式範例：
         </p>
         <cfp-session-type-card />
-        <coc />
+        <cfp-coc />
       </cfp-glass-box>
       <cfp-glass-box>
         <cfp-block-title>投稿格式</cfp-block-title>
