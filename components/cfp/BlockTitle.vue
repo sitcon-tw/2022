@@ -7,6 +7,7 @@
 
 .cfp-title
   display: inline-block
+  word-break: keep-all
   font-family: 'Noto Sans TC', sans-serif
   font-size: 48px
   font-weight: 900
