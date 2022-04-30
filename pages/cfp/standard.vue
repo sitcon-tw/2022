@@ -54,7 +54,7 @@
         <p>Presentation 包含完整 30 分鐘的議程與 10 分鐘的問答時間，<strong>共 40 分鐘</strong>，讓您有充分的時間展示想法、描述經歷、和與會者交流。</p>
         <cfp-cards>
           <cfp-agenda-card href="https://youtu.be/5YjbEE-E2HA" src="/2022/imgs/cfp/prev-sessions/5YjbEE-E2HA.jpg" target="_blank">
-            How to hack CSGO 破壞他人遊戲體驗從這裡開始
+            How to hack CS:GO 破壞他人遊戲體驗從這裡開始
             （<a href="https://sitcon.org/2021/agenda/97b49c22-89b5-4c66-94d4-108b36db0c19" target="_blank">簡介</a>）
           </cfp-agenda-card>
           <cfp-agenda-card href="https://youtu.be/_lNPRlt6c2E" src="/2022/imgs/cfp/prev-sessions/_lNPRlt6c2E.jpg" target="_blank">
@@ -160,22 +160,15 @@
 
         <h3>稿件資訊</h3>
         <ul>
-          <li>投稿類型：<strong>必填</strong>、<strong>公開</strong>。請寫明所欲投稿為何種議程類型（Presentation、Double Espresso、Espresso）。</li>
+          <li>投稿類型 Type：<strong>必填</strong>、<strong>公開</strong>。請寫明所欲投稿為何種議程類型（Presentation、Double Espresso、Espresso）。</li>
           <li>題目 Title：<strong>必填</strong>、<strong>公開</strong>。請不要超出 20 字。</li>
-          <li>摘要 Abstract：<strong>必填</strong>、<strong>公開</strong>。建議含標點符號 150–250 字，使用於宣傳與網站公告。</li>
+          <li>摘要 Abstract：<strong>必填</strong>、<strong>公開</strong>。建議 150–250 字，使用於宣傳與網站公告。</li>
           <li>演講大綱 Outline：<strong>必填</strong>。請說明議程的內容大綱與時間分配。若為多位講者共同分享，請說明各個講者如何分配演講內容。</li>
-          <li>目標聽眾 Target Audience：<strong>必填</strong>。請說明您期待該議程的目標聽眾，為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。<br>
-            在這邊為您提供過往兩年的會眾比例：<br>
-            <ul>
-              <li>大學生：55%</li>
-              <li>高中生：25%</li>
-              <li>研究生：10%</li>
-              <li>社會人士：10%</li>
-            </ul>
-          </li>
+          <li>目標受眾 Target Audience：<strong>必填</strong>。請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。<br>
+            在這邊為您提供過往的會眾比例：大學生 55%、高中生 25%、研究生 10%、社會人士 10%</li>
           <li>先備知識 Prior Knowledge：<strong>必填</strong>、<strong>公開</strong>。請說明該議程的與會者所需具備的先備知識。例如：「能理解 Python 基礎語法」、「能熟練運用 Class 與 OOP」等。</li>
           <li>詳細說明 Description：<strong>必填</strong>。不限字數，請說明這個議程您認為重要的相關細節，以利審稿委員更瞭解您的議程。</li>
-          <li>附件 Attachment：<strong>選填</strong>。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您的議程的附件，請再三確認是否有開啟共用權限。</li>
+          <li>附件 Attachment：<strong>選填</strong>。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。</li>
         </ul>
 
         <cfp-submission-personal-info />
