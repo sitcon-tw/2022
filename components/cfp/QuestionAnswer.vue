@@ -11,7 +11,7 @@
         </cfp-question-box>
         <cfp-question-box>
             <template v-slot:title>Q：還有疑問怎麼辦？</template>
-            A：歡迎寄信至 &lt;session[at]sitcon.org&gt; 詢問，我們會儘速回應。
+            A：歡迎寄信至 <a href="mailto:session@sitcon.org">session@sitcon.org</a> 詢問，我們會儘速回應。
         </cfp-question-box>
     </div>
 </template>
