@@ -33,7 +33,7 @@
         <logo-cat-in-a-maze />
         <h1 class="text-center">開放式議程</h1>
         <cfp-divider />
-        <cfp-timer :ended-time="new Date('2022-06-26T23:59:00+08:00')" />
+        <cfp-timer :ended-time="new Date('2022-06-26T23:59:59+08:00')" />
         <cfp-submission-btn href="https://forms.gle/pzuULG94mB7ko2ao8" />
         <cfp-divider />
         <cfp-block-title>重要時程</cfp-block-title>
