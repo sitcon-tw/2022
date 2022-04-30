@@ -57,12 +57,12 @@
         <ul>
           <li>題目 Title：<strong>必填</strong>、<strong>公開</strong>。請不要超出 20 字。</li>
           <li>摘要 Abstract：<strong>必填</strong>、<strong>公開</strong>。建議 150–250 字，使用於宣傳與網站公告。</li>
-          <li>進行模式 Method : <strong>必填</strong>、<strong>公開</strong>，不限字數。請詳細說明該議程預計如何和會眾互動，以及是否需要額外的工具，此項目將幫助會眾預期該如何參與此議程。</li>
+          <li>進行模式 Method : <strong>必填</strong>、<strong>公開</strong>。不限字數，請詳細說明該議程預計如何和會眾互動，以及是否需要額外的工具，此項目將幫助會眾預期該如何參與此議程。</li>
           <li>議程大綱 Outline：<strong>必填</strong>。請說明該開放式議程的大綱及時間長度規劃。</li>
           <li>目標受眾 Target Audience：<strong>必填</strong>。請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「不知道該不該讀研究所的學生」等。</li>
           <li>先備知識 Prior Knowledge：<strong>必填</strong>、<strong>公開</strong>。請說明該議程的與會者所需具備的先備知識。例如：「能理解 Python 基礎語法」、「略懂 108 課綱現況」等。</li>
-          <li>詳細說明 Description：<strong>必填</strong>、<strong>不限字數</strong>。請說明這個議程您認為重要的相關細節，以利審稿委員更瞭解您的議程。</li>
-          <li>附件 Attachment：<strong>選填</strong>。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件。</li>
+          <li>詳細說明 Description：<strong>必填</strong>。不限字數，請說明這個議程您認為重要的相關細節，以利審稿委員更瞭解您的議程。</li>
+          <li>附件 Attachment：<strong>選填</strong>。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。</li>
         </ul>
 
         <cfp-submission-personal-info />
