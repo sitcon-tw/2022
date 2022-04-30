@@ -92,6 +92,6 @@
 <script setup>
 const pageTitle = ref('開放式議程')
 const title = ref('SITCON X：開放式議程徵稿')
-const description = ref('開放式議程跳脫講者對聽眾單向陳述式的演講，更加強調主講者和與會者的雙向交流。SITCON 作為學生展現自己的舞台，我們期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是一同探討學生相關議題等。')
+const description = ref('開放式議程跳脫講者對聽眾單向陳述式的演講，更加強調主講者和與會者的雙向交流。SITCON 作為學生展現自己的舞台，我們期待以學生及資訊為主體的投稿。')
 const image = ref('https://sitcon.org/2022/imgs/cfp/cfp-og.png')
 </script>

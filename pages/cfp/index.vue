@@ -74,7 +74,7 @@
         <p>企業合作歡迎聯繫 <a href="mailto:contact@sitcon.org">contact@sitcon.org</a></p>
         <div class="rad-btns">
           <cfp-rad-btn href="https://ocf.neticrm.tw/civicrm/contribute/transact?reset=1&id=55" content="個人贊助方案" />
-          <cfp-rad-btn href="#" content="索取贊助徵求書" style="display:none;"/>
+          <cfp-rad-btn href="#" content="索取贊助徵求書" style="display:none;" />
         </div>
       </cfp-rounded-glass-box>
 
@@ -85,7 +85,7 @@
 <script setup>
 const pageTitle = ref('Call for Papers')
 const title = ref('SITCON X - Cat in a Maze')
-const description = ref('在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每個人能夠向貓咪學習，換個思維邏輯面對迷惘的現況，保持著好奇心與探索的樂趣，跳脫框架創造屬於自己的美好未來！')
+const description = ref('在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每個人能夠向貓咪學習，保持著好奇心與探索的樂趣，跳脫原有的思維邏輯與框架，創造屬於自己的美好未來！')
 const image = ref('https://sitcon.org/2022/imgs/cfp/cfp-og.png')
 </script>
 <style lang="sass" scoped>
