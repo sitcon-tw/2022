@@ -178,7 +178,7 @@
           <li>附件 Attachment：<strong>選填</strong>。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您的議程的附件，請再三確認是否有開啟共用權限。</li>
         </ul>
 
-        <cfp-submission-persional-info />
+        <cfp-submission-personal-info />
         <br>
 
         <cfp-block-title>審稿方式</cfp-block-title>
