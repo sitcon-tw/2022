@@ -152,7 +152,7 @@
             格鬥遊戲 AI 開發經驗談
           </cfp-agenda-card>
         </cfp-cards>
-        <cfp-coc style="margin-top: 56px" />
+        <cfp-coc style="margin-top: 68px" />
       </cfp-glass-box>
       <cfp-glass-box>
         <cfp-block-title>投稿格式</cfp-block-title>
