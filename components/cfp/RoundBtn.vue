@@ -1,7 +1,7 @@
 <template>
-  <NuxtLink :to="href || to || null" class="round-btn">
+  <Component :is="href ? 'a' : to ? 'router-link' : 'div'" :to="href || to || null" class="round-btn">
     <slot />
-  </NuxtLink>
+  </Component>
 </template>
 
 <script>
