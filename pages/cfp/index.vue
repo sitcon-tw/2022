@@ -75,7 +75,6 @@
         <p>企業合作歡迎聯繫 <a href="mailto:contact@sitcon.org">contact@sitcon.org</a></p>
         <div class="rad-btns">
           <cfp-rad-btn href="https://ocf.neticrm.tw/civicrm/contribute/transact?reset=1&id=55" content="個人贊助方案" />
-          <cfp-rad-btn href="https://docs.google.com/forms/d/1DsjOn--g-pkUzdWBWzOkCbX8aF08LwlTOC7dcGPIGMs/" content="索取贊助徵求書" />
         </div>
       </cfp-rounded-glass-box>
 
