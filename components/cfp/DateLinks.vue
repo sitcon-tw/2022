@@ -27,7 +27,9 @@ export default {
 <style lang="sass" scoped>
 
 .date-links
-  position: relative
+  position: relative 
+  @media screen and (min-width: 1151px)  
+    min-height: 330px
   .date
     line-height: 1
     color: #32E0C4
