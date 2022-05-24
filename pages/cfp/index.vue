@@ -70,7 +70,7 @@
         <h3 class="text-center">但是⋯⋯我們真的只能當老鼠嗎？</h3>
         <p>不如，像貓咪一樣思考？以貓咪的個性，第一直覺想到的會是遇到迷宮時，直接破壞迷宮離開，或者是使用我們想不到的方式解決迷宮。同時貓咪相較於老鼠，對一切事物充滿好奇、敢於探索未知事物，不畏強權挑戰一切，是貓咪獨特的個性。<br>
           對於學生而言，充滿好奇、敢於探索未知事物相當重要，畢竟自己的未來要由自己來定義。當大家陷入迷惘的時候，比起使用老鼠告訴大家已經陷入迷惘了，不如讓我們可以看看貓咪、學學貓咪，換個思維邏輯去面對迷惘的現況，保持著好奇心與探索的樂趣。又或者跳脫框架，創造屬於自己的美好未來。</p>
-        <h3 id="request-for-sponsorship">SITCON 贊助徵求</h3>
+        <h3 id="request-for-sponsorship"><a href="#request-for-sponsorship"></a>SITCON 贊助徵求</h3>
         <p>SITCON 的舉辦，除了有賴眾多志工的努力，也需要金錢的支持。<br>如果您認同 SITCON 的理念，歡迎以行動支持 SITCON 的運作，讓更多交流產生！</p>
         <p>企業合作歡迎聯繫 <a href="mailto:contact@sitcon.org">contact@sitcon.org</a></p>
         <div class="rad-btns">

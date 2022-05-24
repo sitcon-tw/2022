@@ -11,7 +11,7 @@
     <div class="links">
       <cfp-round-btn to="/cfp/standard">一般議程</cfp-round-btn>
       <cfp-round-btn to="/cfp/undefined">開放式議程</cfp-round-btn>
-      <cfp-round-btn @click="scrollTo">支持我們</cfp-round-btn>
+      <cfp-round-btn href="#request-for-sponsorship" @click="scrollTo">支持我們</cfp-round-btn>
     </div>
   </div>
 </template>
@@ -27,8 +27,8 @@ export default {
 <style lang="sass" scoped>
 
 .date-links
-  position: relative 
-  @media screen and (min-width: 1151px)  
+  position: relative
+  @media screen and (min-width: 1151px)
     min-height: 330px
   .date
     line-height: 1
