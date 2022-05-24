@@ -11,18 +11,11 @@
     <div class="links">
       <cfp-round-btn to="/cfp/standard">一般議程</cfp-round-btn>
       <cfp-round-btn to="/cfp/undefined">開放式議程</cfp-round-btn>
-      <cfp-round-btn href="#request-for-sponsorship" @click="scrollTo">支持我們</cfp-round-btn>
+      <cfp-round-btn href="#request-for-sponsorship">支持我們</cfp-round-btn>
     </div>
   </div>
 </template>
 <script>
-export default {
-  methods: {
-    scrollTo() {
-      window.document.getElementById(`request-for-sponsorship`).scrollIntoView({ behavior: "smooth" })
-    }
-  }
-}
 </script>
 <style lang="sass" scoped>
 
