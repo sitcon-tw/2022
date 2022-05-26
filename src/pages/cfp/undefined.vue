@@ -1,32 +1,11 @@
  <template>
   <div>
-
-    <Head>
-      <!-- Primary Meta Tags -->
-      <Title>{{ pageTitle }}</Title>
-      <Meta name="title" :content="title" />
-      <Meta name="description" :content="description" />
-
-      <!-- Open Graph / Facebook -->
-      <Meta property="og:type" content="website" />
-      <Meta property="og:url" content="https://sitcon.org/2022/cfp/" />
-      <Meta property="og:site_name" content="SITCON 2022" />
-      <Meta property="og:title" :content="title" />
-      <Meta property="og:description" :content="description" />
-      <Meta property="og:image" :content="image" />
-
-      <!-- Twitter -->
-      <Meta property="twitter:card" content="summary_large_image" />
-      <Meta property="twitter:url" content="https://sitcon.org/2022/cfp/" />
-      <Meta property="twitter:title" :content="title" />
-      <Meta property="twitter:description" :content="description" />
-      <Meta property="twitter:image" :content="image" />
-
-      <!-- Icon -->
-      <Link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.ico" sizes="any" />
-      <Link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.png" sizes="any" />
-      <Link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.svg" type="image/svg+xml" />
-    </Head>
+    <GeneralHead
+      page-title="開放式議程"
+      title="SITCON X：開放式議程徵稿"
+      description="開放式議程跳脫講者對聽眾單向陳述式的演講，更加強調主講者和與會者的雙向交流。SITCON 作為學生展現自己的舞台，我們期待以學生及資訊為主體的投稿。"
+      image="https://sitcon.org/2022/imgs/cfp/cfp-og.png"
+      :cfp="true" />
     <div class="maze-background">
       <cfp-glass-box first-child>
         <cfp-back-btn />
@@ -41,7 +20,8 @@
         <cfp-block-title>議程種類</cfp-block-title>
         <cfp-agenda-type />
         <cfp-block-title>什麼是開放式議程？</cfp-block-title>
-        <p>在追求創新的時代，我們為講者提供了開放式議程這個選項，跳脫講者對聽眾單向陳述式的演講，開放式議程更加強調主講者和與會者的<strong>雙向交流</strong>。SITCON 作為學生展現自己的舞台，我們期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是一同探討學生相關議題等。
+        <p>在追求創新的時代，我們為講者提供了開放式議程這個選項，跳脫講者對聽眾單向陳述式的演講，開放式議程更加強調主講者和與會者的<strong>雙向交流</strong>。SITCON
+          作為學生展現自己的舞台，我們期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是一同探討學生相關議題等。
           <br>
           <br>
           對於還在猶豫的講者們，以下是我們提供的幾種議程形式範例：
@@ -88,10 +68,4 @@
       <Footer />
     </div>
   </div>
-</template>
-<script setup>
-const pageTitle = ref('開放式議程')
-const title = ref('SITCON X：開放式議程徵稿')
-const description = ref('開放式議程跳脫講者對聽眾單向陳述式的演講，更加強調主講者和與會者的雙向交流。SITCON 作為學生展現自己的舞台，我們期待以學生及資訊為主體的投稿。')
-const image = ref('https://sitcon.org/2022/imgs/cfp/cfp-og.png')
-</script>
+</template> 

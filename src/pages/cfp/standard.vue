@@ -1,32 +1,12 @@
 <template>
   <div>
 
-    <Head>
-      <!-- Primary Meta Tags -->
-      <Title>{{ pageTitle }}</Title>
-      <Meta name="title" :content="title" />
-      <Meta name="description" :content="description" />
-
-      <!-- Open Graph / Facebook -->
-      <Meta property="og:type" content="website" />
-      <Meta property="og:url" content="https://sitcon.org/2022/cfp/" />
-      <Meta property="og:site_name" content="SITCON 2022" />
-      <Meta property="og:title" :content="title" />
-      <Meta property="og:description" :content="description" />
-      <Meta property="og:image" :content="image" />
-
-      <!-- Twitter -->
-      <Meta property="twitter:card" content="summary_large_image" />
-      <Meta property="twitter:url" content="https://sitcon.org/2022/cfp/" />
-      <Meta property="twitter:title" :content="title" />
-      <Meta property="twitter:description" :content="description" />
-      <Meta property="twitter:image" :content="image" />
-
-      <!-- Icon -->
-      <Link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.ico" sizes="any" />
-      <Link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.png" sizes="any" />
-      <Link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.svg" type="image/svg+xml" />
-    </Head>
+    <GeneralHead
+      page-title="一般議程"
+      title="SITCON X：一般議程徵稿"
+      description="一般議程依據時長分為 Presentation（四十分鐘）、Double Expresso（二十分鐘）與 Espresso （十分鐘）三種。SITCON 作為學生展現自己的舞台，我們期待以學生及資訊為主體的投稿。"
+      image="https://sitcon.org/2022/imgs/cfp/cfp-og.png"
+      :cfp="true" />
 
     <div class="maze-background">
       <cfp-glass-box first-child>
@@ -44,9 +24,13 @@
         <cfp-block-title>投稿主題</cfp-block-title>
         <p>SITCON 作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。<br>
           任何與資訊科技、電腦技術相關的講題，我們都非常歡迎投稿！<br>
-          除此之外，您也可以透過參與投稿者小聚或前往 SITCON 歷年網站（<a href="https://sitcon.org/2013/" target="_blank">2013</a>、<a href="https://sitcon.org/2014/" target="_blank">2014</a>、<a href="https://sitcon.org/2015/" target="_blank">2015</a>、<a href="https://sitcon.org/2016/" target="_blank">2016</a>、<a
-             href="https://sitcon.org/2017/" target="_blank">2017</a>、<a href="https://sitcon.org/2018/" target="_blank">2018</a>、<a href="https://sitcon.org/2019/" target="_blank">2019</a>、<a href="https://sitcon.org/2020/" target="_blank">2020</a>、<a href="https://sitcon.org/2021/"
-             target="_blank">2021</a>）查看過去的議程。
+          除此之外，您也可以透過參與投稿者小聚或前往 SITCON 歷年網站（<a href="https://sitcon.org/2013/" target="_blank">2013</a>、<a href="https://sitcon.org/2014/"
+            target="_blank">2014</a>、<a href="https://sitcon.org/2015/" target="_blank">2015</a>、<a href="https://sitcon.org/2016/"
+            target="_blank">2016</a>、<a
+            href="https://sitcon.org/2017/" target="_blank">2017</a>、<a href="https://sitcon.org/2018/" target="_blank">2018</a>、<a
+            href="https://sitcon.org/2019/" target="_blank">2019</a>、<a href="https://sitcon.org/2020/" target="_blank">2020</a>、<a
+            href="https://sitcon.org/2021/"
+            target="_blank">2021</a>）查看過去的議程。
           <br><br>
           以下是我們選出以往的優良議程，提供給您參考：
         </p>
@@ -194,10 +178,4 @@
       <Footer />
     </div>
   </div>
-</template>
-<script setup>
-const pageTitle = ref('一般議程')
-const title = ref('SITCON X：一般議程徵稿')
-const description = ref('一般議程依據時長分為 Presentation（四十分鐘）、Double Expresso（二十分鐘）與 Espresso （十分鐘）三種。SITCON 作為學生展現自己的舞台，我們期待以學生及資訊為主體的投稿。')
-const image = ref('https://sitcon.org/2022/imgs/cfp/cfp-og.png')
-</script>
+</template> 
