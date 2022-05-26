@@ -12,8 +12,13 @@
     "vue": "^3.2.33",
     "vue-router": "^4.0.14"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
     "unplugin-vue-components": "^0.19.5",
     "vite": "^2.9.5",
     "vite-ssg": "^0.20.0"
