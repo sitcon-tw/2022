@@ -8,7 +8,7 @@ import jsonld from './assets/jsonld';
 
   <Head>
     <component :is="'script'" type="application/ld+json">
-      {{ jsonld }}
+      {{ JSON.stringify(jsonld) }}
     </component>
   </Head>
   <RouterView />
