@@ -1,7 +1,10 @@
 <template>
-  <NuxtLink :to="href || to || null" class="round-btn">
+  <a :href="href" v-if="href" class="round-btn">
     <slot />
-  </NuxtLink>
+  </a>
+  <router-link :to="to" v-else-if="to" class="round-btn">
+    <slot />
+  </router-link>
 </template>
 
 <script>

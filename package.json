@@ -1,20 +1,21 @@
 {
   "name": "sitcon-2022",
+  "version": "0.0.0",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
-  },
-  "devDependencies": {
-    "nuxt": "^3.0.0-rc.1",
-    "ufo": "^0.8.3"
+    "dev": "vite",
+    "build": "vite-ssg build",
+    "preview": "vite preview --port 5050"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
-    "npm": "^8.7.0",
-    "nuxt-jsonld": "^2.0.3",
-    "sass": "^1.50.1",
-    "vue": "^3.2.33"
+    "@vueuse/head": "^0.7.6",
+    "sass": "^1.52.1",
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "unplugin-vue-components": "^0.19.5",
+    "vite": "^2.9.5",
+    "vite-ssg": "^0.20.0"
   }
 }

@@ -15,7 +15,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v2-beta
       with:
-        node-version: '14.x'
+        node-version: '18.x'
     - name: Cache dependencies
       uses: actions/cache@v2
       with:
@@ -26,13 +26,9 @@ jobs:
     - name: Install npm packages
       run: npm install
     - name: Generate Pages
-      run: npm run generate 
-    # 1. move /2022/ all files to /
-    # https://github.com/nuxt/framework/issues/4581 workaround 
-    # 2. copy /index.html as /404.html & /200.html
+      run: npm run build 
     - name: Fixed index.html
       run: |
-        mv ./dist/2022/* ./dist/
         cp ./dist/index.html ./dist/404.html 
         cp ./dist/index.html ./dist/200.html
     - name: Deploy to GitHub Pages

@@ -1,31 +1,29 @@
-# SITCON 2022
+# sitcon-2022
 
-這裡是 SITCON 2022 的網站，建議使用 Node.js v14 或 v16。
+This template should help get you started developing with Vue 3 in Vite.
 
-We recommend to look at the [documentation](https://v3.nuxtjs.org).
+## Recommended IDE Setup
 
-## Setup
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
-Make sure to install the dependencies
+## Customize configuration
 
-```bash
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
 npm install
 ```
 
-## Development
+### Compile and Hot-Reload for Development
 
-Start the development server on http://localhost:3000
-
-```bash
+```sh
 npm run dev
 ```
 
-## Production
+### Compile and Minify for Production
 
-Build the application for production:
-
-```bash
+```sh
 npm run build
 ```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
