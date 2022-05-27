@@ -3,7 +3,7 @@
     <div
       class="agenda-teble"
       :style="{
-        gridTemplateColumns: ['[time]', 'auto', gridTemplateColumns.join(' 1fr ') + '1fr'].join(' '),
+        gridTemplateColumns: ['[🥞time]', 'auto', gridTemplateColumns.join(' 1fr ') + '1fr', '[🥞end]'].join(' '),
         gridTemplateRows: gridTemplateRows.join(' auto ')
       }">
       <!-- time -->
@@ -11,7 +11,7 @@
         class="time-item"
         v-for="time of times"
         :style="{
-          'grid-column-start': `time`,
+          'grid-column-start': `🥞time`,
           'grid-row-start': `🥞${parseTime(time)}`,
         }">
         {{ time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
@@ -124,12 +124,13 @@ export default {
           'grid-row': `${start} / ${end}`,
         })
       } else {
-
         let roomStart = Math.min(...session.broadcast.map(x => this.rooms.indexOf(x)))
         let roomEnd = Math.max(...session.broadcast.map(x => this.rooms.indexOf(x)))
+        roomStart = this.rooms[roomStart] || 'time'
+        roomEnd = this.rooms[roomEnd + 1] || 'end'
         return ({
-          'grid-column-start': `🥞${this.rooms[roomStart]}`,
-          'grid-column-end': `🥞${this.rooms[roomEnd + 1]}`,
+          'grid-column-start': `🥞${roomStart}`,
+          'grid-column-end': `🥞${roomEnd}`,
           'grid-row': `${start} / ${end}`,
         })
       }
