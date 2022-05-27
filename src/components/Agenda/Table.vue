@@ -90,20 +90,18 @@ export default {
     },
     activeSession() {
       if (this.$route.meta.id) {
-        this.sessionModal = true;
         return this.sessionData.sessions.find(x => x.id === this.$route.meta.id)
       }
-    }
+    },
   },
   mounted() {
     if (this.$route.meta.id) {
-      this.openModel(this.sessionData.sessions.filter(x => x.id === id)[0]);
+      this.sessionModal = true
     }
   },
   watch: {
-    sessionModal(val) {
-      if (!val) {
-        this.activeSession = null
+    sessionModal(from, to) {
+      if (to) {
         this.$router.push(`/agenda/`)
       }
     }
@@ -138,6 +136,7 @@ export default {
     },
     openModel(session) {
       this.$router.push(`/agenda/${session.id}`)
+      this.sessionModal = true
     }
   }
 
