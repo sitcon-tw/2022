@@ -65,7 +65,7 @@
           <li>深入學生群體</li>
           <li>推廣產品內容</li>
         </ul>
-        <p>如果您也認同 SITCON 的理念，歡迎以行動支持 SITCON 的運作，點擊下方「個人贊助方案」，您的支持將會成為我們的動力，讓更多學生能在舞台上展現自我、讓資訊教育遍及臺灣的每個角落！</p>
+        <p>如果您也認同 SITCON 的理念，歡迎以行動支持 SITCON 的運作，點擊下方「<a href="https://ocf.neticrm.tw/civicrm/contribute/transact?reset=1&id=55" target="_blabk">個人贊助方案</a>」，您的支持將會成為我們的動力，讓更多學生能在舞台上展現自我、讓資訊教育遍及臺灣的每個角落！</p>
         <p>若您有興趣成為我們的贊助夥伴，歡迎透過 <a href="mailto:contact@sitcon.org">contact@sitcon.org</a> 與我們聯繫！</p>
 
         <div class="rad-btns">
@@ -76,7 +76,7 @@
       <Footer />
     </div>
   </div>
-</template> 
+</template>
 <style lang="sass" scoped>
 
 .cfp-main-page
