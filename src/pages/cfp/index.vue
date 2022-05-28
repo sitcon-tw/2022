@@ -173,7 +173,7 @@
     &:before
       content: ''
       position: absolute
-      bottom: 20px
+      bottom: -10px
       right: 100px
       width: 212px
       height: 212px
