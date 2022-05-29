@@ -57,6 +57,7 @@
           <li>舉辦逾 400 場聚會和講座、7 場夏令營</li>
           <li>扶植近 1,000 名熱愛資訊的志工</li>
         </ul>
+        <img class="the-donut-cat" src="/imgs/cfp/cat.png" />
 
         <p>此外，我們也樂見企業與學生的近距離交流，成為我們的合作夥伴您可以：</p>
         <ul>
@@ -65,8 +66,10 @@
           <li>深入學生群體</li>
           <li>推廣產品內容</li>
         </ul>
-        <p>如果您也認同 SITCON 的理念，歡迎以行動支持 SITCON 的運作，點擊下方「<a href="https://ocf.neticrm.tw/civicrm/contribute/transact?reset=1&id=55" target="_blabk">個人贊助方案</a>」，您的支持將會成為我們的動力，讓更多學生能在舞台上展現自我、讓資訊教育遍及臺灣的每個角落！</p>
-        <p>若您有興趣成為我們的贊助夥伴，歡迎點擊下方「<a href="https://i.sitcon.org/2022cfs-form" target="_blabk">索取贊助徵求書</a>」，了解詳細合作方案，或是利用 <a href="mailto:contact@sitcon.org">contact@sitcon.org</a> 聯絡我們，商討更多的合作方式！</p>
+        <p>如果您也認同 SITCON 的理念，歡迎以行動支持 SITCON 的運作，點擊下方「<a href="https://ocf.neticrm.tw/civicrm/contribute/transact?reset=1&id=55"
+            target="_blabk">個人贊助方案</a>」，您的支持將會成為我們的動力，讓更多學生能在舞台上展現自我、讓資訊教育遍及臺灣的每個角落！</p>
+        <p>若您有興趣成為我們的贊助夥伴，歡迎點擊下方「<a href="https://i.sitcon.org/2022cfs-form" target="_blabk">索取贊助徵求書</a>」，了解詳細合作方案，或是利用 <a
+            href="mailto:contact@sitcon.org">contact@sitcon.org</a> 聯絡我們，商討更多的合作方式！</p>
 
         <div class="rad-btns">
           <cfp-rad-btn href="https://ocf.neticrm.tw/civicrm/contribute/transact?reset=1&id=55" content="個人贊助方案" />
@@ -169,20 +172,18 @@
     flex-direction: column
 
 .cat-background
+  @media screen and (max-width: 959px)
+    .the-donut-cat
+      display: none
   @media screen and (min-width: 960px)
     position: relative
-    &:before
-      content: ''
-      position: absolute
-      bottom: -10px
-      right: 100px
+    .the-donut-cat
+      float: right
+      object-fit: contain
       width: 212px
       height: 212px
-      background-image: url(/imgs/cfp/cat.png)
-      background-repeat: no-repeat
-      background-size: contain
-      background-position: bottom right
       animation: floating-cat-animation 10s ease-in-out infinite
+      user-select: none
 
 @keyframes floating-cat-animation
   from
