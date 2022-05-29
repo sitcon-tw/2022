@@ -70,6 +70,7 @@
 
         <div class="rad-btns">
           <cfp-rad-btn href="https://ocf.neticrm.tw/civicrm/contribute/transact?reset=1&id=55" content="個人贊助方案" />
+          <cfp-rad-btn href="https://i.sitcon.org/2022cfs-form" content="索取贊助徵求書" />
         </div>
       </cfp-rounded-glass-box>
 
