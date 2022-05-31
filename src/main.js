@@ -7,7 +7,7 @@ export const createApp = ViteSSG(
   {
     base: '/2022/',
     routes: [
-      // 
+      //
       ...Object.entries(import.meta.glob('./pages/**/*.vue')).map(
         ([p, component]) => {
           const PAGE_DIR = '../pages'
@@ -39,9 +39,21 @@ export const createApp = ViteSSG(
             id: x,
           }
         }))
-    ]
+    ],
+    scrollBehavior(to, from, savedPosition) {
+      if (to.hash) {
+        return {
+          el: to.hash,
+          behavior: 'smooth',
+        }
+      }
+      if (savedPosition) {
+        return savedPosition
+      }
+      return { x: 0, y: 0 }
+    }
   },
   ({ app, router, routes, isClient, initialState }) => {
 
   },
-) 
+)

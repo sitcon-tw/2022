@@ -81,20 +81,6 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  mounted() {
-    // scroll to hash
-    if (location.hash) {
-      const hash = location.hash.substring(1);
-      const element = document.getElementById(hash);
-      if (element) {
-        element.scrollIntoView();
-      }
-    }
-  }
-}
-</script>
 <style lang="sass" scoped>
 
 .cfp-main-page
