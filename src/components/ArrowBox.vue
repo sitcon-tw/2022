@@ -16,10 +16,11 @@
   padding: 36px
   min-height: 50vh
   width: calc(100vw - 10px)
-  margin: 5px
+  margin: 5px auto
   border-radius: var(--border-radius)
   border: var(--border-width) solid var(--border-color)
   position: relative
+  width: min(1280px,95vw)
   .arrow_top
     position: absolute
     bottom: calc((var(--border-width) * -1.3361) + 14.459px)
@@ -40,6 +41,15 @@
     transform: rotate(-45deg)
     border-radius: var(--border-radius)
     z-index: 1
+  @media (max-width: 768px)
+    padding: 24px
+    --border-width: 4px
+    --arrow-width: 20px
+    --border-radius: 24px
+    .arrow_top
+      bottom: 1px
+    .arrow_bottom
+      bottom: -11px
   &::after
     content: ""
     position: absolute
@@ -47,7 +57,7 @@
     bottom: 0
     width: var(--arrow-dimmer-width)
     height: var(--border-width)
-    background: #000
+    background: var(--background-color)
     transform: translateY(var(--border-width))
   &::before
     content: ""

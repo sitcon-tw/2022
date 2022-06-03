@@ -7,6 +7,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AgendaTable: typeof import('./src/components/Agenda/Table.vue')['default']
     ArrowBox: typeof import('./src/components/ArrowBox.vue')['default']
+    BlockTitle: typeof import('./src/components/BlockTitle.vue')['default']
     CfpAgendaCard: typeof import('./src/components/cfp/AgendaCard.vue')['default']
     CfpAgendaType: typeof import('./src/components/cfp/AgendaType.vue')['default']
     CfpBackBtn: typeof import('./src/components/cfp/BackBtn.vue')['default']
@@ -34,6 +35,7 @@ declare module '@vue/runtime-core' {
     GeneralHead: typeof import('./src/components/GeneralHead.vue')['default']
     LogoCatInAMaze: typeof import('./src/components/logo/CatInAMaze.vue')['default']
     LogoSitcon: typeof import('./src/components/logo/Sitcon.vue')['default']
+    MintBox: typeof import('./src/components/MintBox.vue')['default']
     Modal: typeof import('./src/components/modal.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
