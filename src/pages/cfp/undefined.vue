@@ -1,5 +1,5 @@
  <template>
-  <div>
+  <div class="cfp-page">
     <GeneralHead
       page-title="開放式議程"
       title="SITCON X：開放式議程徵稿"
@@ -68,4 +68,4 @@
       <Footer />
     </div>
   </div>
-</template> 
+</template>
