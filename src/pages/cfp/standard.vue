@@ -175,7 +175,7 @@
       <cfp-glass-box last-child>
         <cfp-question-answer />
       </cfp-glass-box>
-      <Footer />
+      <cfp-footer />
     </div>
   </div>
 </template>
