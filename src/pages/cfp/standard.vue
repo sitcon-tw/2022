@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cfp-page">
 
     <GeneralHead
       page-title="一般議程"
@@ -178,4 +178,4 @@
       <Footer />
     </div>
   </div>
-</template> 
+</template>

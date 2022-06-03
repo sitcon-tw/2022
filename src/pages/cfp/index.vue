@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cfp-page">
     <GeneralHead
       page-title="Call for Papers"
       title="SITCON X - Cat in a Maze"
