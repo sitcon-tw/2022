@@ -38,7 +38,16 @@ export const createApp = ViteSSG(
           meta: {
             id: x,
           }
-        }))
+        })),
+      {
+        path: '/404',
+        name: '404',
+        component: () => import('@/pages/404')
+      },
+      {
+        path: '/:pathMatch(.*)',
+        redirect: '/404'
+      }
     ],
     scrollBehavior(to, from, savedPosition) {
       if (to.hash) {
