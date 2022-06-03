@@ -6,6 +6,7 @@ import '@vue/runtime-core'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AgendaTable: typeof import('./src/components/Agenda/Table.vue')['default']
+    ArrowBox: typeof import('./src/components/ArrowBox.vue')['default']
     CfpAgendaCard: typeof import('./src/components/cfp/AgendaCard.vue')['default']
     CfpAgendaType: typeof import('./src/components/cfp/AgendaType.vue')['default']
     CfpBackBtn: typeof import('./src/components/cfp/BackBtn.vue')['default']
