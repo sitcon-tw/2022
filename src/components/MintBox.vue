@@ -13,5 +13,6 @@
     --padding: 24px
   &+.mint-box
     margin-top: var(--padding)
-
+  @media screen and (prefers-color-scheme: light)
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 </style>
