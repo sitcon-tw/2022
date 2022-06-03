@@ -17,6 +17,7 @@ declare module '@vue/runtime-core' {
     CfpCoc: typeof import('./src/components/cfp/coc.vue')['default']
     CfpDateLinks: typeof import('./src/components/cfp/DateLinks.vue')['default']
     CfpDivider: typeof import('./src/components/cfp/Divider.vue')['default']
+    CfpFooter: typeof import('./src/components/cfp/Footer.vue')['default']
     CfpGlassBox: typeof import('./src/components/cfp/GlassBox.vue')['default']
     CfpPrevSite: typeof import('./src/components/cfp/PrevSite.vue')['default']
     CfpQuestionAnswer: typeof import('./src/components/cfp/QuestionAnswer.vue')['default']

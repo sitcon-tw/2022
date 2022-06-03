@@ -77,7 +77,7 @@
         </div>
       </cfp-rounded-glass-box>
 
-      <Footer />
+      <cfp-footer />
     </div>
   </div>
 </template>
