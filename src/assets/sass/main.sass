@@ -1,6 +1,12 @@
 :root
-  --background-color: #373737
-  --text-color: #fff
+  --background-color: #fff
+  --text-color: #373737
+@media screen and (prefers-color-scheme: dark)
+  :root
+    --background-color: #373737
+    --text-color: #fff
+
+
 body,html
   font-family: 'Noto Sans TC', sans-serif
   background-color: var(--background-color)

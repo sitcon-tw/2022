@@ -7,7 +7,7 @@
 h1
   font-size: 48px
   font-weight: bold
-  color: #FCFCFC
+  color: var(--text-color)
   margin: 0
   padding: 0
   margin-bottom: .5em
