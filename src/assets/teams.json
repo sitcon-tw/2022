@@ -1,0 +1,738 @@
+{
+  "總召組": {
+    "name": "總召組",
+    "intro": "掌握協調年會籌備進度，主持核心討論及決策。",
+    "members": [
+      {
+        "name": "小知",
+        "type": "總召",
+        "emailHash": "a6b6898ed8d1c570e68b6629158f51fb"
+      },
+      {
+        "name": "Leon",
+        "type": "副召",
+        "emailHash": "913e70e0bc08342c187643da82c684cd"
+      }
+    ]
+  },
+  "行政組": {
+    "name": "行政組",
+    "intro": "負責維持年會常務行政事務；工作分為人事、票務，負責工作人員登記、與會人員與報名事宜。",
+    "members": [
+      {
+        "name": "Wama",
+        "type": "組長",
+        "emailHash": "a238d9c4b1f0a5685f7c32e3a39d2120"
+      },
+      {
+        "name": "TC",
+        "type": "組員",
+        "emailHash": "9ae8ff2c7e70c5a72b26898f6d2d066f"
+      },
+      {
+        "name": "土撥鼠",
+        "type": "組員",
+        "emailHash": "66d031d668718463ef31b94926086e89"
+      },
+      {
+        "name": "泡麵",
+        "type": "組員",
+        "emailHash": "bf7b9b627a2729d947ab881572f2c713"
+      }
+    ]
+  },
+  "議程組": {
+    "name": "議程組",
+    "intro": "議程組負責一切與議程相關的事情，舉凡投稿與審稿、講者聯繫、Keynote 與論壇的安排，都是議程組的工作範圍，此外，議程組也負責一部分的大會活動。",
+    "members": [
+      {
+        "name": "Sean",
+        "type": "組長",
+        "emailHash": "598f6906350d4774bb4385f4e5121f66"
+      },
+      {
+        "name": "Peter/李賜明",
+        "type": "副組長",
+        "emailHash": "a06e537965b337f802913b69848c4289"
+      },
+      {
+        "name": "Arnoldsky",
+        "type": "組員",
+        "emailHash": "98688144e5d35e16ecdbcadd7d0880dd"
+      },
+      {
+        "name": "Bernice",
+        "type": "組員",
+        "emailHash": "95562b9b88a229980bfd935edcf38edb"
+      },
+      {
+        "name": "Hamster",
+        "type": "組員",
+        "emailHash": "01567616be21ba986fed8b57b5110178"
+      },
+      {
+        "name": "Jayinnn",
+        "type": "組員",
+        "emailHash": "e4413693c34974fac75a438ffe2cc630"
+      },
+      {
+        "name": "Jease",
+        "type": "組員",
+        "emailHash": "efe0f9af832583d608b1994e68c4c33a"
+      },
+      {
+        "name": "KJ",
+        "type": "組員",
+        "emailHash": "280af86d5e42a6a3bc7fa0ada9f0e362"
+      },
+      {
+        "name": "Misawai",
+        "type": "組員",
+        "emailHash": "506af9fb6b456eea645adc14943a32b3"
+      },
+      {
+        "name": "家答",
+        "type": "組員",
+        "emailHash": "fd7f60e68311eea3de7c840fd1f53b0a"
+      },
+      {
+        "name": "橋毅",
+        "type": "組員",
+        "emailHash": "3b5c1e780a3ca15b76c59ac2f3a2109f"
+      },
+      {
+        "name": "白兔",
+        "type": "組員",
+        "emailHash": "18eb366edd0ccc5725ce36e0038cc862"
+      },
+      {
+        "name": "綠葉",
+        "type": "組員",
+        "emailHash": "d34b64266f50a6aefbdccaabc15d3dbb"
+      }
+    ]
+  },
+  "場務組": {
+    "name": "場務組",
+    "intro": "SITCON 場務組主要負責年會的機動人力、動線、餐飲、報到、物流的規劃，是人數最多的一組，適合最有熱情、最有活力的朋友們！",
+    "members": [
+      {
+        "name": "CPY",
+        "type": "組長",
+        "emailHash": "2162367e6dd93f5c602644317af3cfcd"
+      },
+      {
+        "name": "siriuskoan",
+        "type": "餐飲股股長",
+        "emailHash": "4e5651bf63f254632eeedb8a17878222"
+      },
+      {
+        "name": "CSY54",
+        "type": "報到股股長",
+        "emailHash": "c379feb8a2073843af848ba6020d9805"
+      },
+      {
+        "name": "Vincent55",
+        "type": "機動股股長",
+        "emailHash": "cdade6f4871313de8425f02471da9679"
+      },
+      {
+        "name": "佳硯",
+        "type": "防疫股股長",
+        "emailHash": "17c471c91a01b8f592861f0612e13c62"
+      },
+      {
+        "name": "咪路",
+        "type": "防疫股副股長",
+        "emailHash": "0d3eba022a4e0eda175441d9cf1e9061"
+      },
+      {
+        "name": "洋蔥",
+        "type": "組員",
+        "emailHash": "a4e1a23a50b9a8c3ab2100e52a71460b"
+      },
+      {
+        "name": "年糕",
+        "type": "組員",
+        "emailHash": "058a537ecca38f27453cf830f8c830e5"
+      },
+      {
+        "name": "Yummy",
+        "type": "組員",
+        "emailHash": "46976ccc6c658049a6ba7e8901ab8116"
+      },
+      {
+        "name": "sherry",
+        "type": "組員",
+        "emailHash": "834ba4cb1a67889559c90f18cc9c6224"
+      },
+      {
+        "name": "Chummy",
+        "type": "組員",
+        "emailHash": "c840f49e781c1e3201bb2baf943dd7d1"
+      },
+      {
+        "name": "舟",
+        "type": "組員",
+        "emailHash": "2b785d5c3d59f480fa7a92f9d2a8e5e9"
+      },
+      {
+        "name": "skyling",
+        "type": "組員",
+        "emailHash": "3a2167eae63b246f7f9234b984a07d99"
+      },
+      {
+        "name": "阿肥",
+        "type": "組員",
+        "emailHash": "33e5296caa4f6be2487fc64fcbb88cf2"
+      },
+      {
+        "name": "御粽",
+        "type": "組員",
+        "emailHash": "e5446445eba4c082f85a49b698776576"
+      },
+      {
+        "name": "HeiTang",
+        "type": "組員",
+        "emailHash": "3aaae5a6c03cee93c310e242bbd675e6"
+      },
+      {
+        "name": "劉軒",
+        "type": "組員",
+        "emailHash": "a30f84712c2a85d94aa7d91298fa91e8"
+      },
+      {
+        "name": "HNO2",
+        "type": "組員",
+        "emailHash": "0d15d42c648905a5fb9bf93023324f3a"
+      },
+      {
+        "name": "Peggy",
+        "type": "組員",
+        "emailHash": "4926b19b5def0d3979f403a9e23d5c68"
+      },
+      {
+        "name": "Jess",
+        "type": "組員",
+        "emailHash": "92b387678bacb8e239b05c8980d906a7"
+      },
+      {
+        "name": "yc油成",
+        "type": "組員",
+        "emailHash": "bf5797545199284bfc73b5a372f49f8c"
+      },
+      {
+        "name": "saboten",
+        "type": "組員",
+        "emailHash": "d5b2770a61614382244f335158359b99"
+      },
+      {
+        "name": "KT",
+        "type": "組員",
+        "emailHash": "1a80ec287b703ce564b21e90dfc39016"
+      },
+      {
+        "name": "jonafk555",
+        "type": "組員",
+        "emailHash": "c59b48c9e5ae68a2535aaabc636e8681"
+      },
+      {
+        "name": "小瓜呆",
+        "type": "組員",
+        "emailHash": "de92e403a228bbd8921f45976263e5a6"
+      },
+      {
+        "name": "Yan",
+        "type": "組員",
+        "emailHash": "ce1a3d8311f04e3929cb76ff99dda89f"
+      },
+      {
+        "name": "Henry",
+        "type": "組員",
+        "emailHash": "95edca6e1347ff61050bac616be960ec"
+      },
+      {
+        "name": "Kalvin",
+        "type": "組員",
+        "emailHash": "09a8bd6b62ac28008a566972ad2309b4"
+      },
+      {
+        "name": "simba",
+        "type": "組員",
+        "emailHash": "9e5aa1c6c977843583d9b02fe77a2e03"
+      },
+      {
+        "name": "Willy_Awkward",
+        "type": "組員",
+        "emailHash": "211ef93f613a87ab9f9294f131cfa599"
+      },
+      {
+        "name": "Kiri487",
+        "type": "組員",
+        "emailHash": "72571dd4295f99a8940630c85221362a"
+      },
+      {
+        "name": "尚哲（Jack Liu）",
+        "type": "組員",
+        "emailHash": "d099b6bcffd429e94d19607091b9616c"
+      },
+      {
+        "name": "ItisCaleb",
+        "type": "組員",
+        "emailHash": "40368e33ad3c049dde9bf1aecc0df58b"
+      },
+      {
+        "name": "安安",
+        "type": "組員",
+        "emailHash": "394a33c4c8edd1dea632a2afee0b058e"
+      },
+      {
+        "name": "家弘",
+        "type": "組員",
+        "emailHash": "66ef9d40cbe4219398b41846e6248992"
+      },
+      {
+        "name": "shuan",
+        "type": "組員",
+        "emailHash": "c1b2a6b3a2d31bdf97bb8ff6284e68bf"
+      },
+      {
+        "name": "星星",
+        "type": "組員",
+        "emailHash": "9a6168159e18086e733a6552e31c611d"
+      },
+      {
+        "name": "Ann",
+        "type": "組員",
+        "emailHash": "994c26ba0172f6bd48e461685243f6d4"
+      },
+      {
+        "name": "lbwei",
+        "type": "組員",
+        "emailHash": "a35a7b39b06f44cb983260500847db33"
+      },
+      {
+        "name": "鴨嘴獸",
+        "type": "組員",
+        "emailHash": "1105fc8ec9364f8e8427b1e53f12e5ef"
+      },
+      {
+        "name": "阿魚",
+        "type": "組員",
+        "emailHash": "a1972d822499003b8589e8bf00c9c1e8"
+      },
+      {
+        "name": "Sciuridae 松鼠",
+        "type": "物流股股長",
+        "emailHash": "60ce6b00bae88e0ff15c9480a9ce92f5"
+      },
+      {
+        "name": "TU",
+        "type": "組員",
+        "emailHash": "e10d7d1cecf2b1d8bf2bcb8cacacff57"
+      },
+      {
+        "name": "Justin Lin",
+        "type": "組員",
+        "emailHash": "1ca72aef2ae3152cdc8b2f898d4bb986"
+      }
+    ]
+  },
+  "設計組": {
+    "name": "設計組",
+    "intro": "負責年會主視覺設計、網站設計、相關紀念品發想<del>挖坑</del>等事宜，開場動畫與許多會場內的印刷品也都是由設計組設計。",
+    "members": [
+      {
+        "name": "小yun",
+        "type": "組長",
+        "emailHash": "b7b58c3619604d527a1a028558a1e67c"
+      },
+      {
+        "name": "飄飄",
+        "type": "副組長",
+        "emailHash": "55973dd99a6281df2e3901d5f3faf539"
+      },
+      {
+        "name": "小t",
+        "type": "小精靈",
+        "emailHash": "09e29b020b5a4c4bc254dfd9fa2d4dfd"
+      },
+      {
+        "name": "銳銳",
+        "type": "組員",
+        "emailHash": "63e8d77f1f3a7a34e252a9c30fff2aa2"
+      },
+      {
+        "name": "蛋糕",
+        "type": "組員",
+        "emailHash": "dae2323d35d594e3248df1286e441303"
+      },
+      {
+        "name": "tastyfresh",
+        "type": "組員",
+        "emailHash": "bfc8b320e47472ab0fbdb91d26d17018"
+      },
+      {
+        "name": "Lanx",
+        "type": "組員",
+        "emailHash": "b12e7d7859f2115e40eb1e8ec5b34a37"
+      },
+      {
+        "name": "Nuss",
+        "type": "組員",
+        "emailHash": "fc9ed632a9a22b500e1d928850e09f4e"
+      },
+      {
+        "name": "一一",
+        "type": "組員",
+        "emailHash": "3350aed8c95d0392a4d2239523e2612e"
+      },
+      {
+        "name": "Stacy",
+        "type": "組員",
+        "emailHash": "8dcda831acf3929b4198da1ce7c91882"
+      },
+      {
+        "name": "火柴",
+        "type": "組員",
+        "emailHash": "d91e670b0fdf31647b555b66e08c9c91"
+      }
+    ]
+  },
+  "財務組": {
+    "name": "財務組",
+    "intro": "負責年會與金錢相關的業務。",
+    "members": [
+      {
+        "name": "裸男",
+        "type": "組長",
+        "emailHash": "df1f1ee0d0ec7945862d5844fc4fadc5"
+      },
+      {
+        "name": "葉子",
+        "type": "副組長",
+        "emailHash": "602818418612b2ea7b2ea810cc60a900"
+      },
+      {
+        "name": "Melody",
+        "type": "組員",
+        "emailHash": "d55a5c45e6253a3fcc5adc9ab043e71b"
+      },
+      {
+        "name": "練練",
+        "type": "組員",
+        "emailHash": "1b24c32ed58f434165e5c3d8bfdcf3fd"
+      },
+      {
+        "name": "紅馬",
+        "type": "組員",
+        "emailHash": "3329cd97d0c3fff967bd44949f2d8937"
+      }
+    ]
+  },
+  "紀錄組": {
+    "name": "紀錄組",
+    "intro": "協助年會與相關活動之靜態影像紀錄，及提供各組所需之影像素材。",
+    "members": [
+      {
+        "name": "小群",
+        "type": "組長",
+        "emailHash": "c87cbee0a4a96655bd7366b56be7a18a"
+      },
+      {
+        "name": "月太",
+        "type": "副組長",
+        "emailHash": "4e9d08c3b268edcc82ccfa958eda5e66"
+      },
+      {
+        "name": "William Mou",
+        "type": "組員",
+        "emailHash": "9a51023daf8ec97748277899cf9683f7"
+      },
+      {
+        "name": "家維",
+        "type": "組員",
+        "emailHash": "6c9671ae54b2b490692a827fd1f2ae04"
+      },
+      {
+        "name": "Rong",
+        "type": "組員",
+        "emailHash": "284313f3541e3f1cf248f9c06ed17368"
+      },
+      {
+        "name": "HY",
+        "type": "組員",
+        "emailHash": "5afd91e11dfb52f8cfcb273c6ce17ebf"
+      },
+      {
+        "name": "nebula",
+        "type": "組員",
+        "emailHash": "53fa2bdb2a7672206c4055a18b073ea2"
+      },
+      {
+        "name": "家康",
+        "type": "組員",
+        "emailHash": "951fb6649a3587f85cdbe63277b6ac14"
+      },
+      {
+        "name": "Nuss",
+        "type": "組員",
+        "emailHash": "fc9ed632a9a22b500e1d928850e09f4e"
+      },
+      {
+        "name": "餅乾",
+        "type": "組員",
+        "emailHash": "911dfb6cdce2ce7acf5d053958455ea1"
+      },
+      {
+        "name": "耀淞",
+        "type": "組員",
+        "emailHash": "8ffd85d68675918ecd132660513e93dd"
+      }
+    ]
+  },
+  "製播組": {
+    "name": "製播組",
+    "intro": "協助年會當天各會議廳之錄影及直播，並處理議程演講的剪接後製。",
+    "members": [
+      {
+        "name": "Camel",
+        "type": "組長",
+        "emailHash": "f35f231f200ae8c6a0371ef13dc906cd"
+      },
+      {
+        "name": "Oqo",
+        "type": "副組長",
+        "emailHash": "5a5625442665b2dd2fdfbbe201fabb4a"
+      },
+      {
+        "name": "Wama",
+        "type": "組員",
+        "emailHash": "a238d9c4b1f0a5685f7c32e3a39d2120"
+      },
+      {
+        "name": "家康",
+        "type": "組員",
+        "emailHash": "951fb6649a3587f85cdbe63277b6ac14"
+      },
+      {
+        "name": "鯨魚",
+        "type": "組員",
+        "emailHash": "43aa1dc9409b4488cf476d51b47a07c1"
+      },
+      {
+        "name": "Yuxuan",
+        "type": "組員",
+        "emailHash": "eb5d13d96c9be308ea586710875cd0f4"
+      },
+      {
+        "name": "Brian",
+        "type": "組員",
+        "emailHash": "67c6905618ca9fe291784f62467c62fd"
+      },
+      {
+        "name": "御痕",
+        "type": "組員",
+        "emailHash": "add1d9d5f920572d02c756b8ebf7f57c"
+      },
+      {
+        "name": "郭郭",
+        "type": "組員",
+        "emailHash": "aa520a04ba552cf4868aa896491e3199"
+      },
+      {
+        "name": "jim",
+        "type": "組員",
+        "emailHash": "bc5cf1c86731e499e60927faf3db2854"
+      },
+      {
+        "name": "熱狗",
+        "type": "組員",
+        "emailHash": "3f97bac0643c3c8d8fce42e277616d11"
+      },
+      {
+        "name": "加七",
+        "type": "議程助理股股長",
+        "emailHash": "1babd39415f11c55fdc3d4095e6423cc"
+      },
+      {
+        "name": "百姓",
+        "type": "議程助理",
+        "emailHash": "8206a5fae4e07a3223ce97fc7e47555d"
+      },
+      {
+        "name": "諾諾",
+        "type": "議程助理",
+        "emailHash": "dcfbc856db3adb957a79aac3336b1161"
+      },
+      {
+        "name": "Thirvin",
+        "type": "議程助理",
+        "emailHash": "696e692c89ca8a15703f77d85f052af0"
+      },
+      {
+        "name": "渫軒",
+        "type": "議程助理",
+        "emailHash": "176e51d30ae9f2ed244977e6e084a375"
+      },
+      {
+        "name": "Jay",
+        "type": "議程助理",
+        "emailHash": "0220542c6c7bc84dc19bff6eb490523c"
+      },
+      {
+        "name": "Log",
+        "type": "議程助理",
+        "emailHash": "2caa3038f7983657a5f5a708738a93e3"
+      },
+      {
+        "name": "Wei",
+        "type": "議程助理",
+        "emailHash": "c0141c0a0b04d0a3e6f917d2917661b5"
+      }
+    ]
+  },
+  "開發組": {
+    "name": "開發組",
+    "intro": "SITCON 開發組主要負責年會的官網與通關 App 開發，適合對網頁開發有興趣、想法，有新鮮肝可以炸的朋友們！\n\n",
+    "members": [
+      {
+        "name": "勝勝",
+        "type": "組長",
+        "emailHash": "0ec6b0bf31c378645f536452d46adfb0"
+      },
+      {
+        "name": "nella17",
+        "type": "組員",
+        "emailHash": "6892a845f40ad6c10dc583963c4f303b"
+      },
+      {
+        "name": "Brian",
+        "type": "組員",
+        "emailHash": "0bd17d09b89f9f1c9f6ba890657e4ad9"
+      },
+      {
+        "name": "coin3x",
+        "type": "組員",
+        "emailHash": "695a54a432dec06097a8ee949e544cac"
+      }
+    ]
+  },
+  "編輯組": {
+    "name": "編輯組",
+    "intro": "SITCON 編輯組負責年會的社群媒體經營與互動，包含：Facebook、Instagram、Plurk、Twitter、Telegram Channel。以及開源相關活動推廣與其他組別公告事項、大會公告等文案撰寫需求。適合對社群媒體經營有興趣，有新鮮腦汁可以榨的朋友們！",
+    "members": [
+      {
+        "name": "繁嵐",
+        "type": "組長",
+        "emailHash": "f46225edf97b66ca05c2cacc4bc19d9f"
+      },
+      {
+        "name": "RS",
+        "type": "副組長",
+        "emailHash": "b3ecf4287d58054135af5d7b4d741021"
+      },
+      {
+        "name": "飄飄",
+        "type": "組員",
+        "emailHash": "55973dd99a6281df2e3901d5f3faf539"
+      },
+      {
+        "name": "Sky",
+        "type": "組員",
+        "emailHash": "4d0a2e7961d9ff36a2bb04c7036d84c2"
+      },
+      {
+        "name": "天天",
+        "type": "組員",
+        "emailHash": "f2acd1ab284be452e01231983476fce7"
+      },
+      {
+        "name": "二二",
+        "type": "組員",
+        "emailHash": "dd4c94208f8958228ae86f228bf122fd"
+      },
+      {
+        "name": "胡椒鹽",
+        "type": "組員",
+        "emailHash": "ac9998c597a87af978beb083443f8eb7"
+      },
+      {
+        "name": "球球",
+        "type": "組員",
+        "emailHash": "463bd651eb2ee643d1e9e3951faeba45"
+      },
+      {
+        "name": "火山",
+        "type": "組員",
+        "emailHash": "093b3496782564d86dce4914cb410f99"
+      },
+      {
+        "name": "心妤",
+        "type": "組員",
+        "emailHash": "ce03f7ff8ef7d600498c9dccefdaa1fd"
+      }
+    ]
+  },
+  "行銷組": {
+    "name": "行銷組",
+    "intro": "行銷組是銜接 SITCON 與社會的橋樑，負責探詢潛在的合作單位，連結更多支持 SITCON 理念的社群夥伴、媒體與贊助商，讓 SITCON 能被更多人看見。",
+    "members": [
+      {
+        "name": "HM",
+        "type": "組長",
+        "emailHash": "5147c378d434178134bc21e52a3ee87a"
+      },
+      {
+        "name": "四季紅",
+        "type": "副組長",
+        "emailHash": "5b558c8821a9a1ccc445f5232a102f99"
+      },
+      {
+        "name": "Denny",
+        "type": "組員(小精靈)",
+        "emailHash": "9c08215f31eb6005a25be6521bf47b0a"
+      },
+      {
+        "name": "小易",
+        "type": "組員",
+        "emailHash": "1ec8db9c1cd57aee84467f250353bf12"
+      },
+      {
+        "name": "白兔",
+        "type": "組員",
+        "emailHash": "18eb366edd0ccc5725ce36e0038cc862"
+      },
+      {
+        "name": "光琹",
+        "type": "組員",
+        "emailHash": "6d474041a43de776534b9aa728d0cdff"
+      },
+      {
+        "name": "yu",
+        "type": "組員",
+        "emailHash": "e68f138e12ab9b0bc6f0a307e67fc1eb"
+      },
+      {
+        "name": "Amber",
+        "type": "組員",
+        "emailHash": "adf86d46377349e768dd2f1b8d30589a"
+      },
+      {
+        "name": "BobHsiao",
+        "type": "組員",
+        "emailHash": "e4eca769a48396647baa639389c2dcc5"
+      },
+      {
+        "name": "乾太",
+        "type": "組員",
+        "emailHash": "3b07a910cbb16e7b24c93605231ad438"
+      },
+      {
+        "name": "Jason",
+        "type": "組員",
+        "emailHash": "465b302effe901df04c5e520237bbcec"
+      }
+    ]
+  }
+}

@@ -103,7 +103,7 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
     object-position: top center
     position: absolute
     right: calc(var(--padding))
-    transition: all 0.3s ease
+    transition: all 0.3s cubic-bezier(.5,-0.55,.53,1.45)
   &:hover
     .footer-cat
       transform: translateY(5px)
