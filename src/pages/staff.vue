@@ -6,7 +6,7 @@
       <p>{{ item.intro }}</p>
       <div class="member-items">
         <div class="member-item" v-for="item of item.members">
-          <img :src="`https://www.gravatar.com/avatar/${item.emailHash}?s=320&d=${origin}/2022/imgs/deafult_avatar.jpg&r=g`" />
+          <img :src="`https://www.gravatar.com/avatar/${item.emailHash}?s=320&d=https://i.imgur.com/IIG5XiW.jpg&r=g`" />
           <div class="member-name">{{ item.name }}</div>
           <div class="member-intro">{{ item.type }}</div>
         </div>
@@ -20,8 +20,7 @@ import teams from '@/assets/teams.json'
 export default {
   data() {
     return {
-      teams,
-      origin: location.origin
+      teams
     }
   }
 }
