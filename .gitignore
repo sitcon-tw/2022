@@ -28,3 +28,5 @@ coverage
 *.sw?
 .vite-ssg-temp
 dist_netlify
+utils/SITCON 2022 工作人員通訊錄 - 工作表1.csv
+utils/teams.json
