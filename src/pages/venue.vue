@@ -5,11 +5,11 @@
       <block-title>會場地圖</block-title>
       <mint-box>
         <h2 class="floor-title">3F</h2>
-        <img class="floor-img" src="/2022/imgs/venue/3f.svg" />
+        <img class="floor-img" :src="'/2022/imgs/venue/3f.svg'" />
       </mint-box>
       <mint-box>
         <h2 class="floor-title">4F</h2>
-        <img class="floor-img" src="/2022/imgs/venue/4f.svg" />
+        <img class="floor-img" :src="'/2022/imgs/venue/4f.svg'" />
       </mint-box>
     </arrow-box>
     <footer-item />

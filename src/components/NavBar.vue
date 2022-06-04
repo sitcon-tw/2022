@@ -1,8 +1,8 @@
 <template>
   <arrow-box class="nav-bar">
     <router-link class="logo" to="/">
-      <img class="sitcon" src="/2022/imgs/sitcon.svg" />
-      <img class="x" src="/2022/imgs/x.svg" />
+      <img class="sitcon" :src="'/2022/imgs/sitcon.svg'" />
+      <img class="x" :src="'/2022/imgs/x.svg'" />
     </router-link>
     <div class="links">
       <router-link class="link" to="/agenda"> 議程資訊 </router-link>
