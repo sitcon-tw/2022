@@ -1,12 +1,13 @@
 <template>
-  <div>
-    <cfp-glass-box>
-      <agenda-table />
-    </cfp-glass-box>
+  <div class="container">
+    <nav-bar />
+    <agenda-table />
+
+    <footer-item />
   </div>
 
 </template>
- 
+
 
 <style>
 </style>

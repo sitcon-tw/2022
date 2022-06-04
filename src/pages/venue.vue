@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="container">
+    <nav-bar />
     <arrow-box>
       <block-title>會場地圖</block-title>
       <mint-box>
@@ -11,6 +12,7 @@
         <img class="floor-img" src="/2022/imgs/venue/4f.svg" />
       </mint-box>
     </arrow-box>
+    <footer-item />
   </div>
 </template>
 

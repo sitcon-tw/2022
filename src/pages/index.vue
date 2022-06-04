@@ -27,6 +27,11 @@
       <link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.png" sizes="any" />
       <link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.svg" type="image/svg+xml" />
     </Head>
+    <div class="container">
+      <nav-bar />
+      index
+      <footer-item />
+    </div>
   </div>
 </template>
 <script setup>
@@ -42,7 +47,7 @@ const image = ref('https://sitcon.org/2022/imgs/cfp/cfp-og.png')
 export default {
   // redirect to  '/cfp'
   created() {
-    this.$router.push('/cfp')
+    // this.$router.push('/cfp')
   }
 }
 </script>
