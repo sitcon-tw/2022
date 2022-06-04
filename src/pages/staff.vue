@@ -8,7 +8,7 @@
         <div class="member-item" v-for="item of item.members">
           <img :src="`https://www.gravatar.com/avatar/${item.emailHash}?s=320&d=https://i.imgur.com/IIG5XiW.jpg&r=g`" />
           <div class="member-name">{{ item.name }}</div>
-          <div class="member-intro">{{ item.type }}</div>
+          <div class="member-type">{{ item.type }}</div>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@ export default {
 <style lang="sass" scoped>
 .member-items
   display: grid
-  grid-template-columns: repeat(auto-fit, 80px)
+  grid-template-columns: repeat(auto-fit, 100px)
   grid-gap: 20px
   margin-top: 20px
   .member-item
@@ -36,6 +36,14 @@ export default {
     flex-direction: column
     align-items: center
     justify-content: center
+    line-height: 1.5
     img
-      width: 100%
+      width: 80px
+      border-radius: 100em
+    .member-name
+      font-size: 10px
+      font-weight: bold
+      margin-top: 4px
+    .member-type
+      font-size: 8px
 </style>
