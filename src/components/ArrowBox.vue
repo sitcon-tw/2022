@@ -14,7 +14,6 @@
   --arrow-width: 40px
   --arrow-position: 20%
   padding: 36px
-  min-height: 50vh
   width: calc(100vw - 10px)
   margin: 5px auto
   border-radius: var(--border-radius)

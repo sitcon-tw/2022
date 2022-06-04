@@ -1,3 +1,7 @@
 <template>
-  <arrow-box>hi</arrow-box>
+  <div class="container">
+    <nav-bar />
+    traffic
+    <footer-item />
+  </div>
 </template>

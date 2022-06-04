@@ -14,7 +14,9 @@
           'grid-column-start': `🥞time`,
           'grid-row-start': `🥞${parseTime(time)}`,
         }">
-        {{ time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
+        <div class="time-item-content">
+          {{ time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
+        </div>
       </div>
       <!-- room -->
       <div class="room-name" v-for="room of rooms" :style="{
@@ -54,7 +56,7 @@
       image="https://sitcon.org/2022/imgs/cfp/cfp-og.png" />
   </div>
 </template>
- 
+
 <script>
 import sessionData from '@/assets/session.json';
 export default {
@@ -67,7 +69,7 @@ export default {
   },
   computed: {
     rooms() {
-      // return this.sessionData.rooms.map(x => x.zh.name) 
+      // return this.sessionData.rooms.map(x => x.zh.name)
       return ['R2', 'R0', 'R1', 'R3', 'S']
     },
     times() {
@@ -100,10 +102,13 @@ export default {
     }
   },
   watch: {
-    sessionModal(from, to) {
-      if (to) {
+    sessionModal(to, from) {
+      if (!to) {
         this.$router.push(`/agenda/`)
       }
+    },
+    '$route.meta.id': function (to, from) {
+      this.sessionModal = !!to
     }
   },
   methods: {
@@ -136,7 +141,6 @@ export default {
     },
     openModel(session) {
       this.$router.push(`/agenda/${session.id}`)
-      this.sessionModal = true
     }
   }
 
@@ -147,6 +151,13 @@ export default {
 .agenda-teble
   display: grid
   gap: 8px
+  .time-item
+    .time-item-content
+      background-color: #82D357
+      border-radius: 100em
+      color: #383838
+      padding: 0 12px
+      transform: translateY(-50%)
   .room-name
     font-weight: bold
     font-size: 22px
@@ -154,9 +165,12 @@ export default {
     background-color: rgba(255,255,255,0.25)
     border-radius: 8px
   .session-item
-    background-color: rgba(255,255,255,0.15)
-    border-radius: 4px
+    background-color: #F4EEE1
+    color: #383838
+    border-radius: 20px
     padding: 8px 16px
     text-align: center
     cursor: pointer
+    &:hover
+      background-color: #F4EEC0
 </style>
