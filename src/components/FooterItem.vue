@@ -76,7 +76,7 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
 </script>
 <style lang="sass" scoped>
 .sopnsor-items
-  margin-top: 36px
+  margin-top: 48px
   display: grid
   grid-template-columns: repeat(4, 1fr)
   grid-gap: 20px
@@ -86,7 +86,7 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
 
 .footer
   --padding: 36px
-  margin-top: calc(var(--padding) + 80px)
+  margin-top: calc(5px + 80px)
   margin-bottom: var(--padding)
   width: min(1280px,95vw)
   background-color: #82D357
@@ -108,6 +108,10 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
     .footer-cat
       transform: translateY(5px)
       height: 65px
+  &:active
+    .footer-cat
+      transform: translateY(-5px)
+      height: 75px
   @media (max-width: 768px)
     --padding: 24px
   .content
