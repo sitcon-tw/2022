@@ -1,5 +1,5 @@
 <template>
-  <div>404</div>
-
-  <footer-item />
+  <div>404
+    <footer-item />
+  </div>
 </template>
