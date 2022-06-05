@@ -1,50 +1,160 @@
 <template>
-  <nav-bar />
-  <div class="container">
-    <arrow-box class="header-box">
-      <p>
-        SITCON 年會每年皆是許多志工奉獻時間與精神所舉辦，沒有大家的付出，就不可能會有如此內容豐富且高品質的年會， 希望大家在參加之餘，也不要忘記背後工作人員的付出。
-      </p>
-      <p>
-        若你對參與 SITCON 年會的籌備有興趣，歡迎填寫跳坑表單或是關注 SITCON 的郵件論壇，明年的籌備開始時，你就會收到相關的資訊！
-      </p>
-      <div class="header-box-btns">
-        <btn href="#" large>跳坑表單</btn>
-        <btn href="https://groups.google.com/g/sitcon-general" large>郵件論壇</btn>
-      </div>
-      <div class="header-box-cat">
-        <img :src="'/2022/imgs/cats/cat2_1.svg'" />
-      </div>
-    </arrow-box>
-  </div>
-  <div class="team-box" v-for="({ intro, members }, name, i) of teams" :key="name" :class="[`${i % 2 == 0 ? 'odd' : 'even'}`]">
-    <div class="inner-box">
-      <div class="container">
-        <h2 class="team-name">{{ name }}</h2>
-        <p class="team-intro">{{ intro }}</p>
-        <div class="team-member-items">
-          <div class="team-member-item" v-for="item of members">
-            <img :src="`https://www.gravatar.com/avatar/${item.emailHash}?s=320&d=https://i.imgur.com/IIG5XiW.jpg&r=g`" />
-            <div class="team-member-name">{{ item.name }}</div>
-            <div class="team-member-type">{{ item.type }}</div>
+  <div>
+    <nav-bar />
+    <div class="container">
+      <arrow-box class="header-box">
+        <p>
+          SITCON 年會每年皆是許多志工奉獻時間與精神所舉辦，沒有大家的付出，就不可能會有如此內容豐富且高品質的年會， 希望大家在參加之餘，也不要忘記背後工作人員的付出。
+        </p>
+        <p>
+          若你對參與 SITCON 年會的籌備有興趣，歡迎填寫跳坑表單或是關注 SITCON 的郵件論壇，明年的籌備開始時，你就會收到相關的資訊！
+        </p>
+        <div class="header-box-btns">
+          <btn href="#" large>跳坑表單</btn>
+          <btn href="https://groups.google.com/g/sitcon-general" large>郵件論壇</btn>
+        </div>
+        <div class="header-box-cat">
+          <img :src="'/2022/imgs/cats/cat2_1.svg'" />
+        </div>
+      </arrow-box>
+    </div>
+    <div ref="border-container" class="border-container">
+      <div class="team-box" v-for="({ intro, members }, name, i) of teams" :key="name" :class="[`${i % 2 == 0 ? 'odd' : 'even'}`]">
+        <div class="inner-box">
+          <div class="container">
+            <h2 class="team-name">{{ name }}</h2>
+            <p class="team-intro">{{ intro }}</p>
+            <div class="team-member-items">
+              <div class="team-member-item" v-for="item of members">
+                <img :src="`https://www.gravatar.com/avatar/${item.emailHash}?s=320&d=https://i.imgur.com/IIG5XiW.jpg&r=g`" />
+                <div class="team-member-name">{{ item.name }}</div>
+                <div class="team-member-type">{{ item.type }}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div class="team-box last">
+        <div class="inner-box"></div>
+      </div>
     </div>
-  </div>
-  <div class="team-box last">
-    <div class="inner-box"></div>
-  </div>
-  <div class="container">
-    <footer-item />
+    <div class="container">
+      <footer-item />
+    </div>
   </div>
 </template>
 <script>
+import * as d3 from "d3";
 import teams from '@/assets/teams.json'
 export default {
   data() {
     return {
       teams
+    }
+  },
+  mounted() {
+    this.drawBorder();
+    window.addEventListener('resize', this.drawBorder);
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.drawBorder);
+  },
+  methods: {
+    drawBorder() {
+      const container = this.$refs['border-container']
+      let stroke = 8
+      let lineGap = 20
+      let gap = (window.innerWidth - 1280) / 2
+      if (window.innerWidth < 1280) {
+        gap = window.innerWidth / 100 * 2.5
+        stroke = 4
+        lineGap = window.innerWidth / 100 * 2.5 / 2
+      }
+      const radius = parseInt(window.getComputedStyle(container).getPropertyValue('--border-radius'))
+      function getPath() {
+        // draw a border around the childern
+        let result = "M0,8"
+
+
+        result += `C${0},${8} ${gap - lineGap},${stroke} ${gap - lineGap},${gap - lineGap + stroke}`
+        let childList = container.children;
+        let x, y
+        for (let child of childList) {
+          let rect = child.getBoundingClientRect();
+          let isEven = child.classList.contains('even');
+          let isLast = child.classList.contains('last');
+          let index = [...childList].indexOf(child);
+          if (isLast) {
+            continue
+          }
+          if (index == 0) {
+            y = rect.bottom - rect.top - radius
+          } else if (index % 2 == 0) {
+            console.log(rect.height)
+            y += rect.height - radius * 2
+          }
+          if (index % 2 == 0) {
+            // if (index == 0) {
+            x = gap - lineGap
+            result += `L${x},${y}`
+            result += `C`
+            result += `${x},${y} `
+            result += `${gap - lineGap},${y + radius + lineGap} `
+            x = x + radius + lineGap
+            y = y + radius + lineGap
+            result += ` ${x},${y}`
+
+            x += rect.width - radius * 2 - gap
+            result += `L${x},${y}`
+
+            result += `C`
+            result += `${x},${y} `
+            result += `${x + radius - lineGap},${y} `
+            x = x + radius - lineGap
+            y = y + radius
+            result += ` ${x},${y}`
+          }
+          if (index % 2 == 1) {
+            y = y + rect.height - radius * 2 - lineGap
+            result += `L${x},${y}`
+
+            result += `C`
+            result += `${x},${y} `
+            result += `${x},${y + radius - lineGap} `
+            x = x - radius
+            y = y + radius - lineGap
+            result += ` ${x},${y}`
+
+            x = x - (rect.width - gap * 2) + lineGap + radius * 2
+            result += `L${x},${y}`
+
+            result += `C`
+            result += `${x},${y} `
+            result += `${gap - lineGap},${y} `
+            x = gap - lineGap
+            y = y + radius + lineGap
+            result += ` ${x},${y}`
+          }
+        }
+        return result
+      }
+
+      let borderContainer = d3.select(container);
+      borderContainer.attr("style", "position: relative;");
+
+      // clrar existing svg
+      borderContainer.selectAll("svg").remove();
+      // draw
+      let svg = borderContainer.append('svg')
+      svg.attr('width', '100%')
+      svg.attr('height', '100%')
+      svg.attr('style', 'position: absolute; top: 0; left: 0;pointer-events: none;')
+
+      svg.append("path")
+        .attr("d", getPath())
+        .attr("stroke", "#A89B85")
+        .attr("fill", "none")
+        .attr("stroke-width", stroke)
     }
   }
 }
@@ -75,14 +185,15 @@ export default {
   gap: 16px
   align-items: center
   justify-content: center
-.team-box
-  line-height: 1.5
-  --background-gap: calc((100vw - 1280px)/2)
+.border-container
+  --background-gap: calc((100vw - 1280px) / 2)
   --border-radius: 64px
   @media (max-width: 1280px)
     --background-gap: 2.5vw
   @media (max-width: 768px)
     --border-radius: 32px
+.team-box
+  line-height: 1.5
   .container
     padding: 48px
   &.odd
