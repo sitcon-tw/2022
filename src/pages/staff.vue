@@ -253,7 +253,7 @@ export default {
   grid-gap: 20px
   margin-top: 20px
   @media (max-width: 768px)
-    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(72px, 1fr))
   .team-member-item
     display: flex
     flex-direction: column
