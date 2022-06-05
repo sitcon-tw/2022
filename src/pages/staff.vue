@@ -17,14 +17,13 @@
       </div>
     </arrow-box>
   </div>
-  <div class="team-box" v-for="item of teams" :key="item.name">
+  <div class="team-box" v-for="({ intro, members }, name, i) of teams" :key="name" :class="[`${i % 2 == 0 ? 'odd' : 'even'}`]">
     <div class="inner-box">
-
       <div class="container">
-        <h2 class="team-name">{{ item.name }}</h2>
-        <p class="team-intro">{{ item.intro }}</p>
+        <h2 class="team-name">{{ name }}</h2>
+        <p class="team-intro">{{ intro }}</p>
         <div class="team-member-items">
-          <div class="team-member-item" v-for="item of item.members">
+          <div class="team-member-item" v-for="item of members">
             <img :src="`https://www.gravatar.com/avatar/${item.emailHash}?s=320&d=https://i.imgur.com/IIG5XiW.jpg&r=g`" />
             <div class="team-member-name">{{ item.name }}</div>
             <div class="team-member-type">{{ item.type }}</div>
@@ -32,6 +31,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="team-box last">
+    <div class="inner-box"></div>
   </div>
   <div class="container">
     <footer-item />
@@ -75,26 +77,36 @@ export default {
   justify-content: center
 .team-box
   line-height: 1.5
-  --background-gap: min(60px, 2.5vw)
+  --background-gap: calc((100vw - 1280px)/2)
   --border-radius: 64px
-  @media (max-width: 768px)
+  @media (max-width: 1280px)
     --background-gap: 2.5vw
+  @media (max-width: 768px)
     --border-radius: 32px
   .container
     padding: 48px
-  &:nth-child(odd)
+  &.odd
     background-color: #F4EEE1
     color: #373737
     margin-left: var(--background-gap)
     border-radius: var(--border-radius) 0 0 var(--border-radius)
     .inner-box
       margin-left: calc(var(--background-gap) * -1)
-  &:nth-child(even)
+  &.even
     background-color: #F4EEE1
     .inner-box
       margin-right: var(--background-gap)
       background-color: var(--background-color)
       border-radius: 0 var(--border-radius) var(--border-radius) 0
+      .container
+        margin-right: calc((100vw - min(1280px,95vw)) / 2 - var(--background-gap))
+  &.last
+    background-color: #F4EEE1
+    .inner-box
+      // margin-right: var(--background-gap)
+      background-color: var(--background-color)
+      border-radius: 0 var(--border-radius) 0 0
+      min-height: var(--border-radius)
       .container
         margin-right: calc((100vw - min(1280px,95vw)) / 2 - var(--background-gap))
 
@@ -112,6 +124,8 @@ export default {
     justify-content: center
     img
       width: 80px
+      height: 80px
+      object-fit: cover
       border-radius: 100em
       background-color: #fff
     .team-member-name
