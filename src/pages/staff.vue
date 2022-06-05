@@ -65,7 +65,7 @@ export default {
       let stroke = 8
       let lineGap = 20
       let gap = (window.innerWidth - Math.min(1280, window.innerWidth / 100 * 95)) / 2
-      if (window.innerWidth < 1280) {
+      if (window.innerWidth < 768) {
         gap = window.innerWidth / 100 * 2.5
         stroke = 4
         lineGap = window.innerWidth / 100 * 2.5 / 2
@@ -102,17 +102,17 @@ export default {
             result += `${gap - lineGap},${y} `
             result += ` ${x},${y}`
 
-            x = window.innerWidth - radius - lineGap
+            x = window.innerWidth
             result += `L${x},${y} `
 
-            result += `C`
-            result += `${x},${y} `
-            x = x + radius
-            result += `${x},${y} `
-            y = y + radius
-            result += `${x},${y} `
+            // result += `C`
+            // result += `${x},${y} `
+            // x = x + radius
+            // result += `${x},${y} `
+            // y = y + radius
+            // result += `${x},${y} `
 
-            continue
+            return result
           }
           if (index == 0) {
             y = rect.bottom - rect.top - radius
@@ -162,7 +162,6 @@ export default {
             result += ` ${x},${y}`
           }
         }
-        return result
       }
 
       let borderContainer = d3.select(container);
@@ -242,7 +241,7 @@ export default {
     .inner-box
       // margin-right: var(--background-gap)
       background-color: var(--background-color)
-      border-radius: 0 var(--border-radius) 0 0
+      border-radius: 0 0 0 0
       min-height: var(--border-radius)
       .container
         margin-right: calc((100vw - min(1280px,95vw)) / 2 - var(--background-gap))
@@ -258,7 +257,8 @@ export default {
     display: flex
     flex-direction: column
     align-items: center
-    justify-content: center
+    justify-content: top
+    text-align: center
     img
       width: 80px
       height: 80px
@@ -266,10 +266,10 @@ export default {
       border-radius: 100em
       background-color: #fff
     .team-member-name
-      font-size: 10px
+      font-size: 12px
       font-weight: bold
       margin-top: 4px
     .team-member-type
-      font-size: 8px
+      font-size: 12px
 
 </style>
