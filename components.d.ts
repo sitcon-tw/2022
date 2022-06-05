@@ -8,6 +8,7 @@ declare module '@vue/runtime-core' {
     AgendaTable: typeof import('./src/components/Agenda/Table.vue')['default']
     ArrowBox: typeof import('./src/components/ArrowBox.vue')['default']
     BlockTitle: typeof import('./src/components/BlockTitle.vue')['default']
+    Btn: typeof import('./src/components/Btn.vue')['default']
     CfpAgendaCard: typeof import('./src/components/cfp/AgendaCard.vue')['default']
     CfpAgendaType: typeof import('./src/components/cfp/AgendaType.vue')['default']
     CfpBackBtn: typeof import('./src/components/cfp/BackBtn.vue')['default']
