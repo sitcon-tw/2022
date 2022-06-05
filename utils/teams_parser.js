@@ -47,7 +47,7 @@ lines.forEach(line => {
   results[teamName].members.push({
     name,
     type,
-    emailHash: md5(email.trim()),
+    emailHash: md5(email.trim().toLowerCase()),
   })
 })
 fs.writeFileSync('teams.json', JSON.stringify(results, null, 2));
