@@ -13,10 +13,10 @@
     <div class="footer">
       <img class="footer-cat" :src="'/2022/imgs/cats/cat2.svg'" />
 
+      <div class="title">學生計算機年會</div>
+      <div class="title"> Students' Information Technology Conference</div>
       <div class="content">
         <div class="left">
-          <div class="title">學生計算機年會</div>
-          <div class="title"> Students' Information Technology Conference</div>
 
           <div class="title" style="margin-top: 1em">合作聯繫</div>
           <div class="subtitle">
@@ -80,6 +80,8 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
   display: grid
   grid-template-columns: repeat(4, 1fr)
   grid-gap: 20px
+  @media (max-width: 768px)
+    grid-template-columns: repeat(2, 1fr)
   img
     width: 100%
 
@@ -96,13 +98,13 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
   padding: var(--padding)
   z-index: 1
   .footer-cat
-    top: calc(var(--padding) * -2 + 2px)
+    top: calc(36px * -2 + 2px)
     width: 100px
     height: 70px
     object-fit: cover
     object-position: top center
     position: absolute
-    right: calc(var(--padding))
+    right: var(--padding)
     transition: all 0.3s cubic-bezier(.5,-0.55,.53,1.45)
   &:hover
     .footer-cat
@@ -114,6 +116,14 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
       height: 75px
   @media (max-width: 768px)
     --padding: 24px
+
+  .title
+    font-size: 20px
+    font-weight: bold
+    @media (max-width: 768px)
+      font-size: 16px
+  .subtitle
+    font-weight: normal
   .content
     display: grid
     grid-template-columns: 1fr 1fr
@@ -121,13 +131,6 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
     font-size: 18px
     @media (max-width: 768px)
       font-size: 14px
-    .title
-      font-size: 20px
-      font-weight: bold
-      @media (max-width: 768px)
-        font-size: 16px
-    .subtitle
-      font-weight: normal
     a
       color: #373737
       transition: all .2s ease
@@ -142,7 +145,7 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
       display: grid
       grid-template-columns: repeat(auto-fit, var(--size))
       grid-gap: 16px
-      margin-bottom: 16px
+      margin-bottom: 4px
       .social-media-item
         display: block
         width: var(--size)
