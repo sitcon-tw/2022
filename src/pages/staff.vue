@@ -9,9 +9,8 @@
         若你對參與 SITCON 年會的籌備有興趣，歡迎填寫跳坑表單或是關注 SITCON 的郵件論壇，明年的籌備開始時，你就會收到相關的資訊！
       </p>
       <div class="header-box-btns">
-
         <btn href="#" large>跳坑表單</btn>
-        <btn href="#" large>郵件論壇</btn>
+        <btn href="https://groups.google.com/g/sitcon-general" large>郵件論壇</btn>
       </div>
       <div class="header-box-cat">
         <img :src="'/2022/imgs/cats/cat2_1.svg'" />
