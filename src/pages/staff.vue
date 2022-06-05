@@ -64,7 +64,7 @@ export default {
       const container = this.$refs['border-container']
       let stroke = 8
       let lineGap = 20
-      let gap = (window.innerWidth - 1280) / 2
+      let gap = (window.innerWidth - Math.min(1280, window.innerWidth / 100 * 95)) / 2
       if (window.innerWidth < 1280) {
         gap = window.innerWidth / 100 * 2.5
         stroke = 4
@@ -91,6 +91,27 @@ export default {
           let isLast = child.classList.contains('last');
           let index = [...childList].indexOf(child);
           if (isLast) {
+            // last
+            x = gap - lineGap
+            result += `L`
+            result += `${x},${y} `
+            result += `C`
+            result += `${x},${y} `
+            x = gap + radius + lineGap
+            y = y + radius + lineGap
+            result += `${gap - lineGap},${y} `
+            result += ` ${x},${y}`
+
+            x = window.innerWidth - radius - lineGap
+            result += `L${x},${y} `
+
+            result += `C`
+            result += `${x},${y} `
+            x = x + radius
+            result += `${x},${y} `
+            y = y + radius
+            result += `${x},${y} `
+
             continue
           }
           if (index == 0) {
@@ -98,7 +119,7 @@ export default {
           } else if (index % 2 == 0) {
             y += rect.height - radius * 2
           }
-          if (index % 2 == 0) {
+          if (index % 2 == 0 && index != 10) {
             // if (index == 0) {
             x = gap - lineGap
             result += `L${x},${y}`
@@ -110,8 +131,8 @@ export default {
             result += ` ${x},${y}`
 
             x += rect.width - radius * 2 - gap
-            result += `L${x},${y}`
 
+            result += `L${x},${y}`
             result += `C`
             result += `${x},${y} `
             result += `${x + radius - lineGap},${y} `
@@ -191,16 +212,16 @@ export default {
   align-items: center
   justify-content: center
 .border-container
-  --background-gap: calc((100vw - 1280px) / 2)
+  --background-gap: calc((100vw - min(1280px,95vw)) / 2)
   --border-radius: 64px
-  @media (max-width: calc(1280px + var(--background-gap)))
-    --background-gap: 2.5vw
   @media (max-width: 768px)
     --border-radius: 32px
 .team-box
   line-height: 1.5
   .container
     padding: 48px
+    @media (max-width: 768px)
+      padding: 24px
   &.odd
     background-color: #F4EEE1
     color: #373737
