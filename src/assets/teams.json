@@ -61,11 +61,6 @@
         "emailHash": "98688144e5d35e16ecdbcadd7d0880dd"
       },
       {
-        "name": "Bernice",
-        "type": "組員",
-        "emailHash": "95562b9b88a229980bfd935edcf38edb"
-      },
-      {
         "name": "Hamster",
         "type": "組員",
         "emailHash": "01567616be21ba986fed8b57b5110178"
@@ -127,9 +122,9 @@
         "emailHash": "4e5651bf63f254632eeedb8a17878222"
       },
       {
-        "name": "CSY54",
+        "name": "Justin Lin",
         "type": "報到股股長",
-        "emailHash": "c379feb8a2073843af848ba6020d9805"
+        "emailHash": "1ca72aef2ae3152cdc8b2f898d4bb986"
       },
       {
         "name": "Vincent55",
@@ -145,6 +140,11 @@
         "name": "咪路",
         "type": "防疫股副股長",
         "emailHash": "0d3eba022a4e0eda175441d9cf1e9061"
+      },
+      {
+        "name": "Sciuridae 松鼠",
+        "type": "物流股股長",
+        "emailHash": "60ce6b00bae88e0ff15c9480a9ce92f5"
       },
       {
         "name": "洋蔥",
@@ -322,19 +322,14 @@
         "emailHash": "a1972d822499003b8589e8bf00c9c1e8"
       },
       {
-        "name": "Sciuridae 松鼠",
-        "type": "物流股股長",
-        "emailHash": "60ce6b00bae88e0ff15c9480a9ce92f5"
-      },
-      {
         "name": "TU",
         "type": "組員",
         "emailHash": "e10d7d1cecf2b1d8bf2bcb8cacacff57"
       },
       {
-        "name": "Justin Lin",
+        "name": "CSY54",
         "type": "組員",
-        "emailHash": "1ca72aef2ae3152cdc8b2f898d4bb986"
+        "emailHash": "c379feb8a2073843af848ba6020d9805"
       }
     ]
   },
@@ -671,6 +666,11 @@
         "name": "心妤",
         "type": "組員",
         "emailHash": "ce03f7ff8ef7d600498c9dccefdaa1fd"
+      },
+      {
+        "name": "小易",
+        "type": "組員",
+        "emailHash": "1ec8db9c1cd57aee84467f250353bf12"
       }
     ]
   },
@@ -711,7 +711,7 @@
       {
         "name": "yu",
         "type": "組員",
-        "emailHash": "e68f138e12ab9b0bc6f0a307e67fc1eb"
+        "emailHash": "1a4ad680d95c02747834baecc96ba348"
       },
       {
         "name": "Amber",

@@ -1,12 +1,12 @@
 // 將人事表轉換為網站的 json 格式
 // 1. 下載 csv
-// https://docs.google.com/spreadsheets/d/13TZarUSNvnoQOOSDSKj2I15Egw5S2ZD7zV4dWIXLcyM/edit#gid=0
+// https://docs.google.com/spreadsheets/d/1P6OJzxRu3pSbTCltH-huaGrQka2NMKSbEWgEB6H-STA/edit#gid=1610495860
 // 2. 放在相同資料夾下
 // 3. 執行 node teams_parser.js
 const fs = require('fs');
 const md5 = require('md5');
 const results = {};
-const file = 'SITCON 2022 工作人員通訊錄 - 工作表1.csv';
+const file = 'SITCON 2022 工作人員登錄狀況 - 工人名單（已刪除移除工人）.csv';
 const data = fs.readFileSync(file, 'utf8');
 const lines = data.split('\n');
 const intros = {
@@ -22,12 +22,14 @@ const intros = {
   "編輯組": "SITCON 編輯組負責年會的社群媒體經營與互動，包含：Facebook、Instagram、Plurk、Twitter、Telegram Channel。以及開源相關活動推廣與其他組別公告事項、大會公告等文案撰寫需求。適合對社群媒體經營有興趣，有新鮮腦汁可以榨的朋友們！",
   "製播組": "協助年會當天各會議廳之錄影及直播，並處理議程演講的剪接後製。",
 }
-// drop first 2 line
+// drop first 3 line
+lines.shift();
+lines.shift();
 lines.shift();
 lines.shift();
 let teamName = ''
 lines.forEach(line => {
-  const cells = line.split(',');
+  const cells = line.replace(/\r/g, '').split(',');
   if (cells[0] !== '') {
     teamName = cells[0]
   }
