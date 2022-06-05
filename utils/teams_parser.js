@@ -40,10 +40,14 @@ lines.forEach(line => {
       members: []
     }
   }
+  let [_, name, type, email] = cells;
+  if (name === '勝勝') {
+    name = '可愛勝勝寶寶'
+  }
   results[teamName].members.push({
-    name: cells[1],
-    type: cells[2],
-    emailHash: md5(cells[3].trim()),
+    name,
+    type,
+    emailHash: md5(email.trim()),
   })
 })
 fs.writeFileSync('teams.json', JSON.stringify(results, null, 2));
