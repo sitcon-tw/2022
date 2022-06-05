@@ -73,15 +73,21 @@ export default {
       const radius = parseInt(window.getComputedStyle(container).getPropertyValue('--border-radius'))
       function getPath() {
         // draw a border around the childern
-        let result = "M0,8"
+        let x = 0, y = stroke
+        let result = `M${x},${y}`
+        x = gap - lineGap - radius
+        result += `L${x},${y}`
+        result += `C`
+        result += `${x + radius},${y} `
+        x = x + radius
+        y = y + radius
+        result += `${x},${y} `
+        result += `${x},${y} `
 
 
-        result += `C${0},${8} ${gap - lineGap},${stroke} ${gap - lineGap},${gap - lineGap + stroke}`
         let childList = container.children;
-        let x, y
         for (let child of childList) {
           let rect = child.getBoundingClientRect();
-          let isEven = child.classList.contains('even');
           let isLast = child.classList.contains('last');
           let index = [...childList].indexOf(child);
           if (isLast) {
@@ -90,7 +96,6 @@ export default {
           if (index == 0) {
             y = rect.bottom - rect.top - radius
           } else if (index % 2 == 0) {
-            console.log(rect.height)
             y += rect.height - radius * 2
           }
           if (index % 2 == 0) {
@@ -188,7 +193,7 @@ export default {
 .border-container
   --background-gap: calc((100vw - 1280px) / 2)
   --border-radius: 64px
-  @media (max-width: 1280px)
+  @media (max-width: calc(1280px + var(--background-gap)))
     --background-gap: 2.5vw
   @media (max-width: 768px)
     --border-radius: 32px
