@@ -12,6 +12,7 @@
       <router-link class="link" to="/sponsor"> 贊助 </router-link>
     </div>
   </arrow-box>
+  <div style="height: 160px" />
 </template>
 <style lang="sass" scoped>
 .nav-bar
@@ -24,8 +25,10 @@
   --arrow-dimmer-width: 90px
   --arrow-width: 20px
   --border-width: 8px
-  position: sticky
+  position: fixed
   top: 10px
+  left: 0
+  right: 0
   z-index: 5
   background-color: var(--background-color)
   margin-bottom: 72px
