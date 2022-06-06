@@ -20,6 +20,8 @@
   border: var(--border-width) solid var(--border-color)
   position: relative
   width: min(1280px,95vw)
+  &+.arrow-box
+    margin-top: 48px
   .arrow_top
     position: absolute
     bottom: calc((var(--border-width) * -1.3361) + 14.459px)
