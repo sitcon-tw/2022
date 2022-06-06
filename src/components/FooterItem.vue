@@ -129,6 +129,7 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
     grid-template-columns: 1fr 1fr
     grid-gap: 20px
     font-size: 18px
+    align-items: end
     @media (max-width: 768px)
       font-size: 14px
     a
