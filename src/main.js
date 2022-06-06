@@ -2,7 +2,6 @@ import { ViteSSG } from 'vite-ssg'
 
 import App from './App.vue'
 import sessionData from '@/assets/session.json';
-import OpenLayersMap from 'vue3-openlayers'
 import 'vue3-openlayers/dist/vue3-openlayers.css'
 export const createApp = ViteSSG(
   App,
@@ -64,7 +63,10 @@ export const createApp = ViteSSG(
       return { x: 0, y: 0 }
     }
   },
-  ({ app, router, routes, isClient, initialState }) => {
-    app.use(OpenLayersMap)
+  async ({ app, router, routes, isClient, initialState }) => {
+    if (isClient) {
+      const OpenLayersMap = await import('vue3-openlayers')
+      app.use(OpenLayersMap)
+    }
   },
 )
