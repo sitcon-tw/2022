@@ -8,7 +8,9 @@
         <div class="location-title">地點</div>
         <p class="location-description">中央研究院人文社會科學館<br />
           台北市南港區研究院路二段 128 號</p>
-        <location-map />
+        <client-only>
+          <location-map />
+        </client-only>
         <img class="traffic-flow" :src="'/2022/imgs/traffic/traffic-flow.svg'" />
         <img class="traffic-flow-mobile" :src="'/2022/imgs/traffic/traffic-flow-mobile.svg'" />
       </mint-box>
