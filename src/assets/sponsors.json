@@ -1,0 +1,165 @@
+{
+  "main": {
+    "name": "SITCON 學生計算機年會籌備團隊",
+    "link": "",
+    "id": "SITCON",
+    "description": "SITCON 學生計算機年會 (Students’ Information Technology Conference) 是一個由各校同學於網路串聯發起，鼓勵自發學習、切磋成長的學生社群。\n\n因為熱愛資訊領域、知道尋找興趣相近夥伴的不容易，籌備團隊從 2013 年以來，便致力於連結對資訊科技相關領域有興趣的學生們，透過每年三月的研討會分享彼此所學，在每週的定期聚交流精進。發展至今，SITCON 除了是東亞最大的學生資訊社群與研討會，各地參與者也藉由夏令營、一小時學程式 (Hour of Code)、黑客松等不同的面向活動，推廣創新、實作、教學相長、以及開源貢獻的精神與理念；在台灣與海外各地，都有 SITCON 參與者的身影。"
+  },
+  "co_org": [
+    {
+      "name": "蹦蹦袋鼠",
+      "link": "https://pancake.gnehs.net/",
+      "logo": "kangaroo.png",
+      "id": "kangaroo",
+      "description": "袋鼠來了！"
+    },
+    {
+      "name": "蓬蓬鬆餅",
+      "link": "https://pancake.gnehs.net/",
+      "logo": "pancake.png",
+      "id": "pancake",
+      "description": "蓬蓬鬆餅致力於提供顧客美味的鬆餅，優秀的鬆餅師傅，精緻的鬆餅，美味的鬆餅，讓您享受美味的鬆餅。"
+    }
+  ],
+  "sup_org": [
+    {
+      "name": "大河馬",
+      "link": "https://pancake.gnehs.net/",
+      "logo": "hippo.png",
+      "id": "hippo",
+      "description": "大河馬將您的安全放在第一順位！提供全宇宙最佳的太空船能量護罩，抵擋任何潛在的外在傷害，讓您的星際旅行旅程更安全。"
+    }
+  ],
+  "sponsors": [
+    {
+      "type": "領航級",
+      "org": [
+        {
+          "name": "蓬蓬鬆餅",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "pancake.png",
+          "id": "pancake",
+          "description": "蓬蓬鬆餅致力於提供顧客美味的鬆餅，優秀的鬆餅師傅，精緻的鬆餅，美味的鬆餅，讓您享受美味的鬆餅。"
+        },
+        {
+          "name": "大河馬",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "hippo.png",
+          "id": "hippo",
+          "description": "大河馬將您的安全放在第一順位！提供全宇宙最佳的太空船能量護罩，抵擋任何潛在的外在傷害，讓您的星際旅行旅程更安全。"
+        },
+        {
+          "name": "蹦蹦袋鼠",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "kangaroo.png",
+          "id": "kangaroo",
+          "description": "澳洲的袋鼠，有寶寶的袋鼠，有大尾巴的袋鼠！"
+        }
+      ]
+    },
+    {
+      "type": "深耕級",
+      "org": [
+        {
+          "name": "大河馬",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "hippo.png",
+          "id": "hippo",
+          "description": "大河馬將您的安全放在第一順位！提供全宇宙最佳的太空船能量護罩，抵擋任何潛在的外在傷害，讓您的星際旅行旅程更安全。"
+        },
+        {
+          "name": "蓬蓬鬆餅",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "pancake.png",
+          "id": "pancake",
+          "description": "蓬蓬鬆餅致力於提供顧客美味的鬆餅，優秀的鬆餅師傅，精緻的鬆餅，美味的鬆餅，讓您享受美味的鬆餅。"
+        }
+      ]
+    },
+    {
+      "type": "前瞻級",
+      "org": [
+        {
+          "name": "大河馬",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "hippo.png",
+          "id": "hippo",
+          "description": "大河馬將您的安全放在第一順位！提供全宇宙最佳的太空船能量護罩，抵擋任何潛在的外在傷害，讓您的星際旅行旅程更安全。"
+        },
+        {
+          "name": "蓬蓬鬆餅",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "pancake.png",
+          "id": "pancake",
+          "description": "蓬蓬鬆餅致力於提供顧客美味的鬆餅，優秀的鬆餅師傅，精緻的鬆餅，美味的鬆餅，讓您享受美味的鬆餅。"
+        }
+      ]
+    },
+    {
+      "type": "新芽級",
+      "org": [
+        {
+          "name": "大河馬",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "hippo.png",
+          "id": "hippo",
+          "description": ""
+        },
+        {
+          "name": "大河馬",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "hippo.png",
+          "id": "hippo",
+          "description": ""
+        },
+        {
+          "name": "蓬蓬鬆餅",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "pancake.png",
+          "id": "pancake",
+          "description": ""
+        },
+        {
+          "name": "大河馬",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "hippo.png",
+          "id": "hippo",
+          "description": ""
+        },
+        {
+          "name": "蓬蓬鬆餅",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "pancake.png",
+          "id": "pancake",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "thanks": [
+    {
+      "type": "特別感謝",
+      "org": [
+        {
+          "name": "大河馬",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "hippo.png",
+          "id": "hippo",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "type": "媒體夥伴",
+      "org": [
+        {
+          "name": "蹦蹦袋鼠",
+          "link": "https://pancake.gnehs.net/",
+          "logo": "kangaroo.png",
+          "id": "kangaroo",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

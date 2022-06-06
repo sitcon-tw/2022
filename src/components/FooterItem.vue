@@ -1,14 +1,9 @@
 <template>
   <div>
-    <mint-box v-if="!hideSponsor" class="sopnsor-items">
-      <img class="sponsor" :src="'/2022/imgs/pancake/sponsor.png'" />
-      <img class="sponsor" :src="'/2022/imgs/pancake/sponsor.png'" />
-      <img class="sponsor" :src="'/2022/imgs/pancake/sponsor.png'" />
-      <img class="sponsor" :src="'/2022/imgs/pancake/sponsor.png'" />
-      <img class="sponsor" :src="'/2022/imgs/pancake/sponsor.png'" />
-      <img class="sponsor" :src="'/2022/imgs/pancake/sponsor.png'" />
-      <img class="sponsor" :src="'/2022/imgs/pancake/sponsor.png'" />
-      <img class="sponsor" :src="'/2022/imgs/pancake/sponsor.png'" />
+    <mint-box v-if="!hideSponsor" class="sponsors-items"> <img class="sponsor" :src="'/2022/imgs/logo.png'" />
+      <a class="sponsor-item" v-for="item of sponsorsData" :href="item.link">
+        <img class="sponsor" :src="`/2022/imgs/sponsors/${item.logo}`" />
+      </a>
     </mint-box>
     <div class="footer">
       <img class="footer-cat" :src="'/2022/imgs/cats/cat2.svg'" />
@@ -66,6 +61,12 @@
 <script setup>
 import { ref } from 'vue';
 
+import sponsors from '@/assets/sponsors.json';
+const sponsorsData = ref([
+  ...sponsors.co_org,
+  ...sponsors.sponsors.map(x => x.org).flat(),
+  ...sponsors.thanks.map(x => x.org).flat()
+]);
 const props = defineProps({
   hideSponsor: {
     type: Boolean,
@@ -75,13 +76,13 @@ const props = defineProps({
 const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url: `https://sitcon.org/${i + 2013}` })))
 </script>
 <style lang="sass" scoped>
-.sopnsor-items
+.sponsors-items
   margin-top: 48px
   display: grid
-  grid-template-columns: repeat(4, 1fr)
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
   grid-gap: 20px
   @media (max-width: 768px)
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
   img
     width: 100%
 
