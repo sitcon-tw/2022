@@ -19,7 +19,7 @@ const intros = {
   "財務組": "負責年會與金錢相關的業務。",
   "紀錄組": "協助年會與相關活動之影像紀錄，及提供各組所需之影像素材。",
   "開發組": "SITCON 開發組主要負責年會的官網與通關 App 開發，適合對網頁開發有興趣、想法，有新鮮肝可以炸的朋友們！\n\n",
-  "編輯組": "SITCON 編輯組負責年會的社群媒體經營與互動，包含：Facebook、Instagram、Plurk、Twitter、Telegram Channel。以及開源相關活動推廣與其他組別公告事項、大會公告等文案撰寫需求。適合對社群媒體經營有興趣，有新鮮腦汁可以榨的朋友們！",
+  "編輯組": "SITCON 編輯組負責年會的社群媒體經營與互動，包含 Facebook、Instagram、Plurk、Twitter、Telegram Channel，以及開源相關活動推廣與其他組別公告事項、大會公告等文案撰寫需求。適合對社群媒體經營有興趣，有新鮮腦汁可以榨的朋友們！",
   "製播組": "協助年會當天各會議廳之錄影及直播，並處理議程演講的剪接後製。",
 }
 // drop first 3 line
@@ -50,5 +50,5 @@ lines.forEach(line => {
     emailHash: md5(email.trim().toLowerCase()),
   })
 })
-fs.writeFileSync('teams.json', JSON.stringify(results, null, 2));
+fs.writeFileSync('../src/assets/teams.json', JSON.stringify(results, null, 2));
 console.log('done');
