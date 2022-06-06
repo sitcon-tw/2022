@@ -1,7 +1,7 @@
 <template>
   <div>
     <mint-box v-if="!hideSponsor" class="sponsors-items"> <img class="sponsor" :src="'/2022/imgs/logo.png'" />
-      <a class="sponsor-item" v-for="item of sponsorsData" :href="item.link">
+      <a class="sponsor-item" v-for="item of sponsorsData" :href="item.link" target="_blank">
         <img class="sponsor" :src="`/2022/imgs/sponsors/${item.logo}`" />
       </a>
     </mint-box>
