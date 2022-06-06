@@ -25,6 +25,8 @@
     <link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.ico" sizes="any" v-if="cfp" />
     <link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.png" sizes="any" v-if="cfp" />
     <link rel="icon" href="https://sitcon.org/2022/imgs/cfp/CFP_favicon.svg" type="image/svg+xml" v-if="cfp" />
+    <link rel="icon" href="https://sitcon.org/2022/imgs/icon.png" sizes="any" v-if="!cfp" />
+    <link rel="icon" href="https://sitcon.org/2022/imgs/icon.svg" type="image/svg+xml" v-if="!cfp" />
   </Head>
 </template>
 
@@ -32,4 +34,3 @@
 import { Head } from '@vueuse/head'
 const props = defineProps(['cfp', 'pageTitle', 'title', 'description', 'image'])
 </script>
- 
