@@ -9,6 +9,7 @@
   background-color: #F4EEE1
   border-radius: var(--padding)
   padding: var(--padding)
+  color: #383838
   @media (max-width: 768px)
     --padding: 24px
   &+.mint-box
