@@ -50,8 +50,8 @@
       :description="activeSession.zh.description"
       image="https://sitcon.org/2022/imgs/cfp/cfp-og.png" />
     <GeneralHead v-else
-      page-title="議程"
-      title="議程"
+      page-title="議程資訊"
+      title="議程資訊 | SITCON X"
       description="議程"
       image="https://sitcon.org/2022/imgs/cfp/cfp-og.png" />
   </div>
