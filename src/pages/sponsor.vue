@@ -56,14 +56,19 @@ export default {
   text-align: center
 .sponsor-description
   font-size: 18px
+  @media (max-width: 768px)
+    font-size: 14px
 .sponsor-logo
   display: block
-  max-width: 300px
+  width: 300px
+  max-width: 100%
   margin: 0 auto
 .sponsor-items
   display: grid
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
   gap: 32px
+  @media (max-width: 768px)
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
   &.co_org
     grid-template-columns: repeat(2, 1fr)
     @media (max-width: 768px)
