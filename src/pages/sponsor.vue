@@ -11,7 +11,7 @@
       <block-title>主辦單位</block-title>
       <mint-box>
         <div class="sponsor-name">{{ sponsors.main.name }}</div>
-        <img class="sponsor-logo" :src="'/2022/imgs/logo.png'" />
+        <img class="sopnsor-logo" :src="'/2022/imgs/logo.png'" />
         <p class="sponsor-description">{{ sponsors.main.description }}</p>
       </mint-box>
     </arrow-box>
@@ -20,7 +20,7 @@
       <div class="sponsor-items co_org">
         <mint-box class="sponsor-item" v-for="item of sponsors.co_org" :id="item.id" :href="item.link">
           <div class="sponsor-name">{{ item.name }}</div>
-          <img class="sponsor-logo" :src="`/2022/imgs/sponsors/${item.logo}`" />
+          <img class="sopnsor-logo" :src="`/2022/imgs/sponsors/${item.logo}`" />
           <p class="sponsor-description">{{ item.description }}</p>
         </mint-box>
       </div>
@@ -30,7 +30,7 @@
       <div class="sponsor-items">
         <mint-box class="sponsor-item" v-for="item of data.org" :id="item.id" :href="item.link">
           <div class="sponsor-name">{{ item.name }}</div>
-          <img class="sponsor-logo" :src="`/2022/imgs/sponsors/${item.logo}`" />
+          <img class="sopnsor-logo" :src="`/2022/imgs/sponsors/${item.logo}`" />
           <p class="sponsor-description">{{ item.description }}</p>
         </mint-box>
       </div>
@@ -58,7 +58,7 @@ export default {
   font-size: 18px
   @media (max-width: 768px)
     font-size: 14px
-.sponsor-logo
+.sopnsor-logo
   display: block
   width: 300px
   max-width: 100%
@@ -74,5 +74,5 @@ export default {
     @media (max-width: 768px)
       grid-template-columns: 1fr
   .sponsor-item
-    margin-top: 0
+    margin-top: 0 !important
 </style>
