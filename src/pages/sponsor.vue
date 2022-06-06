@@ -66,6 +66,8 @@ export default {
   gap: 32px
   &.co_org
     grid-template-columns: repeat(2, 1fr)
+    @media (max-width: 768px)
+      grid-template-columns: 1fr
   .sponsor-item
     margin-top: 0
 </style>
