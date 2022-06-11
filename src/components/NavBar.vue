@@ -91,13 +91,17 @@ export default {
     img
       &.sitcon
         height: 24px
-        @media (max-width: 768px)
+        @media (max-width: 1024px)
           display: none
       &.x
         height: 48px
+        @media (max-width: 1024px)
+          height: 40px
   .links
     display: flex
     gap: 8px
+    @media (max-width: 1024px)
+      gap: 4px
     .link
       display: block
       border: none
@@ -111,6 +115,9 @@ export default {
       transition: all 0.2s ease
       box-shadow: inset 0 0 0 2px #82D357
       text-align: center
+      @media (max-width: 1024px)
+        padding: 6px 12px
+        font-size: 14px
       &:hover,&.router-link-active
         background-color: transparent
         color: var(--text-color)
