@@ -125,7 +125,7 @@ export default {
       &:not(.link-menu)
         &:hover,&.router-link-active
           background-color: transparent
-          --link-text-color: #fff
+          --link-text-color: var(--text-color)
       &.hide-mobile
         @media (max-width: 768px)
           display: none
