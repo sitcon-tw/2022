@@ -16,11 +16,18 @@
               <ol-style-icon :src="'/2022/imgs/sitcon-stone.png'" :scale="0.25"></ol-style-icon>
             </ol-style>
           </ol-feature>
-
         </ol-source-vector>
-
       </ol-vector-layer>
-
+      <ol-vector-layer>
+        <ol-source-vector>
+          <ol-feature>
+            <ol-geom-point :coordinates="[9.4001631, -66.6639189]"></ol-geom-point>
+            <ol-style>
+              <ol-style-icon :src="'/2022/imgs/pancake.png'" :scale="0.25"></ol-style-icon>
+            </ol-style>
+          </ol-feature>
+        </ol-source-vector>
+      </ol-vector-layer>
     </ol-map>
   </div>
 </template>
