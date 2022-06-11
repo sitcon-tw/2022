@@ -1,7 +1,7 @@
 <template>
   <nav-bar />
   <div style="height: 160px" />
-  <div class="loading-container">
+  <div class="loading-container" v-if="showLoading">
     <div class="loading"></div>
   </div>
   <router-view v-if="!showLoading" />
