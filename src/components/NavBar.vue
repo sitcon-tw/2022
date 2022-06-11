@@ -8,7 +8,7 @@
       <router-link class="link hide-mobile" :to="link.to" v-for="(link, i) of links" @click="active = i">
         {{ link.text }}
       </router-link>
-      <button class="link link-menu hide-desktop">
+      <button class="link link-menu hide-desktop" :class="{ 'active': menuActive }" @click="menuActive = !menuActive">
         {{ links[active].text }}
         <div class="menu">
           <router-link class="menu-item" :to="link.to" v-for="(link, i) of links" @click="active = i">
@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       active: 0,
+      menuActive: false,
       links: [
         {
           to: '/',
@@ -151,7 +152,7 @@ export default {
         &:hover
           background-color: #82D357
           color: var(--text-color)
-        &:focus-within
+        &.active
           background-color: transparent
           &::before
             transform: translateY(50%) rotate(135deg)
