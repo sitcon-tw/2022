@@ -1,12 +1,12 @@
 <template>
   <nav-bar />
   <div style="height: 160px" />
-  <transition name="fade" mode="out-in">
+  <transition name="fade" mode="in-out">
     <div class="loading-container" v-if="showLoading">
       <div class="loading"></div>
     </div>
-    <router-view v-else />
   </transition>
+  <router-view />
   <div class="container">
     <footer-item :hide-sponsor="hideSponsor" />
   </div>
@@ -40,7 +40,15 @@ export default {
   display: flex
   align-items: center
   justify-content: center
-  margin: calc(100svh / 2 - 50px / 2 - 160px) 0
+  position: fixed
+  z-index: 100
+  background: rgba(0, 0, 0, .2)
+  top: 0
+  bottom: 0
+  margin: auto
+  width: 100vw
+  height: 100vh
+  height: 100svh
   .loading
     width: 50px
     height: 50px

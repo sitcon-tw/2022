@@ -114,7 +114,7 @@ export default {
       font-weight: 700
       position: relative
       transition: all 0.2s ease
-      box-shadow: inset 0 0 0 2px #82D357
+      box-shadow: inset 0 0 0 4px #82D357
       text-align: center
       @media (max-width: 1024px)
         padding: 6px 12px
@@ -126,6 +126,7 @@ export default {
         &:hover,&.router-link-active
           background-color: transparent
           --link-text-color: var(--text-color)
+          box-shadow: inset 0 0 0 2px #82D357
       &.hide-mobile
         @media (max-width: 768px)
           display: none
@@ -155,6 +156,7 @@ export default {
         &.active
           background-color: transparent
           --link-text-color: var(--text-color)
+          box-shadow: inset 0 0 0 2px #82D357
           &::before
             transform: translateY(50%) rotate(135deg)
           .menu
