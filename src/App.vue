@@ -11,7 +11,11 @@ import jsonld from './assets/jsonld';
       {{ JSON.stringify(jsonld) }}
     </component>
   </Head>
-  <RouterView />
+  <router-view v-slot="{ Component }">
+    <transition name="fade">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 <style lang="sass">
 @import './assets/sass/main.sass'
