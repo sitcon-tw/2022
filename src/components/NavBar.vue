@@ -100,13 +100,14 @@ export default {
   .links
     display: flex
     gap: 8px
+    --link-text-color: #383838
     @media (max-width: 1024px)
       gap: 4px
     .link
       display: block
       border: none
       background-color: #82D357
-      color: #383838
+      color: var(--link-text-color)
       text-decoration: none
       border-radius: 10em
       padding: 8px 16px
@@ -121,9 +122,10 @@ export default {
       @media (min-width: 769px)
         &:first-child
           display: none
-      &:hover,&.router-link-active
-        background-color: transparent
-        color: var(--text-color)
+      &:not(.link-menu)
+        &:hover,&.router-link-active
+          background-color: transparent
+          --link-text-color: #fff
       &.hide-mobile
         @media (max-width: 768px)
           display: none
@@ -137,7 +139,6 @@ export default {
         cursor: pointer
         &::before
           --size: 5px
-          --color: var(--text-color)
           content: ''
           position: absolute
           top: 0
@@ -146,16 +147,14 @@ export default {
           margin: auto
           width: var(--size)
           height: var(--size)
-          border-left: 2px solid var(--color)
-          border-bottom: 2px solid var(--color)
+          border-left: 2px solid var(--link-text-color)
+          border-bottom: 2px solid var(--link-text-color)
           transform: rotate(-45deg)
           transform-origin: center center
           transition: all 0.2s ease
-        &:hover
-          background-color: #82D357
-          color: var(--text-color)
         &.active
           background-color: transparent
+          --link-text-color: var(--text-color)
           &::before
             transform: translateY(50%) rotate(135deg)
           .menu
@@ -169,7 +168,7 @@ export default {
           position: absolute
           top: calc(100% + 8px)
           left: 0
-          width: 200px
+          width: calc(8.5em + 8px)
           border-radius: var(--border-radius)
           background: #82D357
           opacity: 0
@@ -177,6 +176,7 @@ export default {
           transition: all 0.2s ease
           pointer-events: none
           z-index: 5
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.2)
           .menu-item
             display: block
             padding: 16px 16px
@@ -184,6 +184,7 @@ export default {
             color: #383838
             font-weight: 700
             transition: all 0.2s ease
+            text-align: left
             &:first-child
               border-radius: var(--border-radius) var(--border-radius) 0 0
             &:last-child
