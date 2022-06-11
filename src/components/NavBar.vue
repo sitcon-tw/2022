@@ -5,15 +5,63 @@
       <img class="x" :src="'/2022/imgs/x.svg'" />
     </router-link>
     <div class="links">
-      <router-link class="link" to="/agenda"> 議程資訊 </router-link>
-      <router-link class="link" to="/venue"> 會場地圖 </router-link>
-      <router-link class="link" to="/traffic"> 交通方式 </router-link>
-      <router-link class="link" to="/staff"> SITCON 團隊 </router-link>
-      <router-link class="link" to="/sponsor"> 贊助 </router-link>
+      <router-link class="link hide-mobile" :to="link.to" v-for="(link, i) of links" @click="active = i">
+        {{ link.text }}
+      </router-link>
+      <button class="link link-menu hide-desktop">
+        {{ links[active].text }}
+        <div class="menu">
+          <router-link class="menu-item" :to="link.to" v-for="(link, i) of links" @click="active = i">
+            {{ link.text }}
+          </router-link>
+        </div>
+      </button>
+      <a class="link hide-desktop">
+        報名取票
+      </a>
     </div>
   </arrow-box>
   <div style="height: 160px" />
 </template>
+<script>
+export default {
+  name: 'NavBar',
+  data() {
+    return {
+      active: 0,
+      links: [
+        {
+          to: '/',
+          text: '年會主題'
+        },
+        {
+          to: '/agenda',
+          text: '議程資訊'
+        },
+        {
+          to: '/venue',
+          text: '會場地圖'
+        },
+        {
+          to: '/traffic',
+          text: '交通方式'
+        },
+        {
+          to: '/staff',
+          text: 'SITCON 團隊'
+        },
+        {
+          to: '/sponsor',
+          text: '贊助'
+        }
+      ]
+    }
+  },
+  mounted() {
+    this.active = this.links.findIndex(link => link.to === this.$route.path)
+  }
+}
+</script>
 <style lang="sass" scoped>
 .nav-bar
   display: flex
@@ -51,7 +99,8 @@
     display: flex
     gap: 8px
     .link
-      display: inline-block
+      display: block
+      border: none
       background-color: #82D357
       color: #383838
       text-decoration: none
@@ -61,8 +110,78 @@
       position: relative
       transition: all 0.2s ease
       box-shadow: inset 0 0 0 2px #82D357
+      text-align: center
       &:hover,&.router-link-active
         background-color: transparent
         color: var(--text-color)
+      &.hide-mobile
+        @media (max-width: 768px)
+          display: none
+      &.hide-desktop
+        @media (min-width: 769px)
+          display: none
+      &.link-menu
+        padding-right: 32px
+        min-width: calc(8.5em + 8px)
+        position: relative
+        cursor: pointer
+        &::before
+          --size: 5px
+          --color: var(--text-color)
+          content: ''
+          position: absolute
+          top: 0
+          bottom: 0
+          right: 16px
+          margin: auto
+          width: var(--size)
+          height: var(--size)
+          border-left: 2px solid var(--color)
+          border-bottom: 2px solid var(--color)
+          transform: rotate(-45deg)
+          transform-origin: center center
+          transition: all 0.2s ease
+        &:hover
+          background-color: #82D357
+          color: var(--text-color)
+        &:focus-within
+          background-color: transparent
+          &::before
+            transform: translateY(50%) rotate(135deg)
+          .menu
+            opacity: 1
+            transform: translateY(0)
+            pointer-events: auto
+        .menu
+          --border-radius: 16px
+          display: flex
+          flex-direction: column
+          position: absolute
+          top: calc(100% + 8px)
+          left: 0
+          width: 200px
+          border-radius: var(--border-radius)
+          background: #82D357
+          opacity: 0
+          transform: translateY(10px)
+          transition: all 0.2s ease
+          pointer-events: none
+          z-index: 5
+          .menu-item
+            display: block
+            padding: 16px 16px
+            text-decoration: none
+            color: #383838
+            font-weight: 700
+            transition: all 0.2s ease
+            &:first-child
+              border-radius: var(--border-radius) var(--border-radius) 0 0
+            &:last-child
+              border-radius: 0 0 var(--border-radius) var(--border-radius)
+            &:not(:last-child)
+              border-bottom: 1px solid rgba(0, 0, 0, .1)
+            &:hover
+              background-color: rgba(0, 0, 0, .05)
+              color: var(--text-color)
 
 </style>
