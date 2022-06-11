@@ -1,8 +1,8 @@
 <template>
   <nav-bar />
   <div style="height: 160px" />
-  <div class="loading-container" v-if="showLoading">
-    <div class="loading-meow">🐈 讀取中</div>
+  <div class="loading-container">
+    <div class="loading"></div>
   </div>
   <router-view v-if="!showLoading" />
   <div class="container">
@@ -35,9 +35,20 @@ export default {
 </script>
 <style lang="sass" scoped>
 .loading-container
-  height: calc(100vh - 160px)
-  height: calc(100svh - 160px)
   display: flex
   align-items: center
   justify-content: center
+  margin: 48px 0
+  .loading
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    border: 8px solid #A89B85
+    border-top: 8px solid transparent
+    animation: loading 1s linear infinite
+@keyframes loading
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
 </style>
