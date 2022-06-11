@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <nav-bar />
     <GeneralHead
       page-title="交通方式"
       title="交通方式 | SITCON X"
@@ -20,7 +19,6 @@
         <img class="the-white-neko" :src="'/2022/imgs/cats/cat3.svg'" />
       </mint-box>
     </arrow-box>
-    <footer-item />
   </div>
 </template>
 <style lang="sass" scoped>

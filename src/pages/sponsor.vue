@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <nav-bar />
     <GeneralHead
       page-title="贊助"
       title="贊助 | SITCON X"
@@ -35,7 +34,6 @@
         </mint-box>
       </div>
     </arrow-box>
-    <footer-item hide-sponsor />
   </div>
 </template>
 

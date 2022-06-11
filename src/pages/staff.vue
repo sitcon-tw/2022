@@ -1,6 +1,5 @@
 <template>
   <div>
-    <nav-bar />
     <GeneralHead
       page-title="SITCON 團隊"
       title="SITCON 團隊 | SITCON X"
@@ -42,9 +41,6 @@
       <div class="team-box last">
         <div class="inner-box"></div>
       </div>
-    </div>
-    <div class="container">
-      <footer-item />
     </div>
   </div>
 </template>
