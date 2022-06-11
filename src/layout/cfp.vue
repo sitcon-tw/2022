@@ -1,3 +1,3 @@
 <template>
-  <div>404 </div>
+  <router-view />
 </template>

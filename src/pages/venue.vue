@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <nav-bar />
     <GeneralHead
       page-title="會場地圖"
       title="會場地圖 | SITCON X"
@@ -17,7 +16,6 @@
         <img class="floor-img" :src="'/2022/imgs/venue/4f.svg'" />
       </mint-box>
     </arrow-box>
-    <footer-item />
   </div>
 </template>
 

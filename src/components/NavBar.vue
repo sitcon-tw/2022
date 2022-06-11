@@ -119,6 +119,9 @@ export default {
       @media (max-width: 1024px)
         padding: 6px 12px
         font-size: 14px
+      @media (min-width: 769px)
+        &:first-child
+          display: none
       &:hover,&.router-link-active
         background-color: transparent
         color: var(--text-color)
