@@ -1,7 +1,10 @@
 <template>
   <nav-bar />
+  <div style="height: 160px" />
+  <div class="loading-container" v-if="showLoading">
+    <div class="loading-meow">🐈 讀取中</div>
+  </div>
   <router-view v-if="!showLoading" />
-  <div class="loading" v-if="showLoading">loading...</div>
   <div class="container">
     <footer-item :hide-sponsor="hideSponsor" />
   </div>
@@ -30,3 +33,10 @@ export default {
   }
 }
 </script>
+<style lang="sass" scoped>
+.loading-container
+  height: calc(100vh - 160px)
+  height: calc(100svh - 160px)
+  display: flex
+  align-items: center
+  justify-content: center

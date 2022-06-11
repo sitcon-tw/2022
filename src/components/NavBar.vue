@@ -21,7 +21,6 @@
       </a>
     </div>
   </arrow-box>
-  <div style="height: 160px" />
 </template>
 <script>
 export default {
