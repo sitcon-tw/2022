@@ -6,7 +6,6 @@ import jsonld from './assets/jsonld';
 export default {
   data() {
     return {
-      showLoading: true,
       jsonld
     }
   },
@@ -14,16 +13,6 @@ export default {
     RouterView,
     Head
   },
-  mounted() {
-    this.$router.beforeEach((to, from, next) => {
-      this.showLoading = true
-      next()
-    })
-    this.$router.afterEach(() => {
-      this.showLoading = false
-    })
-    this.showLoading = false
-  }
 }
 </script>
 <template>
@@ -33,7 +22,7 @@ export default {
       {{ JSON.stringify(jsonld) }}
     </component>
   </Head>
-  <router-view v-show="!showLoading" />
+  <router-view />
 </template>
 <style lang="sass">
 @import './assets/sass/main.sass'
