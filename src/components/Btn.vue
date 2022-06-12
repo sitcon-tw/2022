@@ -2,7 +2,7 @@
   <a class="btn" v-if="href !== ''" :href="href" :target="target" :class="{ large }">
     <slot />
   </a>
-  <router-link class="btn" v-if="to !== ''" :to="to" :class="{ large }">
+  <router-link class="btn" v-else :to="to" :class="{ large }">
     <slot />
   </router-link>
 </template>
