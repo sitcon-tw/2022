@@ -35,21 +35,23 @@ body,html
   --text-color: #fff
   color: var(--text-color)
   ul
-  list-style: none
-  padding: 0
-  margin: 0
-  li
-    margin-bottom: 10px
-    position: relative
-    padding-left: 15px
-    &::before
-      content: ""
-      position: absolute
-      top: 0.5em
-      left: 0
-      width: 5px
-      height: 1em
-      background-color: #fff
+    list-style: none
+    padding: 0
+    margin: 0
+    li
+      margin-bottom: 10px
+      position: relative
+      padding-left: 15px
+      &::before
+        content: ""
+        position: absolute
+        top: 0.5em
+        left: 0
+        width: 5px
+        height: 1em
+        background-color: #fff
+  a
+    color: #fff
 
 *
   box-sizing: border-box
@@ -80,8 +82,6 @@ strong
   font-weight: 900
 .text-center
   text-align: center
-a
-  color: #fff
 .maze-background
   overflow-x: hidden // prevent ConfettiExplosion in cfp page causing horizontal overflow
   background-color: #333333
