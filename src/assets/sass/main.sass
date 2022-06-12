@@ -78,10 +78,31 @@ h3
     font-size: 24px
   @media screen and (max-width: 768px)
     font-size: 20px
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+  li
+    margin-bottom: 10px
+    position: relative
+    padding-left: 15px
+    &::before
+      content: ""
+      position: absolute
+      top: 0.5em
+      left: 0
+      width: 5px
+      height: 1em
+      background-color: #82D357
 strong
   font-weight: 900
 .text-center
   text-align: center
+a
+  color: #82D357
+img
+  max-width: 100%
+
 .maze-background
   overflow-x: hidden // prevent ConfettiExplosion in cfp page causing horizontal overflow
   background-color: #333333

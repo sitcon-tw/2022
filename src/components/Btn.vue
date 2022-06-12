@@ -33,6 +33,7 @@ const props = defineProps({
   border-radius: 16px
   padding: 4px 16px
   text-decoration: none
+  text-align: center
   box-shadow: inset 0 0 0 2px #82D357
   font-weight: 700
   font-size: 20px
