@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite-ssg build",
-    "build:netlify": "vite-ssg build && mkdir dist_netlify && mkdir dist_netlify/2022 &&cp -r ./dist/* ./dist_netlify/2022",
+    "build:netlify": "vite-ssg build && mv dist dist_netlify/2022",
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
