@@ -66,7 +66,7 @@ export default {
       let stroke = 8
       let lineGap = 20
       let gap = (window.innerWidth - Math.min(1280, window.innerWidth / 100 * 95)) / 2
-      if (window.innerWidth < 768) {
+      if (window.innerWidth <= 768) {
         gap = window.innerWidth / 100 * 2.5
         stroke = 4
         lineGap = window.innerWidth / 100 * 2.5 / 2
