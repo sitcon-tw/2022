@@ -8,11 +8,9 @@
 
     <div class="container">
       <div class="wrap">
-        <h2 class="name">SITCON 學生計算機年會</h2>
-        <div class="x-cat">
-          <div class="x">
-            <img :src="'/2022/imgs/xx.svg'" />
-          </div>
+        <div class="banner">
+          <h1 class="name">SITCON 學生計算機年會</h1>
+          <img class="x" :src="'/2022/imgs/xx.svg'" />
           <div class="wool-cat-one">
             <img class="wool" :src="'/2022/imgs/cats/wool-orange.svg'" />
             <img class="cat" :src="'/2022/imgs/cats/cat-cover.svg'" />
@@ -20,9 +18,9 @@
         </div>
 
         <div class="info">
-          <div class="text">
-            <h3>2022 09/04<br>中央研究院 人文社會科學館</h3>
-          </div>
+          <h2 class="text">
+            2022 09/04<br>中央研究院 人文社會科學館
+          </h2>
           <img class="arrow" :src="'/2022/imgs/arrow.svg'" />
           <img class="arrow" :src="'/2022/imgs/arrow.svg'" />
           <div class="btns">
@@ -131,45 +129,77 @@ h1, h2, h3, h4, h5, h6
 .boxes
   width: 85%
   margin: 0 auto
-.pad1
-  padding: 0 40px
-.pad2
-  padding: 0 80px
+@media screen and (min-width: 769px)
+  .pad1
+    padding: 0 40px
+  .pad2
+    padding: 0 80px
 .rat-center
   color: #FFA949
   text-align: center
-  font-size: 32px
+  @media screen and (max-width: 768px)
+    line-height: 5
+  @media screen and (min-width: 769px)
+    font-size: 32px
 .btns
   display: flex
   gap: 16px
 .name
   text-align: right
-.x-cat
+.banner
   display: grid
-  grid-template-columns: 5fr 4fr
-  grid-gap: 60px
+  grid-template-columns: 5fr 0 4fr
+  grid-template-rows: 1fr 0 auto 50px auto
+  @media screen and (max-width: 768px)
+    grid-template-columns: 50% auto 45%
+    grid-template-rows: 1fr 3fr 0 1fr 2fr
+  grid-template-areas: ". . name" "x . name" "x . ." "x cat cat" ". cat cat"
+  .name
+    grid-area: name
+    word-break: keep-all
+    font-size: 32px
+    @media screen and (max-width: 768px)
+      font-size: 20px
+      line-height: 1.5
   .x
+    grid-area: x
     align-items: flex-start
     img
       width: 100%
   .wool-cat-one
+    grid-area: cat
+    display: grid
+    grid-template-columns: auto auto
+    grid-gap: 16px
+    @media screen and (max-width: 768px)
+      grid-template-columns: 1fr 3fr
+      grid-gap: 4px
     align-items: flex-end
-    display: flex
-    justify-content: flex-end
-    position: relative
-    bottom: -50px
-  padding-bottom: 50px
+    justify-content: flex-start
 .info
-  width: 90%
+  width: 95%
   margin: 64px auto
   display: grid
-  grid-template-columns: 4fr 1fr 1fr 4fr
-  grid-gap: 45px
+  grid-template-columns: 6fr 5% 1fr 5px 1fr 5% 4fr
+  @media screen and (max-width: 768px)
+    grid-template-columns: 5fr 1% 8% 1% 8% 2% 4fr
+  grid-template-areas: "text . arrow1 . arrow2 . btns"
   align-items: center
-  h3
+  .text
     line-height: 1.2
+    grid-area: text
+    word-break: keep-all
+    @media screen and (max-width: 768px)
+        font-size: 20px
+        font-weight: 700
+  .arrow
+    &:first-of-type
+      grid-area: arrow1
+    &:last-of-type
+      grid-area: arrow2
   .btns
-    margin: 0 auto
+    margin: 5% auto
+    grid-area: btns
     @media screen and (max-width: 768px)
       flex-direction: column
 .wool-cat-two
@@ -179,6 +209,8 @@ h1, h2, h3, h4, h5, h6
   display: grid
   grid-template-columns: 5fr 1fr 5fr
   grid-gap: 36px
+  @media screen and (max-width: 768px)
+    grid-gap: 8px
   align-items: end
   position: relative
   bottom: -10px
