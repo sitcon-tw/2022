@@ -23,7 +23,6 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 </style>
 <script setup>
-import { defineProps } from 'vue'
 const props = defineProps({
   href: {
     type: String,
