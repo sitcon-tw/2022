@@ -40,7 +40,11 @@ const rotation = ref(0)
 </script>
 <style lang="sass">
 #map
-  height: 400px
+  width: 100%
+  aspect-ratio: 21 / 9
   border-radius: 8px
   overflow: hidden
+  @media (max-width: 768px)
+    width: 100%
+    aspect-ratio: 1 / 1
 </style>

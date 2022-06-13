@@ -39,11 +39,15 @@
   font-size: 32px
   font-weight: bold
   text-align: center
+  @media (max-width: 768px)
+    font-size: 24px
 .location-description
   font-size: 24px
   line-height: 1.5
   text-align: center
   margin-top: 0
+  @media (max-width: 768px)
+    font-size: 18px
 .traffic-flow,.traffic-flow-mobile
   margin-top: 16px
   width: 100%
