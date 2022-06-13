@@ -6,6 +6,7 @@
       :hand-color="cat.handColor"
       :streak-color="cat.streakColor"
       :eye-color="cat.eyeColor"
+      :with-pancake="cat.withPancake"
       :style="`transform: scaleX(${cat.flip ? '-1' : '1'}) rotate(${cat.roate}deg);`" />
   </div>
 </template>
@@ -51,7 +52,8 @@ export default {
           streakColor: `rgba(0, 0, 0, .25)`,
           eyeColor: `rgba(0, 0, 0, .75)`,
           roate: Math.random() * 30 - 15,
-          flip: Math.random() > 0.5
+          flip: Math.random() > 0.5,
+          withPancake: Math.random() > 0.9
         })
       }
       this.show = true
