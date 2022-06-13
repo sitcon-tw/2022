@@ -43,14 +43,13 @@ export default {
         let hueList = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'monochrome']
         let hue = hueList[Math.floor(Math.random() * hueList.length)]
         let headColor = randomcolor({ hue: hue, luminosity: 'light' })
-        let eyeColor = `rgba(0, 0, 0, .5)`
         let handColor = randomcolor({ hue: hue, luminosity: 'dark' })
         this.cats.push({
           headColor,
           chokerColor: `#82D357`,
           handColor: handColor,
-          streakColor: eyeColor,
-          eyeColor: eyeColor,
+          streakColor: `rgba(0, 0, 0, .25)`,
+          eyeColor: `rgba(0, 0, 0, .75)`,
           roate: Math.random() * 30 - 15,
           flip: Math.random() > 0.5
         })
@@ -71,6 +70,7 @@ export default {
   z-index: 10
   display: flex
   transform: translateY(50%)
+  pointer-events: none
   animation-name: show-cat
   animation-duration: 3s
   animation-direction: alternate
