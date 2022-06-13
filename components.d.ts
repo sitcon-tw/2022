@@ -9,6 +9,8 @@ declare module '@vue/runtime-core' {
     ArrowBox: typeof import('./src/components/ArrowBox.vue')['default']
     BlockTitle: typeof import('./src/components/BlockTitle.vue')['default']
     Btn: typeof import('./src/components/Btn.vue')['default']
+    CatCorner: typeof import('./src/components/cat/Corner.vue')['default']
+    CatKonami: typeof import('./src/components/cat/Konami.vue')['default']
     CfpAgendaCard: typeof import('./src/components/cfp/AgendaCard.vue')['default']
     CfpAgendaType: typeof import('./src/components/cfp/AgendaType.vue')['default']
     CfpBackBtn: typeof import('./src/components/cfp/BackBtn.vue')['default']

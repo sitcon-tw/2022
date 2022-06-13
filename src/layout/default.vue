@@ -7,6 +7,7 @@
     </div>
   </transition>
   <router-view />
+  <cat-konami />
   <div class="container">
     <footer-item :hide-sponsor="hideSponsor" />
   </div>
