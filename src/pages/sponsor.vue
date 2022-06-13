@@ -26,7 +26,7 @@
     </arrow-box>
     <arrow-box v-for="data of [...sponsors.sponsors, ...sponsors.thanks]">
       <block-title>{{ data.type }}</block-title>
-      <div class="sponsor-items">
+      <div class="sponsor-items" :class="`type-${data.type}`">
         <mint-box class="sponsor-item" v-for="item of data.org" :id="item.id" :href="item.link">
           <div class="sponsor-name">{{ item.name }}</div>
           <img class="sopnsor-logo" :src="`/2022/imgs/sponsors/${item.logo}`" />
@@ -67,6 +67,13 @@ export default {
   gap: 32px
   @media (max-width: 768px)
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+    gap: 16px
+  &.type-新芽級,&.type-特別感謝,&.type-媒體夥伴
+    grid-template-columns: repeat(3, 1fr)
+    @media (max-width: 768px)
+      grid-template-columns: repeat(2, 1fr)
+    @media (max-width: 512px)
+      grid-template-columns: repeat(1, 1fr)
   &.co_org
     grid-template-columns: repeat(2, 1fr)
     @media (max-width: 768px)
