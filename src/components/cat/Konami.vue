@@ -12,7 +12,6 @@
 </template>
 <script>
 import KonamiCode from 'konami-code-js'
-import randomcolor from 'randomcolor'
 export default {
   name: 'cat-cornor',
   data() {
@@ -24,6 +23,7 @@ export default {
   },
   mounted() {
     this.registerKonamiCode()
+    this.showCats()
   },
   unmounted() {
     this.unregisterKonamiCode()
@@ -41,10 +41,13 @@ export default {
     showCats() {
       this.cats = []
       for (let i = 0; i < 11; i++) {
-        let hueList = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'monochrome']
-        let hue = hueList[Math.floor(Math.random() * hueList.length)]
-        let headColor = randomcolor({ hue: hue, luminosity: 'light' })
-        let handColor = randomcolor({ hue: hue, luminosity: 'dark' })
+        let randomMinMax = (min, max) => {
+          return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let hue = randomMinMax(30, 100)
+        let chroma = randomMinMax(0, 132)
+        let headColor = `hsl(${hue}, ${chroma}%, ${randomMinMax(50, 80)}%)`
+        let handColor = `hsl(${hue}, ${chroma}%, ${randomMinMax(30, 50)}%)`
         this.cats.push({
           headColor,
           chokerColor: `#82D357`,
@@ -53,7 +56,7 @@ export default {
           eyeColor: `rgba(0, 0, 0, .75)`,
           roate: Math.random() * 30 - 15,
           flip: Math.random() > 0.5,
-          withPancake: Math.random() > 0.9
+          withPancake: Math.random() > 0.99
         })
       }
       this.show = true
