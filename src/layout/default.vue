@@ -2,9 +2,7 @@
   <nav-bar />
   <div style="height: 160px" />
   <transition name="fade" mode="in-out">
-    <div class="loading-container" v-if="showLoading">
-      <div class="loading"></div>
-    </div>
+    <div class="loading" v-if="showLoading" />
   </transition>
   <router-view />
   <cat-konami />
@@ -37,26 +35,16 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-.loading-container
-  display: flex
-  align-items: center
-  justify-content: center
+.loading
+  width: 25px
+  height: 25px
+  border-radius: 50%
+  border: 4px solid #A89B85
+  border-top: 4px solid transparent
+  animation: loading 1s linear infinite
   position: fixed
-  z-index: 100
-  background: rgba(0, 0, 0, .2)
-  top: 0
-  bottom: 0
-  margin: auto
-  width: 100vw
-  height: 100vh
-  height: 100svh
-  .loading
-    width: 50px
-    height: 50px
-    border-radius: 50%
-    border: 8px solid #A89B85
-    border-top: 8px solid transparent
-    animation: loading 1s linear infinite
+  top: 8px
+  right: 8px
 @keyframes loading
   0%
     transform: rotate(0deg)
