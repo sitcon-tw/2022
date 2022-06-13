@@ -23,7 +23,6 @@ export default {
   },
   mounted() {
     this.registerKonamiCode()
-    this.showCats()
   },
   unmounted() {
     this.unregisterKonamiCode()
@@ -44,8 +43,8 @@ export default {
         let randomMinMax = (min, max) => {
           return Math.floor(Math.random() * (max - min + 1)) + min
         }
-        let hue = randomMinMax(30, 100)
-        let chroma = randomMinMax(0, 132)
+        let hue = randomMinMax(30, 150)
+        let chroma = randomMinMax(0, 75)
         let headColor = `hsl(${hue}, ${chroma}%, ${randomMinMax(50, 80)}%)`
         let handColor = `hsl(${hue}, ${chroma}%, ${randomMinMax(30, 50)}%)`
         this.cats.push({
