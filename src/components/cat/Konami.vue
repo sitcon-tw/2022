@@ -71,4 +71,17 @@ export default {
   z-index: 10
   display: flex
   transform: translateY(50%)
+  animation-name: show-cat
+  animation-duration: 3s
+  animation-direction: alternate
+  animation-easing-function: ease
+  animation-timeline: show-cat-timeline
+@keyframes show-cat
+    0%
+        transform: translateY(70%)
+    100%
+        transform: translateY(50%)
+@scroll-timeline show-cat-timeline
+    source: selector(".konami-code-cat")
+
 </style>
