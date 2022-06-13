@@ -45,6 +45,14 @@ export default {
   position: fixed
   top: 8px
   right: 8px
+  @media (max-width: 768px)
+    top: 2px
+    right: 2px
+    width: 20px
+    height: 20px
+    border: 2.5px solid #A89B85
+    border-top: 2.5px solid transparent
+
 @keyframes loading
   0%
     transform: rotate(0deg)
