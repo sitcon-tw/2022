@@ -96,7 +96,7 @@ export const createApp = ViteSSG(
       if (savedPosition) {
         return savedPosition
       }
-      return { x: 0, y: 0 }
+      return { top: 0 }
     }
   },
   async ({ app, router, routes, isClient, initialState }) => {
