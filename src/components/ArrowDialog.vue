@@ -92,12 +92,14 @@ export default {
       overflow-x: hidden
       max-height: calc(100vh - 250px)
       max-height: calc(100dvh - 250px)
-      margin: -36px
-      padding: 36px
+      margin: -18px
+      padding: 18px
       scrollbar-width: thin
       scrollbar-color: #F4EEE1 #F4EEE1
       @media screen and (max-width: 768px)
         max-height: calc(100vh - 200px)
+        margin: -12px
+        padding: 12px
 
 @keyframes fade-in
   from
