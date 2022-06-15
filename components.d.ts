@@ -36,7 +36,6 @@ declare module '@vue/runtime-core' {
     CfpSubmissionPersonalInfo: typeof import('./src/components/cfp/SubmissionPersonalInfo.vue')['default']
     CfpTimer: typeof import('./src/components/cfp/Timer.vue')['default']
     ConfettiExplosion: typeof import('./src/components/ConfettiExplosion.vue')['default']
-    Dialog: typeof import('./src/components/Dialog.vue')['default']
     FooterItem: typeof import('./src/components/FooterItem.vue')['default']
     GeneralHead: typeof import('./src/components/GeneralHead.vue')['default']
     LocationMap: typeof import('./src/components/LocationMap.vue')['default']
