@@ -132,6 +132,10 @@ h1, h2, h3, h4, h5, h6
 .boxes
   width: 85%
   margin: 0 auto
+  .mint-box
+    .btn
+      &:hover
+        color: #383838
 @media screen and (min-width: 769px)
   .pad1
     padding: 0 40px
