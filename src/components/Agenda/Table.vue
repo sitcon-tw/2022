@@ -18,6 +18,20 @@
           {{ time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
         </div>
       </div>
+      <!-- room decoration-line -->
+      <div class="decoration-container" v-for="room of rooms" :style="{
+        'grid-column-start': `🥞${room}`,
+        'grid-row-start': 'decoration-line-start',
+        'grid-row-end': '🥞end',
+      }">
+        <div class="decoration-line" />
+      </div>
+      <div class="decoration-end" v-for="room of rooms" :style="{
+        'grid-column-start': `🥞${room}`,
+        'grid-row-start': '🥞end',
+      }">
+        <div class="decoration-end-arrow" />
+      </div>
       <!-- room -->
       <div class="room-name" v-for="room of rooms" :style="{
         'grid-column-start': `🥞${room}`,
@@ -74,8 +88,8 @@ export default {
     },
     times() {
       return [...new Set(
-        this.sessionData.sessions.map(({ start }) => start),
-        this.sessionData.sessions.map(({ end }) => end),
+        [...      this.sessionData.sessions.map(({ start }) => start),
+        ...  this.sessionData.sessions.map(({ end }) => end),]
       )]
         .map(x => new Date(x))
         .sort()
@@ -88,7 +102,7 @@ export default {
         this.times
           .map(x => this.parseTime(x))
           .map(x => `[🥞${x}]`)
-      return ['[roomname]', ...res]
+      return ['[roomname]', '[decoration-line-start]', ...res, '[🥞end]']
     },
     activeSession() {
       if (this.$route.meta.id) {
@@ -173,4 +187,41 @@ export default {
     cursor: pointer
     &:hover
       background-color: #F4EEC0
+  .decoration-container
+    display: flex
+    justify-content: center
+    align-items: center
+    .decoration-line
+      background-color: #A89B85
+      width: 20px
+      height: 100%
+      border-radius: 100em 100em 0 0
+
+  .decoration-end
+    height: 100px
+    margin-top: -8px
+    display: flex
+    justify-content: center
+    align-items: center
+    .decoration-end-arrow
+      background-color: #A89B85
+      width: 20px
+      height: 100%
+      border-radius: 0 0 100em 100em
+      position: relative
+      &::before, &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 20px
+        height: 100%
+        border-radius: 100em 100em
+        background-color: #A89B85
+        transform-origin: bottom center
+      &::before
+        transform: translateX(-5px) translateY(10px) rotate(45deg)
+      &::after
+        transform: translateX(5px) translateY(10px) rotate(-45deg)
+
 </style>
