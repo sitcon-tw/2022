@@ -25,11 +25,15 @@ export default {
       type: Boolean
     }
   },
+  mounted() {
+    document.querySelector('html').style['overflow-y'] = this.modelValue ? 'hidden' : 'auto'
+    document.querySelector('body').style['overflow-y'] = this.modelValue ? 'hidden' : 'auto'
+  },
   watch: {
     modelValue: function (val) {
       // added overflow to html
-      document.querySelector('html').style.overflow = val ? 'hidden' : 'auto'
-      document.querySelector('body').style.overflow = val ? 'hidden' : 'auto'
+      document.querySelector('html').style['overflow-y'] = val ? 'hidden' : 'auto'
+      document.querySelector('body').style['overflow-y'] = val ? 'hidden' : 'auto'
     }
   },
 }

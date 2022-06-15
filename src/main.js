@@ -96,6 +96,9 @@ export const createApp = ViteSSG(
       if (savedPosition) {
         return savedPosition
       }
+      if (to.path.startsWith('/agenda/')) {
+        return
+      }
       return { top: 0 }
     }
   },
