@@ -46,10 +46,17 @@
         :class="{ hoverable: item.zh.description }"
         @click="openModel(item)">
 
-        {{ item.zh.title }}
+        <div class="session-title">
+          {{ item.zh.title }}
+        </div>
         <div class="speakers" v-if="item.speakers.length > 0">
           <span v-for="speaker of item.speakers" :key="speaker.id">
             {{ sessionData.speakers.filter(x => x.id == speaker)[0].zh.name }}
+          </span>
+        </div>
+        <div class="tags">
+          <span v-for="tag of item.tags" :key="tag">
+            #{{ tag }}
           </span>
         </div>
       </div>
@@ -76,7 +83,7 @@
               </span>
             </div>
             <div class="room">
-              {{ item.room }}/{{ Math.floor((new Date(item.end) - new Date(item.start)) / 1000 / 60) }}mins
+              {{ item.room }} / {{ Math.floor((new Date(item.end) - new Date(item.start)) / 1000 / 60) }}mins
             </div>
           </div>
         </div>
@@ -94,14 +101,23 @@
         </div>
         <div class="agenda-dialog-content">
           <div class="agenda-dialog-content-description">
-            <div class="tags">
+            <div class="tags" v-if="activeSession.tags.length > 0">
               <span class="tags-title">Tags</span>: <span class="tags-content">{{ activeSession.tags.join(', ') }}</span>
             </div>
             <div class="description">
-              {{ activeSession.zh.description }}
+              <Markdown :content="activeSession.zh.description" />
             </div>
           </div>
-          <div class="agenda-dialog-content-info"></div>
+          <div class="agenda-dialog-content-info">
+            <div class="section-title">目標聽眾</div>
+            <div class="section-content">
+              <Markdown :content="activeSession.targetAudience" />
+            </div>
+            <div class="section-title">先備知識</div>
+            <div class="section-content">
+              <Markdown :content="activeSession.priorKnowledge" />
+            </div>
+          </div>
         </div>
       </div>
     </ArrowDialog>
@@ -163,6 +179,20 @@ export default {
         let res = this.sessionData.sessions.find(x => x.id === this.$route.meta.id)
         res = JSON.parse(JSON.stringify(res))
         res.type = this.sessionData.session_types.filter(x => x.id === res.type)[0]?.zh?.name
+        console.log(res)
+        let description = res.zh.description.split('## 目標聽眾\n')[0]
+        let targetAudience = ''
+        let priorKnowledge = ''
+        let temp = res.zh.description.split(/## 目標聽眾\n|## 先備知識\n/)
+        if (temp.length > 1) {
+          targetAudience = temp[1]
+          if (temp.length > 2) {
+            priorKnowledge = temp[2]
+          }
+        }
+        res.zh.description = description
+        res.targetAudience = targetAudience
+        res.priorKnowledge = priorKnowledge
         return res
       }
     },
@@ -223,19 +253,44 @@ export default {
 <style lang="sass" scoped>
 .agenda-dialog
   color: #373737
-  .agenda-title
-    font-size: 36px
-    font-weight: bold
-  .agenda-type
-    font-size: 24px
+  font-size: 16px
+  @media (max-width: 768px)
+    font-size: 12px
+  .agenda-dialog-header
+    margin-bottom: .75em
+    .agenda-title
+      font-size: 2em
+      line-height: 1.5
+      font-weight: bold
+      position: relative
+      @media (max-width: 768px)
+        font-size: 1.5em
+      &::before
+        content: ''
+        width: 2em
+        height: 1em
+        pointer-events: none
+        float: right
+        z-index: -1
+  .agenda-type,.section-title
+    font-size: 1.5em
     font-weight: bold
     line-height: 1.5
+    @media (max-width: 768px)
+      font-size: 1.25em
+  .section-title
+    margin-top: .5em
+    margin-bottom: -.5em
   .tags
     font-family: 'STIX Two Text'
-    font-size: 24px
+    font-size: 1.25em
     font-weight: bold
     .tags-title
       color: #82D357
+  .agenda-dialog-content
+    display: grid
+    grid-template-columns: 3fr 1fr
+    gap: 16px
 .agenda-mobile-list
   display: none
   @media screen and (max-width: 768px)
@@ -249,39 +304,39 @@ export default {
     padding: 4px 8px
     font-size: 14px
     font-weight: bold
-  .session-item
-    background-color: #F4EEE1
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .25)
-    border-radius: 8px
-    padding: 8px
-    color: #373737
-    line-height: 1.75
-    &.hoverable:hover
-      cursor: pointer
-      background-color: #F4EEC0
-    .session-title
-      font-size: 16px
-      font-weight: bold
-    .speakers
-      font-size: 14px
-      color: #666666
-      span:not(:first-child)
-        &::before
-          content: '、'
-    .footer
-      display: flex
-      justify-content: space-between
-      align-items: center
-    .tags
-      span
-        text-transform: capitalize
-        font-size: 12px
-        background-color: #82D357
-        padding: 4px 8px
-        border-radius: 100em
-    .room
-      color: #51823A
+.session-item
+  background-color: #F4EEE1
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25)
+  border-radius: 8px
+  padding: 8px
+  color: #373737
+  line-height: 1.75
+  &.hoverable:hover
+    cursor: pointer
+    background-color: #F4EEC0
+  .session-title
+    font-size: 16px
+    font-weight: bold
+  .speakers
+    font-size: 14px
+    color: #666666
+    span:not(:first-child)
+      &::before
+        content: '、'
+  .footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .tags
+    span
+      text-transform: capitalize
       font-size: 12px
+      background-color: #82D357
+      padding: 4px 8px
+      border-radius: 100em
+  .room
+    color: #51823A
+    font-size: 12px
 .agenda-teble
   display: grid
   gap: 8px
@@ -303,25 +358,12 @@ export default {
     border-radius: 8px
     line-height: 1.2
   .session-item
-    background-color: #F4EEE1
-    color: #383838
-    border-radius: 20px
-    padding: 8px 16px
-    text-align: center
-    font-size: 14px
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    &.hoverable:hover
-      cursor: pointer
-      background-color: #F4EEC0
-    .speakers
-      font-size: 12px
-      color: #666666
-      span:not(:first-child)
-        &::before
-          content: '、'
+    text-align: center
+    border-radius: 16px
   .decoration-container
     display: flex
     justify-content: center

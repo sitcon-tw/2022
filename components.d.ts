@@ -41,6 +41,7 @@ declare module '@vue/runtime-core' {
     LocationMap: typeof import('./src/components/LocationMap.vue')['default']
     LogoCatInAMaze: typeof import('./src/components/logo/CatInAMaze.vue')['default']
     LogoSitcon: typeof import('./src/components/logo/Sitcon.vue')['default']
+    Markdown: typeof import('./src/components/Markdown.vue')['default']
     MintBox: typeof import('./src/components/MintBox.vue')['default']
     Modal: typeof import('./src/components/modal.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
