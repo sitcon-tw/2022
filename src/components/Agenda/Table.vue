@@ -54,7 +54,34 @@
         </div>
       </div>
     </div>
-
+    <div class="agenda-mobile-list">
+      <template v-for="time of startTimes">
+        <div class="time-item">
+          {{ time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
+        </div>
+        <div class="session-item" v-for="item of sessionData.sessions.filter(x => new Date(x.start).toString() == time)"
+          :class="{ hoverable: item.zh.description }" @click="openModel(item)">
+          <div class="session-title">
+            {{ item.zh.title }}
+          </div>
+          <div class="speakers" v-if="item.speakers.length > 0">
+            <span v-for="speaker of item.speakers" :key="speaker.id">
+              {{ sessionData.speakers.filter(x => x.id == speaker)[0].zh.name }}
+            </span>
+          </div>
+          <div class="footer">
+            <div class="tags">
+              <span v-for="tag of item.tags" :key="tag">
+                #{{ tag }}
+              </span>
+            </div>
+            <div class="room">
+              {{ item.room }}/{{ Math.floor((new Date(item.end) - new Date(item.start)) / 1000 / 60) }}mins
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
     <ArrowDialog v-model="sessionModal">
       <div class="agenda-dialog" v-if="activeSession">
         <div class="agenda-dialog-header">
@@ -68,7 +95,7 @@
         <div class="agenda-dialog-content">
           <div class="agenda-dialog-content-description">
             <div class="tags">
-              <span class="tags-title">tags</span>: <span class="tags-content">{{ activeSession.tags.join(', ') }}</span>
+              <span class="tags-title">Tags</span>: <span class="tags-content">{{ activeSession.tags.join(', ') }}</span>
             </div>
             <div class="description">
               {{ activeSession.zh.description }}
@@ -108,8 +135,15 @@ export default {
     },
     times() {
       return [...new Set(
-        [...      this.sessionData.sessions.map(({ start }) => start),
-        ...  this.sessionData.sessions.map(({ end }) => end),]
+        [...this.sessionData.sessions.map(({ start }) => start),
+        ...this.sessionData.sessions.map(({ end }) => end),]
+      )]
+        .map(x => new Date(x))
+        .sort()
+    },
+    startTimes() {
+      return [...new Set(
+        [...this.sessionData.sessions.map(({ start }) => start)]
       )]
         .map(x => new Date(x))
         .sort()
@@ -126,7 +160,10 @@ export default {
     },
     activeSession() {
       if (this.$route.meta.id) {
-        return this.sessionData.sessions.find(x => x.id === this.$route.meta.id)
+        let res = this.sessionData.sessions.find(x => x.id === this.$route.meta.id)
+        res = JSON.parse(JSON.stringify(res))
+        res.type = this.sessionData.session_types.filter(x => x.id === res.type)[0]?.zh?.name
+        return res
       }
     },
   },
@@ -136,14 +173,14 @@ export default {
     }
   },
   watch: {
-    sessionModal(to, from) {
-      if (!to) {
+    '$route.meta.id': function (val) {
+      this.sessionModal = !!val
+    },
+    sessionModal(val) {
+      if (!val) {
         this.$router.push(`/agenda/`)
       }
     },
-    '$route.meta.id': function (to, from) {
-      this.sessionModal = !!to
-    }
   },
   methods: {
     parseTime(time) {
@@ -184,9 +221,72 @@ export default {
 
 </script>
 <style lang="sass" scoped>
+.agenda-dialog
+  color: #373737
+  .agenda-title
+    font-size: 36px
+    font-weight: bold
+  .agenda-type
+    font-size: 24px
+    font-weight: bold
+    line-height: 1.5
+  .tags
+    font-family: 'STIX Two Text'
+    font-size: 24px
+    font-weight: bold
+    .tags-title
+      color: #82D357
+.agenda-mobile-list
+  display: none
+  @media screen and (max-width: 768px)
+    display: flex
+    flex-direction: column
+    gap: 8px
+  .time-item
+    background-color: #82D357
+    color: #383838
+    border-radius: 8px
+    padding: 4px 8px
+    font-size: 14px
+    font-weight: bold
+  .session-item
+    background-color: #F4EEE1
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25)
+    border-radius: 8px
+    padding: 8px
+    color: #373737
+    line-height: 1.75
+    &.hoverable:hover
+      cursor: pointer
+      background-color: #F4EEC0
+    .session-title
+      font-size: 16px
+      font-weight: bold
+    .speakers
+      font-size: 14px
+      color: #666666
+      span:not(:first-child)
+        &::before
+          content: '、'
+    .footer
+      display: flex
+      justify-content: space-between
+      align-items: center
+    .tags
+      span
+        text-transform: capitalize
+        font-size: 12px
+        background-color: #82D357
+        padding: 4px 8px
+        border-radius: 100em
+    .room
+      color: #51823A
+      font-size: 12px
 .agenda-teble
   display: grid
   gap: 8px
+  @media screen and (max-width: 769px)
+    display: none
   .time-item
     .time-item-content
       background-color: #82D357
@@ -197,7 +297,7 @@ export default {
   .room-name
     font-family: 'STIX Two Text', serif
     font-weight: bold
-    font-size: 48px
+    font-size: 36px
     text-align: center
     color: #82D357
     border-radius: 8px
