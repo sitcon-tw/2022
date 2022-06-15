@@ -91,6 +91,12 @@ export default {
     bottom: -3px
   &:deep(.arrow_bottom)
     bottom: -11px
+  @media screen and (max-width: 768px)
+    --border-width: 4px
+    --arrow-width: 20px
+    --border-radius: 24px
+    &:deep(.arrow_top)
+      bottom: 1px
   .logo
     display: flex
     align-items: center
