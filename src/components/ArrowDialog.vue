@@ -80,9 +80,11 @@ export default {
 
 @keyframes show
     from
-      transform: scale(0)
+      transform: scale(.5)
+      opacity: 0
     to
       transform: scale(1)
+      opacity: 1
 @keyframes show-backdrop
     from
       background-color: rgba(0, 0, 0, 0)
@@ -90,9 +92,11 @@ export default {
       background-color: rgba(0, 0, 0, 0.75)
 @keyframes hide
     to
-      transform: scale(0)
+      transform: scale(.5)
+      opacity: 0
     from
       transform: scale(1)
+      opacity: 1
 @keyframes hide-backdrop
     to
       background-color: rgba(0, 0, 0, 0)
