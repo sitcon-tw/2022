@@ -1,5 +1,5 @@
 <template>
-  <div v-html="parsed_content" />
+  <div class="🥞markdown-parser" v-html="parsed_content" />
 </template>
 <script>
 import showdown from 'showdown'
@@ -18,9 +18,7 @@ export default {
   },
   created() {
     this.parsed_content = this.content
-
     this.parsed_content = this.parse(this.content)
-    console.log(this.parse(this.content))
   },
   methods: {
     parse(content) {
@@ -31,3 +29,8 @@ export default {
 }
 
 </script>
+<style lang="sass">
+.🥞markdown-parser
+  p
+    margin-top: 0
+</style>
