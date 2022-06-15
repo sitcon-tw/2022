@@ -9,7 +9,7 @@
     <div class="maze-background">
       <cfp-glass-box first-child>
         <cfp-back-btn />
-        <logo-cat-in-a-maze />
+        <cfp-logo-cat-in-a-maze />
         <h1 class="text-center">開放式議程</h1>
         <cfp-divider />
         <cfp-timer :ended-time="new Date('2022-06-26T23:59:59+08:00')" />

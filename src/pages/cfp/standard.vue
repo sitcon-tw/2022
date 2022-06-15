@@ -11,7 +11,7 @@
     <div class="maze-background">
       <cfp-glass-box first-child>
         <cfp-back-btn />
-        <logo-cat-in-a-maze />
+        <cfp-logo-cat-in-a-maze />
         <h1 class="text-center">一般議程</h1>
         <cfp-divider />
         <cfp-timer />
