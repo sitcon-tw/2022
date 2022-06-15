@@ -24,7 +24,7 @@
           <img class="arrow" :src="'/2022/imgs/arrow.svg'" />
           <img class="arrow" :src="'/2022/imgs/arrow.svg'" />
           <div class="btns">
-            <btn href="#">報名取票</btn>
+            <btn @click="dialogStore.signUpDialogOpened = true">報名取票</btn>
             <btn href="#">公告資訊</btn>
           </div>
         </div>
@@ -115,9 +115,12 @@
   </div>
 </template>
 <script>
+import { useDialogStore } from '../store/dialog'
 export default {
-  created() {
-  }
+  setup() {
+    const dialogStore = useDialogStore()
+    return { dialogStore }
+  },
 }
 </script>
 <style lang="sass" scoped>

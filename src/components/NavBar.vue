@@ -16,15 +16,20 @@
           </router-link>
         </div>
       </button>
-      <a class="link hide-desktop">
+      <a class="link hide-desktop" @click="dialogStore.signUpDialogOpened = true">
         報名取票
       </a>
     </div>
   </arrow-box>
 </template>
 <script>
+import { useDialogStore } from '../store/dialog'
 export default {
   name: 'NavBar',
+  setup() {
+    const dialogStore = useDialogStore()
+    return { dialogStore }
+  },
   data() {
     return {
       active: 0,
@@ -59,6 +64,8 @@ export default {
   },
   mounted() {
     this.active = this.links.findIndex(link => link.to === this.$route.path)
+  },
+  methods: {
   }
 }
 </script>
@@ -116,6 +123,7 @@ export default {
       transition: all 0.2s ease
       box-shadow: inset 0 0 0 4px #82D357
       text-align: center
+      cursor: pointer
       @media (max-width: 1024px)
         padding: 6px 12px
         font-size: 14px

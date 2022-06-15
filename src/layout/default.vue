@@ -6,6 +6,7 @@
   </transition>
   <router-view />
   <cat-konami />
+  <sign-up-dialog />
   <div class="container">
     <footer-item :hide-sponsor="hideSponsor" />
   </div>

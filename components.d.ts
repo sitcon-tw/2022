@@ -7,6 +7,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AgendaTable: typeof import('./src/components/Agenda/Table.vue')['default']
     ArrowBox: typeof import('./src/components/ArrowBox.vue')['default']
+    ArrowDialog: typeof import('./src/components/ArrowDialog.vue')['default']
     BlockTitle: typeof import('./src/components/BlockTitle.vue')['default']
     Btn: typeof import('./src/components/Btn.vue')['default']
     CatCorner: typeof import('./src/components/cat/Corner.vue')['default']
@@ -35,6 +36,7 @@ declare module '@vue/runtime-core' {
     CfpSubmissionPersonalInfo: typeof import('./src/components/cfp/SubmissionPersonalInfo.vue')['default']
     CfpTimer: typeof import('./src/components/cfp/Timer.vue')['default']
     ConfettiExplosion: typeof import('./src/components/ConfettiExplosion.vue')['default']
+    Dialog: typeof import('./src/components/Dialog.vue')['default']
     FooterItem: typeof import('./src/components/FooterItem.vue')['default']
     GeneralHead: typeof import('./src/components/GeneralHead.vue')['default']
     LocationMap: typeof import('./src/components/LocationMap.vue')['default']
@@ -45,6 +47,7 @@ declare module '@vue/runtime-core' {
     NavBar: typeof import('./src/components/NavBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SignUpDialog: typeof import('./src/components/SignUpDialog.vue')['default']
   }
 }
 
