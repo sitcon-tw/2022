@@ -40,7 +40,11 @@
         {{ room }}
       </div>
       <!-- sessions -->
-      <div class="session-item" v-for="item of sessionData.sessions" :style="{ ...parseSessionStyle(item) }" @click="openModel(item)">
+      <div class="session-item"
+        v-for="item of sessionData.sessions"
+        :style="{ ...parseSessionStyle(item) }"
+        :class="{ hoverable: item.zh.description }"
+        @click="openModel(item)">
 
         {{ item.zh.title }}
         <div class="speakers" v-if="item.speakers.length > 0">
@@ -52,14 +56,25 @@
     </div>
 
     <ArrowDialog v-model="sessionModal">
-      <div class="modal-frame" v-if="activeSession">
-        <div class="modal-header">
-          <h2 class="text-center title"> {{ activeSession.zh.title }}</h2>
+      <div class="agenda-dialog" v-if="activeSession">
+        <div class="agenda-dialog-header">
+          <div class="agenda-title">
+            {{ activeSession.zh.title }}
+          </div>
+          <div class="agenda-type">
+            {{ activeSession.type }}
+          </div>
         </div>
-        <div class="modal-content">
-          <pre>
-            {{ activeSession }}
-          </pre>
+        <div class="agenda-dialog-content">
+          <div class="agenda-dialog-content-description">
+            <div class="tags">
+              <span class="tags-title">tags</span>: <span class="tags-content">{{ activeSession.tags.join(', ') }}</span>
+            </div>
+            <div class="description">
+              {{ activeSession.zh.description }}
+            </div>
+          </div>
+          <div class="agenda-dialog-content-info"></div>
         </div>
       </div>
     </ArrowDialog>
@@ -84,7 +99,6 @@ export default {
     return {
       sessionData,
       sessionModal: false,
-      randomID: Math.random().toString(36).substr(2, 9),
     }
   },
   computed: {
@@ -124,7 +138,7 @@ export default {
   watch: {
     sessionModal(to, from) {
       if (!to) {
-        this.$router.replace(`/agenda/`)
+        this.$router.push(`/agenda/`)
       }
     },
     '$route.meta.id': function (to, from) {
@@ -160,7 +174,9 @@ export default {
       }
     },
     openModel(session) {
-      this.$router.replace(`/agenda/${session.id}`)
+      if (session.zh.description) {
+        this.$router.push(`/agenda/${session.id}`)
+      }
     }
   }
 
@@ -192,13 +208,13 @@ export default {
     border-radius: 20px
     padding: 8px 16px
     text-align: center
-    cursor: pointer
     font-size: 14px
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    &:hover
+    &.hoverable:hover
+      cursor: pointer
       background-color: #F4EEC0
     .speakers
       font-size: 12px
