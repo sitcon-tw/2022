@@ -103,9 +103,20 @@ export const createApp = ViteSSG(
     }
   },
   async ({ app, router, routes, isClient, initialState }) => {
+    const pinia = createPinia()
+    app.use(pinia)
+    if (import.meta.env.SSR)
+      initialState.pinia = pinia.state.value
+    else
+      pinia.state.value = initialState.pinia || {}
+    router.beforeEach((to, from, next) => {
+      const store = useDialogStore(pinia)
+      // if (!store.ready)
+      //   // perform the (user-implemented) store action to fill the store's state
+      //   store.initialize()
+      next()
+    })
     if (isClient) {
-      const pinia = createPinia()
-      app.use(pinia)
       const OpenLayersMap = await import('vue3-openlayers')
       app.use(OpenLayersMap)
     }
