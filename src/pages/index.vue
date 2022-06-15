@@ -10,7 +10,7 @@
       <div class="wrap">
         <div class="banner">
           <h1 class="name">SITCON 學生計算機年會</h1>
-          <img class="x" :src="'/2022/imgs/xx.svg'" />
+          <svg-x-cat-in-a-maze class="x" />
           <div class="wool-cat-one">
             <img class="wool" :src="'/2022/imgs/cats/wool-orange.svg'" />
             <img class="cat" :src="'/2022/imgs/cats/cat-cover.svg'" />
@@ -21,8 +21,8 @@
           <h2 class="text">
             2022 09/04<br>中央研究院 人文社會科學館
           </h2>
-          <img class="arrow" :src="'/2022/imgs/arrow.svg'" />
-          <img class="arrow" :src="'/2022/imgs/arrow.svg'" />
+          <svg-arrow class="arrow" />
+          <svg-arrow class="arrow" />
           <div class="btns">
             <btn @click="dialogStore.signUpDialogOpened = true">報名取票</btn>
             <btn href="#">公告資訊</btn>
@@ -89,7 +89,7 @@
         </mint-box>
 
         <div class="wool-cat-two">
-          <img class="cat" :src="'/2022/imgs/cats/cat-left.svg'" />
+          <cat-flat-left class="cat" />
           <img class="wool" :src="'/2022/imgs/cats/wool-green.svg'" />
           <img class="cat" :src="'/2022/imgs/cats/cat-right.svg'" />
         </div>
