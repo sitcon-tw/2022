@@ -119,6 +119,13 @@
             </div>
           </div>
         </div>
+        <div class="agenda-speaker" v-for="speaker of activeSession.speakers">
+          <div class="content">
+            <div class="agenda-speaker-name"> {{ speaker.zh.name }}</div>
+            <div class="agenda-speaker-bio"> {{ speaker.zh.bio }}</div>
+          </div>
+          <img class="agenda-speaker-avatar" :src="speaker.avatar" />
+        </div>
       </div>
     </ArrowDialog>
     <GeneralHead v-if="activeSession"
@@ -179,7 +186,7 @@ export default {
         let res = this.sessionData.sessions.find(x => x.id === this.$route.meta.id)
         res = JSON.parse(JSON.stringify(res))
         res.type = this.sessionData.session_types.filter(x => x.id === res.type)[0]?.zh?.name
-        console.log(res)
+        // description
         let description = res.zh.description.split('## 目標聽眾\n')[0]
         let targetAudience = ''
         let priorKnowledge = ''
@@ -193,6 +200,10 @@ export default {
         res.zh.description = description
         res.targetAudience = targetAudience
         res.priorKnowledge = priorKnowledge
+        // speakers
+        res.speakers = res.speakers
+          .map(x => this.sessionData.speakers.filter(y => y.id === x)[0])
+          .map(x => JSON.parse(JSON.stringify(x)))
         return res
       }
     },
@@ -278,9 +289,6 @@ export default {
     line-height: 1.5
     @media (max-width: 768px)
       font-size: 1.25em
-  .section-title
-    margin-top: .5em
-    margin-bottom: -.5em
   .tags
     font-family: 'STIX Two Text'
     font-size: 1.25em
@@ -289,8 +297,51 @@ export default {
       color: #82D357
   .agenda-dialog-content
     display: grid
-    grid-template-columns: 3fr 1fr
-    gap: 16px
+    grid-template-columns: 1fr 256px
+    gap: 32px
+    @media (max-width: 768px)
+      grid-template-columns: 1fr
+      gap: 0
+  .agenda-speaker
+    display: flex
+    gap: 32px
+    margin-top: 32px
+    @media (max-width: 768px)
+      gap: 16px
+      margin-top: 16px
+    .content
+      flex: 1
+    .agenda-speaker-name
+      font-size: 1.5em
+      font-weight: bold
+      line-height: 1.5
+      position: relative
+      padding-left: .5em
+      @media (max-width: 768px)
+        font-size: 1.25em
+      &::before
+        content: ''
+        width: .25em
+        height: 1em
+        position: absolute
+        left: 0
+        top: 4px
+        bottom: 0
+        margin: auto
+        border-radius: 100em
+        background-color: #82D357
+    .agenda-speaker-bio
+      font-size: 1em
+    .agenda-speaker-avatar
+      width: 256px
+      height: 256px
+      object-fit: cover
+      border-radius: 16px
+      background-color: #fff
+      @media (max-width: 768px)
+        width: 96px
+        height: 96px
+        border-radius: 8px
 .agenda-mobile-list
   display: none
   @media screen and (max-width: 768px)
