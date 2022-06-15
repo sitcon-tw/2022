@@ -117,8 +117,8 @@ export const createApp = ViteSSG(
       next()
     })
     if (isClient) {
-      const OpenLayersMap = await import('vue3-openlayers')
-      app.use(OpenLayersMap)
+      app.use(await import('vue3-openlayers'))
+      // app.use(await import('vue3-markdown-it'))
     }
   },
 )

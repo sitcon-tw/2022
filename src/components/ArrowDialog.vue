@@ -53,7 +53,7 @@ export default {
   cursor: pointer
   animation: fade-in 0.25s ease-in-out
 .arrow-dialog
-  max-width: calc(100vw - 40px)
+  max-width: min(calc(100vw - 40px) , 1280px)
   min-width: 500px
   margin: 20px auto
   border: none
@@ -68,11 +68,15 @@ export default {
   transition: all 0.25s ease
   cursor: initial
   animation: dialog-show 0.25s ease-in-out
+  @media screen and (max-width: 768px)
+    min-width: calc(100vw - 40px)
+    padding: 16px
   .close
     position: absolute
     top: 0
     right: 0
     transition: all .25s ease
+    z-index: 1
     &:hover
       opacity: 0.8
       cursor: pointer
