@@ -87,11 +87,18 @@ export default {
       margin: 8px
   .arrow-box
     width: 100%
-    .content
+    &>.content
       overflow-y: scroll
+      overflow-x: hidden
+      max-height: calc(100vh - 250px)
       max-height: calc(100dvh - 250px)
+      margin: -36px
+      padding: 36px
+      scrollbar-width: thin
+      scrollbar-color: #F4EEE1 #F4EEE1
       @media screen and (max-width: 768px)
         max-height: calc(100vh - 200px)
+
 @keyframes fade-in
   from
     opacity: 0
