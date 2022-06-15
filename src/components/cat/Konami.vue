@@ -13,7 +13,7 @@
 <script>
 import KonamiCode from 'konami-code-js'
 export default {
-  name: 'cat-cornor',
+  name: 'cat-corner',
   data() {
     return {
       show: false,
