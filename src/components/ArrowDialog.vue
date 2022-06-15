@@ -1,67 +1,69 @@
 <template>
-  <dialog ref="signUpDialog" class="signUpDialog">
-    <arrow-box>
-      <a @click="close" class="close">
-        <img :src="'/2022/imgs/dialog_close.svg'" />
-      </a>
-      <slot />
-    </arrow-box>
-  </dialog>
+  <Teleport to="body">
+    <transition name="arrowDialog">
+      <div class="arrow-dialog-backdrop" v-if="modelValue" @click="$emit('update:modelValue', false)">
+        <div class="arrow-dialog" :class="{ 'open': modelValue }" @click.stop="">
+          <arrow-box>
+            <div class="content">
+              <a @click="$emit('update:modelValue', false)" class="close">
+                <img :src="'/2022/imgs/dialog_close.svg'" />
+              </a>
+              <slot />
+            </div>
+          </arrow-box>
+        </div>
+      </div>
+    </transition>
+  </Teleport>
 </template>
 <script>
-import { useDialogStore } from '../store/dialog';
 
 export default {
-  name: 'sign-up-dialog',
+  name: 'arrow-dialog',
   props: {
     modelValue: {
       type: Boolean
     }
   },
-  data() {
-    return {
-      showSignUpDialog: useDialogStore()
-    }
-  },
   watch: {
-    modelValue(val) {
-      if (val) {
-        this.$refs.signUpDialog.showModal();
-      }
+    modelValue: function (val) {
+      // added overflow to html
+      document.querySelector('html').style.overflow = val ? 'hidden' : 'auto'
+      document.querySelector('body').style.overflow = val ? 'hidden' : 'auto'
     }
   },
-  methods: {
-    close() {
-      this.$refs.signUpDialog.classList.add('hide')
-      this.$refs.signUpDialog.addEventListener('animationend', () => {
-        if (this.$refs.signUpDialog.classList.contains('hide')) {
-          this.$refs.signUpDialog.classList.remove('hide')
-          this.$refs.signUpDialog.close()
-          this.$emit('update:modelValue', false)
-        }
-      })
-    }
-  }
 }
 </script>
-<style lang="sass" scoped>
-.signUpDialog
-  width: calc(100vw - 40px)
+<style lang="sass">
+.arrow-dialog-backdrop
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  z-index: 100
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  animation: fade-in 0.25s ease-in-out
+.arrow-dialog
+  max-width: calc(100vw - 40px)
+  min-width: 500px
+  margin: 20px auto
   border: none
   --background-color: #F4EEE1
   background-color: var(--background-color)
   border-radius: 24px
   outline: none
-  &[open]
-    animation: show .25s ease
-    &::backdrop
-      animation: show-backdrop .25s ease
-  &.hide
-    animation: hide .25s ease
-    &::backdrop
-      animation: hide-backdrop .25s ease
-  &::backdrop
-    background-color: rgba(0, 0, 0, 0.75)
+  overflow-y: hidden
+  max-height: calc(100vh - 40px)
+  padding: 40px
+  position: relative
+  transition: all 0.25s ease
+  cursor: initial
+  animation: dialog-show 0.25s ease-in-out
   .close
     position: absolute
     top: 0
@@ -77,29 +79,32 @@ export default {
       margin: 8px
   .arrow-box
     width: 100%
-
-@keyframes show
-    from
-      transform: scale(.5)
-      opacity: 0
-    to
-      transform: scale(1)
-      opacity: 1
-@keyframes show-backdrop
-    from
-      background-color: rgba(0, 0, 0, 0)
-    to
-      background-color: rgba(0, 0, 0, 0.75)
-@keyframes hide
-    to
-      transform: scale(.5)
-      opacity: 0
-    from
-      transform: scale(1)
-      opacity: 1
-@keyframes hide-backdrop
-    to
-      background-color: rgba(0, 0, 0, 0)
-    from
-      background-color: rgba(0, 0, 0, 0.75)
+    .content
+      overflow-y: scroll
+      max-height: calc(100dvh - 250px)
+      @media screen and (max-width: 768px)
+        max-height: calc(100vh - 200px)
+@keyframes fade-in
+  from
+    opacity: 0
+  to
+    opacity: 1
+@keyframes dialog-show
+  from
+    opacity: 0
+    transform: scale(.5)
+  to
+    opacity: 1
+    transform: none
+.arrowDialog-enter-active,
+.arrowDialog-leave-active
+  transition: all .25s ease-in-out
+.arrowDialog-enter-from
+  opacity: 0
+  .arrow-dialog
+    transform: scale(.5)
+.arrowDialog-leave-to
+  opacity: 0
+  .arrow-dialog
+    transform: scale(.5)
 </style>

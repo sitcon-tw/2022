@@ -41,11 +41,17 @@
       </div>
       <!-- sessions -->
       <div class="session-item" v-for="item of sessionData.sessions" :style="{ ...parseSessionStyle(item) }" @click="openModel(item)">
+
         {{ item.zh.title }}
+        <div class="speakers" v-if="item.speakers.length > 0">
+          <span v-for="speaker of item.speakers" :key="speaker.id">
+            {{ sessionData.speakers.filter(x => x.id == speaker)[0].zh.name }}
+          </span>
+        </div>
       </div>
     </div>
 
-    <modal v-model="sessionModal">
+    <ArrowDialog v-model="sessionModal">
       <div class="modal-frame" v-if="activeSession">
         <div class="modal-header">
           <h2 class="text-center title"> {{ activeSession.zh.title }}</h2>
@@ -56,8 +62,7 @@
           </pre>
         </div>
       </div>
-    </modal>
-
+    </ArrowDialog>
     <GeneralHead v-if="activeSession"
       :page-title="activeSession.zh.title"
       :title="activeSession.zh.title"
@@ -79,6 +84,7 @@ export default {
     return {
       sessionData,
       sessionModal: false,
+      randomID: Math.random().toString(36).substr(2, 9),
     }
   },
   computed: {
@@ -110,7 +116,7 @@ export default {
       }
     },
   },
-  mounted() {
+  created() {
     if (this.$route.meta.id) {
       this.sessionModal = true
     }
@@ -118,7 +124,7 @@ export default {
   watch: {
     sessionModal(to, from) {
       if (!to) {
-        this.$router.push(`/agenda/`)
+        this.$router.replace(`/agenda/`)
       }
     },
     '$route.meta.id': function (to, from) {
@@ -154,7 +160,7 @@ export default {
       }
     },
     openModel(session) {
-      this.$router.push(`/agenda/${session.id}`)
+      this.$router.replace(`/agenda/${session.id}`)
     }
   }
 
@@ -173,11 +179,13 @@ export default {
       padding: 0 12px
       transform: translateY(-50%)
   .room-name
+    font-family: 'STIX Two Text', serif
     font-weight: bold
-    font-size: 22px
+    font-size: 48px
     text-align: center
-    background-color: rgba(255,255,255,0.25)
+    color: #82D357
     border-radius: 8px
+    line-height: 1.2
   .session-item
     background-color: #F4EEE1
     color: #383838
@@ -185,8 +193,19 @@ export default {
     padding: 8px 16px
     text-align: center
     cursor: pointer
+    font-size: 14px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     &:hover
       background-color: #F4EEC0
+    .speakers
+      font-size: 12px
+      color: #666666
+      span:not(:first-child)
+        &::before
+          content: '、'
   .decoration-container
     display: flex
     justify-content: center
