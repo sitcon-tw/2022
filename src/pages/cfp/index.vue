@@ -9,8 +9,8 @@
     <div class="cfp-main-page">
       <div class="cfp-container">
         <div class="logos">
-          <logo-sitcon />
-          <logo-cat-in-a-maze />
+          <cfp-logo-sitcon />
+          <cfp-logo-cat-in-a-maze />
         </div>
         <h1 class="call-for-paper">
           <div class="corner" />
