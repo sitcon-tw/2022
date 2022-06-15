@@ -11,6 +11,8 @@ declare module '@vue/runtime-core' {
     BlockTitle: typeof import('./src/components/BlockTitle.vue')['default']
     Btn: typeof import('./src/components/Btn.vue')['default']
     CatCorner: typeof import('./src/components/cat/Corner.vue')['default']
+    CatFlatLeft: typeof import('./src/components/cat/FlatLeft.vue')['default']
+    CatHeadBlack: typeof import('./src/components/cat/HeadBlack.vue')['default']
     CatKonami: typeof import('./src/components/cat/Konami.vue')['default']
     CfpAgendaCard: typeof import('./src/components/cfp/AgendaCard.vue')['default']
     CfpAgendaType: typeof import('./src/components/cfp/AgendaType.vue')['default']
@@ -48,6 +50,8 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SignUpDialog: typeof import('./src/components/SignUpDialog.vue')['default']
+    SvgArrow: typeof import('./src/components/svg/Arrow.vue')['default']
+    SvgXCatInAMaze: typeof import('./src/components/svg/XCatInAMaze.vue')['default']
   }
 }
 

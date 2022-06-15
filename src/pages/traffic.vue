@@ -16,7 +16,9 @@
         </client-only>
         <img class="traffic-flow" :src="'/2022/imgs/traffic/traffic-flow.svg'" />
         <img class="traffic-flow-mobile" :src="'/2022/imgs/traffic/traffic-flow-mobile.svg'" />
-        <img class="the-white-neko" :src="'/2022/imgs/cats/cat3.svg'" />
+        <div class="the-white-neko">
+          <cat-head-black />
+        </div>
       </mint-box>
     </arrow-box>
   </div>
@@ -28,9 +30,12 @@
     position: absolute
     --size: 150px
     top:  calc(var(--size) * -0.6)
-    height: calc(var(--size) * 0.6)
     right: 5vw
+    height: calc(var(--size) * 0.6)
     width: var(--size)
+    overflow: hidden
+    &:deep(svg)
+      height: unset
     object-fit: cover
     object-position: top right
     @media (max-width: 768px)
