@@ -1,4 +1,6 @@
 import { ViteSSG } from 'vite-ssg'
+import { createPinia } from 'pinia'
+import { useDialogStore } from './store/dialog'
 
 import App from './App.vue'
 import defaultLayout from '@/layout/default.vue'
@@ -99,6 +101,8 @@ export const createApp = ViteSSG(
   },
   async ({ app, router, routes, isClient, initialState }) => {
     if (isClient) {
+      const pinia = createPinia()
+      app.use(pinia)
       const OpenLayersMap = await import('vue3-openlayers')
       app.use(OpenLayersMap)
     }
