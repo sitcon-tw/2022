@@ -152,26 +152,29 @@ export default {
       const { height: catH } = container.querySelector('.wool-cat-two').getBoundingClientRect()
 
       function sign(x) { return x === 0 ? 0 : x > 0 ? 1 : -1; }
-      function genLine(x, y, dx, dy, arrow = false) {
+      function genLine(x, y, dx, dy, hasArrow = false) {
         const xs = dx.reduce((pv,cv) => pv.concat(pv[pv.length-1]+cv), [x])
         const ys = dy.reduce((pv,cv) => pv.concat(pv[pv.length-1]+cv), [y])
-        let line = ''
+        let arrow = '', arrow_style = ''
         const rd = radius * 2
-        if (arrow) {
+        if (hasArrow) {
           const r = 4
           const k = .4
           if (dx[0] && !dy[0]) {
             const s = sign(dx[0])
             x += s * r
-            line += `M${x},${y} L${x+rd*k*s},${y-rd*k} `
-            line += `M${x},${y} L${x+rd*k*s},${y+rd*k} `
+            arrow += `M${x},${y} L${x+rd*k*s},${y-rd*k} `
+            arrow += `M${x},${y} L${x+rd*k*s},${y+rd*k} `
+            if (Math.abs(dx[0]) < rd)
+              arrow_style = `transform-origin: ${x}px ${y}px; transform: rotate(${-45*s}deg);`
           } else {
             const s = sign(dy[0])
             y += s * r
-            line += `M${x},${y} L${x-rd*k},${y+rd*k*s} `
-            line += `M${x},${y} L${x+rd*k},${y+rd*k*s} `
+            arrow += `M${x},${y} L${x-rd*k},${y+rd*k*s} `
+            arrow += `M${x},${y} L${x+rd*k},${y+rd*k*s} `
           }
         }
+        let line = ''
         line += `M${x},${y} `
         for(let i = 0, sz = dx.length; i < sz; i++) {
           let cx = 0, cy = 0
@@ -187,7 +190,7 @@ export default {
             line += `q${cx},${cy} ${nx},${ny}`
           }
         }
-        return line
+        return { line, arrow, arrow_style }
       }
 
       function genPath1() {
@@ -252,8 +255,10 @@ export default {
         genPath4(),
         genPath5(),
       ]
-      for(const p of paths)
-        svg.append("path").attr("d", p).attr("stroke-width", stroke)
+      for(const { line, arrow, arrow_style } of paths) {
+        svg.append("path").attr("d", line).attr("stroke-width", stroke)
+        if (arrow) svg.append("path").attr("d", arrow).attr("stroke-width", stroke).attr("style", arrow_style)
+      }
     }
   }
 }
