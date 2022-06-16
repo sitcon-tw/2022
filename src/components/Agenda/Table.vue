@@ -109,20 +109,32 @@
             </div>
           </div>
           <div class="agenda-dialog-content-info">
-            <div class="section-title">目標聽眾</div>
-            <div class="section-content">
-              <Markdown :content="activeSession.targetAudience" />
-            </div>
-            <div class="section-title">先備知識</div>
-            <div class="section-content">
-              <Markdown :content="activeSession.priorKnowledge" />
+            <template v-if="activeSession.targetAudience.length">
+              <div class="section-title">目標聽眾</div>
+              <div class="section-content">
+                <Markdown :content="activeSession.targetAudience" />
+              </div>
+            </template>
+            <template v-if="activeSession.priorKnowledge.length">
+              <div class="section-title">先備知識</div>
+              <div class="section-content">
+                <Markdown :content="activeSession.priorKnowledge" />
+              </div>
+            </template>
+            <div class="links">
+              <btn v-if="activeSession.slide" :href="activeSession.slide">簡報連結</btn>
+              <btn v-if="activeSession.co_write" :href="activeSession.co_write">共筆連結</btn>
+              <btn v-if="activeSession.record || activeSession.live" :href="activeSession.record || activeSession.live">
+                {{ activeSession.record ? '錄影' : '直播' }}連結</btn>
             </div>
           </div>
         </div>
         <div class="agenda-speaker" v-for="speaker of activeSession.speakers">
           <div class="content">
             <div class="agenda-speaker-name"> {{ speaker.zh.name }}</div>
-            <div class="agenda-speaker-bio"> {{ speaker.zh.bio }}</div>
+            <div class="agenda-speaker-bio">
+              <Markdown :content="speaker.zh.bio" />
+            </div>
           </div>
           <img class="agenda-speaker-avatar" :src="speaker.avatar" />
         </div>
@@ -302,6 +314,10 @@ export default {
     @media (max-width: 768px)
       grid-template-columns: 1fr
       gap: 0
+    .links
+      display: flex
+      flex-wrap: wrap
+      gap: 8px
   .agenda-speaker
     display: flex
     gap: 32px
@@ -309,6 +325,7 @@ export default {
     @media (max-width: 768px)
       gap: 16px
       margin-top: 16px
+      flex-direction: column-reverse
     .content
       flex: 1
     .agenda-speaker-name
@@ -334,13 +351,11 @@ export default {
       font-size: 1em
     .agenda-speaker-avatar
       width: 256px
-      height: 256px
       object-fit: cover
       border-radius: 16px
       background-color: #fff
       @media (max-width: 768px)
         width: 96px
-        height: 96px
         border-radius: 8px
 .agenda-mobile-list
   display: none

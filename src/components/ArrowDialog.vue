@@ -59,7 +59,7 @@ export default {
   border: none
   --background-color: #F4EEE1
   background-color: var(--background-color)
-  border-radius: 24px
+  border-radius: 68px
   outline: none
   overflow-y: hidden
   max-height: calc(100vh - 40px)
@@ -70,6 +70,7 @@ export default {
   animation: dialog-show 0.25s ease-in-out
   @media screen and (max-width: 768px)
     min-width: calc(100vw - 40px)
+    border-radius: 39px
     padding: 16px
   .close
     position: absolute
