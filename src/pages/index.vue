@@ -284,7 +284,6 @@ export default {
 
       const leftWool = container.querySelector('.border-item.left.wool')
       leftWool.style.top = `${bH + iH + mbHs[0] + mbHs[1] * .75}px`
-      leftWool.style.left = `${-mbGap}px`
       leftWool.style.width = `${mbGap}px`
       const rightCat = container.querySelector('.border-item.right.cat')
       rightCat.style.top = `${bH + iH + mbHs[0] + mbHs[1] * .5}px`
@@ -315,8 +314,9 @@ h1, h2, h3, h4, h5, h6
     --border-radius: 16px
   .border-item
     position: absolute
+    max-width: calc(var(--border-radius)*4)
     &.left.wool
-      transform: scale(0.8)
+      transform: translateX(-100%) scale(0.8)
     &.right.cat
       transform: scaleX(-1) rotate(90deg) scale(2) translateY(30%)
   &:deep(svg.border)
