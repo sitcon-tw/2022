@@ -165,8 +165,10 @@ export default {
             x += s * r
             arrow += `M${x},${y} L${x+rd*k*s},${y-rd*k} `
             arrow += `M${x},${y} L${x+rd*k*s},${y+rd*k} `
-            if (Math.abs(dx[0]) < rd)
-              arrow_style = `transform-origin: ${x}px ${y}px; transform: rotate(${-45*s}deg);`
+            if (Math.abs(dx[0]) < rd*2) {
+              const p = -Math.log2(Math.abs(dx[0]) / rd / 2)
+              arrow_style = `transform-origin: ${x}px ${y}px; transform: rotate(${-23*p*s}deg);`
+            }
           } else {
             const s = sign(dy[0])
             y += s * r
