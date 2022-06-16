@@ -22,7 +22,10 @@ export default {
   },
   methods: {
     parse(content) {
-      const converter = new showdown.Converter()
+      const converter = new showdown.Converter({
+        simplifiedAutoLink: true,
+        openLinksInNewWindow: true,
+      })
       return converter.makeHtml(content)
     }
   }
