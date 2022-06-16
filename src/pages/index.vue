@@ -214,51 +214,111 @@ export default {
         }
         return { line, arrow, arrow_style }
       }
+      function genBlock(u, y, h) {
+        const x = u > 0 ? 0 : vW
+        const dx = [blockPad*u, 0, -blockPad*u]
+        const dy = [0, h-radius*2, 0]
+        const xs = dx.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [x])
+        const ys = dy.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [y])
+        let arrow = '', arrow_style = ''
+        const rd = radius * 2, srd = rd * .3
+        let line = ''
+        line += `M${x},${y} `
+        for (let i = 0, sz = dx.length; i < sz; i++) {
+          let cx = 0, cy = 0
+          let crd = rd
+          const isLast = i + 1 == sz
+          if (!isLast) {
+            if (dx[i]) cx = crd * sign(dx[i])
+            if (dy[i]) cy = crd * sign(dy[i])
+          }
+          line += `L${xs[i + 1] - cx},${ys[i + 1] - cy} `
+          if (!isLast) {
+            let nx = cx + crd * sign(dx[i + 1])
+            let ny = cy + crd * sign(dy[i + 1])
+            line += `q${cx},${cy} ${nx},${ny}`
+          }
+        }
+        return { line, arrow, arrow_style }
+      }
+
+      const p = [.5, .7, .85, .3, .7, .6]
 
       function genPath1() {
         const x = bGap
         const y = bH
         const dx = [bW + radius, 0, -radius - bGap - bW + mbPad, 0, -mbPad]
-        const dy = [0, iH, 0, mbHs[0] / 2, 0]
+        const dy = [0, iH, 0, mbHs[0] * p[0], 0]
         return genLine(x, y, dx, dy, { hasArrow: true, sLast: true })
       }
 
       function genPath2() {
-        const p = .7
         const x = mbPad
-        const y = bH + iH + mbHs[0] + mbHs[1] * p
+        const y = bH + iH + mbHs[0] + mbHs[1] * p[1]
         const dx = [0, mbW + radius * 2, 0, mbPad]
-        const dy = [-mbHs[1] * p, 0, -mbHs[0] + radius / 2, 0]
+        const dy = [-mbHs[1] * p[1], 0, -mbHs[0] + radius / 2, 0]
         return genLine(x, y, dx, dy, { hasArrow: true, sLast: true })
       }
 
       function genPath3() {
-        const p1 = .85, p2 = .3
         const x = 0
-        const y = bH + iH + mbHs[0] + mbHs[1] * p1
+        const y = bH + iH + mbHs[0] + mbHs[1] * p[2]
         const dx = [mbPad, 0, mbW + radius * 2, 0, mbPad]
-        const dy = [0, mbHs[1] * (1 - p1), 0, -mbHs[1] * p2, 0]
+        const dy = [0, mbHs[1] * (1 - p[2]), 0, -mbHs[1] * p[3], 0]
         return genLine(x, y, dx, dy, { sFirst: true, sLast: true })
       }
 
       function genPath4() {
-        const p1 = .7, p2 = .6
         const x = 0
-        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] * p1
+        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] * p[4]
         const dx = [mbPad, 0, mbW + radius * 2, 0, mbPad]
-        const dy = [0, -mbHs[3] * p1, 0, mbHs[3] * p2, 0]
+        const dy = [0, -mbHs[3] * p[4], 0, mbHs[3] * p[5], 0]
         return genLine(x, y, dx, dy, { sFirst: true, sLast: true })
       }
 
       function genPath5() {
-        const p1 = radius * 2
         const x = vW
         const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] + catH + mbHs[4]
         const dx = [-mbPad, 0, mbPad]
-        const dy = [0, -(p1 + mbHs[4]), 0]
+        const dy = [0, -(radius * 2 + mbHs[4]), 0]
         return genLine(x, y, dx, dy, { sFirst: true, sLast: true })
       }
 
+      const blockPad = mbPad-radius
+      function genItem1() {
+        const u = 1
+        const y = bH + iH + radius
+        const h = mbHs[0]*p[0]
+        return genBlock(u, y, h)
+      }
+
+      function genItem2() {
+        const u = -1
+        const y = bH + iH + radius
+        const h = mbHs[0]
+        return genBlock(u, y, h)
+      }
+
+      function genItem3() {
+        const u = 1
+        const y = bH + iH + mbHs[0] + mbHs[1]*p[2] + radius
+        const h = mbHs[1]*(1-p[2]) + mbHs[2] + mbHs[3] * p[4]
+        return genBlock(u, y, h)
+      }
+
+      function genItem4() {
+        const u = -1
+        const y = bH + iH + mbHs[0] + mbHs[1]*p[4] + radius
+        const h = mbHs[1]*(1-p[4]) + mbHs[2] + mbHs[3] * p[5]
+        return genBlock(u, y, h)
+      }
+
+      function genItem5() {
+        const u = -1
+        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] + catH - radius
+        const h = mbHs[4] + radius * 2
+        return genBlock(u, y, h)
+      }
       const borderContainer = d3.select(container)
       // clrar existing svg border
       borderContainer.selectAll("svg.border").remove()
@@ -278,8 +338,18 @@ export default {
         genPath5(),
       ]
       for (const { line, arrow, arrow_style } of paths) {
-        svg.append("path").attr("d", line).attr("stroke-width", stroke)
-        if (arrow) svg.append("path").attr("d", arrow).attr("stroke-width", stroke).attr("style", arrow_style)
+        svg.append("path").attr("d", line).attr("stroke-width", stroke).attr("stroke", "#A89B85")
+        if (arrow) svg.append("path").attr("d", arrow).attr("stroke-width", stroke).attr("stroke", "#A89B85").attr("style", arrow_style)
+      }
+      const items = [
+        genItem1(),
+        genItem2(),
+        genItem3(),
+        genItem4(),
+        genItem5(),
+      ]
+      for (const { line } of items) {
+        svg.append("path").attr("d", line).attr("fill", "#82D357")
       }
 
       const leftWool = container.querySelector('.border-item.left.wool')
@@ -326,7 +396,6 @@ h1, h2, h3, h4, h5, h6
     pointer-events: none
     stroke-linecap: round
     fill: none
-    stroke: #A89B85
 @media screen and (min-width: 769px)
   .pad1
     padding: 0 40px
