@@ -8,7 +8,7 @@
   <cat-konami />
   <sign-up-dialog />
   <div class="container">
-    <footer-item :hide-sponsor="hideSponsor" />
+    <footer-item :hide-sponsor="hideSponsor" :is-index="isIndex" />
   </div>
 </template>
 <script>
@@ -16,6 +16,9 @@ export default {
   computed: {
     hideSponsor() {
       return this.$route.path.indexOf('/sponsor') === 0
+    },
+    isIndex() {
+      return this.$route.path === '/'
     }
   },
   data() {

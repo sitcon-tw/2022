@@ -1,6 +1,7 @@
 <template>
   <div>
-    <mint-box v-if="!hideSponsor" class="sponsors-items"> <img class="sponsor" :src="'/2022/imgs/logo.png'" />
+    <mint-box v-if="!hideSponsor" class="sponsors-items" :class="{ 'is-index': isIndex }">
+      <img class="sponsor" :src="'/2022/imgs/logo.png'" />
       <a class="sponsor-item" v-for="item of sponsorsData" :href="item.link" target="_blank">
         <img class="sponsor" :src="`/2022/imgs/sponsors/${item.logo}`" />
       </a>
@@ -71,7 +72,11 @@ const props = defineProps({
   hideSponsor: {
     type: Boolean,
     default: false
-  }
+  },
+  isIndex: {
+    type: Boolean,
+    default: false
+  },
 })
 const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url: `https://sitcon.org/${i + 2013}` })))
 </script>
