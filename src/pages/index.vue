@@ -122,16 +122,20 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
+      this.wrapDrawBorder()
+    })
+    window.addEventListener('resize', this.wrapDrawBorder)
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.wrapDrawBorder)
+  },
+  methods: {
+    wrapDrawBorder() {
+      this.drawBorder()
       setTimeout(() => {
         this.drawBorder()
       }, 100)
-    })
-    window.addEventListener('resize', this.drawBorder)
-  },
-  unmounted() {
-    window.removeEventListener('resize', this.drawBorder)
-  },
-  methods: {
+    },
     drawBorder() {
       const container = this.$refs['border-container']
       const { height: ctH } = container.getBoundingClientRect()
