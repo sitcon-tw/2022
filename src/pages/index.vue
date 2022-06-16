@@ -158,16 +158,17 @@ export default {
         let line = ''
         if (arrow) {
           const r = 4
+          const k = .4
           if (dx[0] && !dy[0]) {
             const s = sign(dx[0])
             x += s * r
-            line += `M${x},${y} L${x+radius*.4*s},${y-radius*.4} `
-            line += `M${x},${y} L${x+radius*.4*s},${y+radius*.4} `
+            line += `M${x},${y} L${x+radius*k*s},${y-radius*k} `
+            line += `M${x},${y} L${x+radius*k*s},${y+radius*k} `
           } else {
             const s = sign(dy[0])
             y += s * r
-            line += `M${x},${y} L${x-radius*.4},${y+radius*.4*s} `
-            line += `M${x},${y} L${x+radius*.4},${y+radius*.4*s} `
+            line += `M${x},${y} L${x-radius*k},${y+radius*k*s} `
+            line += `M${x},${y} L${x+radius*k},${y+radius*k*s} `
           }
         }
         line += `M${x},${y} `
@@ -256,20 +257,13 @@ export default {
   }
 }
 </script>
-<style lang="sass">
-.mint-box
-  width: 85%
-  margin: 0 auto
-</style>
 <style lang="sass" scoped>
 h1, h2, h3, h4, h5, h6
   margin: 0
 .border-container
   position: relative
   --background-gap: calc((100vw - min(1280px,95vw))/2)
-  --border-radius: 64px
-  @media (max-width: 768px)
-    --border-radius: 32px
+  --border-radius: 32px
   &:deep(svg.border)
     position: absolute
     top: 0
