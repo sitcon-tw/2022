@@ -6,7 +6,7 @@
       description="在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每個人能夠向貓咪學習，換個思維邏輯面對迷惘的現況，保持著好奇心與探索的樂趣，跳脫框架創造屬於自己的美好未來！"
       image="https://sitcon.org/2022/imgs/og.jpg" />
 
-    <div class="container">
+    <div ref="border-container" class="container border-container">
       <div class="banner">
         <h1 class="name">SITCON 學生計算機年會</h1>
         <svg-x-cat-in-a-maze class="x" />
@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <mint-box>
+      <mint-box class="has-border">
         <h1>迷宮中的貓貓</h1>
         <img class="cat pad1" :src="'/2022/imgs/cat-in-a-maze.svg'" />
         <div class="pad2">
@@ -41,7 +41,7 @@
         </div>
       </mint-box>
 
-      <mint-box>
+      <mint-box class="has-border">
         <h1>活動</h1>
         <div class="pad1">
           <h2>Activity</h2>
@@ -66,10 +66,10 @@
         </div>
       </mint-box>
 
-      <mint-box>
+      <mint-box class="has-border">
         <h1>關於 SITCON</h1>
         <div class="pad1">
-          <h2>Students' Information Technology Conference</h2>
+          <h2>Students' Information TectHnology Conference</h2>
           <p>SITCON 學生計算機年會是由學生自發舉辦，投身學生資訊教育與推廣開源精神的社群， 也是一個由學生主辦、學生擔任講者、以學生為主軸的資訊研討會，給學生們一個發表交流技術的舞台。</p>
           <p>除了技術研討之外，還有許多從學生角度出發的經驗分享、專題研究成果或探討學生相關議題等等議程。 我們也曾舉辦黑客松、工作坊，和各地學校社團舉辦聯合講座等等。</p>
         </div>
@@ -112,11 +112,148 @@
 </template>
 <script>
 import { useDialogStore } from '../store/dialog'
+import * as d3 from "d3";
 export default {
   setup() {
     const dialogStore = useDialogStore()
     return { dialogStore }
   },
+  mounted() {
+    this.wrapDrawBorder()
+    window.addEventListener('resize', this.wrapDrawBorder)
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.wrapDrawBorder)
+  },
+  methods: {
+    wrapDrawBorder() {
+      setTimeout(() => {
+        this.drawBorder()
+      }, 100)
+    },
+    drawBorder() {
+      const container = this.$refs['border-container']
+      window.container = container
+      const { height: ctH } = container.getBoundingClientRect()
+      const { innerWidth: vW } = window
+      const small_size = window.innerWidth <= 768
+      const stroke = !small_size ? 8 : 4
+      const radius = parseInt(window.getComputedStyle(container).getPropertyValue('--border-radius'))
+
+      const { width: bW, height: bH } = container.querySelector('.banner').getBoundingClientRect()
+      const bGap = (vW - bW) / 2
+      const { width: iW, height: iH } = container.querySelector('.info').getBoundingClientRect()
+      const iGap = (vW - iW) / 2
+      const mbxs = Array.from(document.querySelectorAll('.mint-box'), el => el.getBoundingClientRect())
+      const mbHs = mbxs.map(rect => rect.height + radius*2)
+      const mbWs = mbxs.map(rect => rect.width)
+      const mbW = mbWs[0]
+      const mbGap = (vW - mbW) / 2
+      const { height: catH } = container.querySelector('.wool-cat-two').getBoundingClientRect()
+
+      function sign(x) { return x === 0 ? 0 : x > 0 ? 1 : -1; }
+      function genLine(x, y, dx, dy, arrow = false) {
+        const xs = dx.reduce((pv,cv) => pv.concat(pv[pv.length-1]+cv), [x])
+        const ys = dy.reduce((pv,cv) => pv.concat(pv[pv.length-1]+cv), [y])
+        let line = ''
+        if (arrow) {
+          const r = 4
+          if (dx[0] && !dy[0]) {
+            const s = sign(dx[0])
+            x += s * r
+            line += `M${x},${y} L${x+radius*.4*s},${y-radius*.4} `
+            line += `M${x},${y} L${x+radius*.4*s},${y+radius*.4} `
+          } else {
+            const s = sign(dy[0])
+            y += s * r
+            line += `M${x},${y} L${x-radius*.4},${y+radius*.4*s} `
+            line += `M${x},${y} L${x+radius*.4},${y+radius*.4*s} `
+          }
+        }
+        line += `M${x},${y} `
+        for(let i = 0, sz = dx.length; i < sz; i++) {
+          let cx = 0, cy = 0
+          const last = i+1 == sz
+          if (!last) {
+            if (dx[i]) cx = radius * sign(dx[i])
+            if (dy[i]) cy = radius * sign(dy[i])
+          }
+          line += `L${xs[i+1]-cx},${ys[i+1]-cy} `
+          if (!last) {
+            let nx = cx + radius * sign(dx[i+1])
+            let ny = cy + radius * sign(dy[i+1])
+            line += `q${cx},${cy} ${nx},${ny}`
+          }
+        }
+        return line
+      }
+
+      function genPath1() {
+        const x = bGap
+        const y = bH
+        const dx = [bW, 0, -bGap-bW+mbGap/2, 0, -mbGap/2]
+        const dy = [0, iH, 0, mbHs[0]/2, 0]
+        return genLine(x, y, dx, dy, true)
+      }
+
+      function genPath2() {
+        const p = .7
+        const x = mbGap/2
+        const y = bH + iH + mbHs[0] + mbHs[1] * p
+        const dx = [0, mbW+mbGap, 0, mbGap/2]
+        const dy = [-mbHs[1] * p, 0, -mbHs[0]+radius/2, 0]
+        return genLine(x, y, dx, dy, true)
+      }
+
+      function genPath3() {
+        const p1 = .85, p2 = .3
+        const x = 0
+        const y = bH + iH + mbHs[0] + mbHs[1] * p1
+        const dx = [mbGap/2, 0, mbW+mbGap, 0, mbGap/2]
+        const dy = [0, mbHs[1]*(1-p1), 0, -mbHs[1]*p2, 0]
+        return genLine(x, y, dx, dy)
+      }
+
+      function genPath4() {
+        const p1 = .7, p2 = .6
+        const x = 0
+        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] * p1
+        const dx = [mbGap/2, 0, mbW+mbGap, 0, mbGap/2]
+        const dy = [0, -mbHs[3]*p1, 0, mbHs[3]*p2, 0]
+        return genLine(x, y, dx, dy, true)
+      }
+
+      function genPath5() {
+        const p1 = radius * 0.1
+        const x = vW
+        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] + catH + mbHs[4]
+        const dx = [-mbGap/2, 0, mbGap/2]
+        const dy = [0, -(p1+mbHs[4]), 0]
+        return genLine(x, y, dx, dy, true)
+      }
+
+      const borderContainer = d3.select(container)
+      // clrar existing svg border
+      borderContainer.selectAll("svg.border").remove()
+      // draw
+      const svg = borderContainer.append('svg')
+      const height = ctH+mbHs[5]
+      svg.attr('width', '100vw')
+      svg.attr('height', `${height}px`)
+      svg.attr('viewBox', `0 0 ${vW} ${height}`)
+      svg.attr('class', 'border')
+
+      const paths = [
+        genPath1(),
+        genPath2(),
+        genPath3(),
+        genPath4(),
+        genPath5(),
+      ]
+      for(const p of paths)
+        svg.append("path").attr("d", p).attr("stroke-width", stroke)
+    }
+  }
 }
 </script>
 <style lang="sass">
@@ -127,6 +264,20 @@ export default {
 <style lang="sass" scoped>
 h1, h2, h3, h4, h5, h6
   margin: 0
+.border-container
+  position: relative
+  --background-gap: calc((100vw - min(1280px,95vw))/2)
+  --border-radius: 64px
+  @media (max-width: 768px)
+    --border-radius: 32px
+  &:deep(svg.border)
+    position: absolute
+    top: 0
+    left: calc(-1*var(--background-gap))
+    pointer-events: none
+    stroke-linecap: round
+    fill: none
+    stroke: #A89B85
 @media screen and (min-width: 769px)
   .pad1
     padding: 0 40px
@@ -178,7 +329,8 @@ h1, h2, h3, h4, h5, h6
     justify-content: flex-start
 .info
   width: 90%
-  margin: 64px auto
+  margin: 0 auto
+  padding: 64px 0
   display: grid
   grid-template-columns: 10fr 0.1fr 1fr 0.1fr 1fr 0.2fr auto 0.6fr
   @media screen and (max-width: 768px)
@@ -206,7 +358,11 @@ h1, h2, h3, h4, h5, h6
       border-radius: 5em
       @media screen and (max-width: 768px)
         font-size: 20px
+  + .mint-box
+    margin-top: var(--border-radius)
 .mint-box
+  &.has-border
+    margin-bottom: calc(var(--border-radius)*2)
   .btn
     &:hover
       color: #383838
