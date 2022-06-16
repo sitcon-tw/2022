@@ -87,7 +87,7 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
   grid-gap: 20px
   @media (max-width: 768px)
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr))
   img
     width: 100%
 
@@ -158,6 +158,7 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
         width: var(--size)
         height: var(--size)
         display: flex
+        flex-wrap: wrap
         justify-content: center
         align-items: center
         transition: all .2s ease
@@ -169,5 +170,6 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
           opacity: 1
     .web-items
       display: flex
+      flex-wrap: wrap
       gap: 8px
 </style>
