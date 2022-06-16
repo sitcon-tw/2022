@@ -119,6 +119,11 @@ export default {
   },
 }
 </script>
+<style lang="sass">
+.mint-box
+  width: 85%
+  margin: 0 auto
+</style>
 <style lang="sass" scoped>
 h1, h2, h3, h4, h5, h6
   margin: 0
@@ -202,8 +207,6 @@ h1, h2, h3, h4, h5, h6
       @media screen and (max-width: 768px)
         font-size: 20px
 .mint-box
-  width: 85%
-  margin: 0 auto
   .btn
     &:hover
       color: #383838
