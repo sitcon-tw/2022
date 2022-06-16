@@ -32,7 +32,8 @@
         <h1>迷宮中的貓貓</h1>
         <img class="cat pad1" :src="'/2022/imgs/cat-in-a-maze.svg'" />
         <div class="pad2">
-          <p>Cat in a Maze 參考自 Rat in a Maze 這道經典演算法題目。題目描述一隻老鼠要走迷宮，在給定了迷宮形狀的前提下，要努力找出走出迷宮的出路。「Rat in a Maze」這句話切實地反映了劇烈動盪時代下的學生們在面對未來的生涯發展時，猶如一隻無法逃避、勢必得進入體制這一迷宮的老鼠。</p>
+          <p>Cat in a Maze 參考自 Rat in a Maze 這道經典演算法題目。題目描述一隻老鼠要走迷宮，在給定了迷宮形狀的前提下，要努力找出走出迷宮的出路。「Rat in a
+            Maze」這句話切實地反映了劇烈動盪時代下的學生們在面對未來的生涯發展時，猶如一隻無法逃避、勢必得進入體制這一迷宮的老鼠。</p>
           <p class="rat-center">但是⋯⋯我們真的只能當老鼠嗎？</p>
           <p>
             不如，像貓咪一樣思考？以貓咪的個性，第一直覺想到的會是遇到迷宮時，直接破壞迷宮離開，或者是使用我們想不到的方式解決迷宮。同時貓咪相較於老鼠，對一切事物充滿好奇、敢於探索未知事物，不畏強權挑戰一切，是貓咪獨特的個性。<br>
@@ -80,7 +81,8 @@
         <div class="pad1">
           <h2>Code of Conduct</h2>
           <p>
-            SITCON 歡迎不同身分、來自不同背景的與會者，也非常鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快的參加 SITCON，我們要求所有參與者閱讀年會的行為準則（<a href="https://sitcon.org/code-of-conduct/">Code of Conduct</a>），共同創造一個友善的環境。
+            SITCON 歡迎不同身分、來自不同背景的與會者，也非常鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快的參加 SITCON，我們要求所有參與者閱讀年會的行為準則（<a href="https://sitcon.org/code-of-conduct/">Code of
+              Conduct</a>），共同創造一個友善的環境。
           </p>
         </div>
       </mint-box>
@@ -119,18 +121,17 @@ export default {
     return { dialogStore }
   },
   mounted() {
-    this.wrapDrawBorder()
-    window.addEventListener('resize', this.wrapDrawBorder)
-  },
-  unmounted() {
-    window.removeEventListener('resize', this.wrapDrawBorder)
-  },
-  methods: {
-    wrapDrawBorder() {
+    this.$nextTick(() => {
       setTimeout(() => {
         this.drawBorder()
       }, 100)
-    },
+    })
+    window.addEventListener('resize', this.drawBorder)
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.drawBorder)
+  },
+  methods: {
     drawBorder() {
       const container = this.$refs['border-container']
       const { height: ctH } = container.getBoundingClientRect()
@@ -144,7 +145,7 @@ export default {
       const { width: iW, height: iH } = container.querySelector('.info').getBoundingClientRect()
       const iGap = (vW - iW) / 2
       const mbxs = Array.from(document.querySelectorAll('.mint-box'), el => el.getBoundingClientRect())
-      const mbHs = mbxs.map(rect => rect.height + radius*2)
+      const mbHs = mbxs.map(rect => rect.height + radius * 2)
       const mbWs = mbxs.map(rect => rect.width)
       const mbW = mbWs[0]
       const mbGap = (vW - mbW) / 2
@@ -153,8 +154,8 @@ export default {
 
       function sign(x) { return x === 0 ? 0 : x > 0 ? 1 : -1; }
       function genLine(x, y, dx, dy, hasArrow = false) {
-        const xs = dx.reduce((pv,cv) => pv.concat(pv[pv.length-1]+cv), [x])
-        const ys = dy.reduce((pv,cv) => pv.concat(pv[pv.length-1]+cv), [y])
+        const xs = dx.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [x])
+        const ys = dy.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [y])
         let arrow = '', arrow_style = ''
         const rd = radius * 2
         if (hasArrow) {
@@ -163,32 +164,32 @@ export default {
           if (dx[0] && !dy[0]) {
             const s = sign(dx[0])
             x += s * r
-            arrow += `M${x},${y} L${x+rd*k*s},${y-rd*k} `
-            arrow += `M${x},${y} L${x+rd*k*s},${y+rd*k} `
-            if (Math.abs(dx[0]) < rd*2) {
+            arrow += `M${x},${y} L${x + rd * k * s},${y - rd * k} `
+            arrow += `M${x},${y} L${x + rd * k * s},${y + rd * k} `
+            if (Math.abs(dx[0]) < rd * 2) {
               const p = -Math.log2(Math.abs(dx[0]) / rd / 2)
-              arrow_style = `transform-origin: ${x}px ${y}px; transform: rotate(${-23*p*s}deg);`
+              arrow_style = `transform-origin: ${x}px ${y}px; transform: rotate(${-23 * p * s}deg);`
             }
           } else {
             const s = sign(dy[0])
             y += s * r
-            arrow += `M${x},${y} L${x-rd*k},${y+rd*k*s} `
-            arrow += `M${x},${y} L${x+rd*k},${y+rd*k*s} `
+            arrow += `M${x},${y} L${x - rd * k},${y + rd * k * s} `
+            arrow += `M${x},${y} L${x + rd * k},${y + rd * k * s} `
           }
         }
         let line = ''
         line += `M${x},${y} `
-        for(let i = 0, sz = dx.length; i < sz; i++) {
+        for (let i = 0, sz = dx.length; i < sz; i++) {
           let cx = 0, cy = 0
-          const last = i+1 == sz
+          const last = i + 1 == sz
           if (!last) {
             if (dx[i]) cx = rd * sign(dx[i])
             if (dy[i]) cy = rd * sign(dy[i])
           }
-          line += `L${xs[i+1]-cx},${ys[i+1]-cy} `
+          line += `L${xs[i + 1] - cx},${ys[i + 1] - cy} `
           if (!last) {
-            let nx = cx + rd * sign(dx[i+1])
-            let ny = cy + rd * sign(dy[i+1])
+            let nx = cx + rd * sign(dx[i + 1])
+            let ny = cy + rd * sign(dy[i + 1])
             line += `q${cx},${cy} ${nx},${ny}`
           }
         }
@@ -198,8 +199,8 @@ export default {
       function genPath1() {
         const x = bGap
         const y = bH
-        const dx = [bW+radius, 0, -radius-bGap-bW+mbPad, 0, -mbPad]
-        const dy = [0, iH, 0, mbHs[0]/2, 0]
+        const dx = [bW + radius, 0, -radius - bGap - bW + mbPad, 0, -mbPad]
+        const dy = [0, iH, 0, mbHs[0] / 2, 0]
         return genLine(x, y, dx, dy, true)
       }
 
@@ -207,8 +208,8 @@ export default {
         const p = .7
         const x = mbPad
         const y = bH + iH + mbHs[0] + mbHs[1] * p
-        const dx = [0, mbW+radius*2, 0, mbPad]
-        const dy = [-mbHs[1] * p, 0, -mbHs[0]+radius/2, 0]
+        const dx = [0, mbW + radius * 2, 0, mbPad]
+        const dy = [-mbHs[1] * p, 0, -mbHs[0] + radius / 2, 0]
         return genLine(x, y, dx, dy, true)
       }
 
@@ -216,8 +217,8 @@ export default {
         const p1 = .85, p2 = .3
         const x = 0
         const y = bH + iH + mbHs[0] + mbHs[1] * p1
-        const dx = [mbPad, 0, mbW+radius*2, 0, mbPad]
-        const dy = [0, mbHs[1]*(1-p1), 0, -mbHs[1]*p2, 0]
+        const dx = [mbPad, 0, mbW + radius * 2, 0, mbPad]
+        const dy = [0, mbHs[1] * (1 - p1), 0, -mbHs[1] * p2, 0]
         return genLine(x, y, dx, dy)
       }
 
@@ -225,8 +226,8 @@ export default {
         const p1 = .7, p2 = .6
         const x = 0
         const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] * p1
-        const dx = [mbPad, 0, mbW+radius*2, 0, mbPad]
-        const dy = [0, -mbHs[3]*p1, 0, mbHs[3]*p2, 0]
+        const dx = [mbPad, 0, mbW + radius * 2, 0, mbPad]
+        const dy = [0, -mbHs[3] * p1, 0, mbHs[3] * p2, 0]
         return genLine(x, y, dx, dy, true)
       }
 
@@ -235,7 +236,7 @@ export default {
         const x = vW
         const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] + catH + mbHs[4]
         const dx = [-mbPad, 0, mbPad]
-        const dy = [0, -(p1+mbHs[4]), 0]
+        const dy = [0, -(p1 + mbHs[4]), 0]
         return genLine(x, y, dx, dy, true)
       }
 
@@ -244,7 +245,7 @@ export default {
       borderContainer.selectAll("svg.border").remove()
       // draw
       const svg = borderContainer.append('svg')
-      const height = ctH+mbHs[5]
+      const height = ctH + mbHs[5]
       svg.attr('width', '100vw')
       svg.attr('height', `${height}px`)
       svg.attr('viewBox', `0 0 ${vW} ${height}`)
@@ -257,7 +258,7 @@ export default {
         genPath4(),
         genPath5(),
       ]
-      for(const { line, arrow, arrow_style } of paths) {
+      for (const { line, arrow, arrow_style } of paths) {
         svg.append("path").attr("d", line).attr("stroke-width", stroke)
         if (arrow) svg.append("path").attr("d", arrow).attr("stroke-width", stroke).attr("style", arrow_style)
       }
