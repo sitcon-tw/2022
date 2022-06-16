@@ -247,7 +247,7 @@ export default {
         const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] * p1
         const dx = [mbPad, 0, mbW + radius * 2, 0, mbPad]
         const dy = [0, -mbHs[3] * p1, 0, mbHs[3] * p2, 0]
-        return genLine(x, y, dx, dy, { hasArrow: true, sFirst: true, sLast: true })
+        return genLine(x, y, dx, dy, { sFirst: true, sLast: true })
       }
 
       function genPath5() {
@@ -256,7 +256,7 @@ export default {
         const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] + catH + mbHs[4]
         const dx = [-mbPad, 0, mbPad]
         const dy = [0, -(p1 + mbHs[4]), 0]
-        return genLine(x, y, dx, dy, { hasArrow: true, sFirst: true, sLast: true })
+        return genLine(x, y, dx, dy, { sFirst: true, sLast: true })
       }
 
       const borderContainer = d3.select(container)
