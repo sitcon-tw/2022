@@ -156,19 +156,20 @@ export default {
         const xs = dx.reduce((pv,cv) => pv.concat(pv[pv.length-1]+cv), [x])
         const ys = dy.reduce((pv,cv) => pv.concat(pv[pv.length-1]+cv), [y])
         let line = ''
+        const rd = radius * 2
         if (arrow) {
           const r = 4
           const k = .4
           if (dx[0] && !dy[0]) {
             const s = sign(dx[0])
             x += s * r
-            line += `M${x},${y} L${x+radius*k*s},${y-radius*k} `
-            line += `M${x},${y} L${x+radius*k*s},${y+radius*k} `
+            line += `M${x},${y} L${x+rd*k*s},${y-rd*k} `
+            line += `M${x},${y} L${x+rd*k*s},${y+rd*k} `
           } else {
             const s = sign(dy[0])
             y += s * r
-            line += `M${x},${y} L${x-radius*k},${y+radius*k*s} `
-            line += `M${x},${y} L${x+radius*k},${y+radius*k*s} `
+            line += `M${x},${y} L${x-rd*k},${y+rd*k*s} `
+            line += `M${x},${y} L${x+rd*k},${y+rd*k*s} `
           }
         }
         line += `M${x},${y} `
@@ -176,13 +177,13 @@ export default {
           let cx = 0, cy = 0
           const last = i+1 == sz
           if (!last) {
-            if (dx[i]) cx = radius * sign(dx[i])
-            if (dy[i]) cy = radius * sign(dy[i])
+            if (dx[i]) cx = rd * sign(dx[i])
+            if (dy[i]) cy = rd * sign(dy[i])
           }
           line += `L${xs[i+1]-cx},${ys[i+1]-cy} `
           if (!last) {
-            let nx = cx + radius * sign(dx[i+1])
-            let ny = cy + radius * sign(dy[i+1])
+            let nx = cx + rd * sign(dx[i+1])
+            let ny = cy + rd * sign(dy[i+1])
             line += `q${cx},${cy} ${nx},${ny}`
           }
         }
@@ -192,7 +193,7 @@ export default {
       function genPath1() {
         const x = bGap
         const y = bH
-        const dx = [bW, 0, -bGap-bW+mbPad, 0, -mbPad]
+        const dx = [bW+radius, 0, -radius-bGap-bW+mbPad, 0, -mbPad]
         const dy = [0, iH, 0, mbHs[0]/2, 0]
         return genLine(x, y, dx, dy, true)
       }
@@ -336,8 +337,7 @@ h1, h2, h3, h4, h5, h6
     align-items: flex-end
     justify-content: flex-start
 .info
-  width: 90%
-  margin: 0 auto
+  margin-left: 5%
   padding: var(--border-radius) 0
   display: grid
   grid-template-columns: 10fr 0.1fr 1fr 0.1fr 1fr 0.2fr auto 0.6fr
