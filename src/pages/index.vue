@@ -166,6 +166,8 @@ export default {
 
       function sign(x) { return x === 0 ? 0 : x > 0 ? 1 : -1; }
       function genLine(x, y, dx, dy, { hasArrow = false, sFirst = false, sLast = false  } = {}) {
+        sFirst &= mbPad < 2 * radius
+        sLast  &= mbPad < 2 * radius
         const xs = dx.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [x])
         const ys = dy.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [y])
         let arrow = '', arrow_style = ''
