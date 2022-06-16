@@ -257,13 +257,25 @@ export default {
   }
 }
 </script>
+<style lang="sass">
+.mint-box.sponsors-items.is-index
+  --border-radius: 32px
+  @media screen and (max-width: 768px)
+    --border-radius: 16px
+  width: min(1280px, calc(100vw - var(--border-radius)*4))
+  margin-left: auto
+  margin-right: auto
+</style>
 <style lang="sass" scoped>
 h1, h2, h3, h4, h5, h6
   margin: 0
 .border-container
   position: relative
-  --background-gap: calc((100vw - min(1280px,95vw))/2)
+  width: min(1280px, calc(100vw - var(--border-radius)*4))
+  --background-gap: calc((100vw - min(1280px, calc(100vw - var(--border-radius)*4)))/2)
   --border-radius: 32px
+  @media screen and (max-width: 768px)
+    --border-radius: 16px
   &:deep(svg.border)
     position: absolute
     top: 0
@@ -287,6 +299,8 @@ h1, h2, h3, h4, h5, h6
 .btns
   display: flex
   gap: 16px
+  @media screen and (max-width: 768px)
+    gap: 8px
 .name
   text-align: right
 .banner
@@ -324,7 +338,7 @@ h1, h2, h3, h4, h5, h6
 .info
   width: 90%
   margin: 0 auto
-  padding: 64px 0
+  padding: var(--border-radius) 0
   display: grid
   grid-template-columns: 10fr 0.1fr 1fr 0.1fr 1fr 0.2fr auto 0.6fr
   @media screen and (max-width: 768px)
@@ -358,6 +372,8 @@ h1, h2, h3, h4, h5, h6
   &.has-border
     margin-bottom: calc(var(--border-radius)*2)
   .btn
+    @media screen and (max-width: 768px)
+      font-size: 12px
     &:hover
       color: #383838
 .wool-cat-two
