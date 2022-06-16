@@ -165,43 +165,44 @@ export default {
       const { height: catH } = container.querySelector('.wool-cat-two').getBoundingClientRect()
 
       function sign(x) { return x === 0 ? 0 : x > 0 ? 1 : -1; }
-      function genLine(x, y, dx, dy, hasArrow = false) {
+      function genLine(x, y, dx, dy, { hasArrow = false, sFirst = false, sLast = false  } = {}) {
         const xs = dx.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [x])
         const ys = dy.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [y])
         let arrow = '', arrow_style = ''
-        const rd = radius * 2
+        const rd = radius * 2, srd = rd * .3
         if (hasArrow) {
-          const r = 4
           const k = .4
+          let crd = rd
+          if (sFirst) crd = srd
           if (dx[0] && !dy[0]) {
             const s = sign(dx[0])
-            x += s * r
-            arrow += `M${x},${y} L${x + rd * k * s},${y - rd * k} `
-            arrow += `M${x},${y} L${x + rd * k * s},${y + rd * k} `
-            if (Math.abs(dx[0]) < rd * 2) {
-              const p = -Math.log2(Math.abs(dx[0]) / rd / 2)
-              arrow_style = `transform-origin: ${x}px ${y}px; transform: rotate(${-23 * p * s}deg);`
-            }
+            x += s * stroke / 2
+            arrow += `M${x},${y} L${x + crd * k * s},${y - crd * k} `
+            arrow += `M${x},${y} L${x + crd * k * s},${y + crd * k} `
+            x += s * stroke / 2
           } else {
             const s = sign(dy[0])
-            y += s * r
-            arrow += `M${x},${y} L${x - rd * k},${y + rd * k * s} `
-            arrow += `M${x},${y} L${x + rd * k},${y + rd * k * s} `
+            y += s * stroke / 2
+            arrow += `M${x},${y} L${x - crd * k},${y + crd * k * s} `
+            arrow += `M${x},${y} L${x + crd * k},${y + crd * k * s} `
+            y += s * stroke / 2
           }
         }
         let line = ''
         line += `M${x},${y} `
         for (let i = 0, sz = dx.length; i < sz; i++) {
           let cx = 0, cy = 0
-          const last = i + 1 == sz
-          if (!last) {
-            if (dx[i]) cx = rd * sign(dx[i])
-            if (dy[i]) cy = rd * sign(dy[i])
+          let crd = rd
+          if (sFirst && (i == 0) || sLast && (i+2 == sz)) crd = srd
+          const isLast = i + 1 == sz
+          if (!isLast) {
+            if (dx[i]) cx = crd * sign(dx[i])
+            if (dy[i]) cy = crd * sign(dy[i])
           }
           line += `L${xs[i + 1] - cx},${ys[i + 1] - cy} `
-          if (!last) {
-            let nx = cx + rd * sign(dx[i + 1])
-            let ny = cy + rd * sign(dy[i + 1])
+          if (!isLast) {
+            let nx = cx + crd * sign(dx[i + 1])
+            let ny = cy + crd * sign(dy[i + 1])
             line += `q${cx},${cy} ${nx},${ny}`
           }
         }
@@ -213,7 +214,7 @@ export default {
         const y = bH
         const dx = [bW + radius, 0, -radius - bGap - bW + mbPad, 0, -mbPad]
         const dy = [0, iH, 0, mbHs[0] / 2, 0]
-        return genLine(x, y, dx, dy, true)
+        return genLine(x, y, dx, dy, { hasArrow: true, sLast: true })
       }
 
       function genPath2() {
@@ -222,7 +223,7 @@ export default {
         const y = bH + iH + mbHs[0] + mbHs[1] * p
         const dx = [0, mbW + radius * 2, 0, mbPad]
         const dy = [-mbHs[1] * p, 0, -mbHs[0] + radius / 2, 0]
-        return genLine(x, y, dx, dy, true)
+        return genLine(x, y, dx, dy, { hasArrow: true, sLast: true })
       }
 
       function genPath3() {
@@ -231,7 +232,7 @@ export default {
         const y = bH + iH + mbHs[0] + mbHs[1] * p1
         const dx = [mbPad, 0, mbW + radius * 2, 0, mbPad]
         const dy = [0, mbHs[1] * (1 - p1), 0, -mbHs[1] * p2, 0]
-        return genLine(x, y, dx, dy)
+        return genLine(x, y, dx, dy, { sFirst: true, sLast: true })
       }
 
       function genPath4() {
@@ -240,7 +241,7 @@ export default {
         const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] * p1
         const dx = [mbPad, 0, mbW + radius * 2, 0, mbPad]
         const dy = [0, -mbHs[3] * p1, 0, mbHs[3] * p2, 0]
-        return genLine(x, y, dx, dy, true)
+        return genLine(x, y, dx, dy, { hasArrow: true, sFirst: true, sLast: true })
       }
 
       function genPath5() {
@@ -249,7 +250,7 @@ export default {
         const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] + catH + mbHs[4]
         const dx = [-mbPad, 0, mbPad]
         const dy = [0, -(p1 + mbHs[4]), 0]
-        return genLine(x, y, dx, dy, true)
+        return genLine(x, y, dx, dy, { hasArrow: true, sFirst: true, sLast: true })
       }
 
       const borderContainer = d3.select(container)
