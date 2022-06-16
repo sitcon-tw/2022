@@ -55,7 +55,7 @@ export default {
           eyeColor: `rgba(0, 0, 0, .75)`,
           roate: Math.random() * 30 - 15,
           flip: Math.random() > 0.5,
-          withPancake: Math.random() > 0.99
+          withPancake: Math.random() > 0.95
         })
       }
       this.show = true
