@@ -133,7 +133,6 @@ export default {
     },
     drawBorder() {
       const container = this.$refs['border-container']
-      window.container = container
       const { height: ctH } = container.getBoundingClientRect()
       const { innerWidth: vW } = window
       const small_size = window.innerWidth <= 768
@@ -149,6 +148,7 @@ export default {
       const mbWs = mbxs.map(rect => rect.width)
       const mbW = mbWs[0]
       const mbGap = (vW - mbW) / 2
+      const mbPad = mbGap - radius
       const { height: catH } = container.querySelector('.wool-cat-two').getBoundingClientRect()
 
       function sign(x) { return x === 0 ? 0 : x > 0 ? 1 : -1; }
@@ -192,16 +192,16 @@ export default {
       function genPath1() {
         const x = bGap
         const y = bH
-        const dx = [bW, 0, -bGap-bW+mbGap/2, 0, -mbGap/2]
+        const dx = [bW, 0, -bGap-bW+mbPad, 0, -mbPad]
         const dy = [0, iH, 0, mbHs[0]/2, 0]
         return genLine(x, y, dx, dy, true)
       }
 
       function genPath2() {
         const p = .7
-        const x = mbGap/2
+        const x = mbPad
         const y = bH + iH + mbHs[0] + mbHs[1] * p
-        const dx = [0, mbW+mbGap, 0, mbGap/2]
+        const dx = [0, mbW+radius*2, 0, mbPad]
         const dy = [-mbHs[1] * p, 0, -mbHs[0]+radius/2, 0]
         return genLine(x, y, dx, dy, true)
       }
@@ -210,7 +210,7 @@ export default {
         const p1 = .85, p2 = .3
         const x = 0
         const y = bH + iH + mbHs[0] + mbHs[1] * p1
-        const dx = [mbGap/2, 0, mbW+mbGap, 0, mbGap/2]
+        const dx = [mbPad, 0, mbW+radius*2, 0, mbPad]
         const dy = [0, mbHs[1]*(1-p1), 0, -mbHs[1]*p2, 0]
         return genLine(x, y, dx, dy)
       }
@@ -219,16 +219,16 @@ export default {
         const p1 = .7, p2 = .6
         const x = 0
         const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] * p1
-        const dx = [mbGap/2, 0, mbW+mbGap, 0, mbGap/2]
+        const dx = [mbPad, 0, mbW+radius*2, 0, mbPad]
         const dy = [0, -mbHs[3]*p1, 0, mbHs[3]*p2, 0]
         return genLine(x, y, dx, dy, true)
       }
 
       function genPath5() {
-        const p1 = radius * 0.1
+        const p1 = radius * 2
         const x = vW
         const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] + catH + mbHs[4]
-        const dx = [-mbGap/2, 0, mbGap/2]
+        const dx = [-mbPad, 0, mbPad]
         const dy = [0, -(p1+mbHs[4]), 0]
         return genLine(x, y, dx, dy, true)
       }
@@ -379,7 +379,7 @@ h1, h2, h3, h4, h5, h6
 .wool-cat-two
   width: 80%
   margin: 0 auto 0 auto
-  margin-top: 80px
+  padding-top: 80px
   display: grid
   grid-template-columns: 5fr 1fr 5fr
   grid-gap: 36px
