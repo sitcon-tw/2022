@@ -118,6 +118,9 @@
           </div>
         </div>
       </mint-box>
+
+      <img class="border-item left wool" style="" :src="'/2022/imgs/cats/wool-orange-flip.svg'" />
+      <cat-head-black class="border-item right cat" style="height: auto;"  />
     </div>
   </div>
 </template>
@@ -278,6 +281,15 @@ export default {
         svg.append("path").attr("d", line).attr("stroke-width", stroke)
         if (arrow) svg.append("path").attr("d", arrow).attr("stroke-width", stroke).attr("style", arrow_style)
       }
+
+      const leftWool = container.querySelector('.border-item.left.wool')
+      leftWool.style.top = `${bH + iH + mbHs[0] + mbHs[1] * .75}px`
+      leftWool.style.left = `${-mbGap}px`
+      leftWool.style.width = `${mbGap}px`
+      const rightCat = container.querySelector('.border-item.right.cat')
+      rightCat.style.top = `${bH + iH + mbHs[0] + mbHs[1] * .5}px`
+      rightCat.style.right = `${-mbGap}px`
+      rightCat.style.width = `${mbGap}px`
     }
   }
 }
@@ -301,6 +313,12 @@ h1, h2, h3, h4, h5, h6
   --border-radius: 32px
   @media screen and (max-width: 768px)
     --border-radius: 16px
+  .border-item
+    position: absolute
+    &.left.wool
+      transform: scale(0.8)
+    &.right.cat
+      transform: scaleX(-1) rotate(90deg) scale(2) translateY(30%)
   &:deep(svg.border)
     position: absolute
     top: 0
