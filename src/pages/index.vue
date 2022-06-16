@@ -65,7 +65,8 @@
             </li>
             <li>
               <strong>Lightning Talk 閃電秀：</strong><br>
-              <span>Lightning Talk，中文譯為「閃電秀」，又稱 data blitz（資料閃電戰），顧名思義即為「閃電一般短的演講」。包含準備與連接投影機的時間在內，每位講者僅有 3 分鐘的時間。講者必須以飛快的速度，進行簡潔扼要的分享。要是沒能在 3 分鐘結束，會被直接切斷投影機訊號！無論是對台上的講者，或是台下的聽眾，都是十分刺激又轟動全場的體驗唷！Lightning Talk 將會在年會當天早上 10 點於白板區開放報名，先搶先贏，並在所有議程結束後、閉幕前，在國際會議廳進行演講。</span>
+              <span>Lightning Talk，中文譯為「閃電秀」，又稱 data blitz（資料閃電戰），顧名思義即為「閃電一般短的演講」。包含準備與連接投影機的時間在內，每位講者僅有 3 分鐘的時間。講者必須以飛快的速度，進行簡潔扼要的分享。要是沒能在 3
+                分鐘結束，會被直接切斷投影機訊號！無論是對台上的講者，或是台下的聽眾，都是十分刺激又轟動全場的體驗唷！Lightning Talk 將會在年會當天早上 10 點於白板區開放報名，先搶先贏，並在所有議程結束後、閉幕前，在國際會議廳進行演講。</span>
             </li>
             <li>
               <strong>開放式議程：</strong><br>
@@ -140,9 +141,9 @@ export default {
   methods: {
     wrapDrawBorder() {
       this.drawBorder()
-      setTimeout(() => {
-        this.drawBorder()
-      }, 100)
+      for (let i of [100, 1000, 5000, 10000]) {
+        setTimeout(() => this.drawBorder(), i)
+      }
     },
     drawBorder() {
       const container = this.$refs['border-container']
@@ -165,9 +166,9 @@ export default {
       const { height: catH } = container.querySelector('.wool-cat-two').getBoundingClientRect()
 
       function sign(x) { return x === 0 ? 0 : x > 0 ? 1 : -1; }
-      function genLine(x, y, dx, dy, { hasArrow = false, sFirst = false, sLast = false  } = {}) {
+      function genLine(x, y, dx, dy, { hasArrow = false, sFirst = false, sLast = false } = {}) {
         sFirst &= mbPad < 2 * radius
-        sLast  &= mbPad < 2 * radius
+        sLast &= mbPad < 2 * radius
         const xs = dx.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [x])
         const ys = dy.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [y])
         let arrow = '', arrow_style = ''
@@ -195,7 +196,7 @@ export default {
         for (let i = 0, sz = dx.length; i < sz; i++) {
           let cx = 0, cy = 0
           let crd = rd
-          if (sFirst && (i == 0) || sLast && (i+2 == sz)) crd = srd
+          if (sFirst && (i == 0) || sLast && (i + 2 == sz)) crd = srd
           const isLast = i + 1 == sz
           if (!isLast) {
             if (dx[i]) cx = crd * sign(dx[i])
