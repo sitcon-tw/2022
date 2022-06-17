@@ -12,7 +12,7 @@
         <svg-x-cat-in-a-maze class="x" />
         <div class="wool-cat-one">
           <img class="wool" :src="'/2022/imgs/cats/wool-orange.svg'" />
-          <img class="cat" :src="'/2022/imgs/cats/cat-cover.svg'" />
+          <cat-cover class="cat" />
         </div>
       </div>
 
@@ -443,11 +443,15 @@ h1, h2, h3, h4, h5, h6
     display: grid
     grid-template-columns: auto auto
     grid-gap: 16px
+    align-items: end
+    justify-content: flex-start
     @media screen and (max-width: 768px)
       grid-template-columns: 1fr 3fr
       grid-gap: 4px
-    align-items: flex-end
-    justify-content: flex-start
+    svg.cat
+      height: 100%
+      width: 100%
+      transform: translateY(5px)
 .info
   margin-left: 5%
   padding: var(--border-radius) 0

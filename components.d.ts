@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     BlockTitle: typeof import('./src/components/BlockTitle.vue')['default']
     Btn: typeof import('./src/components/Btn.vue')['default']
     CatCorner: typeof import('./src/components/cat/Corner.vue')['default']
+    CatCover: typeof import('./src/components/cat/Cover.vue')['default']
     CatFlatLeft: typeof import('./src/components/cat/FlatLeft.vue')['default']
     CatHeadBlack: typeof import('./src/components/cat/HeadBlack.vue')['default']
     CatKonami: typeof import('./src/components/cat/Konami.vue')['default']
