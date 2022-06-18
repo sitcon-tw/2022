@@ -132,6 +132,11 @@ export default {
     const dialogStore = useDialogStore()
     return { dialogStore }
   },
+  data() {
+    return {
+      timers: []
+    }
+  },
   mounted() {
     this.$nextTick(() => {
       this.wrapDrawBorder()
@@ -139,13 +144,20 @@ export default {
     window.addEventListener('resize', this.wrapDrawBorder)
   },
   unmounted() {
+    this.clearTimers()
     window.removeEventListener('resize', this.wrapDrawBorder)
   },
   methods: {
+    clearTimers() {
+      for(const timer of this.timers) {
+        clearTimeout(timer)
+      }
+    },
     wrapDrawBorder() {
+      this.clearTimers()
       this.drawBorder()
       for (let i of [100, 1000, 5000, 10000]) {
-        setTimeout(() => this.drawBorder(), i)
+        this.timers.push(setTimeout(() => this.drawBorder(), i))
       }
     },
     drawBorder() {
