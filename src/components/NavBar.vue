@@ -2,7 +2,7 @@
   <arrow-box class="nav-bar">
     <router-link class="logo" to="/">
       <img class="sitcon" :src="'/2022/imgs/sitcon.svg'" />
-      <img class="x" :src="'/2022/imgs/x.svg'" />
+      <svg-x class="x" />
     </router-link>
     <div class="links">
       <router-link class="link hide-mobile" :to="link.to" v-for="(link, i) of links" @click="active = i">
@@ -101,12 +101,11 @@ export default {
     display: flex
     align-items: center
     gap: 8px
-    img
-      &.sitcon
+    .sitcon
         height: 24px
         @media (max-width: 1024px)
           display: none
-      &.x
+    .x
         height: 48px
         @media (max-width: 1024px)
           height: 40px
