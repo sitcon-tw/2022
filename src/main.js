@@ -5,6 +5,7 @@ import { useDialogStore } from './store/dialog'
 import App from './App.vue'
 import defaultLayout from '@/layout/default.vue'
 import cfpLayout from '@/layout/cfp.vue'
+import notFoundLayout from '@/layout/not-found.vue'
 import sessionData from '@/assets/session.json';
 import 'vue3-openlayers/dist/vue3-openlayers.css'
 export const createApp = ViteSSG(
@@ -37,6 +38,11 @@ export const createApp = ViteSSG(
             }
           },
         )]
+      },
+      {
+        path: '/404',
+        name: '404',
+        component: notFoundLayout,
       },
       {
         path: '/',
@@ -73,15 +79,10 @@ export const createApp = ViteSSG(
                 id: x,
               }
             })),
-          {
-            path: '/404',
-            name: '404',
-            component: () => import('@/pages/404.vue')
-          },
-          {
-            path: '/:pathMatch(.*)',
-            redirect: '/404'
-          }
+            {
+              path: '/:pathMatch(.*)',
+              redirect: '/404'
+            }
         ]
       },
       //
