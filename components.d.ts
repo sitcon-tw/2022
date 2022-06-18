@@ -52,6 +52,7 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     SignUpDialog: typeof import('./src/components/SignUpDialog.vue')['default']
     SvgArrow: typeof import('./src/components/svg/Arrow.vue')['default']
+    SvgX: typeof import('./src/components/svg/X.vue')['default']
     SvgXCatInAMaze: typeof import('./src/components/svg/XCatInAMaze.vue')['default']
   }
 }
