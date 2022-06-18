@@ -1,7 +1,7 @@
 <template>
   <arrow-box class="nav-bar">
     <router-link class="logo" to="/">
-      <img class="sitcon" :src="'/2022/imgs/sitcon.svg'" />
+      <svg-sitcon class="sitcon" />
       <svg-x class="x" />
     </router-link>
     <div class="links">
