@@ -29,7 +29,7 @@
       </div>
 
       <mint-box class="has-border">
-        <h1>迷宮中的貓貓</h1>
+        <h1>年會主題</h1>
         <img class="cat pad1" :src="'/2022/imgs/cat-in-a-maze.svg'" />
         <div class="pad2">
           <p>Cat in a Maze 參考自 Rat in a Maze 這道經典演算法題目。題目描述一隻老鼠要走迷宮，在給定了迷宮形狀的前提下，要努力找出走出迷宮的出路。「Rat in a
