@@ -40,6 +40,10 @@ export default {
           text: '年會主題'
         },
         {
+          to: '/activity',
+          text: '活動資訊'
+        },
+        {
           to: '/agenda',
           text: '議程資訊'
         },
