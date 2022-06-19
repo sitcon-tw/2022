@@ -24,7 +24,7 @@
         <svg-arrow class="arrow" />
         <div class="btns">
           <btn @click="dialogStore.signUpDialogOpened = true">報名取票</btn>
-          <btn href="#">公告資訊</btn>
+          <btn to="/sponsor">支持我們</btn>
         </div>
       </div>
 
