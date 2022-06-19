@@ -222,7 +222,7 @@ export default {
         return { line, arrow, arrow_style }
       }
 
-      const p = [.5, .7, .85, .3, .7, .6, .8]
+      const p = [.5, .3, .8, .6, .7, .8]
 
       function genPath1() {
         const x = bGap
@@ -242,25 +242,17 @@ export default {
 
       function genPath3() {
         const x = 0
-        const y = bH + iH + mbHs[0] + mbHs[1] * p[2]
+        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] * p[2]
         const dx = [mbPad, 0, mbW + radius * 2, 0, mbPad]
-        const dy = [0, mbHs[1] * (1 - p[2]), 0, -mbHs[1] * p[3], 0]
+        const dy = [0, -mbHs[2] * p[2], 0, mbHs[2] * p[3], 0]
         return genLine(x, y, dx, dy, { sFirst: true, sLast: true })
       }
 
       function genPath4() {
-        const x = 0
-        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] * p[4]
-        const dx = [mbPad, 0, mbW + radius * 2, 0, mbPad]
-        const dy = [0, -mbHs[3] * p[4], 0, mbHs[3] * p[5], 0]
-        return genLine(x, y, dx, dy, { sFirst: true, sLast: true })
-      }
-
-      function genPath5() {
         const x = vW
-        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] + catH + mbHs[4]
+        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + catH + mbHs[3]
         const dx = [-mbPad, 0, mbPad]
-        const dy = [0, -(radius * 2 + mbHs[4]), 0]
+        const dy = [0, -(radius * 2 + mbHs[3]), 0]
         return genLine(x, y, dx, dy, { sFirst: true, sLast: true })
       }
 
@@ -274,28 +266,28 @@ export default {
       function genItem2() {
         const u = -1
         const y = bH + iH + radius / 2
-        const h = mbHs[0] * p[6]
+        const h = mbHs[0] * p[5]
         return genBlock(u, y, h)
       }
 
       function genItem3() {
         const u = 1
-        const y = bH + iH + mbHs[0] + mbHs[1]*p[2]
-        const h = mbHs[1]*(1-p[2]) + mbHs[2] + mbHs[3] * p[4]
+        const y = bH + iH + mbHs[0] + mbHs[1]*(p[1]+0.35)
+        const h = mbHs[1]*(1-p[1]-0.35) + mbHs[2] * p[2]
         return genBlock(u, y, h)
       }
 
       function genItem4() {
         const u = -1
         const y = bH + iH + mbHs[0] + mbHs[1]*p[4]
-        const h = mbHs[1]*(1-p[4]) + mbHs[2] + mbHs[3] * p[5]
+        const h = mbHs[1]*(1-p[4]) + mbHs[2] * p[3]
         return genBlock(u, y, h)
       }
 
       function genItem5() {
         const u = -1
-        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + mbHs[3] + catH - radius * 2
-        const h = mbHs[4] + radius * 2
+        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + catH - radius * 2
+        const h = mbHs[3] + radius * 2
         return genBlock(u, y, h)
       }
       const borderContainer = d3.select(container)
@@ -303,7 +295,7 @@ export default {
       borderContainer.selectAll("svg.border").remove()
       // draw
       const svg = borderContainer.append('svg')
-      const height = ctH + mbHs[5]
+      const height = ctH + mbHs[4]
       svg.attr('width', '100vw')
       svg.attr('height', `${height}px`)
       svg.attr('viewBox', `0 0 ${vW} ${height}`)
@@ -314,7 +306,6 @@ export default {
         genPath2(),
         genPath3(),
         genPath4(),
-        genPath5(),
       ]
       for (const { line, arrow, arrow_style } of paths) {
         svg.append("path").attr("d", line).attr("stroke-width", stroke).attr("stroke", "#A89B85")
@@ -332,7 +323,7 @@ export default {
       }
 
       const leftWool = container.querySelector('.border-item.left.wool')
-      leftWool.style.top = `${bH + iH + mbHs[0] + mbHs[1] * .75}px`
+      leftWool.style.top = `${bH + iH + mbHs[0] + mbHs[1] * (p[1]+0.05)}px`
       leftWool.style.width = `${mbGap}px`
       const rightCat = container.querySelector('.border-item.right.cat')
       rightCat.style.top = `${bH + iH + mbHs[0] + mbHs[1] * .5}px`
