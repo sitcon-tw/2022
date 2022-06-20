@@ -68,9 +68,9 @@ export default {
   flex-direction: column
   align-items: center
   gap: 20px
-  padding: 6% 10% 2% 10%
+  padding: 6% 10%
   margin: 80px
-  --background-opacity: 0.1
+  --background-opacity: 0.35
   background: rgba(0, 0, 0, var(--background-opacity))
   border: 1px solid rgba(222, 222, 222, 0.2)
   border-radius: 25px
@@ -78,15 +78,19 @@ export default {
   backdrop-filter: blur(5px)
   @media screen and (max-width: 768px)
     margin: 20px 0
+  img
+    padding: 5% 10%
 .text
   margin: 0
   color: #FFA949
   word-break: keep-all
+  text-align: center
 .btn
   font-size: 0.8rem
   display: inline-flex
   align-items: center
-  padding: 1em 2em
+  padding: 1em 4em
+  border-radius: 28px
   svg
     fill: #373737
   &:hover
