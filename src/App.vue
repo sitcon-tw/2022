@@ -1,6 +1,5 @@
 
 <script>
-import { RouterView } from 'vue-router'
 import { Head } from '@vueuse/head'
 import jsonld from './assets/jsonld';
 export default {
