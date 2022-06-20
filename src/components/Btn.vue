@@ -28,6 +28,9 @@ const props = defineProps({
 </script>
 <style lang="sass" scoped>
 .btn
+  display: flex
+  align-items: center
+  justify-content: center
   background: #82D357
   color: #383838
   border-radius: 16px
