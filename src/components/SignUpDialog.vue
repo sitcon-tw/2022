@@ -30,11 +30,13 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+h1, p
+  color: #373737
 .content
   padding: 0 24px
   display: flex
   flex-direction: row
-  @media screen and (max-width: 768px)
+  @media screen and (max-width: 920px)
     flex-direction: column
     padding: 0
   .btns
