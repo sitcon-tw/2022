@@ -22,7 +22,7 @@ export default {
     ]
   },
   "image": [
-    "https://sitcon.org/2022/imgs/cfp-OG-image.png"
+    "https://sitcon.org/2022/imgs/og.jpg"
   ],
   "description": "SITCON X - Cat in a Maze 學學貓咪，換個思維邏輯面對迷惘的現況，保持著好奇心與探索的樂趣，跳脫框架創造屬於自己的美好未來！",
   "endDate": "2022-09-04T18:00+08:00",
@@ -103,6 +103,83 @@ export default {
       "url": "https://ocf.neticrm.tw/civicrm/contribute/transact?reset=1&id=55",
       "validFrom": "2022-04-17T00:00+08:00",
       "validThrough": "2022-09-04T17:00:00.000+08:00"
+    },
+    {
+      "@type": "Offer",
+      "name": "邀請票（2022/08/20 截止）",
+      "category": "premium",
+      "price": 0.0,
+      "priceCurrency": "TWD",
+      "availability": "InStock",
+      "url": "https://sitcon.kktix.cc/events/sitcon2022",
+      "validFrom": "2022-06-20T00:00:00.000+08:00",
+      "validThrough": "2022-08-21T00:00:00.000+08:00"
+    },
+    {
+      "@type": "Offer",
+      "name": "學生票（第二波）",
+      "category": "primary",
+      "price": 0.0,
+      "priceCurrency": "TWD",
+      "availability": "InStock",
+      "url": "https://sitcon.kktix.cc/events/sitcon2022",
+      "validFrom": "2022-08-06T20:00:00.000+08:00",
+      "validThrough": "2022-08-21T00:00:00.000+08:00"
+    },
+    {
+      "@type": "Offer",
+      "name": "學生票（第一波）",
+      "category": "primary",
+      "price": 0.0,
+      "priceCurrency": "TWD",
+      "availability": "InStock",
+      "url": "https://sitcon.kktix.cc/events/sitcon2022",
+      "validFrom": "2022-07-16T20:00:00.000+08:00",
+      "validThrough": "2022-07-30T00:00:00.000+08:00"
+    },
+    {
+      "@type": "Offer",
+      "name": "邀請票（SITCON x OSCVPass 開源貢獻票）",
+      "category": "premium",
+      "price": 0.0,
+      "priceCurrency": "TWD",
+      "availability": "InStock",
+      "url": "https://sitcon.kktix.cc/events/sitcon2022",
+      "validFrom": "2022-06-20T00:00:00.000+08:00",
+      "validThrough": "2022-07-30T00:00:00.000+08:00"
+    },
+    {
+      "@type": "Offer",
+      "name": "普通票（第二波）",
+      "category": "primary",
+      "price": 0.0,
+      "priceCurrency": "TWD",
+      "availability": "InStock",
+      "url": "https://sitcon.kktix.cc/events/sitcon2022",
+      "validFrom": "2022-08-06T22:00:00.000+08:00",
+      "validThrough": "2022-08-21T00:00:00.000+08:00"
+    },
+    {
+      "@type": "Offer",
+      "name": "普通票（第一波）",
+      "category": "primary",
+      "price": 0.0,
+      "priceCurrency": "TWD",
+      "availability": "InStock",
+      "url": "https://sitcon.kktix.cc/events/sitcon2022",
+      "validFrom": "2022-07-16T20:00:00.000+08:00",
+      "validThrough": "2022-07-30T00:00:00.000+08:00"
+    },
+    {
+      "@type": "Offer",
+      "name": "邀請票（2022/07/29 截止）",
+      "category": "premium",
+      "price": 0.0,
+      "priceCurrency": "TWD",
+      "availability": "InStock",
+      "url": "https://sitcon.kktix.cc/events/sitcon2022",
+      "validFrom": "2022-06-20T00:00:00.000+08:00",
+      "validThrough": "2022-07-30T00:00:00.000+08:00"
     }
   ],
   "eventStatus": "EventScheduled"
