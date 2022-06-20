@@ -160,6 +160,7 @@ export default {
       const small_size = window.innerWidth <= 768
       const stroke = !small_size ? 8 : 4
       const radius = parseInt(window.getComputedStyle(container).getPropertyValue('--border-radius'))
+      const short_radius = radius * .3
 
       const { width: bW, height: bH } = container.querySelector('.banner').getBoundingClientRect()
       const bGap = (vW - bW) / 2
@@ -172,7 +173,7 @@ export default {
       const mbGap = (vW - mbW) / 2
       const mbPad = mbGap - radius
       const { height: catH } = container.querySelector('.wool-cat-two').getBoundingClientRect()
-      const short_gap = mbPad < 2 * radius
+      const short_gap = mbPad < 1.8 * radius
 
       function sign(x) { return x === 0 ? 0 : x > 0 ? 1 : -1; }
       function genLine(x, y, dx, dy, { hasArrow = false, sFirst = false, sLast = false } = {}) {
@@ -181,11 +182,11 @@ export default {
         const xs = dx.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [x])
         const ys = dy.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [y])
         let arrow = '', arrow_style = ''
-        const rd = radius * 2, srd = rd * .3
+        const rd = radius * 2
         if (hasArrow) {
           const k = .4
           let crd = rd
-          if (sFirst) crd = srd
+          if (sFirst) crd = short_radius * 3
           if (dx[0] && !dy[0]) {
             const s = sign(dx[0])
             x += s * stroke / 2
@@ -205,7 +206,7 @@ export default {
         for (let i = 0, sz = dx.length; i < sz; i++) {
           let cx = 0, cy = 0
           let crd = rd
-          if (sFirst && (i == 0) || sLast && (i + 2 == sz)) crd = srd
+          if (sFirst && (i == 0) || sLast && (i + 2 == sz)) crd = short_radius
           const isLast = i + 1 == sz
           if (!isLast) {
             if (dx[i]) cx = crd * sign(dx[i])
@@ -221,7 +222,7 @@ export default {
         return { line, arrow, arrow_style }
       }
       function genBlock(u, y, h) {
-        const rd = radius * (!short_gap ? 1 : .3)
+        const rd = short_gap ? short_radius : radius
         const blockPad = mbPad - rd
         const x = u > 0 ? 0 : vW
         y += rd
@@ -236,13 +237,13 @@ export default {
           let cx = 0, cy = 0
           const isLast = i + 1 == sz
           if (!isLast) {
-            if (dx[i]) cx = rd * 2 * sign(dx[i])
-            if (dy[i]) cy = rd * 2 * sign(dy[i])
+            if (dx[i]) cx = rd * sign(dx[i])
+            if (dy[i]) cy = rd * sign(dy[i])
           }
           line += `L${xs[i + 1] - cx},${ys[i + 1] - cy} `
           if (!isLast) {
-            let nx = cx + rd * 2 * sign(dx[i + 1])
-            let ny = cy + rd * 2 * sign(dy[i + 1])
+            let nx = cx + rd * sign(dx[i + 1])
+            let ny = cy + rd * sign(dy[i + 1])
             line += `q${cx},${cy} ${nx},${ny}`
           }
         }
@@ -250,37 +251,38 @@ export default {
       }
 
       const p = [.5, .3, .8, .6, .7, .8]
+      const of = short_gap ? short_radius * .8 : 0
 
       function genPath1() {
         const x = bGap
         const y = bH
-        const dx = [bW + radius, 0, -radius - bGap - bW + mbPad, 0, -mbPad]
-        const dy = [0, iH, 0, mbHs[0] * p[0], 0]
+        const dx = [bW + radius, 0, -radius - bGap - bW + mbPad + of, 0, -mbPad - of]
+        const dy = [0, iH, 0, mbHs[0] * p[0] + of, 0]
         return genLine(x, y, dx, dy, { hasArrow: true, sLast: true })
       }
 
       function genPath2() {
         const x = mbPad
         const y = bH + iH + mbHs[0] + mbHs[1] * p[1]
-        const dx = [0, mbW + radius * 2, 0, mbPad]
-        const dy = [-mbHs[1] * p[1], 0, -mbHs[0] + radius / 2, 0]
+        const dx = [0, mbW + radius * 2 - of, 0, mbPad + of]
+        const dy = [-mbHs[1] * p[1], 0, -mbHs[0] + radius / 2 - of, 0]
         return genLine(x, y, dx, dy, { hasArrow: true, sLast: true })
       }
 
       function genPath3() {
         const x = 0
-        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] * p[2]
-        const dx = [mbPad, 0, mbW + radius * 2, 0, mbPad]
-        const dy = [0, -mbHs[2] * p[2], 0, mbHs[2] * p[3], 0]
-        return genLine(x, y, dx, dy, { sFirst: true, sLast: true })
+        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] * p[2] + of
+        const dx = [mbPad + of, 0, mbW + radius * 2 - of * 2, 0, mbPad + of]
+        const dy = [0, -mbHs[2] * p[2] - of, 0, mbHs[2] * p[3] + of, 0]
+        return genLine(x, y, dx, dy, { hasArrow: true, sFirst: true, sLast: true })
       }
 
       function genPath4() {
         const x = vW
-        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + catH + mbHs[3]
-        const dx = [-mbPad, 0, mbPad]
-        const dy = [0, -(radius * 2 + mbHs[3]), 0]
-        return genLine(x, y, dx, dy, { sFirst: true, sLast: true })
+        const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + catH + mbHs[3] + of
+        const dx = [-mbPad-of, 0, mbPad+of]
+        const dy = [0, -(radius * 2 + mbHs[3]) - of * 2, 0]
+        return genLine(x, y, dx, dy, { hasArrow: true, sFirst: true, sLast: true })
       }
 
       function genItem1() {
