@@ -296,7 +296,7 @@ export default {
       // draw
       const svg = borderContainer.append('svg')
       const height = ctH + mbHs[4]
-      svg.attr('width', '100vw')
+      svg.attr('width', `${vW}px`)
       svg.attr('height', `${height}px`)
       svg.attr('viewBox', `0 0 ${vW} ${height}`)
       svg.attr('class', 'border')
@@ -360,6 +360,7 @@ h1, h2, h3, h4, h5, h6
     &.right.cat
       transform: scaleX(-1) rotate(90deg) scale(2) translateY(30%)
   &:deep(svg.border)
+    max-width: unset
     position: absolute
     top: 0
     left: calc(-1*var(--background-gap))
