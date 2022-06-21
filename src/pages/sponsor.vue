@@ -7,9 +7,9 @@
       image="https://sitcon.org/2022/imgs/og.jpg" />
 
     <arrow-box>
-      <block-title>贊助夥伴召集</block-title>
+      <block-title>支持我們</block-title>
       <mint-box class="header-box">
-        <p>十年以來，SITCON 一直秉持著不向與會者收費的原則來舉辦資訊研討會，不僅創造許多學生們交流、教學互長的機會，也帶領無數學子跨入資訊的殿堂。</p>
+        <p>十年以來，SITCON 一直秉持著不向與會者收費的原則來舉辦資訊研討會，不僅創造許多學生們交流、教學互長的機會，也帶領無數學子踏入資訊的殿堂。</p>
         <stats-block />
         <p>而維繫學生們的資訊交流平台，除了有賴志工們的努力及貢獻，亦十分需要在資金上的支持。
 
