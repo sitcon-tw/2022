@@ -127,6 +127,7 @@ export default {
         padding-top: calc(var(--offset) / 2 + var(--padding))
         padding-bottom: calc(var(--offset) / 2 + var(--padding))
         transform: scale(1.2)
+        justify-content: center
     .content
       --offset: 128px
       --padding: 16px
