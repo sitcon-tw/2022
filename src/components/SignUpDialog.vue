@@ -1,6 +1,6 @@
 <template>
   <ArrowDialog v-model="dialogStore.signUpDialogOpened">
-    <h1>報名資訊</h1>
+    <h2 class="title">報名資訊</h2>
     <div class="content">
       <p class="text">
         SITCON 年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助。<br>
@@ -37,6 +37,8 @@ export default {
   @media screen and (max-width: 920px)
     flex-direction: column
     padding: 0
+  .title
+    margin: 0
   .btns
     white-space: nowrap
     padding: 16px 24px
