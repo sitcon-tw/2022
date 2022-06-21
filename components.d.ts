@@ -51,6 +51,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SignUpDialog: typeof import('./src/components/SignUpDialog.vue')['default']
+    StatsBlock: typeof import('./src/components/StatsBlock.vue')['default']
     SvgArrow: typeof import('./src/components/svg/Arrow.vue')['default']
     SvgSitcon: typeof import('./src/components/svg/sitcon.vue')['default']
     SvgX: typeof import('./src/components/svg/X.vue')['default']
