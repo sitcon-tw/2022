@@ -59,6 +59,8 @@ export default {
   border: none
   --background-color: #F4EEE1
   background-color: var(--background-color)
+  --text-color: #373737
+  color: var(--text-color)
   border-radius: 68px
   outline: none
   overflow-y: hidden

@@ -275,7 +275,6 @@ export default {
 </script>
 <style lang="sass" scoped>
 .agenda-dialog
-  color: #373737
   font-size: 16px
   @media (max-width: 768px)
     font-size: 12px

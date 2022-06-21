@@ -30,8 +30,6 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-h1, p
-  color: #373737
 .content
   padding: 0 24px
   display: flex
