@@ -8,11 +8,11 @@
         若你認同 SITCON 的理念與做法，歡迎參與 SITCON 2021 的個人贊助方案，給予我們實質上的支持。
       </p>
       <div class="btns">
-        <btn href="">KKTIX 報名連結</btn>
-        <btn href="">OSCVPass 申請</btn>
-        <btn href="">
+        <btn href="https://sitcon.kktix.cc/events/sitcon2022">KKTIX 報名連結</btn>
+        <btn href="https://ocf.tw/p/oscvpass/">OSCVPass 申請</btn>
+        <btn href="https://hackmd.io/@SITCON/rJjIFtkOq">
           <img class="cat-right" src="/imgs/cats/cat-right-angle.svg" />
-          個人贊助方案
+          遠道而來票
         </btn>
       </div>
     </div>
