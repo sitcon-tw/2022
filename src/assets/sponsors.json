@@ -7,72 +7,39 @@
   },
   "co_org": [
     {
-      "name": "蹦蹦袋鼠",
-      "link": "https://pancake.gnehs.net/",
-      "logo": "kangaroo.png",
-      "id": "kangaroo",
-      "description": "袋鼠來了！"
+      "name": "中央研究院資訊科學研究所",
+      "link": "https://www.iis.sinica.edu.tw/",
+      "logo": "iis.png",
+      "id": "iis",
+      "description": "中央研究院資訊科學研究所於 1977 年開始設立籌備處，歷經五年籌備， 於 1982 年 9 月正式成立研究所，是中央研究院數理組十一個單位之一。目前編制內有 39 位研究人員，另外有 29 位博士後研究學者，將近 300 位專任之資訊技術人員與非全時之研究助理，支援資訊領域之研究與系統之開發。「件件工作，反映自我，凡經我手，必為佳作」是全體同仁一致秉持的工作信念，重視工作之卓越品質，發揮最佳綜效之團隊精神。"
     },
     {
-      "name": "蓬蓬鬆餅",
-      "link": "https://pancake.gnehs.net/",
-      "logo": "pancake.png",
-      "id": "pancake",
-      "description": "蓬蓬鬆餅致力於提供顧客美味的鬆餅，優秀的鬆餅師傅，精緻的鬆餅，美味的鬆餅，讓您享受美味的鬆餅。"
+      "name": "財團法人開放文化基金會",
+      "link": "https://ocf.tw/",
+      "logo": "ocf.png",
+      "id": "ocf",
+      "description": "財團法人開放文化基金會（Open Culture Foundation，簡稱 OCF）成立的主要目的，是希望能夠藉由法人組織的力量，協助台灣資訊軟體界的開放源碼社群，包含開放原始碼軟體、開放資料、開放政府三個主要領域的發展和應用。除此之外，也期許能將開源自由的精神，更廣泛地應用在各個領域。因此，除了協助開源社群之外，基金會也協助民間企業、政府單位、非政府組織及學術單位，讓他們更能了解開源軟硬體的優勢、開放資料的重要性，進而在產、官、學三方推廣開源與開放協作的文化。"
     }
   ],
   "sup_org": [
     {
-      "name": "大河馬",
-      "link": "https://pancake.gnehs.net/",
-      "logo": "hippo.png",
-      "id": "hippo",
-      "description": "大河馬將您的安全放在第一順位！提供全宇宙最佳的太空船能量護罩，抵擋任何潛在的外在傷害，讓您的星際旅行旅程更安全。"
+      "name": "智慧創新跨域人才培育計畫",
+      "link": "https://www.itsa.org.tw/",
+      "logo": "itsa.png",
+      "id": "itsa",
+      "description": "主要推動重點在協助國內大專校院建立多元培育管道，以解決產業界對軟體與服務人才質與量需求日益殷切的問題。\n\n各大專校院⋯⋯透過教育部推廣計畫的補助機制，導入本計畫推動團隊所發展的創作社群服務平臺、線上協同學習平臺(e-tutor)及學習資源服務平臺，已逐步建立創新的培育模式，為國內軟體專業人才培育系所注入向上提升的助力，是國內目前培養軟體人才的主力之一。"
     }
   ],
   "sponsors": [
     {
-      "type": "領航級",
-      "org": [
-        {
-          "name": "蓬蓬鬆餅",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "pancake.png",
-          "id": "pancake",
-          "description": "蓬蓬鬆餅致力於提供顧客美味的鬆餅，優秀的鬆餅師傅，精緻的鬆餅，美味的鬆餅，讓您享受美味的鬆餅。"
-        },
-        {
-          "name": "大河馬",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "hippo.png",
-          "id": "hippo",
-          "description": "大河馬將您的安全放在第一順位！提供全宇宙最佳的太空船能量護罩，抵擋任何潛在的外在傷害，讓您的星際旅行旅程更安全。"
-        },
-        {
-          "name": "蹦蹦袋鼠",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "kangaroo.png",
-          "id": "kangaroo",
-          "description": "澳洲的袋鼠，有寶寶的袋鼠，有大尾巴的袋鼠！"
-        }
-      ]
-    },
-    {
       "type": "深耕級",
       "org": [
         {
-          "name": "大河馬",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "hippo.png",
-          "id": "hippo",
-          "description": "大河馬將您的安全放在第一順位！提供全宇宙最佳的太空船能量護罩，抵擋任何潛在的外在傷害，讓您的星際旅行旅程更安全。"
-        },
-        {
-          "name": "蓬蓬鬆餅",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "pancake.png",
-          "id": "pancake",
-          "description": "蓬蓬鬆餅致力於提供顧客美味的鬆餅，優秀的鬆餅師傅，精緻的鬆餅，美味的鬆餅，讓您享受美味的鬆餅。"
+          "name": "原昌工業股份有限公司",
+          "link": "https://github.com/skiptests/astraea",
+          "logo": "alpha-link-limited.png",
+          "id": "alpha-link-limited",
+          "description": "原昌工業以機械製造的大數據技術為己任，致力成為高效能資料處理的先鋒，以提供國內機械製造完整的大數據解決方案和生態系。"
         }
       ]
     },
@@ -80,86 +47,23 @@
       "type": "前瞻級",
       "org": [
         {
-          "name": "大河馬",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "hippo.png",
-          "id": "hippo",
-          "description": "大河馬將您的安全放在第一順位！提供全宇宙最佳的太空船能量護罩，抵擋任何潛在的外在傷害，讓您的星際旅行旅程更安全。"
+          "name": "祐生研究基金會",
+          "link": "https://www.archilife.org/",
+          "logo": "archilife.png",
+          "id": "archilife",
+          "description": "祐生研究基金會由推動建築與環境永續發展之研究開始，推動長期的知識累積與人才培養。除了過去建築、環境、生態、健康與資訊社會與文化等面向之碩士論文獎助主題外，本會目前定期舉辦的聯誼會及讀書會，強化祐生成員的知識密度。其後，於 2011 年起，本會持續針對國內開源活動進行贊助，也針對國內獨立遊戲開發者，推動知識與資訊分享聚會，期能幫助國內相關社群之發展。"
         },
         {
-          "name": "蓬蓬鬆餅",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "pancake.png",
-          "id": "pancake",
-          "description": "蓬蓬鬆餅致力於提供顧客美味的鬆餅，優秀的鬆餅師傅，精緻的鬆餅，美味的鬆餅，讓您享受美味的鬆餅。"
-        }
-      ]
-    },
-    {
-      "type": "新芽級",
-      "org": [
-        {
-          "name": "大河馬",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "hippo.png",
-          "id": "hippo",
-          "description": ""
-        },
-        {
-          "name": "大河馬",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "hippo.png",
-          "id": "hippo",
-          "description": ""
-        },
-        {
-          "name": "蓬蓬鬆餅",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "pancake.png",
-          "id": "pancake",
-          "description": ""
-        },
-        {
-          "name": "大河馬",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "hippo.png",
-          "id": "hippo",
-          "description": ""
-        },
-        {
-          "name": "蓬蓬鬆餅",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "pancake.png",
-          "id": "pancake",
-          "description": ""
+          "name": "COSCUP 開源人年會",
+          "link": "https://coscup.org/",
+          "logo": "coscup.png",
+          "id": "coscup",
+          "description": "COSCUP 是由台灣開放原始碼社群聯合推動的研討會，希望藉由每一屆的年度會議，讓全球的 FLOSS 愛好者齊聚一堂。無論您是開放原始碼的開發者、推廣者、使用者、還是想了解軟體的新手，都歡迎您來參加開源人年會。"
         }
       ]
     }
   ],
   "thanks": [
-    {
-      "type": "特別感謝",
-      "org": [
-        {
-          "name": "大河馬",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "hippo.png",
-          "id": "hippo",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "type": "媒體夥伴",
-      "org": [
-        {
-          "name": "蹦蹦袋鼠",
-          "link": "https://pancake.gnehs.net/",
-          "logo": "kangaroo.png",
-          "id": "kangaroo",
-          "description": ""
-        }
-      ]
-    }
+
   ]
 }
