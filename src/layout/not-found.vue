@@ -12,7 +12,7 @@
     </div>
     <div class="content">
       <img :src="'/2022/imgs/404.svg'" />
-      <h1 class="text">你走錯路了嗎?到SITCON官網看看吧!</h1>
+      <h1 class="text">你走錯路了嗎？<br />到 SITCON 官網看看吧！</h1>
       <btn to="/">
         <svg-sitcon class="logo" />
         <svg-x class="x" />
@@ -70,8 +70,8 @@ export default {
   gap: 20px
   padding: 6% 10%
   margin: 80px
-  --background-opacity: 0.35
-  background: rgba(0, 0, 0, var(--background-opacity))
+  --background-opacity: 0.75
+  background: rgba(55, 55, 55, var(--background-opacity))
   border: 1px solid rgba(222, 222, 222, 0.2)
   border-radius: 25px
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85)
