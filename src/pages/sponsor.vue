@@ -43,6 +43,16 @@
         </mint-box>
       </div>
     </arrow-box>
+    <arrow-box>
+      <block-title>協辦單位</block-title>
+      <div class="sponsor-items sup_org">
+        <mint-box class="sponsor-item" v-for="item of sponsors.sup_org" :id="item.id" :href="item.link">
+          <div class="sponsor-name">{{ item.name }}</div>
+          <img class="sopnsor-logo" :src="`/2022/imgs/sponsors/${item.logo}`" />
+          <p class="sponsor-description">{{ item.description }}</p>
+        </mint-box>
+      </div>
+    </arrow-box>
     <arrow-box v-for="data of [...sponsors.sponsors, ...sponsors.thanks]">
       <block-title>{{ data.type }}</block-title>
       <div class="sponsor-items" :class="`type-${data.type}`">
