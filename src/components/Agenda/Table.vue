@@ -160,7 +160,6 @@ export default {
   data() {
     return {
       sessionData,
-      sessionModal: false,
     }
   },
   computed: {
@@ -219,20 +218,21 @@ export default {
         return res
       }
     },
-  },
-  created() {
-    if (this.$route.meta.id) {
-      this.sessionModal = true
+    // set get
+    sessionModal: {
+      get() {
+        return !!this.activeSession
+      },
+      set(val) {
+        if (!val) {
+          this.$router.push(`/agenda/`)
+        }
+      }
     }
   },
   watch: {
     '$route.meta.id': function (val) {
       this.sessionModal = !!val
-    },
-    sessionModal(val) {
-      if (!val) {
-        this.$router.push(`/agenda/`)
-      }
     },
   },
   methods: {
