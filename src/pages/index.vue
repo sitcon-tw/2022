@@ -84,8 +84,8 @@
         </div>
       </mint-box>
 
-      <img class="border-item left wool" style="" :src="'/2022/imgs/cats/wool-orange-flip.svg'" />
-      <cat-head-black class="border-item right cat" style="height: auto;"  />
+      <img class="border-item left wool" style="display: none;" :src="'/2022/imgs/cats/wool-orange-flip.svg'" />
+      <cat-head-black class="border-item right cat" style="display: none; height: auto;"  />
     </div>
 
     <ArrowDialog v-model="cocModal">
@@ -354,10 +354,12 @@ export default {
       const leftWool = container.querySelector('.border-item.left.wool')
       leftWool.style.top = `${bH + iH + mbHs[0] + mbHs[1] * (p[1]+0.05)}px`
       leftWool.style.width = `${mbGap}px`
+      leftWool.style.display = null
       const rightCat = container.querySelector('.border-item.right.cat')
       rightCat.style.top = `${bH + iH + mbHs[0] + mbHs[1] * .5}px`
       rightCat.style.right = `${-mbGap}px`
       rightCat.style.width = `${mbGap}px`
+      rightCat.style.display = null
     }
   }
 }
