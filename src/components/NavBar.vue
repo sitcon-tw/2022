@@ -68,6 +68,7 @@ export default {
   },
   mounted() {
     this.active = this.links.findIndex(link => link.to === this.$route.path)
+    this.active = this.active === -1 ? 0 : this.active
   },
   methods: {
   }
