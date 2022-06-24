@@ -148,7 +148,7 @@
     <GeneralHead v-else
       page-title=" 議程資訊"
       title="議程資訊 | SITCON X"
-      description="議程"
+      description="大會各項一般議程與開放式議程的地點、時程一覽表"
       image="https://sitcon.org/2022/imgs/og.jpg" />
   </div>
 </template>

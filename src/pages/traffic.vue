@@ -3,7 +3,7 @@
     <GeneralHead
       page-title="交通方式"
       title="交通方式 | SITCON X"
-      description="在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每個人能夠向貓咪學習，換個思維邏輯面對迷惘的現況，保持著好奇心與探索的樂趣，跳脫框架創造屬於自己的美好未來！"
+      description="從各地抵達年會所在地（中研院人社館）的各種方法"
       image="https://sitcon.org/2022/imgs/og.jpg" />
     <arrow-box>
       <block-title>交通方式</block-title>
