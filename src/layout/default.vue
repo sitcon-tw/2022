@@ -1,6 +1,6 @@
 <template>
   <nav-bar />
-  <div style="height: 160px" />
+  <div class="nav-spacer" />
   <transition name="fade" mode="in-out">
     <div class="loading" v-if="showLoading" />
   </transition>
@@ -39,6 +39,10 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+.nav-spacer
+  height: 160px
+  @media screen and (max-width: 768px)
+    height: 100px
 .loading
   width: 25px
   height: 25px
