@@ -30,7 +30,7 @@
       <mint-box>
         <div class="sponsor-name">{{ sponsors.main.name }}</div>
         <img class="sopnsor-logo" :src="'/2022/imgs/logo.png'" />
-        <p class="sponsor-description">{{ sponsors.main.description }}</p>
+        <Markdown class="sponsor-description" :content="sponsors.main.description" />
       </mint-box>
     </arrow-box>
     <arrow-box>
@@ -39,7 +39,7 @@
         <mint-box class="sponsor-item" v-for="item of sponsors.co_org" :id="item.id" :href="item.link">
           <div class="sponsor-name">{{ item.name }}</div>
           <img class="sopnsor-logo" :src="`/2022/imgs/sponsors/${item.logo}`" />
-          <p class="sponsor-description">{{ item.description }}</p>
+          <Markdown class="sponsor-description" :content="item.description" />
         </mint-box>
       </div>
     </arrow-box>
@@ -49,7 +49,7 @@
         <mint-box class="sponsor-item" v-for="item of sponsors.sup_org" :id="item.id" :href="item.link">
           <div class="sponsor-name">{{ item.name }}</div>
           <img class="sopnsor-logo" :src="`/2022/imgs/sponsors/${item.logo}`" />
-          <p class="sponsor-description">{{ item.description }}</p>
+          <Markdown class="sponsor-description" :content="item.description" />
         </mint-box>
       </div>
     </arrow-box>
@@ -59,7 +59,7 @@
         <mint-box class="sponsor-item" v-for="item of data.org" :id="item.id" :href="item.link">
           <div class="sponsor-name">{{ item.name }}</div>
           <img class="sopnsor-logo" :src="`/2022/imgs/sponsors/${item.logo}`" />
-          <p class="sponsor-description">{{ item.description }}</p>
+          <Markdown class="sponsor-description" :content="item.description" />
         </mint-box>
       </div>
     </arrow-box>
