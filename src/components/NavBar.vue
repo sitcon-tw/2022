@@ -43,14 +43,14 @@ export default {
           to: '/activity',
           text: '活動資訊'
         },
-        {
-          to: '/agenda',
-          text: '議程資訊'
-        },
-        {
-          to: '/venue',
-          text: '會場地圖'
-        },
+        // {
+        //   to: '/agenda',
+        //   text: '議程資訊'
+        // },
+        // {
+        //   to: '/venue',
+        //   text: '會場地圖'
+        // },
         {
           to: '/traffic',
           text: '交通方式'
