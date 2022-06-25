@@ -30,7 +30,7 @@
 
       <mint-box class="has-border">
         <h1>年會主題</h1>
-        <img class="cat pad1" :src="'/2022/imgs/cat-in-a-maze.svg'" />
+        <img class="cat-in-a-maze pad1" :src="'/2022/imgs/cat-in-a-maze.svg'" />
         <div class="pad2">
           <p>Cat in a Maze 參考自 Rat in a Maze 這道經典演算法題目。題目描述一隻老鼠要走迷宮，在給定了迷宮形狀的前提下，要努力找出走出迷宮的出路。「Rat in a
             Maze」這句話切實地反映了劇烈動盪時代下的學生們在面對未來的生涯發展時，猶如一隻無法逃避、勢必得進入體制這一迷宮的老鼠。</p>
@@ -409,6 +409,9 @@ h1, h2, h3, h4, h5, h6
     padding-left: 24px
 .pad4
   padding-left: 1em
+.cat-in-a-maze
+  @media screen and (max-width: 768px)
+    max-width: 80%
 .rat-center
   color: #FFA949
   text-align: center
