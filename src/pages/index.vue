@@ -46,8 +46,11 @@
         <h1>關於 SITCON</h1>
         <div class="pad1">
           <h2>Students' Information Technology Conference</h2>
-          <p>SITCON 學生計算機年會是由學生自發舉辦，投身學生資訊教育與推廣開源精神的社群， 也是一個由學生主辦、學生擔任講者、以學生為主軸的資訊研討會，給學生們一個發表交流技術的舞台。</p>
-          <p>除了技術研討之外，還有許多從學生角度出發的經驗分享、專題研究成果或探討學生相關議題等等議程。 我們也曾舉辦黑客松、工作坊，和各地學校社團舉辦聯合講座等等。</p>
+          <p>
+            SITCON 學生計算機年會自 2013 年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。<br>
+            <br>
+            在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每人皆能在與大家的聊天與討論之中，找到自己的方向、熱情。
+          </p>
         </div>
       </mint-box>
 
@@ -72,14 +75,13 @@
         <div class="pad1">
           <h2>Join the community</h2>
           <p>
-            SITCON 是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱 SITCON 的郵件論壇並貢獻你的想法！<br>
+            SITCON 是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱 SITCON 的郵件論壇並貢獻你的想法！<br/>
             <br>
-            若你想進一步了解過往討論的內容，也歡迎在 HackMD 上查看 SITCON 2022 的會議記錄。
+            若你想進一步了解 SITCON 年會籌備與討論的內容，也歡迎到 GitLab 上查看 SITCON 2022 的籌備歷程。
           </p>
           <div class="btns">
-            <btn href="#">郵件論壇</btn>
-            <btn href="#">會議記錄</btn>
-            <btn href="#">個人贊助</btn>
+            <btn href="https://groups.google.com/g/sitcon-general/">郵件論壇</btn>
+            <btn href="https://gitlab.com/sitcon-tw/2022/2022-board/-/issues">籌備紀錄</btn>
           </div>
         </div>
       </mint-box>
