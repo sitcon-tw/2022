@@ -67,10 +67,18 @@ export default {
     }
   },
   mounted() {
-    this.active = this.links.findIndex(link => link.to === this.$route.path)
-    this.active = this.active === -1 ? 0 : this.active
+    this.updateActive(this.$route.path)
+  },
+  watch: {
+    '$route.path': function (val) {
+      this.updateActive(val)
+    },
   },
   methods: {
+    updateActive(path) {
+      this.active = this.links.findIndex(link => link.to === path)
+      this.active = this.active === -1 ? 0 : this.active
+    }
   }
 }
 </script>
