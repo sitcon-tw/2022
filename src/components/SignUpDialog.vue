@@ -9,7 +9,7 @@
       </p>
       <div class="btns">
         <btn href="https://sitcon.kktix.cc/events/sitcon2022">KKTIX 報名連結</btn>
-        <btn href="https://ocf.tw/p/oscvpass/">OSCVPass 申請</btn>
+        <btn href="https://oscvpass.ocf.tw">OSCVPass 申請</btn>
         <btn href="https://hackmd.io/@SITCON/rJjIFtkOq">
           <img class="cat-right" src="/imgs/cats/cat-right-angle.svg" />
           遠道而來票
