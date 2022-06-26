@@ -12,7 +12,8 @@
     </div>
     <div class="content">
       <img :src="'/2022/imgs/404.svg'" />
-      <h1 class="text">你走錯路了嗎？<br />到 SITCON 官網看看吧！</h1>
+      <h1 class="text">你走錯路了嗎？<br /></h1>
+      <h3 class="text">到 SITCON 官網看看吧！</h3>
       <btn to="/">
         <svg-sitcon class="logo" />
         <svg-x class="x" />
@@ -85,12 +86,14 @@ export default {
   color: #FFA949
   word-break: keep-all
   text-align: center
+  line-height: 1.2
 .btn
   font-size: 0.8rem
   display: inline-flex
   align-items: center
   padding: 1em 4em
   border-radius: 28px
+  margin-top: 1em
   svg
     fill: #373737
   &:hover
