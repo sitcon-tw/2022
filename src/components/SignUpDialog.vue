@@ -4,7 +4,8 @@
     <div class="content">
       <p class="text">
         SITCON 年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助。<br>
-        除了大家都能報名的普通票和提供給學生的學生票外，為了鼓勵開源貢獻，SITCON 也為開源貢獻者保留了 OSCVPass 票種
+        除了大家都能報名的普通票和提供給學生的學生票外，為了鼓勵開源貢獻，SITCON 也為開源貢獻者保留了 OSCVPass 票種<br>
+        SITCON 也希望提供給偏鄉地區的學生接觸資訊領域的機會、鼓勵國外的學生來台進行交流，因此也規劃了遠道而來票，開放偏鄉或離島、國外地區的學生申請。
       </p>
       <div class="btns">
         <btn href="https://sitcon.kktix.cc/events/sitcon2022">KKTIX 報名連結</btn>
