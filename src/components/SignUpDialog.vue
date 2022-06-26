@@ -23,7 +23,6 @@
 <script>
 import { useDialogStore } from '../store/dialog'
 export default {
-  name: 'NavBar',
   setup() {
     const dialogStore = useDialogStore()
     return { dialogStore }

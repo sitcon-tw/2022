@@ -35,11 +35,6 @@ export default {
       document.querySelector('html').style['overflow-y'] = val ? 'hidden' : 'auto'
       document.querySelector('body').style['overflow-y'] = val ? 'hidden' : 'auto'
     },
-    '$route.path': function (val) {
-      if (this.modelValue) {
-        this.$emit('update:modelValue', false)
-      }
-    },
   },
 }
 </script>
