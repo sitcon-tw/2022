@@ -41,7 +41,7 @@ export default {
         },
         {
           to: '/activity',
-          text: '活動資訊'
+          text: '大會活動'
         },
         // {
         //   to: '/agenda',

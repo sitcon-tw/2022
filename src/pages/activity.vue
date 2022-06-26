@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <GeneralHead
-      page-title="活動資訊"
-      title="活動資訊 | SITCON X"
+      page-title="大會活動"
+      title="大會活動 | SITCON X"
       description="除了議程之外，還有這些活動等著你來參與！"
       image="https://sitcon.org/2022/imgs/og.jpg" />
     <arrow-box>
-      <block-title>活動資訊</block-title>
+      <block-title>大會活動</block-title>
       <mint-box>
         <h1>Activity</h1>
         <h3>你是第一次參加 SITCON 年會嗎？</h3>
