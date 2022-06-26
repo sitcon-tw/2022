@@ -43,6 +43,8 @@ const props = defineProps({
   transition: all 0.2s ease
   &.large
     font-size: 28px
+    @media screen and (max-width: 768px)
+      font-size: 24px
   &:hover
     background: transparent
     color: var(--text-color)
