@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <GeneralHead
-      page-title="贊助"
-      title="贊助 | SITCON X"
+      page-title="合作夥伴"
+      title="合作夥伴 | SITCON X"
       description="認同學生計算機年會的理念，歡迎透過個人小額贊助支持，或與我們聯繫取得更多企業合作資訊。"
       image="https://sitcon.org/2022/imgs/og.jpg" />
 
