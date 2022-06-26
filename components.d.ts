@@ -44,6 +44,8 @@ declare module '@vue/runtime-core' {
     FooterItem: typeof import('./src/components/FooterItem.vue')['default']
     GeneralHead: typeof import('./src/components/GeneralHead.vue')['default']
     LocationMap: typeof import('./src/components/LocationMap.vue')['default']
+    LogoCatInAMaze: typeof import('./src/components/logo/CatInAMaze.vue')['default']
+    LogoSitcon: typeof import('./src/components/logo/Sitcon.vue')['default']
     Markdown: typeof import('./src/components/Markdown.vue')['default']
     MintBox: typeof import('./src/components/MintBox.vue')['default']
     Modal: typeof import('./src/components/modal.vue')['default']
