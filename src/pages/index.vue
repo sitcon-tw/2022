@@ -23,7 +23,7 @@
         <svg-arrow class="arrow" />
         <svg-arrow class="arrow" />
         <div class="btns">
-          <btn to="/cfp">我要投稿</btn>
+          <btn @click="dialogStore.signUpDialogOpened = true">報名取票</btn>
           <btn to="/sponsor">支持我們</btn>
         </div>
       </div>
