@@ -47,7 +47,8 @@
         <div class="pad1">
           <h2>About SITCON</h2>
           <p>
-            學生計算機年會（Students’ Information Technology Conference）自 2013 年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。<br>
+            學生計算機年會（Students’ Information Technology Conference）自 2013
+            年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。<br>
             <br>
             在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每人皆能在與大家的聊天與討論之中，找到自己的方向、熱情。
           </p>
@@ -59,7 +60,8 @@
         <div class="pad1">
           <h2>Code of Conduct</h2>
           <p>
-            SITCON 歡迎不同身分、來自不同背景的與會者，也非常鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快的參加 SITCON，我們要求所有參與者閱讀年會的行為準則（<a @click.prevent="cocModal = true">Code of Conduct</a>），共同創造一個友善的環境。
+            SITCON 歡迎不同身分、來自不同背景的與會者，也非常鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快的參加 SITCON，我們要求所有參與者閱讀年會的行為準則（<a @click.prevent="cocModal = true">Code of
+              Conduct</a>），共同創造一個友善的環境。
           </p>
         </div>
       </mint-box>
@@ -75,7 +77,7 @@
         <div class="pad1">
           <h2>Join the community</h2>
           <p>
-            SITCON 是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱 SITCON 的郵件論壇並貢獻你的想法！<br/>
+            SITCON 是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱 SITCON 的郵件論壇並貢獻你的想法！<br />
             <br>
             若你想進一步了解 SITCON 年會籌備與討論的內容，也歡迎到 GitLab 上查看 SITCON 2022 的籌備歷程。
           </p>
@@ -87,33 +89,35 @@
       </mint-box>
 
       <img class="border-item left wool" style="display: none;" :src="'/2022/imgs/cats/wool-orange-flip.svg'" />
-      <cat-head-black class="border-item right cat" style="display: none; height: auto;"  />
+      <cat-head-black class="border-item right cat" style="display: none; height: auto;" />
     </div>
 
     <ArrowDialog v-model="cocModal">
       <h1>行為準則</h1>
       <h2 class="pad4">Code of Conduct</h2>
       <div class="pad3">
-      		<p>SITCON 冀望打造屬於學生自己的舞台，而我們也致力於為社群中的每位成員提供更友善、開放的環境。我們相信每位參與社群活動的夥伴都值得被尊重，而我們會盡力提供最安全的環境，讓參與 SITCON 盛會的每位朋友能夠認識個體間的差異、在社群中相互扶助、並鼓勵每個人揮灑屬於自己生命的色彩。</p>
-          <p>因此，若有幸能在 SITCON 社群與您見面，無論您是以與會者、贊助商、工作人員、或是講者的身分參加活動，我們都希望您遵守以下的行為準則：</p>
-          <ul class="pad4">
-            <li>尊重每一位參與者，將對方的感受放在心上。</li>
-            <li>避免使用帶有侮辱、歧視、或具有潛在騷擾意涵的文字、言語及肢體動作。</li>
-            <li>多關心周遭的社群夥伴，適度詢問對方是否需要協助。</li>
-            <li>當遭遇危險、或發現事情不對勁時，適時尋求工作人員的支援與協助。</li>
-            <li>在活動裡多交朋友，珍惜彼此相聚的時光！</li>
-          </ul>
-          <p>以下的行為是不被社群所容忍的：</p>
-          <ul class="pad4">
-            <li>歧視行為，包含針對性別、性向、種族、外貌、宗教、年齡、身體狀況或個人身分的挑釁、冒犯、錯稱或差別待遇。</li>
-            <li>騷擾行為，包含性騷擾、造成當事人反感的綽號或肢體接觸，以及任何形式的言語或肢體霸凌。</li>
-            <li>公開發表、展示或放映含有侮辱、歧視、仇恨、暴力、或是性暗示的言論或影像。</li>
-            <li>無故干擾議程或活動的正常進行，無視工作人員或與會者的制止。</li>
-            <li>干擾、攻擊活動場地網路，未經同意蒐集或散佈個人資料。</li>
-            <li>其他違反法律的行為。</li>
-          </ul>
-          <p>為了確保每位參與者的安全，我們將恪守以上規則。違反行為準則的參與者，我們將採取必要且合理的手段予以介入，包含但不限於將參與者請離現場、自相關名冊除名或列為不受歡迎對象，或在必要時移送警察機關法辦。若您或他人遇到了以上情況、或是有任何其他顧慮，都請立即尋求 SITCON 工作人員的協助。</p>
-          <p>我們誠摯地邀請來到 SITCON 的朋友一同履行以上承諾，將 SITCON 打造為更友善、更溫暖的所在；讓每一位參與者，都能在社群的交流中共同成長、在人與人的互動中找到自信——而這正是我們所珍惜的、屬於學生社群的真正精神。</p>
+        <p>SITCON 冀望打造屬於學生自己的舞台，而我們也致力於為社群中的每位成員提供更友善、開放的環境。我們相信每位參與社群活動的夥伴都值得被尊重，而我們會盡力提供最安全的環境，讓參與 SITCON
+          盛會的每位朋友能夠認識個體間的差異、在社群中相互扶助、並鼓勵每個人揮灑屬於自己生命的色彩。</p>
+        <p>因此，若有幸能在 SITCON 社群與您見面，無論您是以與會者、贊助商、工作人員、或是講者的身分參加活動，我們都希望您遵守以下的行為準則：</p>
+        <ul class="pad4">
+          <li>尊重每一位參與者，將對方的感受放在心上。</li>
+          <li>避免使用帶有侮辱、歧視、或具有潛在騷擾意涵的文字、言語及肢體動作。</li>
+          <li>多關心周遭的社群夥伴，適度詢問對方是否需要協助。</li>
+          <li>當遭遇危險、或發現事情不對勁時，適時尋求工作人員的支援與協助。</li>
+          <li>在活動裡多交朋友，珍惜彼此相聚的時光！</li>
+        </ul>
+        <p>以下的行為是不被社群所容忍的：</p>
+        <ul class="pad4">
+          <li>歧視行為，包含針對性別、性向、種族、外貌、宗教、年齡、身體狀況或個人身分的挑釁、冒犯、錯稱或差別待遇。</li>
+          <li>騷擾行為，包含性騷擾、造成當事人反感的綽號或肢體接觸，以及任何形式的言語或肢體霸凌。</li>
+          <li>公開發表、展示或放映含有侮辱、歧視、仇恨、暴力、或是性暗示的言論或影像。</li>
+          <li>無故干擾議程或活動的正常進行，無視工作人員或與會者的制止。</li>
+          <li>干擾、攻擊活動場地網路，未經同意蒐集或散佈個人資料。</li>
+          <li>其他違反法律的行為。</li>
+        </ul>
+        <p>為了確保每位參與者的安全，我們將恪守以上規則。違反行為準則的參與者，我們將採取必要且合理的手段予以介入，包含但不限於將參與者請離現場、自相關名冊除名或列為不受歡迎對象，或在必要時移送警察機關法辦。若您或他人遇到了以上情況、或是有任何其他顧慮，都請立即尋求 SITCON
+          工作人員的協助。</p>
+        <p>我們誠摯地邀請來到 SITCON 的朋友一同履行以上承諾，將 SITCON 打造為更友善、更溫暖的所在；讓每一位參與者，都能在社群的交流中共同成長、在人與人的互動中找到自信——而這正是我們所珍惜的、屬於學生社群的真正精神。</p>
       </div>
     </ArrowDialog>
   </div>
@@ -144,7 +148,7 @@ export default {
   },
   methods: {
     clearTimers() {
-      for(const timer of this.timers) {
+      for (const timer of this.timers) {
         clearTimeout(timer)
       }
     },
@@ -228,8 +232,8 @@ export default {
         const blockPad = mbPad - rd
         const x = u > 0 ? 0 : vW
         y += rd
-        const dx = [blockPad*u, 0, -blockPad*u]
-        const dy = [0, h-rd*2, 0]
+        const dx = [blockPad * u, 0, -blockPad * u]
+        const dy = [0, h - rd * 2, 0]
         const xs = dx.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [x])
         const ys = dy.reduce((pv, cv) => pv.concat(pv[pv.length - 1] + cv), [y])
         let arrow = '', arrow_style = ''
@@ -282,7 +286,7 @@ export default {
       function genPath4() {
         const x = vW
         const y = bH + iH + mbHs[0] + mbHs[1] + mbHs[2] + catH + mbHs[3] + of
-        const dx = [-mbPad-of, 0, mbPad+of]
+        const dx = [-mbPad - of, 0, mbPad + of]
         const dy = [0, -(radius * 2 + mbHs[3]) - of * 2, 0]
         return genLine(x, y, dx, dy, { hasArrow: true, sFirst: true, sLast: true })
       }
@@ -290,7 +294,7 @@ export default {
       function genItem1() {
         const u = 1
         const y = bH + iH
-        const h = mbHs[0]*p[0]
+        const h = mbHs[0] * p[0]
         return genBlock(u, y, h)
       }
 
@@ -303,15 +307,15 @@ export default {
 
       function genItem3() {
         const u = 1
-        const y = bH + iH + mbHs[0] + mbHs[1]*(p[1]+0.35)
-        const h = mbHs[1]*(1-p[1]-0.35) + mbHs[2] * p[2]
+        const y = bH + iH + mbHs[0] + mbHs[1] * (p[1] + 0.35)
+        const h = mbHs[1] * (1 - p[1] - 0.35) + mbHs[2] * p[2]
         return genBlock(u, y, h)
       }
 
       function genItem4() {
         const u = -1
-        const y = bH + iH + mbHs[0] + mbHs[1]*p[4]
-        const h = mbHs[1]*(1-p[4]) + mbHs[2] * p[3]
+        const y = bH + iH + mbHs[0] + mbHs[1] * p[4]
+        const h = mbHs[1] * (1 - p[4]) + mbHs[2] * p[3]
         return genBlock(u, y, h)
       }
 
@@ -354,7 +358,7 @@ export default {
       }
 
       const leftWool = container.querySelector('.border-item.left.wool')
-      leftWool.style.top = `${bH + iH + mbHs[0] + mbHs[1] * (p[1]+0.05)}px`
+      leftWool.style.top = `${bH + iH + mbHs[0] + mbHs[1] * (p[1] + 0.05)}px`
       leftWool.style.width = `${mbGap}px`
       leftWool.style.display = null
       const rightCat = container.querySelector('.border-item.right.cat')
