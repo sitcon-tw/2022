@@ -61,7 +61,7 @@ export default {
         },
         {
           to: '/sponsor',
-          text: '贊助'
+          text: '合作夥伴'
         }
       ]
     }
