@@ -16,9 +16,9 @@
           </router-link>
         </div>
       </button>
-      <a class="link hide-desktop" @click="dialogStore.signUpDialogOpened = true">
-        報名取票
-      </a>
+      <router-link class="link hide-desktop" to="/cfp">
+        我要投稿
+      </router-link>
     </div>
   </arrow-box>
 </template>
