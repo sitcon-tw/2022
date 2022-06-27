@@ -43,6 +43,8 @@ export default {
     padding: 0
   .title
     margin: 0
+  .text
+    z-index: 1
   .btns
     white-space: nowrap
     padding: 16px 24px
@@ -63,6 +65,7 @@ export default {
   right: 0
   @media screen and (max-width: 768px)
     bottom: 5%
+    max-width: 10%
 .cat-right
   position: absolute
   top: 0
