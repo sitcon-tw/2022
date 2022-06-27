@@ -1,9 +1,9 @@
 <template>
-  <ArrowDialog v-model="dialogStore.signUpDialogOpened">
+  <ArrowDialog hash="#sign-up">
     <h2 class="title">報名資訊</h2>
     <div class="content">
       <p class="text">
-        SITCON 年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助，若您也認同 SITCON 的理念，歡迎 <router-link to="/sponsor"  @click="dialogStore.signUpDialogOpened = false">支持我們</router-link>。<br><br>
+        SITCON 年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助，若您也認同 SITCON 的理念，歡迎 <router-link to="/sponsor">支持我們</router-link>。<br><br>
 
         <ul>
           <li>學生 / 普通票 於 07/16（六）20:00 及 08/06（六）20:00 在 <a href="https://sitcon.kktix.cc/events/sitcon2022" target="_blank">KKTIX</a> 開放報名。</li>
@@ -15,7 +15,7 @@
         <btn href="https://sitcon.kktix.cc/events/sitcon2022">KKTIX 報名連結</btn>
         <btn href="https://oscvpass.ocf.tw">OSCVPass 申請</btn>
         <btn href="https://hackmd.io/@SITCON/rJjIFtkOq">遠道而來票</btn>
-        <btn to="/sponsor" @click="dialogStore.signUpDialogOpened = false">
+        <btn to="/sponsor">
           <img class="cat-right" src="/imgs/cats/cat-right-angle.svg" />
           支持我們
         </btn>
