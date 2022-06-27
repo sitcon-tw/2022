@@ -62,7 +62,7 @@ export default {
   max-width: 15%
   position: absolute
   bottom: 20%
-  right: 0
+  right: -4px
   @media screen and (max-width: 768px)
     bottom: 5%
     max-width: 10%
