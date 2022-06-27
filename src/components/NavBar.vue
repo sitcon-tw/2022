@@ -16,7 +16,7 @@
           </router-link>
         </div>
       </button>
-      <a class="link hide-desktop" href="#sign-up">
+      <a class="link hide-desktop" @click="dialogStore.signUpDialogOpened = true">
         報名取票
       </a>
     </div>

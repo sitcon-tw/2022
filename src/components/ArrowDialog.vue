@@ -1,11 +1,11 @@
 <template>
   <Teleport to="body">
     <transition name="arrowDialog">
-      <div class="arrow-dialog-backdrop" v-if="showModel" @click="close">
-        <div class="arrow-dialog" :class="{ 'open': showModel }" @click.stop="">
+      <div class="arrow-dialog-backdrop" v-if="modelValue" @click="$emit('update:modelValue', false)">
+        <div class="arrow-dialog" :class="{ 'open': modelValue }" @click.stop="">
           <arrow-box>
             <div class="content">
-              <a @click="close" class="close">
+              <a @click="$emit('update:modelValue', false)" class="close">
                 <img :src="'/2022/imgs/dialog_close.svg'" />
               </a>
               <slot />
@@ -23,48 +23,18 @@ export default {
   props: {
     modelValue: {
       type: Boolean
-    },
-    hash: {
-      type: String,
-      default: null,
     }
   },
   mounted() {
-    this.update(this.showModel)
-  },
-  computed: {
-    showModel() {
-      return this.hash ? this.$route.hash === this.hash : this.modelValue
-    }
-  },
-  methods: {
-    close() {
-      this.$emit('update:modelValue', false)
-      if (this.hash) this.$router.push({ hash: '#' })
-    },
-    update(val) {
-      // added overflow to html
-      document.querySelector('html').style['overflow-y'] = val ? 'hidden' : 'auto'
-      document.querySelector('body').style['overflow-y'] = val ? 'hidden' : 'auto'
-      this.$emit('update:modelValue', val)
-      if (this.hash) {
-        if (val) this.$router.push({ hash: this.hash })
-        else if (this.$route.hash === this.hash) close()
-      }
-    }
+    document.querySelector('html').style['overflow-y'] = this.modelValue ? 'hidden' : 'auto'
+    document.querySelector('body').style['overflow-y'] = this.modelValue ? 'hidden' : 'auto'
   },
   watch: {
     modelValue: function (val) {
-      this.update(val)
+      // added overflow to html
+      document.querySelector('html').style['overflow-y'] = val ? 'hidden' : 'auto'
+      document.querySelector('body').style['overflow-y'] = val ? 'hidden' : 'auto'
     },
-    '$route.hash': function (val, oldVal) {
-      if (this.hash) {
-        if (oldVal === this.hash && val !== this.hash)
-          this.update(false)
-        if (val === this.hash)
-          this.update(true)
-      }
-    }
   },
 }
 </script>
