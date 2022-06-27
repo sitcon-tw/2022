@@ -1,11 +1,11 @@
 <template>
   <Teleport to="body">
     <transition name="arrowDialog">
-      <div class="arrow-dialog-backdrop" v-if="showModel" @click="update(false)">
+      <div class="arrow-dialog-backdrop" v-if="showModel" @click="close">
         <div class="arrow-dialog" :class="{ 'open': showModel }" @click.stop="">
           <arrow-box>
             <div class="content">
-              <a @click="update(false)" class="close">
+              <a @click="close" class="close">
                 <img :src="'/2022/imgs/dialog_close.svg'" />
               </a>
               <slot />
@@ -38,6 +38,10 @@ export default {
     }
   },
   methods: {
+    close() {
+      this.$emit('update:modelValue', false)
+      if (this.hash) this.$router.push({ hash: '#' })
+    },
     update(val) {
       // added overflow to html
       document.querySelector('html').style['overflow-y'] = val ? 'hidden' : 'auto'
@@ -45,7 +49,7 @@ export default {
       this.$emit('update:modelValue', val)
       if (this.hash) {
         if (val) this.$router.push({ hash: this.hash })
-        else if (this.$route.hash == this.hash) this.$router.push({ hash: '#' })
+        else if (this.$route.hash === this.hash) close()
       }
     }
   },
@@ -53,12 +57,12 @@ export default {
     modelValue: function (val) {
       this.update(val)
     },
-    '$route.hash': function (val) {
-      if (this.showModel && val != this.hash) {
-        this.update(false)
-      }
-      if (this.hash && val == this.hash) {
-        this.update(true)
+    '$route.hash': function (val, oldVal) {
+      if (this.hash) {
+        if (oldVal === this.hash && val !== this.hash)
+          this.update(false)
+        if (val === this.hash)
+          this.update(true)
       }
     }
   },
