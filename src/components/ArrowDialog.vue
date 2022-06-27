@@ -1,11 +1,11 @@
 <template>
   <Teleport to="body">
     <transition name="arrowDialog">
-      <div class="arrow-dialog-backdrop" v-if="modelValue" @click="$emit('update:modelValue', false)">
-        <div class="arrow-dialog" :class="{ 'open': modelValue }" @click.stop="">
+      <div class="arrow-dialog-backdrop" v-if="showModel" @click="update(false)">
+        <div class="arrow-dialog" :class="{ 'open': showModel }" @click.stop="">
           <arrow-box>
             <div class="content">
-              <a @click="$emit('update:modelValue', false)" class="close">
+              <a @click="update(false)" class="close">
                 <img :src="'/2022/imgs/dialog_close.svg'" />
               </a>
               <slot />
@@ -23,18 +23,44 @@ export default {
   props: {
     modelValue: {
       type: Boolean
+    },
+    hash: {
+      type: String,
+      default: null,
     }
   },
   mounted() {
-    document.querySelector('html').style['overflow-y'] = this.modelValue ? 'hidden' : 'auto'
-    document.querySelector('body').style['overflow-y'] = this.modelValue ? 'hidden' : 'auto'
+    this.update(this.showModel)
   },
-  watch: {
-    modelValue: function (val) {
+  computed: {
+    showModel() {
+      return this.hash ? this.$route.hash === this.hash : this.modelValue
+    }
+  },
+  methods: {
+    update(val) {
       // added overflow to html
       document.querySelector('html').style['overflow-y'] = val ? 'hidden' : 'auto'
       document.querySelector('body').style['overflow-y'] = val ? 'hidden' : 'auto'
+      this.$emit('update:modelValue', val)
+      if (this.hash) {
+        if (val) this.$router.push({ hash: this.hash })
+        else if (this.$route.hash == this.hash) this.$router.push({ hash: '#' })
+      }
+    }
+  },
+  watch: {
+    modelValue: function (val) {
+      this.update(val)
     },
+    '$route.hash': function (val) {
+      if (this.showModel && val != this.hash) {
+        this.update(false)
+      }
+      if (this.hash && val == this.hash) {
+        this.update(true)
+      }
+    }
   },
 }
 </script>

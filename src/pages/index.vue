@@ -23,7 +23,7 @@
         <svg-arrow class="arrow" />
         <svg-arrow class="arrow" />
         <div class="btns">
-          <btn @click="dialogStore.signUpDialogOpened = true">報名取票</btn>
+          <btn to="#sign-up">報名取票</btn>
           <btn to="/sponsor">支持我們</btn>
         </div>
       </div>
@@ -60,7 +60,7 @@
         <div class="pad1">
           <h2>Code of Conduct</h2>
           <p>
-            SITCON 歡迎不同身分、來自不同背景的與會者，也非常鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快的參加 SITCON，我們要求所有參與者閱讀年會的行為準則（<a @click.prevent="cocModal = true">Code of
+            SITCON 歡迎不同身分、來自不同背景的與會者，也非常鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快的參加 SITCON，我們要求所有參與者閱讀年會的行為準則（<a href="#code-of-conduct">Code of
               Conduct</a>），共同創造一個友善的環境。
           </p>
         </div>
@@ -92,7 +92,7 @@
       <cat-head-black class="border-item right cat" style="display: none; height: auto;" />
     </div>
 
-    <ArrowDialog v-model="cocModal">
+    <ArrowDialog hash="#code-of-conduct">
       <h1>行為準則</h1>
       <h2 class="pad4">Code of Conduct</h2>
       <div class="pad3">
@@ -132,7 +132,6 @@ export default {
   },
   data() {
     return {
-      cocModal: false,
       timers: []
     }
   },
