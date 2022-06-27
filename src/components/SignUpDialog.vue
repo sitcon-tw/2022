@@ -3,7 +3,7 @@
     <h2 class="title">報名資訊</h2>
     <div class="content">
       <p class="text">
-        SITCON 年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助，若您也認同 SITCON 的理念，歡迎支持我們。<br><br>
+        SITCON 年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助，若您也認同 SITCON 的理念，歡迎 <router-link to="/sponsor"  @click="dialogStore.signUpDialogOpened = false">支持我們</router-link>。<br><br>
 
         <ul>
           <li>學生 / 普通票 於 07/16（六）20:00 及 08/06（六）20:00 在 <a href="https://sitcon.kktix.cc/events/sitcon2022" target="_blank">KKTIX</a> 開放報名。</li>
