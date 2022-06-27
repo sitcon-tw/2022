@@ -21,7 +21,7 @@
         </btn>
       </div>
     </div>
-    <img class="cat-flat" src="/imgs/cats/cat-vertical.svg" />
+    <cat-flat-vertical class="cat-flat" />
   </ArrowDialog>
 </template>
 <script>

@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     CatCorner: typeof import('./src/components/cat/Corner.vue')['default']
     CatCover: typeof import('./src/components/cat/Cover.vue')['default']
     CatFlatLeft: typeof import('./src/components/cat/FlatLeft.vue')['default']
+    CatFlatVertical: typeof import('./src/components/cat/FlatVertical.vue')['default']
     CatHeadBlack: typeof import('./src/components/cat/HeadBlack.vue')['default']
     CatKonami: typeof import('./src/components/cat/Konami.vue')['default']
     CfpAgendaCard: typeof import('./src/components/cfp/AgendaCard.vue')['default']
