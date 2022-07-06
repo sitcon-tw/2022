@@ -1,0 +1,29 @@
+name: Update agenda
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-agenda:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: dev
+    - name: Generate Schedule Json
+      uses: CCIP-App/schedule-json-generator@v1
+      id: generate
+      with:
+        gcp-api-key: ${{ secrets.GCP_API_KEY }}
+        spreadsheet-key: "198dUX5oH72Q7gaGt_SEPrON-QYNRdAu3f-F2Pg4uFoM"
+        default-avatar: "https://sitcon.org/2018/static/img/staffs/stone.png"
+        avatar-base-url: "https://sitcon.org/2018/static/img/speaker/"
+    # Use the output from the `generate` step
+    - name: Get the output json
+      run: echo '${{ steps.generate.outputs.output-json }}' >> /src/assets/session.json
+    # commit
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v9
+      with:
+        message: 'Update session.json'
+        default_author: github_actions
