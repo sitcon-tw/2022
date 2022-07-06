@@ -11,7 +11,7 @@ jobs:
       with:
         ref: dev
     - name: Generate Schedule Json
-      uses: CCIP-App/schedule-json-generator@v1
+      uses: CCIP-App/schedule-json-generator-action@v1
       id: generate
       with:
         gcp-api-key: ${{ secrets.GCP_API_KEY }}
