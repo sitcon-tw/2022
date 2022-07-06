@@ -20,7 +20,7 @@ jobs:
         avatar-base-url: "https://sitcon.org/2018/static/img/speaker/"
     # Use the output from the `generate` step
     - name: Get the output json
-      run: echo '${{ steps.generate.outputs.output-json }}' >> ./src/assets/session.json
+      run: echo '${{ steps.generate.outputs.output-json }}' > ./src/assets/session.json
     # commit
     - name: Commit changes
       uses: EndBug/add-and-commit@v9
