@@ -189,6 +189,7 @@ export default {
       let res =
         this.times
           .map(x => this.parseTime(x))
+          .sort()
           .map(x => `[🥞${x}]`)
       return ['[roomname]', '[decoration-line-start]', ...res, '[🥞end]']
     },
