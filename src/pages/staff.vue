@@ -30,7 +30,7 @@
             <p class="team-intro">{{ intro }}</p>
             <div class="team-member-items">
               <div class="team-member-item" v-for="item of members">
-                <img :src="`https://www.gravatar.com/avatar/${item.emailHash}?s=320&d=https://i.imgur.com/IIG5XiW.jpg&r=g`" />
+                <img :src="`https://www.gravatar.com/avatar/${item.emailHash}?s=320&d=https://sitcon.org/2022/imgs/deafult_avatar.jpg&r=g`" />
                 <div class="team-member-name">{{ item.name }}</div>
                 <div class="team-member-type">{{ item.type }}</div>
               </div>
