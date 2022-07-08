@@ -416,7 +416,6 @@ export default {
       padding: 0 12px
       transform: translateY(-50%)
   .room-name
-    font-family: 'STIX Two Text', serif
     font-weight: bold
     font-size: 36px
     text-align: center
