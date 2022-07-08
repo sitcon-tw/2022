@@ -160,7 +160,7 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
       --size: 24px
       display: grid
       grid-template-columns: repeat(auto-fit, var(--size))
-      grid-gap: 16px
+      grid-gap: 24px
       margin-bottom: 4px
       .social-media-item
         display: block
