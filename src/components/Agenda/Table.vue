@@ -110,12 +110,6 @@
             </div>
           </div>
           <div class="agenda-dialog-content-info">
-            <template v-if="activeSession.targetAudience.length">
-              <div class="section-title">目標聽眾</div>
-              <div class="section-content">
-                <Markdown :content="activeSession.targetAudience" />
-              </div>
-            </template>
             <template v-if="activeSession.priorKnowledge.length">
               <div class="section-title">先備知識</div>
               <div class="section-content">
@@ -203,7 +197,7 @@ export default {
         let description = res.zh.description.split('## 目標聽眾\n')[0]
         let targetAudience = ''
         let priorKnowledge = ''
-        let temp = res.zh.description.split(/## 目標聽眾\n|## 先備知識\n/)
+        let temp = res.zh.description.split(/## 先備知識\n/)
         if (temp.length > 1) {
           targetAudience = temp[1]
           if (temp.length > 2) {
