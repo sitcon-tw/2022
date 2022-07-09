@@ -32,7 +32,7 @@
             <a href="https://sitcon.org/fb" target="_blank" class="social-media-item reverse-color">
               <img :src="'/2022/imgs/social-media/facebook.svg'" alt="Facebook" />
             </a>
-            <a href="https://sitcon.org/instagram" target="_blank" class="social-media-item reverse-color">
+            <a href="https://sitcon.org/instagram" target="_blank" class="social-media-item">
               <img :src="'/2022/imgs/social-media/instagram.svg'" alt="Instagram" />
             </a>
             <a href="https://sitcon.org/tg" target="_blank" class="social-media-item reverse-color">
