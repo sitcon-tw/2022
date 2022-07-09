@@ -56,7 +56,7 @@
         </div>
         <div class="tags">
           <span v-for="tag of item.tags" :key="tag">
-            #{{ tag }}
+            #{{ getTagById(tag).zh.name }}
           </span>
         </div>
       </div>
@@ -79,7 +79,7 @@
           <div class="footer">
             <div class="tags">
               <span v-for="tag of item.tags" :key="tag">
-                #{{ tag }}
+                #{{ getTagById(tag).zh.name }}
               </span>
             </div>
             <div class="room">
@@ -102,7 +102,8 @@
         <div class="agenda-dialog-content">
           <div class="agenda-dialog-content-description">
             <div class="tags" v-if="activeSession.tags.length > 0">
-              <span class="tags-title">Tags</span>: <span class="tags-content">{{ activeSession.tags.join(', ') }}</span>
+              <span class="tags-title">Tags</span>: <span class="tags-content">{{ activeSession.tags.map(x => getTagById(x).zh.name).join(', ')
+              }}</span>
             </div>
             <div class="description">
               <Markdown :content="activeSession.zh.description" />
@@ -237,6 +238,9 @@ export default {
     },
   },
   methods: {
+    getTagById(id) {
+      return this.sessionData.tags.filter(x => x.id === id)[0]
+    },
     parseTime(time) {
       return new Date(time).toLocaleTimeString('en-US', {
         hour: '2-digit',
@@ -400,6 +404,8 @@ export default {
       background-color: #82D357
       padding: 4px 8px
       border-radius: 100em
+      &+span
+        margin-left: 4px
   .room
     color: #51823A
     font-size: 12px
