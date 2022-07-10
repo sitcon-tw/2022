@@ -24,6 +24,8 @@ jobs:
       run: echo '${{ steps.generate.outputs.output-json }}' > ./src/assets/session.json
     - name: Copy session.json to public/json
       run: cp ./src/assets/session.json ./public/json/session.json
+    - name: Remove ./public/json/session.json ./src/assets/session.json from .gitignore
+      run: sed -i '/session.json/d' .gitignore
     - name: Sync to dev-netlify branch
       uses: peaceiris/actions-gh-pages@v3
       with:
