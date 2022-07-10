@@ -33,3 +33,4 @@ jobs:
         force_orphan: true
         user_name: GitHub Actions
         user_email: actions@github.com
+        commit_message: ${{ github.event.head_commit.message }}
