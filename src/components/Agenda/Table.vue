@@ -200,18 +200,13 @@ export default {
         res = JSON.parse(JSON.stringify(res))
         res.type = this.sessionData.session_types.filter(x => x.id === res.type)[0]?.zh?.name
         // description
-        let description = res.zh.description.split('## 目標聽眾\n')[0]
-        let targetAudience = ''
-        let priorKnowledge = ''
         let temp = res.zh.description.split(/## 先備知識\n/)
+        let description = temp[0]
+        let priorKnowledge = ''
         if (temp.length > 1) {
-          targetAudience = temp[1]
-          if (temp.length > 2) {
-            priorKnowledge = temp[2]
-          }
+          priorKnowledge = temp[1]
         }
         res.zh.description = description
-        res.targetAudience = targetAudience
         res.priorKnowledge = priorKnowledge
         // speakers
         res.speakers = res.speakers
