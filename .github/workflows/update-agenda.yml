@@ -24,12 +24,12 @@ jobs:
       run: echo '${{ steps.generate.outputs.output-json }}' > ./src/assets/session.json
     - name: Copy session.json to public/json
       run: cp ./src/assets/session.json ./public/json/session.json
-    # commit
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v9
+    - name: Sync to dev-netlify branch
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        message: 'Update session.json'
-        committer_name: GitHub Actions
-        committer_email: actions@github.com
-        new_branch: dev-netlify
-        push: --force
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
+        publish_branch: dev-netlify
+        force_orphan: true
+        user_name: GitHub Actions
+        user_email: actions@github.com
