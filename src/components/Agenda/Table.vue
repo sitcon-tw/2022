@@ -55,7 +55,7 @@
           </span>
         </div>
         <div class="tags">
-          <span>
+          <span v-if="getTypeById(item.type)" :data-type="item.type">
             #{{ getTypeById(item.type).zh.name }}
           </span>
           <span v-for="tag of item.tags" :key="tag">
@@ -81,7 +81,7 @@
           </div>
           <div class="footer">
             <div class="tags">
-              <span>
+              <span v-if="getTypeById(item.type)" :data-type="item.type">
                 #{{ getTypeById(item.type).zh.name }}
               </span>
               <span v-for="tag of item.tags" :key="tag">
@@ -233,11 +233,16 @@ export default {
     },
   },
   methods: {
+    getTypeById(id) {
+      let showList = ['K', 'E', 'D', 'P', 'U', 'Fo', 'L']
+      if (showList.includes(id)) {
+        return this.sessionData.session_types.filter(x => x.id === id)[0]
+      } else {
+        return null
+      }
+    },
     getTagById(id) {
       return this.sessionData.tags.filter(x => x.id === id)[0]
-    },
-    getTypeById(id) {
-      return this.sessionData.session_types.filter(x => x.id === id)[0]
     },
     parseTime(time) {
       return new Date(time).toLocaleTimeString('en-US', {
