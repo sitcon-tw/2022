@@ -27,9 +27,9 @@ coverage
 *.sln
 *.sw?
 .vite-ssg-temp
-dist_netlify
 utils/SITCON 2022 工作人員通訊錄 - 工作表1.csv
 utils/teams.json
 utils/SITCON 2022 工作人員登錄狀況 - 工人名單（已刪除移除工人）.csv
 public/json/session.json
 src/assets/session.json
+dist_netlify/2022/*
