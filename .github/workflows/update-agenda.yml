@@ -1,7 +1,6 @@
 name: Update agenda
 
 on:
-  workflow_dispatch:
 
 jobs:
   update-agenda:
