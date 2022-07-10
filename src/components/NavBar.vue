@@ -43,10 +43,10 @@ export default {
           to: '/activity',
           text: '大會活動'
         },
-        // {
-        //   to: '/agenda',
-        //   text: '議程資訊'
-        // },
+        {
+          to: '/agenda',
+          text: '議程資訊'
+        },
         // {
         //   to: '/venue',
         //   text: '會場地圖'
