@@ -358,11 +358,14 @@ export default {
       font-size: 1em
     .agenda-speaker-avatar
       width: 256px
+      height: 256px
       object-fit: cover
       border-radius: 16px
       background-color: #fff
+      aspect-ratio: 1/1
       @media (max-width: 768px)
         width: 96px
+        height: 96px
         border-radius: 8px
 .agenda-mobile-list
   display: none
