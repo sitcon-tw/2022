@@ -234,11 +234,11 @@ export default {
   },
   methods: {
     getTypeById(id) {
-      let showList = ['K', 'E', 'D', 'P', 'U', 'Fo', 'L']
-      if (showList.includes(id)) {
-        return this.sessionData.session_types.filter(x => x.id === id)[0]
-      } else {
+      let hideList = ['Ev']
+      if (hideList.includes(id)) {
         return null
+      } else {
+        return this.sessionData.session_types.filter(x => x.id === id)[0]
       }
     },
     getTagById(id) {
