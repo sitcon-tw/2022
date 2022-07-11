@@ -84,6 +84,7 @@ export default {
 </script>
 <style lang="sass" scoped>
 .nav-bar
+  font-family: 'Noto Sans TC', sans-serif
   display: flex
   align-items: center
   justify-content: space-between
