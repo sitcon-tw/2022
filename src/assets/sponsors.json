@@ -87,6 +87,13 @@
           "description": "臺科大營建系著重於理論與實際結合及跨領域之科技整合發展，包含營建管理、大地工程、結構工程、營建材料及資訊科技等五個研究領域。\n\n資訊科技組以促進資通訊科技於土木營建與防災工程的全生命週期導入與應用為目標，朝向智慧營建及永續土木工程等方向發展。"
         },
         {
+          "name": "零碼科技 Code Zero",
+          "link": "https://codezero.tw",
+          "logo": "codezero.png",
+          "id": "codezero",
+          "description": "零碼科技以「匯聚人才，以科技改善生活」為團隊宗旨。我們熱愛開發以用戶體驗為優先的產品，並研發自家軟體產品為主。歡迎各方志同道合的人才加入！"
+        },
+        {
           "name": "曉數碼 Akatsuki Taiwan Inc.",
           "link": "https://bit.ly/3bwhylS",
           "logo": "akatsuki.png",
