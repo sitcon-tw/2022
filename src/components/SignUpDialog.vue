@@ -43,8 +43,6 @@ export default {
     padding: 0
   .title
     margin: 0
-  .text
-    z-index: 1
   .btns
     white-space: nowrap
     padding: 16px 24px
