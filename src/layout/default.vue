@@ -1,6 +1,6 @@
 <template>
-  <nav-bar />
-  <div class="nav-spacer" />
+  <nav-bar v-if="!appMode" />
+  <div class="nav-spacer" v-if="!appMode" />
   <transition name="fade" mode="in-out">
     <div class="loading" v-if="showLoading" />
   </transition>
@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       showLoading: true,
+      appMode: false
     }
   },
   mounted() {
@@ -35,6 +36,11 @@ export default {
       this.showLoading = false
     })
     this.showLoading = false
+    // check query string for mode=app
+    const query = this.$route.query
+    if (query.mode === 'app') {
+      this.appMode = true
+    }
   }
 }
 </script>
