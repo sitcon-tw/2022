@@ -50,5 +50,5 @@ lines.forEach(line => {
     emailHash: md5(email.trim().toLowerCase()),
   })
 })
-fs.writeFileSync('../src/assets/teams.json', JSON.stringify(results, null, 2));
+fs.writeFileSync('../../src/assets/teams.json', JSON.stringify(results, null, 2));
 console.log('done');
