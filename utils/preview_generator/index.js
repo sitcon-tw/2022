@@ -62,6 +62,9 @@ const { remote } = require('webdriverio');
             if (count === 0) resolve()
           }
         })
+        setTimeout(() => {
+          resolve()
+        }, 1000 * 10)
       })
     })
 
