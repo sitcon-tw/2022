@@ -172,16 +172,6 @@
         "emailHash": "c840f49e781c1e3201bb2baf943dd7d1"
       },
       {
-        "name": "舟",
-        "type": "組員",
-        "emailHash": "2b785d5c3d59f480fa7a92f9d2a8e5e9"
-      },
-      {
-        "name": "skyling",
-        "type": "組員",
-        "emailHash": "3a2167eae63b246f7f9234b984a07d99"
-      },
-      {
         "name": "阿肥",
         "type": "組員",
         "emailHash": "33e5296caa4f6be2487fc64fcbb88cf2"
@@ -483,6 +473,26 @@
         "name": "耀淞",
         "type": "組員",
         "emailHash": "8ffd85d68675918ecd132660513e93dd"
+      },
+      {
+        "name": "企鵝690",
+        "type": "組員",
+        "emailHash": "c3763fbfda08baccafaa5d85d4e09a62"
+      },
+      {
+        "name": "Cathy",
+        "type": "組員",
+        "emailHash": "a1eecad2f0ee9d065d46e05b1a4e6f5f"
+      },
+      {
+        "name": "yc油成",
+        "type": "組員",
+        "emailHash": "bf5797545199284bfc73b5a372f49f8c"
+      },
+      {
+        "name": "ben",
+        "type": "組員",
+        "emailHash": "c1e96846d36a032b1b137609caa7ffec"
       }
     ]
   },
@@ -737,6 +747,11 @@
         "name": "Jason",
         "type": "組員",
         "emailHash": "465b302effe901df04c5e520237bbcec"
+      },
+      {
+        "name": "火山",
+        "type": "組員",
+        "emailHash": "093b3496782564d86dce4914cb410f99"
       }
     ]
   }
