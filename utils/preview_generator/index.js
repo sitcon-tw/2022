@@ -41,6 +41,7 @@ const { remote } = require('webdriverio');
       document.querySelector('.speakers').innerHTML = data.speakers.map(speaker => {
         return `<div class="speaker"><img class="img" src="${speaker.avatar}" alt=""><div class="name">${speaker.zh.name}</div></div>`
       }).join('')
+      textFit(document.querySelector('.title'), { multiLine: true, maxFontSize: 300 })
       setTimeout(() => {
         updateCatPosition()
       }, 0)

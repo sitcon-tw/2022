@@ -39,6 +39,7 @@
       color: #383838;
       font-size: 72px;
       line-height: 1.15;
+      overflow: hidden;
     }
 
     .frame .cat {
@@ -125,6 +126,7 @@
       ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
     </div>
   </div>
+  <script src="./textFit.js"></script>
   <script>
     // get query string
     function updateCatPosition() {
@@ -133,6 +135,7 @@
       let typeWidth = document.querySelector('.type').clientWidth
       cat.style.right = (2 + typeWidth) + 'px'
     }
+    textFit(document.querySelector('.title'), { multiLine: true, maxFontSize: 300 })
   </script>
 </body>
 
