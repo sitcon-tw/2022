@@ -5,9 +5,10 @@ const Koa = require('koa');
 const app = new Koa();
 
 app.use(serve('./src'));
+app.use(serve('../../public'));
 app.listen(2929);
 
-console.log('listening on port 2929');
+console.log('Server on http://localhost:2929');
 // Chrome
 const sessions = require('../../src/assets/session.json');
 const { remote } = require('webdriverio');
@@ -17,8 +18,9 @@ const { remote } = require('webdriverio');
       browserName: 'chrome',
       'goog:chromeOptions': {
         args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage'],
-      }
-    }
+      },
+    },
+    logLevel: 'warn',
   })
   // download latset version of sessions.json
   // await browser.url('https://sitcon.org/2022/json/session.json')
@@ -39,6 +41,7 @@ const { remote } = require('webdriverio');
       document.querySelector('.title').innerHTML = data.title
       document.querySelector('.type').innerHTML = data.type
       document.querySelector('.speakers').innerHTML = data.speakers.map(speaker => {
+        speaker.avatar = speaker.avatar.replace('https://sitcon.org/2022/', 'http://localhost:2929/')
         return `<div class="speaker"><img class="img" src="${speaker.avatar}" alt=""><div class="name">${speaker.zh.name}</div></div>`
       }).join('')
       textFit(document.querySelector('.title'), { multiLine: true, maxFontSize: 300 })
@@ -69,6 +72,8 @@ const { remote } = require('webdriverio');
     })
 
     await browser.saveScreenshot(`../../public/imgs/sessions/${item.id}.png`)
+
+    console.log(`genetated: ${item.id} ${data.title}`)
   }
   await browser.deleteSession()
   console.log(`🐈 time: ${new Date() - time}ms`)
