@@ -12,14 +12,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@500&family=Noto+Sans+TC:wght@400;700&family=Roboto+Condensed&family=Syncopate:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Syncopate:wght@700&display=swap"
     rel="stylesheet">
   <title>Document</title>
   <style>
+    @font-face {
+      font-family: 'Noto Sans TC';
+      font-style: normal;
+      src: url('./fonts/NotoSansTC-Light.otf');
+    }
+
+    @font-face {
+      font-family: 'Noto Sans TC';
+      font-style: 700;
+      src: url('./fonts/NotoSansTC-Bold.otf');
+    }
+
     body {
       background-image: url('./empty.png');
       background-repeat: no-repeat;
-      font-family: 'Roboto Condensed', 'Noto Sans TC', 'Noto Emoji', sans-serif;
+      font-family: 'Roboto Condensed', 'Noto Sans TC', sans-serif;
     }
 
     .frame {
@@ -34,7 +46,7 @@
       left: 8.17%;
       width: 1300px;
       height: 250px;
-      font-family: 'Syncopate', 'Noto Sans TC', 'Noto Emoji', sans-serif;
+      font-family: 'Syncopate', 'Noto Sans TC', sans-serif;
       font-weight: 700;
       color: #383838;
       font-size: 72px;
@@ -124,9 +136,6 @@
       </div>
     </div>
     <div style="font-family: 'Roboto Condensed';opacity: 0;">
-      ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
-    </div>
-    <div style="font-family: 'Noto Sans TC';opacity: 0;" class="load-font">
       ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
     </div>
   </div>
