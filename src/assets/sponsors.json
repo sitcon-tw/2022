@@ -111,6 +111,16 @@
     }
   ],
   "thanks": [
-
+    {
+      "type": "特別感謝",
+      "org": [
+        {
+          "name": "HackMD",
+          "link": "https://hackmd.io/",
+          "logo": "hackmd.png",
+          "id": "hackmd"
+        }
+      ]
+    }
   ]
 }
