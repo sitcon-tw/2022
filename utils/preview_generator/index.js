@@ -1,0 +1,73 @@
+// Server
+let time = new Date();
+const serve = require('koa-static')
+const Koa = require('koa');
+const app = new Koa();
+
+app.use(serve('./src'));
+app.listen(2929);
+
+console.log('listening on port 2929');
+// Chrome
+const sessions = require('../../src/assets/session.json');
+const { remote } = require('webdriverio');
+; (async () => {
+  const browser = await remote({
+    capabilities: {
+      browserName: 'chrome',
+      'goog:chromeOptions': {
+        args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage'],
+      }
+    }
+  })
+  // download latset version of sessions.json
+  // await browser.url('https://sitcon.org/2022/json/session.json')
+  // let sessions = await browser.$('pre').getText()
+  // sessions = JSON.parse(sessions)
+
+  browser.setWindowSize(1600, 800)
+
+  await browser.url(`http://localhost:2929/index.html`)
+  for (let item of sessions.sessions) {
+    if (item.zh.description == "") continue
+    let data = {
+      title: item.zh.title,
+      speakers: item.speakers.map(x => sessions.speakers.find(y => y.id === x)),
+      type: sessions.session_types.find(x => x.id === item.type).zh.name,
+    }
+    await browser.execute((data) => {
+      document.querySelector('.title').innerHTML = data.title
+      document.querySelector('.type').innerHTML = data.type
+      document.querySelector('.speakers').innerHTML = data.speakers.map(speaker => {
+        return `<div class="speaker"><img class="img" src="${speaker.avatar}" alt=""><div class="name">${speaker.zh.name}</div></div>`
+      }).join('')
+      setTimeout(() => {
+        updateCatPosition()
+      }, 0)
+    }, data)
+    // wait until the page is loaded
+    await browser.execute(() => {
+      return new Promise(resolve => {
+        // imgs are loaded asyncronously
+        let imgs = document.querySelectorAll('.img')
+        let count = imgs.length
+        imgs.forEach(img => {
+          img.addEventListener('load', () => {
+            count--
+            if (count === 0) resolve()
+          })
+          if (img.complete) {
+            count--
+            if (count === 0) resolve()
+          }
+        })
+      })
+    })
+
+    await browser.saveScreenshot(`../../public/imgs/sessions/${item.id}.png`)
+  }
+  await browser.deleteSession()
+  console.log(`🐈 time: ${new Date() - time}ms`)
+  // stop koa
+  process.exit()
+})()
