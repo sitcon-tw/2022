@@ -145,7 +145,7 @@
       :page-title="activeSession.zh.title"
       :title="activeSession.zh.title"
       :description="activeSession.zh.description"
-      image="https://sitcon.org/2022/imgs/og.jpg" />
+      :image="`https://sitcon.org/2022/imgs/sessions/${activeSession.id}.png`" />
     <GeneralHead v-else
       page-title=" 議程資訊"
       title="議程資訊 | SITCON X"
