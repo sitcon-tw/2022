@@ -30,15 +30,6 @@ const { remote } = require('webdriverio');
   browser.setWindowSize(1600, 800)
 
   await browser.url(`http://localhost:2929/index.html`)
-  let allTexts = [
-    ...sessions.sessions.map(x => x.zh.title),
-    ...sessions.speakers.map(x => x.zh.name),
-    ...sessions.session_types.map(x => x.zh.name),
-  ].join('')
-  await browser.execute((allTexts) => {
-    document.querySelector('.load-font').innerHTML = allTexts
-  }, allTexts)
-  await browser.pause(1000)
   for (let item of sessions.sessions) {
     if (item.zh.description == "") continue
     let data = {
