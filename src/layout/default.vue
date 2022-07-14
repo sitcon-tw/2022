@@ -45,6 +45,9 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+.app-mode
+  .nav-bar, .nav-spacer
+    display: none
 .nav-spacer
   height: 160px
   @media screen and (max-width: 768px)

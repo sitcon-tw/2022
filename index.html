@@ -17,6 +17,10 @@
   <link rel="prefetch" href="https://sitcon.org/2022/imgs/cfp/back-hover.svg" as="image" />
   <link rel="prefetch" href="https://sitcon.org/2022/imgs/cfp/cfp_maze_pattern.png" as="image" />
   <link rel="prefetch" href="https://sitcon.org/2022/imgs/cfp/CFP_desktop_mainPage.jpg" as="image" />
+  <script>
+    if (location.search.indexOf('mode=app') !== -1)
+      document.documentElement.classList.add('app-mode')
+  </script>
   <!-- Google Analytics -->
   <script src="https://www.googletagmanager.com/gtag/js?id=UA-34467841-1" async></script>
   <script>
@@ -47,5 +51,4 @@
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
 </body>
-
 </html>
