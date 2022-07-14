@@ -2,7 +2,6 @@
   "name": "sitcon-2022",
   "version": "0.0.0",
   "scripts": {
-    "prepare": "wget https://sitcon.org/2022/json/session.json -O public/json/session.json",
     "dev": "vite",
     "build": "vite-ssg build",
     "build:netlify": "vite-ssg build && mv dist dist_netlify/2022",
