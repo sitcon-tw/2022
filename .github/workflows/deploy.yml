@@ -27,9 +27,7 @@ jobs:
         avatar-base-url: "https://sitcon.org/2022/imgs/speakers/"
     # Use the output from the `generate` step
     - name: Save session.json
-      run: echo '${{ steps.generate.outputs.output-json }}' > ./src/assets/session.json
-    - name: Copy session.json to public/json
-      run: cp ./src/assets/session.json ./public/json/session.json
+      run: echo '${{ steps.generate.outputs.output-json }}' > ./public/json/session.json
     - name: Setup Node
       uses: actions/setup-node@v2-beta
       with:
