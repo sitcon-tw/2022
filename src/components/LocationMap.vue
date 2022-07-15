@@ -60,6 +60,7 @@ const attribution = ref('© <a href="https://www.openstreetmap.org/copyright">Op
     padding: 4px 8px
     border-radius: 4px
     backdrop-filter: blur(2px)
+    line-height: 1
     a
       color: #9c27b0
       text-decoration: none
