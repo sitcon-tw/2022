@@ -116,7 +116,7 @@ export default {
       grid-template-columns: repeat(2, 1fr)
     @media (max-width: 512px)
       grid-template-columns: repeat(1, 1fr)
-  &.co_org
+  &.co_org,&.type-深耕級
     grid-template-columns: repeat(2, 1fr)
     @media (max-width: 768px)
       grid-template-columns: 1fr
