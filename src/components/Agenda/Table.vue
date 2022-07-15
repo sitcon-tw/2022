@@ -98,11 +98,16 @@
     <ArrowDialog v-model="sessionModal">
       <div class="agenda-dialog" v-if="activeSession">
         <div class="agenda-dialog-header">
+          <div class="agenda-info">
+            {{ activeSession.type }}
+          </div>
           <div class="agenda-title">
             {{ activeSession.zh.title }}
           </div>
-          <div class="agenda-type">
-            {{ activeSession.type }}
+          <div class="agenda-info">
+            {{ activeSession.room }} •
+            {{ new Date(activeSession.start).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
+            ~{{ new Date(activeSession.end).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
           </div>
         </div>
         <div class="agenda-dialog-content">
@@ -302,7 +307,8 @@ export default {
         pointer-events: none
         float: right
         z-index: -1
-  .agenda-type,.section-title
+
+  .section-title,.agenda-info
     font-size: 1.5em
     font-weight: bold
     line-height: 1.5
