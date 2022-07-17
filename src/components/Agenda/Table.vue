@@ -366,6 +366,7 @@ export default {
       width: 256px
       height: 256px
       object-fit: cover
+      object-position: top center
       border-radius: 16px
       background-color: #fff
       aspect-ratio: 1/1
