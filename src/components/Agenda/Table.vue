@@ -40,12 +40,12 @@
         {{ room }}
       </div>
       <!-- sessions -->
-      <div class="session-item"
+      <Component
+        :is="item.zh.description ? 'router-link' : 'div'"
+        :to="`/agenda/${item.id}`"
         v-for="item of sessionData.sessions"
         :style="{ ...parseSessionStyle(item) }"
-        :class="{ hoverable: item.zh.description }"
-        @click="openModel(item)">
-
+        :class="{ hoverable: item.zh.description }">
         <div class="session-title">
           {{ item.zh.title }}
         </div>
@@ -62,15 +62,19 @@
             #{{ getTagById(tag).zh.name }}
           </span>
         </div>
-      </div>
+      </Component>
     </div>
     <div class="agenda-mobile-list">
       <template v-for="time of startTimes">
         <div class="time-item">
           {{ time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
         </div>
-        <div class="session-item" v-for="item of sessionData.sessions.filter(x => new Date(x.start).toString() == time)"
-          :class="{ hoverable: item.zh.description }" @click="openModel(item)">
+        <Component
+          :is="item.zh.description ? 'router-link' : 'div'"
+          :to="`/agenda/${item.id}`"
+          class="session-item"
+          v-for="item of sessionData.sessions.filter(x => new Date(x.start).toString() == time)"
+          :class="{ hoverable: item.zh.description }">
           <div class="session-title">
             {{ item.zh.title }}
           </div>
@@ -92,7 +96,7 @@
               {{ item.room }} / {{ Math.floor((new Date(item.end) - new Date(item.start)) / 1000 / 60) }}mins
             </div>
           </div>
-        </div>
+        </Component>
       </template>
     </div>
     <ArrowDialog v-model="sessionModal">
@@ -275,11 +279,6 @@ export default {
           'grid-row': `${start} / ${end}`,
         })
       }
-    },
-    openModel(session) {
-      if (session.zh.description) {
-        this.$router.push(`/agenda/${session.id}`)
-      }
     }
   }
 
@@ -394,6 +393,7 @@ export default {
   padding: 8px
   color: #373737
   line-height: 1.75
+  text-decoration: none
   &.hoverable:hover
     cursor: pointer
     background-color: #F4EEC0
