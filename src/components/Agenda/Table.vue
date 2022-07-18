@@ -44,6 +44,7 @@
         :is="item.zh.description ? 'router-link' : 'div'"
         :to="`/agenda/${item.id}`"
         v-for="item of sessionData.sessions"
+        class="session-item"
         :style="{ ...parseSessionStyle(item) }"
         :class="{ hoverable: item.zh.description }">
         <div class="session-title">
