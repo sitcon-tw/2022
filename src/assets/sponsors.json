@@ -126,6 +126,12 @@
           "link": "https://hackmd.io/",
           "logo": "hackmd.png",
           "id": "hackmd"
+        },
+        {
+          "name": "iCHEF 資廚",
+          "link": "https://www.ichefpos.com/zh-tw",
+          "logo": "ichef.png",
+          "id": "ichef"
         }
       ]
     }
