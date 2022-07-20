@@ -66,6 +66,13 @@
           "logo": "zuso.png",
           "id": "zuso",
           "description": "如梭世代是臺灣本土資訊安全服務業者，服務團隊擁有 10 年以上駭客攻擊手法及豐富威脅分析經驗，提供紅隊演練、滲透測試、顧問服務與事件調查等服務。核心技術手法參照國際標準 MITRE ATT&CK® 框架，透過具系統性的評估標準、識別驗證企業網路安全程度，為各產業提供合規規範，量身為客戶打造專屬解決方案。"
+        },
+        {
+          "name": "台灣積體電路製造股份有限公司",
+          "link": "https://www.tsmc.com/static/english/careers/it_career/index.html",
+          "logo": "tsmc.png",
+          "id": "tsmc",
+          "description": "台積公司是世界領先的專業積體電路製造服務公司，背後關鍵秘訣是：Fab runs on code──跑在程式碼上的晶圓廠。台積 IT 是半導體前瞻製程的重要支援夥伴，產品藍圖涵蓋資通訊建構、AI 應用、技術系統及企業系統，服務的使用者來自工廠、企業員工及合作夥伴。我們匯聚全球頂尖人才，導入矽谷最新 Tech Stack 打造雲原生及數位轉型。Change is happening. Join us now!"
         }
       ]
     },
