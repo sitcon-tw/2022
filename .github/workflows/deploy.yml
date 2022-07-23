@@ -9,9 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: true
+    - uses: actions/checkout@v3
     - name: Set timezone to Asia/Taipei
       uses: szenius/set-timezone@v1.0
       with:
@@ -30,17 +28,10 @@ jobs:
       run: echo '${{ steps.generate.outputs.output-json }}' > ./src/assets/session.json
     - name: Copy session.json to public/json
       run: cp ./src/assets/session.json ./public/json/session.json
-    - name: Setup Node
-      uses: actions/setup-node@v2-beta
+    - uses: actions/setup-node@v3
       with:
-        node-version: '16.x'
-    - name: Cache dependencies
-      uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+        node-version: 16
+        cache: 'npm'
     - name: Install npm packages
       run: npm install
     - name: Generate Session Preview Images
