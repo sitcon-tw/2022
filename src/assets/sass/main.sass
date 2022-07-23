@@ -1,0 +1,134 @@
+:root
+  --background-color: #fff
+  --text-color: #373737
+@media screen and (prefers-color-scheme: dark)
+  :root
+    --background-color: #373737
+    --text-color: #fff
+body.not-found
+  --background-color: #373737
+body,html
+  font-family: 'Roboto Condensed','Noto Sans TC', sans-serif
+  background-color: var(--background-color)
+  color: var(--text-color)
+  line-height: 2
+  font-size: 16px
+  scroll-behavior: smooth
+  width: 100vw
+  min-height: 100vh
+  overflow-x: hidden
+  scroll-margin-top: 160px
+  @media screen and (max-width: 768px)
+    font-size: 14px
+.container
+  width: min(1280px,95vw)
+  margin: 0 auto
+.cfp-container
+  width: calc(100% - 64px)
+  max-width: 1152px
+  margin: 0 auto
+  @media screen and (max-width: 1151px)
+    padding: 40px 64px
+  @media screen and (max-width: 1024px)
+    padding: 40px 20px
+    width: calc(100% - 40px)
+    margin: 18px auto
+
+.cfp-page
+  --text-color: #fff
+  color: var(--text-color)
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+    li
+      margin-bottom: 10px
+      position: relative
+      padding-left: 15px
+      &::before
+        content: ""
+        position: absolute
+        top: 0.5em
+        left: 0
+        width: 5px
+        height: 1em
+        background-color: #fff
+  a
+    color: #fff
+
+*
+  box-sizing: border-box
+  -webkit-tap-highlight-color: transparent
+h1, h2, h3, h4, h5, h6
+  font-weight: 900
+  margin: .25em 0
+  margin-top: .5em
+h1
+  font-size: 48px
+  @media screen and (max-width: 1280px)
+    font-size: 36px
+  @media screen and (max-width: 768px)
+    font-size: 30px
+h2
+  font-size: 36px
+  @media screen and (max-width: 1280px)
+    font-size: 32px
+  @media screen and (max-width: 768px)
+    font-size: 24px
+h3
+  font-size: 30px
+  @media screen and (max-width: 1280px)
+    font-size: 24px
+  @media screen and (max-width: 768px)
+    font-size: 20px
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+  li
+    margin-bottom: 10px
+    position: relative
+    padding-left: 15px
+    &::before
+      content: ""
+      position: absolute
+      top: 0.5em
+      left: 0
+      width: 5px
+      height: 1em
+      background-color: #82D357
+strong
+  font-weight: 900
+.text-center
+  text-align: center
+a
+  color: #82D357
+  text-decoration: underline
+  cursor: pointer
+img, svg
+  max-width: 100%
+
+.maze-background
+  overflow-x: hidden // prevent ConfettiExplosion in cfp page causing horizontal overflow
+  background-color: #333333
+  background-image: url(/imgs/cfp/cfp_maze_pattern.png)
+  background-size: 120vw auto
+  background-position: top
+  background-repeat: repeat
+.clickable
+  cursor: pointer
+
+// animation
+// fade-out
+.fade-out-leave-to
+  opacity: 0
+.fade-out-leave-active
+  transition: opacity 0.5s ease
+// fade
+.fade-enter-active,
+.fade-leave-active
+  transition: opacity 0.25s ease
+
+.fade-enter-from,
+.fade-leave-to
+  opacity: 0
