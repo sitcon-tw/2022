@@ -129,6 +129,18 @@
           "description": "Dcard 在年輕族群有極高影響力的社群平台，每月不重複訪客高達 1,800 萬，發展抽卡社群、廣告電商、跨國市場等領域，並正以成長型思維打造一個邁向世界的網路公司。"
         }
       ]
+    },
+    {
+      "type": "新芽級",
+      "org": [
+        {
+          "name": "合勤基金會",
+          "link": "https://foundation.unizyx.com.tw/?lang=zh_tw",
+          "logo": "zyxel.png",
+          "id": "zyxel",
+          "description": ""
+        }
+      ]
     }
   ],
   "thanks": [
