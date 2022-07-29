@@ -127,6 +127,13 @@
           "logo": "dcard.png",
           "id": "dcard",
           "description": "Dcard 在年輕族群有極高影響力的社群平台，每月不重複訪客高達 1,800 萬，發展抽卡社群、廣告電商、跨國市場等領域，並正以成長型思維打造一個邁向世界的網路公司。"
+        },
+        {
+          "name": "新加坡商鈦坦科技",
+          "link": "https://titansoft.com/tw",
+          "logo": "titansoft.png",
+          "id": "titansoft",
+          "description": ""
         }
       ]
     },
