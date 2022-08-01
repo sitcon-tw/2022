@@ -146,6 +146,13 @@
           "logo": "zyxel.png",
           "id": "zyxel",
           "description": ""
+        },
+        {
+          "name": "財團法人台灣網路資訊中心",
+          "link": "https://twnic.tw/",
+          "logo": "twnic.png",
+          "id": "twnic",
+          "description": ""
         }
       ]
     }
