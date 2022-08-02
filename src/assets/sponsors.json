@@ -80,6 +80,13 @@
           "logo": "amd.png",
           "id": "amd",
           "description": "50多年來，AMD（NASDAQ：AMD）推動創新高效能運算、繪圖及視覺技術，建構遊戲、高臨場感平台與資料中心等重要領域。全球數十億的消費者、世界 500 強企業以及尖端科學研究機構皆仰賴AMD的技術來改善生活、工作及娛樂。AMD 員工致力於研發領先的高效能與自行調適產品，不斷突破技術的極限。"
+        },
+        {
+          "name": "SuDo Research Labs 蘇度科技有限公司",
+          "link": "https://www.yourator.co/companies/sudoresearch",
+          "logo": "sudo-research-labs.png",
+          "id": "sudo-research-labs",
+          "description": ""
         }
       ]
     },
