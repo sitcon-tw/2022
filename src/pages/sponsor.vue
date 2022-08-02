@@ -53,7 +53,7 @@
         </mint-box>
       </div>
     </arrow-box>
-    <arrow-box v-for="data of [...sponsors.sponsors, ...sponsors.thanks]">
+    <arrow-box v-for="data of [...sponsors.sponsors, ...sponsors.media_partners]">
       <block-title>{{ data.type }}</block-title>
       <div class="sponsor-items" :class="`type-${data.type}`">
         <mint-box class="sponsor-item" v-for="item of data.org" :id="item.id" :href="item.link">
