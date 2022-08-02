@@ -182,5 +182,18 @@
         }
       ]
     }
+  ],
+  "media_partners": [
+    {
+      "type": "媒體夥伴",
+      "org": [
+        {
+          "name": "純靠北工程師",
+          "link": "https://init.engineer",
+          "logo": "init-engineer.png",
+          "id": "init-egineer"
+        }
+      ]
+    }
   ]
 }
