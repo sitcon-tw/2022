@@ -12,16 +12,16 @@
         </a>
         <div class="content">
           <h2 class="title">不得不做的 25 件事</h2>
-          <div class="content">
-            <div class="bingo-table">
-              <div
-                class="bingo-item"
-                v-for="item in bingoItems"
-                @click="toggleBingoItem(item)"
-                :class="{ done: item.done }"
-                v-html="item.text" />
-            </div>
+
+          <div class="bingo-table">
+            <div
+              class="bingo-item"
+              v-for="item in bingoItems"
+              @click="toggleBingoItem(item)"
+              :class="{ done: item.done }"
+              v-html="item.text" />
           </div>
+          <div class="all-done" :class="{ show: allDone }" />
         </div>
       </div>
     </transition>
@@ -71,6 +71,11 @@ export default {
       done: false
     }))
   }),
+  computed: {
+    allDone() {
+      return this.bingoItems.every(x => x.done)
+    }
+  },
   mounted() {
     // sync from localStorage
     let bingoItem = JSON.parse(localStorage?.bingoItem || `[]`)
@@ -133,7 +138,25 @@ export default {
     margin: 8px
 .content
   position: relative
-  padding: 16px
+  padding: 8px
+  .all-done
+    height: 128px
+    width: 128px
+    position: absolute
+    background-image: url('/imgs/25-things-must-do/done.svg')
+    background-position: center
+    transform: scale(1.2)
+    transform-origin: center
+    filter: blur(5px)
+    opacity: 0
+    transition: all .2s ease
+    bottom: 0
+    right: 0
+    pointer-events: none
+    &.show
+      opacity: 1
+      transform: translate(25%,25%)
+      filter: blur(0) drop-shadow(0 0 5px white)
 h2.title
   text-align: center
 .bingo-table
@@ -150,8 +173,6 @@ h2.title
   background-repeat: no-repeat
   background-color: #F4EEE1
   color: #333
-  @media (max-width: 512px)
-    margin: 0 -16px
   .bingo-item
     aspect-ratio: 1/1
     display: flex
@@ -167,6 +188,7 @@ h2.title
     position: relative
     cursor: pointer
     background-color: #F4EEE1
+    transition: all .2s ease
     &:nth-child(n+6)
       border-top: var(--border)
     &:nth-child(5n)
@@ -183,22 +205,6 @@ h2.title
       border-bottom-left-radius: 16px
     &:last-child
       border-bottom-right-radius: 16px
-    &::before
-      content: ''
-      height: 100%
-      width: 100%
-      position: absolute
-      background-image: url('/imgs/25-things-must-do/done.svg')
-      background-position: center
-      transform: scale(1.2)
-      transform-origin: center
-      filter: blur(5px)
-      opacity: 0
-      transition: all .2s ease
     &.done
       background-color: rgba(0, 0, 0, .1)
-      &::before
-        opacity: 1
-        transform: scale(1)
-        filter: blur(0)
 </style>
