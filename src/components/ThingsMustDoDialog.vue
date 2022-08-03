@@ -172,7 +172,7 @@ h2.title
       border-right: none
     @media (max-width: 640px)
       padding: 0 2px
-      font-size: min(10px, 0.5vw)
+      font-size: 10px
       aspect-ratio: 1/1
     &:first-child
       border-top-left-radius: 16px
