@@ -7,6 +7,7 @@
   <router-view />
   <cat-konami />
   <sign-up-dialog />
+  <things-must-do-dialog />
   <div class="container">
     <footer-item :hide-sponsor="hideSponsor" :is-index="isIndex" />
   </div>
@@ -15,31 +16,31 @@
 export default {
   computed: {
     hideSponsor() {
-      return this.$route.path.indexOf('/sponsor') === 0
+      return this.$route.path.indexOf("/sponsor") === 0;
     },
     isIndex() {
-      return this.$route.path === '/'
+      return this.$route.path === "/";
     }
   },
   data() {
     return {
       showLoading: true,
       appMode: false
-    }
+    };
   },
   mounted() {
     this.$router.beforeEach((to, from, next) => {
-      this.showLoading = true
-      next()
-    })
+      this.showLoading = true;
+      next();
+    });
     this.$router.afterEach(() => {
-      this.showLoading = false
-    })
-    this.showLoading = false
+      this.showLoading = false;
+    });
+    this.showLoading = false;
     // check query string for mode=app
-    const query = this.$route.query
-    if (query.mode === 'app') {
-      this.appMode = true
+    const query = this.$route.query;
+    if (query.mode === "app") {
+      this.appMode = true;
     }
   }
 }

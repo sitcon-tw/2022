@@ -5,6 +5,7 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    25Things: typeof import('./src/components/25Things.vue')['default']
     AgendaTable: typeof import('./src/components/Agenda/Table.vue')['default']
     ArrowBox: typeof import('./src/components/ArrowBox.vue')['default']
     ArrowDialog: typeof import('./src/components/ArrowDialog.vue')['default']
@@ -57,6 +58,8 @@ declare module '@vue/runtime-core' {
     SvgSitcon: typeof import('./src/components/svg/sitcon.vue')['default']
     SvgX: typeof import('./src/components/svg/X.vue')['default']
     SvgXCatInAMaze: typeof import('./src/components/svg/XCatInAMaze.vue')['default']
+    ThingsMustDo: typeof import('./src/components/ThingsMustDo.vue')['default']
+    ThingsMustDoDialog: typeof import('./src/components/ThingsMustDoDialog.vue')['default']
   }
 }
 

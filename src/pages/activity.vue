@@ -8,12 +8,20 @@
     <arrow-box>
       <block-title>大會活動</block-title>
       <mint-box>
+        <h1>不得不做的 25 件事</h1>
+        <p>按按鈕開賓果</p>
+        <div style="display: flex">
+          <btn @click.native="dialogStore.thingsDialogOpened = true">按我按我按我按我按我</btn>
+        </div>
+      </mint-box>
+      <mint-box>
         <h1>Activity</h1>
         <h3>你是第一次參加 SITCON 年會嗎？</h3>
         <ul>
           <li>
             <strong>導遊團</strong><br>
-            <span>在人來人往的潮流中感到迷茫嗎？在大家邁著堅定步伐前往想去的地方同時，只有你不知該如何是好嗎？我們聽見你的聲音了！我們舉辦了導遊團的活動，獻給還不熟悉社群的你。來吧，跟隨導遊的腳步一同走訪總召、講者、攤位，以及回憶展，帶您一步一步了解 SITCON 的精神，年會的分工以及運作模式，還在等什麼? 快來參與吧！</span>
+            <span>在人來人往的潮流中感到迷茫嗎？在大家邁著堅定步伐前往想去的地方同時，只有你不知該如何是好嗎？我們聽見你的聲音了！我們舉辦了導遊團的活動，獻給還不熟悉社群的你。來吧，跟隨導遊的腳步一同走訪總召、講者、攤位，以及回憶展，帶您一步一步了解 SITCON
+              的精神，年會的分工以及運作模式，還在等什麼? 快來參與吧！</span>
           </li>
           <li>
             <strong>天使計畫</strong><br>
@@ -65,3 +73,13 @@
 
 <style lang="sass" scoped>
 </style>
+<script>
+
+import { useDialogStore } from '../store/dialog'
+export default {
+  setup() {
+    const dialogStore = useDialogStore()
+    return { dialogStore }
+  },
+}
+</script>
