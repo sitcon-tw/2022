@@ -100,8 +100,8 @@ export default {
     &>.content
       overflow-y: scroll
       overflow-x: hidden
-      max-height: calc(100vh - 250px)
-      max-height: calc(100dvh - 250px)
+      max-height: calc(100vh - 150px)
+      max-height: calc(100dvh - 150px)
       margin: -18px
       padding: 18px
       scrollbar-width: thin
