@@ -145,7 +145,7 @@ h2.title
   overflow: hidden
   border: var(--border)
   background-image: url('/imgs/25-things-must-do/cat.svg')
-  background-size: contain
+  background-size: 90% 90%
   background-position: center
   background-repeat: no-repeat
   background-color: #F4EEE1
@@ -166,6 +166,7 @@ h2.title
     line-height: 1.5
     position: relative
     cursor: pointer
+    background-color: #F4EEE1
     &:nth-child(n+6)
       border-top: var(--border)
     &:nth-child(5n)
