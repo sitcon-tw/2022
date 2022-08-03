@@ -190,38 +190,8 @@
         {
           "name": "純靠北工程師",
           "link": "https://init.engineer",
-          "logo": "init-enginner.png",
+          "logo": "init-engineer.png",
           "id": "init-egineer"
-        },
-        {
-          "name": "Linzin 阿哲",
-          "link": "https://www.youtube.com/channel/UC0oosHZ4k1o-zNT21gg5O7A",
-          "logo": "linzin.png",
-          "id": "lizin"          
-        },
-        {
-          "name": "IT DOG",
-          "link": "",
-          "logo": "it-dog.png",
-          "id": "it-dog"
-        },
-        {
-          "name": "在地上滾的工程師 Nic",
-          "link": "https://www.facebook.com/niclin.dev/",
-          "logo": "nic.png",
-          "id": "nic"
-        },
-        {
-          "name": "Untyped 對啊我是工程師",
-          "link": "",
-          "logo": "untyped.png",
-          "id": "untyped"
-        },
-        {
-          "name": "LogoCat",
-          "link": "",
-          "logo": "logocat.png",
-          "id": "logocat"
         }
       ]
     }
