@@ -138,10 +138,11 @@ export default {
     margin: 8px
 .content
   position: relative
-  padding: 8px
+  padding: 16px
   .all-done
-    height: 128px
-    width: 128px
+    --size: 128px
+    height: var(--size)
+    width: var(--size)
     position: absolute
     background-image: url('/imgs/25-things-must-do/done.svg')
     background-position: center
@@ -153,10 +154,14 @@ export default {
     bottom: 0
     right: 0
     pointer-events: none
+    @media (max-width: 768px)
+      --size: 64px
     &.show
       opacity: 1
-      transform: translate(25%,25%)
       filter: blur(0) drop-shadow(0 0 5px white)
+      transform: translate(25%,25%)
+      @media (max-width: 768px)
+        transform: translate(5%,5%)
 h2.title
   text-align: center
 .bingo-table
