@@ -33,11 +33,11 @@ jobs:
         node-version: 16
         cache: 'npm'
     - name: Install npm packages
-      run: npm install
+      run: npm ci
     - name: Generate Session Preview Images
       run: |
         cd ./utils/preview_generator
-        npm i
+        npm ci
         node index.js
         cd ../../
     - name: Generate Pages
