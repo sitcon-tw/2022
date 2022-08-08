@@ -210,6 +210,12 @@
           "link": "https://mcfallout.net/",
           "logo": "mcfallout.png",
           "id": "mcfallout"
+        },
+        {
+          "name": "Linzin 阿哲",
+          "link": "https://www.youtube.com/channel/UC0oosHZ4k1o-zNT21gg5O7A",
+          "logo": "linzin.png",
+          "id": "linzin"
         }
       ]
     }
