@@ -204,6 +204,12 @@
           "link": "https://www.youtube.com/c/NicLin",
           "logo": "nic.png",
           "id": "nic"
+        },
+        {
+          "name": "廢土伺服器",
+          "link": "https://mcfallout.net/",
+          "logo": "mcfallout.png",
+          "id": "mcfallout"
         }
       ]
     }
