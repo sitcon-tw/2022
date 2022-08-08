@@ -47,10 +47,10 @@ export default {
           to: '/agenda',
           text: '議程資訊'
         },
-        {
-          to: '/venue',
-          text: '會場地圖'
-        },
+        // {
+        //   to: '/venue',
+        //   text: '會場地圖'
+        // },
         {
           to: '/traffic',
           text: '交通方式'
