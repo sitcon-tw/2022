@@ -148,6 +148,13 @@
           "logo": "titansoft.png",
           "id": "titansoft",
           "description": "新加坡商鈦坦科技發源於獅城，立足於台灣，專注於線上軟體平台的開發與維護，代理 Atlassian 旗下產品，包含敏捷專案管理工具 Jira Software、企業知識管理內網 Confluence。"
+        },
+        {
+          "name": "KKCompany",
+          "link": "https://www.kkcompany.com/",
+          "logo": "kkcompany.png",
+          "id": "kkcompany",
+          "description": "亞洲領先媒體科技集團 KKCompany 以「Freeways to Inspiration」為使命，協助內容創作者擁抱新科技、助企業實現數位轉型。"
         }
       ]
     },
