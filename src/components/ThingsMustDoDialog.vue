@@ -12,7 +12,9 @@
         </a>
         <div class="content">
           <h2 class="title">不得不做的 25 件事</h2>
-
+          <transition name="fade-out">
+            <ConfettiExplosion v-if="allDone" :duration="4500" :force="0.75" />
+          </transition>
           <div class="bingo-table">
             <div
               class="bingo-item"
