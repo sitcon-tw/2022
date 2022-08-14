@@ -1,0 +1,21 @@
+<heml>
+
+  <head>
+    <subject>SITCON X 與會者行前信</subject>
+    <style>
+      body {
+        background: #ccc;
+      }
+
+      h1 {
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <container>
+      小石
+    </container>
+  </body>
+</heml>
