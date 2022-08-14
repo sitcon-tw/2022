@@ -4,18 +4,20 @@
     <subject>SITCON X 與會者行前信</subject>
     <style>
       body {
-        background: #ccc;
+        background: SkyBlue;
       }
 
       h1 {
-        color: #fff;
+        color: DarkViolet;
       }
     </style>
   </head>
 
   <body>
     <container>
-      小石
+      <marquee>
+        <h1>小石也喜歡跑馬燈！</h1>
+      </marquee>
     </container>
   </body>
 </heml>
