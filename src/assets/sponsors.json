@@ -230,6 +230,12 @@
           "link": "https://www.youtube.com/channel/UC0oosHZ4k1o-zNT21gg5O7A",
           "logo": "linzin.png",
           "id": "linzin"
+        },
+        {
+          "name": "DOG COM",
+          "link": "https://www.facebook.com/itdogcom",
+          "logo": "dog-com.png",
+          "id": "dog-com"
         }
       ]
     }
