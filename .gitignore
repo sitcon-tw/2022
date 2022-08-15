@@ -40,3 +40,4 @@ utils/preview_generator/result/*.jpg
 utils/preview_generator/src/prepros.config
 public/imgs/sessions/*.png
 public/imgs/sessions/*.jpg
+utils/mail/SITCON-2022.html

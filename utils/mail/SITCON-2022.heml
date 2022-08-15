@@ -1,23 +1,61 @@
 <heml>
 
   <head>
-    <subject>SITCON X 與會者行前信</subject>
+    <subject>SITCON X 行前通知信</subject>
+    <base href="https://sitcon.org/2022/mail/SITCON-2022.html" />
     <style>
       body {
-        background: SkyBlue;
+        background: #F4EEE1;
       }
 
-      h1 {
-        color: DarkViolet;
+      p {
+        font-size: 14px;
+        color: #383838;
+        line-height: 1.5em;
+      }
+
+      .white-box {
+        background-color: #fff;
+        padding: 16px;
+        border-radius: 16px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .with-border {
+        border: 2px solid #A89B85;
+      }
+
+      .mt {
+        margin-top: 16px;
+      }
+
+      .mb {
+        margin-bottom: 16px;
+      }
+
+      .my {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+
+      .pa {
+        padding: 16px;
       }
     </style>
   </head>
 
   <body>
     <container>
-      <marquee>
-        <h1>小石也喜歡跑馬燈！</h1>
-      </marquee>
+      <img src="./assets/header.png" />
+      <div class="white-box text-center with-border my">
+        若您無法順利閱讀此信件，請參閱 線上版本。
+      </div>
+      <p class="pa">Hi {{ nickname }}，<br />
+        很高興能在 SITCON 2022 看到你！年會即將在下週日（09/04）揭開序幕，我們整理了一些實用的資訊，還請詳細閱讀：
+      </p>
     </container>
   </body>
 </heml>

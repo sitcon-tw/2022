@@ -46,6 +46,15 @@ jobs:
       run: |
         cp ./dist/index.html ./dist/404.html
         cp ./dist/index.html ./dist/200.html
+    - name: Generate mail
+      run: |
+        cd ./utils/mail
+        npm i
+        npm run build
+        mkdir -p ../../dist/mail
+        cp ./SITCON-2022.html ../../dist/mail/SITCON-2022.html
+        cp -R ./assets ../../dist/mail/assets
+        cd ../../
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
