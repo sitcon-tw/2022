@@ -135,7 +135,7 @@
       <div class="white-box text-center with-border my">
         若您無法順利閱讀此信件，請參閱 <a href="https://sitcon.org/2022/mail/SITCON-2022.html" target="_blank">線上版本</a>。
       </div>
-      <p class="pa">Hi {{ nickname }}，<br />
+      <p class="pa my">Hi {{ nickname }}，<br />
         很高興能在 SITCON 2022 看到你！年會即將在下週日（09/04）揭開序幕，我們整理了一些實用的資訊，還請詳細閱讀：
       </p>
       <div class="white-box">
