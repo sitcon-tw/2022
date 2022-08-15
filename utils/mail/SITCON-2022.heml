@@ -1,7 +1,11 @@
 <heml>
 
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <subject>SITCON X 行前通知信</subject>
+    <preview>很高興能在 SITCON X 看到你！年會即將在下週日（9/4）揭開序幕，我們特別整理了一些實用的資訊，還請詳細閱讀；為始活動報到順利，請先行下載安裝「OPass」App —
+      若您無法順利閱讀此信件，請參閱線上版本：https://sitcon.org/2022/mail/SITCON-2022.html</preview>
     <!-- <base href="https://sitcon.org/2022/mail/SITCON-2022.html" /> -->
     <style>
       body {
@@ -44,7 +48,6 @@
         font-weight: 700;
         margin: 0;
         display: inline-block;
-        padding-bottom: 4px;
         border-bottom: 2px solid #A89B85;
       }
 
@@ -64,8 +67,16 @@
         border-radius: 16px;
       }
 
+      .white-box+.white-box {
+        margin-top: 64px;
+      }
+
       .text-center {
         text-align: center;
+      }
+
+      .text-right {
+        text-align: right;
       }
 
       .with-border {
@@ -120,21 +131,21 @@
 
   <body>
     <container>
-      <img src="./assets/header.png" />
+      <img src="./assets/header.png" infer="retina" />
       <div class="white-box text-center with-border my">
         若您無法順利閱讀此信件，請參閱 <a href="https://sitcon.org/2022/mail/SITCON-2022.html" target="_blank">線上版本</a>。
       </div>
       <p class="pa">Hi {{ nickname }}，<br />
         很高興能在 SITCON 2022 看到你！年會即將在下週日（09/04）揭開序幕，我們整理了一些實用的資訊，還請詳細閱讀：
       </p>
-      <div class="white-box my">
+      <div class="white-box">
         <h1>交通</h1>
         <div></div>
         <h2>活動地點</h2>
         <p>年會地點位於中央研究院 人文社會科學館（台北市南港區研究院路二段 128 號），詳細位置可以參考 SITCON 2022 官方網站或中央研究院院區導覽圖。 </p>
         <h2>接駁車</h2>
         <p>今年提供了自捷運南港展覽館站往返中研院人文館的免費接駁車</p>
-        <div class="white-box with-border">
+        <div class="white-box with-border mb">
           <h3>早上班次（往中研院）</h3>
           <ul>
             <li>發車時間：07:30～10:00，班距約 15～20 分鐘</li>
@@ -146,14 +157,14 @@
           </ul>
         </div>
       </div>
-      <div class="white-box my">
+      <div class="white-box">
         <h1>報到</h1>
         <div></div>
         <h2>報到時間及方式</h2>
         <p>年會將於早上 7 點半開放量體溫入場，早上 8 點開始報到，活動於 9 點準時開始。進入會場前，請務必配戴口罩。在到達會場後，連上年會現場的 Wi-Fi，即可用「OPass」App 進行報到，並到會場四樓<strong>依工作人員指示</strong>排隊領取迎賓袋。</p>
         <div class="text-center">
           <strong>請透過以下專屬連結下載、啟動 OPass</strong><br />
-          <a href="{{ App Link }}">{{ App Link }}</a>
+          <a href="{{ App Link }}" class="btn" style="margin-top: 4px;display: inline-block;">OPass</a>
         </div>
         <p>若您無法使用 App 報到，請向服務台的工作人員出示本信或 KKTIX 提供的 QR Code 以完成手動報到。</p>
         <div class="white-box with-border mb">
@@ -168,7 +179,7 @@
         <p>持有學生票的朋友，也請於報到前備妥學生證或相關證明（在學證明、繳費完成之繳費單等），以節省您寶貴的時間。</p>
       </div>
 
-      <div class="white-box my">
+      <div class="white-box">
         <h1>防疫注意事項</h1>
         <div></div>
         <h2>自主健康管理</h2>
@@ -181,7 +192,8 @@
         <p>參與年會活動全程（於指定區域用餐時除外），<strong>請隨時配戴口罩</strong>，勿任意取下；若因為天氣炎熱而需將口罩取下透透氣，請移至空曠的地方再行取下。</p>
         <p>若您的口罩因為天氣炎熱的因素而濕掉，或者遇到口罩繩斷裂等情形，可以至服務台以一片換一片的方式換領口罩。 </p>
       </div>
-      <div class="white-box my">
+
+      <div class="white-box">
         <h1>年會活動</h1>
         <p>除了一整天 精彩的議程，今年的 SITCON 也有許多有趣的活動可以參加！不論是抓緊機會表現自己，或是想在年會認識新朋友，都千萬別錯過囉！</p>
 
@@ -198,7 +210,7 @@
         <h2>Lightning Talk 閃電秀</h2>
         <p>Lightning Talk 中文譯為「<strong>閃電秀</strong>」，顧名思義即為「閃電一般短的演講」。有什麼想展現給全場所有人的技術、想法、甚至經驗談，都能把握這短短的 <strong>3 分鐘</strong>，在 SITCON 2022
           的大舞台上讓大家看見你！</p>
-        <div class="white-box with-border mt">
+        <div class="white-box with-border mt mb">
           Lightning Talk 安排於年會閉幕前，於國際會議廳 (R0) 進行。於年會當天 10:00 開放投稿，於 14:00 截止投稿，並且開放與會者投票。
         </div>
 
@@ -225,11 +237,12 @@
         <h2>共筆與議程線上討論區</h2>
         <p>今年年會延續往年傳統，為各議程開設「共筆」與「議程線上討論區（Sli.do）」，共筆供聽眾一起編輯議程筆記，議程線上討論區則供講者與各位聽眾進行即時交流。各連結將公告於年會官方網站與
           OPass。您可以在議程中隨時使用議程線上討論區匿名提問，講者能自由選擇時間解答及互動。籌辦團隊雖開設此平台，但並非強制所有與會者及講者必須使用，僅供各位利用參考。</p>
-        <a href="#" class="btn">共筆傳送門</a>
-        <div class="mt"></div>
+        <div class="text-right mb">
+          <a href="#" class="btn">共筆傳送門</a>
+        </div>
       </div>
 
-      <div class="white-box my">
+      <div class="white-box">
         <h1>食物</h1>
         <p>為了讓大家能愉快的交流，年會為各位準備了午餐與各式點心。場地內除了用餐區以外，皆禁止飲食，只能帶有蓋水瓶進出，並全程配戴口罩，還請各位多多配合了 (´・ω・`) </p>
         <h2>午餐</h2>
@@ -243,14 +256,14 @@
         </div>
       </div>
 
-      <div class="white-box my">
+      <div class="white-box">
         <h1>網路</h1>
         <p>現場可使用年會提供的無線網路，SSID 為「<strong>SITCON X via Klickklack</strong>」，密碼為「<strong>20220904</strong>」，也可以透過 OPass 的 XXX 功能加入。 </p>
         <p>請勿於會場私自架設無線基地台（AP），或進行任何干擾公眾網路之行為。</p>
         <p>若您需要使用個人行動網路熱點，請使用 USB 或分享網路連線。</p>
       </div>
 
-      <div class="white-box my">
+      <div class="white-box">
         <h1>其他網路</h1>
         <p>年會當天的線上聊天室十分精彩，您可以和其他與會者抬槓、甚至找到志同道合的夥伴！除了加入 <a href="https://sitcon.org/tg">Telegram @SITCONgeneral 群組</a>、<a
             href="https://sitcon.org/dc">Discord SITCON 伺服器</a>
@@ -265,15 +278,15 @@
       </p>
 
       <div class="white-box text-center with-border my social-media-links">
-        <a class="social-media-link" href="https://sitcon.org/twitter"><img src="./assets/twitter.png" alt="Twitter"></a>
-        <a class="social-media-link" href="https://sitcon.org/fb"><img src="./assets/facebook.png" alt="Facebook"></a>
-        <a class="social-media-link" href="https://sitcon.org/flickr"><img src="./assets/flickr.png" alt="Flickr"></a>
-        <a class="social-media-link" href="https://sitcon.org/instagram"><img src="./assets/instagram.png" alt="Instagram"></a>
-        <a class="social-media-link" href="https://sitcon.org/tg"><img src="./assets/telegram.png" alt="Telegram"></a>
-        <a class="social-media-link" href="https://sitcon.org/yt"><img src="./assets/youtube.png" alt="YouTube"></a>
+        <a class="social-media-link" href="https://sitcon.org/twitter"><img infer="retina" src="./assets/twitter.png" alt="Twitter"></a>
+        <a class="social-media-link" href="https://sitcon.org/fb"><img infer="retina" src="./assets/facebook.png" alt="Facebook"></a>
+        <a class="social-media-link" href="https://sitcon.org/flickr"><img infer="retina" src="./assets/flickr.png" alt="Flickr"></a>
+        <a class="social-media-link" href="https://sitcon.org/instagram"><img infer="retina" src="./assets/instagram.png" alt="Instagram"></a>
+        <a class="social-media-link" href="https://sitcon.org/tg"><img infer="retina" src="./assets/telegram.png" alt="Telegram"></a>
+        <a class="social-media-link" href="https://sitcon.org/yt"><img infer="retina" src="./assets/youtube.png" alt="YouTube"></a>
       </div>
       <div class="text-center mb">
-        <img src="./assets/footer.png" class="footer-img">
+        <img src="./assets/footer.png" infer="retina" class="footer-img">
       </div>
     </container>
   </body>
