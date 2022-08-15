@@ -136,13 +136,13 @@
         若您無法順利閱讀此信件，請參閱 <a href="https://sitcon.org/2022/mail/SITCON-2022.html" target="_blank">線上版本</a>。
       </div>
       <p class="pa my">Hi {{ nickname }}，<br />
-        很高興能在 SITCON 2022 看到你！年會即將在下週日（09/04）揭開序幕，我們整理了一些實用的資訊，還請詳細閱讀：
+        很高興能在 SITCON X 看到你！年會即將在下週日（09/04）揭開序幕，我們整理了一些實用的資訊，還請詳細閱讀：
       </p>
       <div class="white-box">
         <h1>交通</h1>
         <div></div>
         <h2>活動地點</h2>
-        <p>年會地點位於中央研究院 人文社會科學館（台北市南港區研究院路二段 128 號），詳細位置可以參考 SITCON 2022 官方網站或中央研究院院區導覽圖。 </p>
+        <p>年會地點位於中央研究院 人文社會科學館（台北市南港區研究院路二段 128 號），詳細位置可以參考 <a href="https://sitcon.org/2022/traffic">SITCON X 官方網站</a>或中央研究院院區導覽圖。 </p>
         <h2>接駁車</h2>
         <p>今年提供了自捷運南港展覽館站往返中研院人文館的免費接駁車</p>
         <div class="white-box with-border mb">
