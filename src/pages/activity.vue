@@ -7,13 +7,13 @@
       image="https://sitcon.org/2022/imgs/og.jpg" />
     <arrow-box>
       <block-title>大會活動</block-title>
-      <mint-box>
+      <!-- <mint-box>
         <h1>不得不做的 25 件事</h1>
         <p>按按鈕開賓果</p>
         <div style="display: flex">
           <btn @click.native="dialogStore.thingsDialogOpened = true">按我按我按我按我按我</btn>
         </div>
-      </mint-box>
+      </mint-box> -->
       <mint-box>
         <h1>Activity</h1>
         <h3>你是第一次參加 SITCON 年會嗎？</h3>
