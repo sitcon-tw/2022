@@ -80,11 +80,12 @@ export default {
     scrollListener() {
       let res = -1
       for (let [index, item] of Object.entries(this.$refs.stats_items.children)) {
-        if (item.getBoundingClientRect().y - window.innerHeight / 2 <= 0) {
+        let percent = item.getBoundingClientRect().y / window.innerHeight
+        if (percent < 0.3) {
           res = index
         }
         if (res == 3) {
-          if ((item.getBoundingClientRect().y / (window.innerHeight / 2)) < 0.4) {
+          if (percent < 0.1) {
             res = 4
           }
         }
