@@ -6,7 +6,7 @@
     <subject>SITCON X 行前通知信</subject>
     <preview>很高興能在 SITCON X 看到你！年會即將在下週日（9/4）揭開序幕，我們特別整理了一些實用的資訊，還請詳細閱讀；為始活動報到順利，請先行下載安裝「OPass」App —
       若您無法順利閱讀此信件，請參閱線上版本：https://sitcon.org/2022/mail/SITCON-2022.html</preview>
-    <!-- <base href="https://sitcon.org/2022/mail/SITCON-2022.html" /> -->
+    <base href="https://sitcon.org/2022/mail/SITCON-2022.html" />
     <style>
       body {
         background: #F4EEE1;
