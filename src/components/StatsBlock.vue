@@ -1,18 +1,18 @@
 <template>
-  <div class="stats-items">
-    <div class="stats-item">
+  <div class="stats-items" ref="stats_items">
+    <div class="stats-item" :class="{ highlight: highlightItem == 0 }">
       <div class="img" />
       <div class="content">
         超過 <span class="count">{{ count.audience.toLocaleString() }}<span class="unit">名</span></span> 與會者
       </div>
     </div>
-    <div class="stats-item">
+    <div class="stats-item" :class="{ highlight: highlightItem == 1 }">
       <div class="img" />
       <div class="content">
         <span class="count">{{ count.speaker.toLocaleString() }}<span class="unit">名</span></span> 學生講者
       </div>
     </div>
-    <div class="stats-item">
+    <div class="stats-item" :class="{ highlight: highlightItem == 2 }">
       <div class="img" />
       <div class="content">
         <span class="count">{{ count.speaker.toLocaleString() }}<span class="unit">場</span></span> 聚會與講座
@@ -21,13 +21,12 @@
         <span class="count">{{ count.camp.toLocaleString() }}<span class="unit">場</span></span> 夏令營
       </div>
     </div>
-    <div class="stats-item">
+    <div class="stats-item" :class="{ highlight: highlightItem == 3 }">
       <div class="img" />
       <div class="content">
         扶植近 <span class="count">{{ count.volunteer.toLocaleString() }}<span class="unit">名</span></span> 資訊推廣志工
       </div>
     </div>
-
   </div>
 </template>
 
@@ -48,11 +47,16 @@ export default {
         lecture: 0,
         camp: 0,
         volunteer: 0
-      }
+      },
+      highlightItem: 0
     }
   },
   mounted() {
     this.countData();
+    document.addEventListener('scroll', this.scrollListener);
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollListener);
   },
   methods: {
     countData() {
@@ -72,6 +76,20 @@ export default {
           }
         }, 10);
       }
+    },
+    scrollListener() {
+      let res = -1
+      for (let [index, item] of Object.entries(this.$refs.stats_items.children)) {
+        if (item.getBoundingClientRect().y - window.innerHeight / 2 <= 0) {
+          res = index
+        }
+        if (res == 3) {
+          if ((item.getBoundingClientRect().y / (window.innerHeight / 2)) < 0.4) {
+            res = 4
+          }
+        }
+      }
+      this.highlightItem = res
     }
   }
 };
@@ -96,6 +114,7 @@ export default {
     gap: 16px
     position: relative
     overflow: hidden
+    transition: all .4s ease
     &:nth-child(1)
       --background-image: url(/2022/imgs/stats-block/1.jpg)
       --background-position: center bottom
@@ -119,15 +138,28 @@ export default {
       background-size: cover
       background-position: var(--background-position)
       transition: all .4s ease
-    &:hover
-      .img
-        opacity: 0.5
-        transform: scale(1.2)
-      .content
-        padding-top: calc(var(--offset) / 2 + var(--padding))
-        padding-bottom: calc(var(--offset) / 2 + var(--padding))
-        transform: scale(1.2)
-        justify-content: center
+    @media (max-width: 640px)
+      &.highlight
+        transform: scale(1.05)
+        box-shadow: 0 5px 10px rgba(0,0,0,.25)
+        .img
+          opacity: 0.5
+          transform: scale(1.2)
+        .content
+          padding-top: calc(var(--offset) / 2 + var(--padding))
+          padding-bottom: calc(var(--offset) / 2 + var(--padding))
+          transform: scale(1.2)
+          justify-content: center
+    @media (min-width: 640px)
+      &:hover
+        .img
+          opacity: 0.5
+          transform: scale(1.2)
+        .content
+          padding-top: calc(var(--offset) / 2 + var(--padding))
+          padding-bottom: calc(var(--offset) / 2 + var(--padding))
+          transform: scale(1.2)
+          justify-content: center
     .content
       --offset: 128px
       --padding: 16px
