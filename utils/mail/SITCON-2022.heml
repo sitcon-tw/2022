@@ -57,6 +57,10 @@
         margin: 0;
       }
 
+      h1+p {
+        margin-top: 0;
+      }
+
       ul {
         margin: 4px 8px;
       }
