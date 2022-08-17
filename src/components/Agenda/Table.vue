@@ -416,8 +416,9 @@ export default {
       text-transform: capitalize
       font-size: 12px
       background-color: #82D357
-      padding: 4px 8px
+      padding: 3px 6px
       border-radius: 100em
+      display: inline-block
       &+span
         margin-left: 4px
   .room
