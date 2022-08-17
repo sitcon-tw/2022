@@ -48,7 +48,7 @@ export default {
         camp: 0,
         volunteer: 0
       },
-      highlightItem: 0
+      highlightItem: -1
     }
   },
   mounted() {
