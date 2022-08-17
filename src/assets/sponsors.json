@@ -200,6 +200,12 @@
           "link": "https://www.ichefpos.com/zh-tw",
           "logo": "ichef.png",
           "id": "ichef"
+        },
+        {
+          "name": "中央研究院資訊服務處",
+          "link": "https://its.sinica.edu.tw/",
+          "logo": "its.png",
+          "id": "its"
         }
       ]
     }
