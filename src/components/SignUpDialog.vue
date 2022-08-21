@@ -6,8 +6,8 @@
         SITCON 年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助，若您也認同 SITCON 的理念，歡迎 <router-link to="/sponsor"  @click="dialogStore.signUpDialogOpened = false">支持我們</router-link>。<br><br>
 
         <ul>
-          <li>目前票券均已索取完畢，8/20（六）前若有報名人取消報名，您仍可於 <a href="https://sitcon.kktix.cc/events/sitcon2022" target="_blank">KKTIX</a> 索取釋出票券。</li>
-          <li>8/21（日）後，若您臨時無法蒞臨會場請到 <a href="https://www.facebook.com/groups/sitcon.tw/posts/4253256531466140/" target="_blank">Facebook 社團換票樓</a> 釋出票券，將入場資格提供給需要的人。</li>
+          <li>目前票券均已索取完畢，若您臨時無法蒞臨會場請到 <a href="https://www.facebook.com/groups/sitcon.tw/posts/4253256531466140/" target="_blank">Facebook 社團換票樓</a> 釋出票券，將入場資格提供給需要的人。</li>
+          <li>年會議程（R0、R1、R2、R3）將於年會當日在 <a herf="https://sitcon.org/yt" target="_blank">YouTube</a> 同步直播，歡迎線上參與！</li>
           <li>關注 <a href="https://sitcon.org/ig" target="_blank">Instagem</a> 和 <a href="https://sitcon.org/fb" target="_blank">Facebook</a>，以免錯過任何活動資訊！</li>
           <li><a href="https://oscvpass.ocf.tw" target="_blank">開源貢獻者快速通關 OSCVPass</a> 提供開源貢獻者各大台灣社群活動的門票或優惠方案，修 code、發 issue 及舉辦開源推廣活動等均能申請，馬上貢獻為未來做準備！</li>
         </ul>
