@@ -181,6 +181,13 @@
           "logo": "hit.png",
           "id": "hit",
           "description": ""
+        },
+        {
+          "name": "104 資訊科技",
+          "link": "https://kad.events.104.com.tw/104_20220408/?utm_source=SITCON&utm_medium=logo&utm_campaign=SITCON_2022",
+          "logo": "104.png",
+          "id": "104",
+          "description": ""
         }
       ]
     }
