@@ -155,6 +155,13 @@
           "logo": "kkcompany.png",
           "id": "kkcompany",
           "description": "亞洲領先媒體科技集團 KKCompany 以「Freeways to Inspiration」為使命，協助內容創作者擁抱新科技、助企業實現數位轉型。"
+        },
+        {
+          "name": "Amazon Web Services",
+          "link": "https://aws.amazon.com/tw/",
+          "logo": "aws.png",
+          "id": "aws",
+          "description": "超過 15 年來，Amazon Web Services 不斷擴展可支持幾乎任何雲端工作負載的服務，為客戶提供超過 200 種功能全面的雲端服務，包括運算、資料庫、分析、人工智慧等方面。"
         }
       ]
     },
