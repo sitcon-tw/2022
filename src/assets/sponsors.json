@@ -162,6 +162,13 @@
           "logo": "aws.png",
           "id": "aws",
           "description": "超過 15 年來，Amazon Web Services 不斷擴展可支持幾乎任何雲端工作負載的服務，為客戶提供超過 200 種功能全面的雲端服務，包括運算、資料庫、分析、人工智慧等方面。"
+        },
+        {
+          "name": "趨勢科技",
+          "link": "https://careers.trendmicro.tw/",
+          "logo": "trendmicro.png",
+          "id": "trendmicro",
+          "description": "趨勢科技為資訊安全解提供決方案全球領導廠商，致力建立一個安全的資訊交換世界。為資料中心、雲端工作負載、網路、端點裝置提供多層式安全防護。"
         }
       ]
     },
@@ -195,6 +202,13 @@
           "logo": "104.png",
           "id": "104",
           "description": ""
+        },
+        {
+          "name": "六月初一股份有限公司",
+          "link": "https://www.june1.com.tw/?utm_source=sitcon&utm_medium=logo&utm_campaign=2022_sitcon",
+          "logo": "june1.png",
+          "id": "june1",
+          "description": ""
         }
       ]
     }
@@ -220,6 +234,12 @@
           "link": "https://its.sinica.edu.tw/",
           "logo": "its.png",
           "id": "its"
+        },
+        {
+          "name": "奧義智慧科技",
+          "link": "https://www.cycarrier.com/",
+          "logo": "cycraft.png",
+          "id": "cycraft"
         }
       ]
     }
