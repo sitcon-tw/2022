@@ -40,7 +40,7 @@ export const createApp = ViteSSG(
         )]
       },
       {
-        path: '/404',
+        path: '/notfound',
         name: '404',
         component: notFoundLayout,
       },
@@ -79,10 +79,10 @@ export const createApp = ViteSSG(
                 id: x,
               }
             })),
-            {
-              path: '/:pathMatch(.*)',
-              redirect: '/404'
-            }
+          {
+            path: '/:pathMatch(.*)',
+            redirect: '/notfound'
+          }
         ]
       },
       //
