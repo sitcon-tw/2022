@@ -52,6 +52,7 @@ jobs:
         npm run build
         mkdir -p ../../dist/mail
         cp ./SITCON-2022.html ../../dist/mail/SITCON-2022.html
+        cp ./SITCON-2022-speaker.html ../../dist/mail/speaker.html
         cp -R ./assets ../../dist/mail/assets
         cd ../../
     - name: Deploy to GitHub Pages

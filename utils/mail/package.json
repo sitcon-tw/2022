@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "heml develop SITCON-2022.heml",
-    "build": "heml build SITCON-2022.heml"
+    "build": "heml build SITCON-2022.heml; heml build SITCON-2022-speaker.heml"
   },
   "author": "",
   "license": "ISC",
