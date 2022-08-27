@@ -171,7 +171,8 @@
         <div class="text-center">
           <strong>請透過以下專屬連結下載、啟動 OPass</strong><br />
           <!-- 這邊一定要特別注意！ Build 的時候會被加上 Base，記得刪掉不然會燒起來 🔥 -->
-          <a href="*|Inviter|*" class="btn" style="margin-top: 4px;display: inline-block;">安裝 / 開啟 OPass</a>
+          <a href="https://opass.app/r/SITCON_2022/" class="btn" style="margin-top: 4px;display: inline-block;">安裝 / 開啟 OPass</a>
+          <!-- <a href="*|Inviter|*" class="btn" style="margin-top: 4px;display: inline-block;">安裝 / 開啟 OPass</a> -->
         </div>
         <p>若您無法使用 App 報到，請向服務台的工作人員出示 KKTIX 提供的 QR Code 以完成手動報到。</p>
         <div class="white-box with-border mb">
