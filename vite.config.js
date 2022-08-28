@@ -19,5 +19,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  ssgOptions: { formatting: "minify" },
+  ssgOptions: {
+    dirStyle: 'nested',
+    formatting: "minify"
+  },
 })
