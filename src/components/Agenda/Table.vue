@@ -133,6 +133,7 @@
               </div>
             </template>
             <div class="links">
+              <btn v-if="activeSession.qa" :href="activeSession.qa">即時提問</btn>
               <btn v-if="activeSession.slide" :href="activeSession.slide">簡報連結</btn>
               <btn v-if="activeSession.co_write" :href="activeSession.co_write">共筆連結</btn>
               <btn v-if="activeSession.record || activeSession.live" :href="activeSession.record || activeSession.live">
