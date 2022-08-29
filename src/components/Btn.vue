@@ -33,11 +33,11 @@ const props = defineProps({
   justify-content: center
   background: #82D357
   color: #383838
-  border-radius: 16px
-  padding: 4px 16px
+  border-radius: .8em
+  padding: .2em .8em
   text-decoration: none
   text-align: center
-  box-shadow: inset 0 0 0 2px #82D357
+  box-shadow: inset 0 0 0 .1em #82D357
   font-weight: 700
   font-size: 20px
   transition: all 0.2s ease

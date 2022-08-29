@@ -116,6 +116,13 @@
           </div>
         </div>
         <div class="agenda-dialog-content">
+          <div class="links mobile">
+            <btn v-if="activeSession.qa" :href="activeSession.qa">即時提問</btn>
+            <btn v-if="activeSession.slide" :href="activeSession.slide">簡報連結</btn>
+            <btn v-if="activeSession.co_write" :href="activeSession.co_write">共筆連結</btn>
+            <btn v-if="activeSession.record || activeSession.live" :href="activeSession.record || activeSession.live">
+              {{  activeSession.record ? '錄影' : '直播'  }}連結</btn>
+          </div>
           <div class="agenda-dialog-content-description">
             <div class="tags" v-if="activeSession.tags.length > 0">
               <span class="tags-title">Tags</span>: <span class="tags-content">{{  activeSession.tags.map(x => getTagById(x).zh.name).join(', ') 
@@ -332,6 +339,21 @@ export default {
       display: flex
       flex-wrap: wrap
       gap: 8px
+      @media (max-width: 768px)
+        display: none
+    .links.mobile:not(:empty)
+      display: none
+      margin-bottom: 4px
+      @media (max-width: 768px)
+        display: flex
+        flex-wrap: wrap
+        gap: 8px
+        background-color: rgba(255,255,255,.4)
+        padding: 4px
+        border-radius: 12px
+      .btn
+        font-size: 12px
+
   .agenda-speaker
     display: flex
     gap: 32px
