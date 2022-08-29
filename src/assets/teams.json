@@ -177,11 +177,6 @@
         "emailHash": "33e5296caa4f6be2487fc64fcbb88cf2"
       },
       {
-        "name": "御粽",
-        "type": "組員",
-        "emailHash": "e5446445eba4c082f85a49b698776576"
-      },
-      {
         "name": "HeiTang",
         "type": "組員",
         "emailHash": "3aaae5a6c03cee93c310e242bbd675e6"
@@ -320,6 +315,21 @@
         "name": "CSY54",
         "type": "組員",
         "emailHash": "c379feb8a2073843af848ba6020d9805"
+      },
+      {
+        "name": "程惟",
+        "type": "組員",
+        "emailHash": "faa24ea10fdfb0cec203b1981a93df3f"
+      },
+      {
+        "name": "烏鴉頭頭",
+        "type": "組員",
+        "emailHash": "ece72ae659306d9ef52bd07b4d41a6c0"
+      },
+      {
+        "name": "Cindy",
+        "type": "組員",
+        "emailHash": "069542573aa5483570ad0413253c2d0e"
       }
     ]
   },
@@ -407,11 +417,6 @@
         "name": "練練",
         "type": "組員",
         "emailHash": "1b24c32ed58f434165e5c3d8bfdcf3fd"
-      },
-      {
-        "name": "紅馬",
-        "type": "組員",
-        "emailHash": "3329cd97d0c3fff967bd44949f2d8937"
       }
     ]
   },
@@ -428,6 +433,11 @@
         "name": "月太",
         "type": "副組長",
         "emailHash": "4e9d08c3b268edcc82ccfa958eda5e66"
+      },
+      {
+        "name": "yc油成",
+        "type": "副組長",
+        "emailHash": "bf5797545199284bfc73b5a372f49f8c"
       },
       {
         "name": "William Mou",
@@ -483,11 +493,6 @@
         "name": "Cathy",
         "type": "組員",
         "emailHash": "a1eecad2f0ee9d065d46e05b1a4e6f5f"
-      },
-      {
-        "name": "yc油成",
-        "type": "組員",
-        "emailHash": "bf5797545199284bfc73b5a372f49f8c"
       },
       {
         "name": "ben",
