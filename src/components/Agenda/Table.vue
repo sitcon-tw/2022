@@ -15,7 +15,7 @@
           'grid-row-start': `🥞${parseTime(time)}`,
         }">
         <div class="time-item-content">
-          {{ time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
+          {{  time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, })  }}
         </div>
       </div>
       <!-- room decoration-line -->
@@ -37,7 +37,7 @@
         'grid-column-start': `🥞${room}`,
         'grid-row-start': 'roomname'
       }">
-        {{ room }}
+        {{  room  }}
       </div>
       <!-- sessions -->
       <Component
@@ -48,19 +48,19 @@
         :style="{ ...parseSessionStyle(item) }"
         :class="{ hoverable: item.zh.description }">
         <div class="session-title">
-          {{ item.zh.title }}
+          {{  item.zh.title  }}
         </div>
         <div class="speakers" v-if="item.speakers.length > 0">
           <span v-for="speaker of item.speakers" :key="speaker.id">
-            {{ sessionData.speakers.filter(x => x.id == speaker)[0].zh.name }}
+            {{  sessionData.speakers.filter(x => x.id == speaker)[0].zh.name  }}
           </span>
         </div>
         <div class="tags">
           <span v-if="getTypeById(item.type)" :data-type="item.type">
-            #{{ getTypeById(item.type).zh.name }}
+            #{{  getTypeById(item.type).zh.name  }}
           </span>
           <span v-for="tag of item.tags" :key="tag">
-            #{{ getTagById(tag).zh.name }}
+            #{{  getTagById(tag).zh.name  }}
           </span>
         </div>
       </Component>
@@ -68,7 +68,7 @@
     <div class="agenda-mobile-list">
       <template v-for="time of startTimes">
         <div class="time-item">
-          {{ time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
+          {{  time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, })  }}
         </div>
         <Component
           :is="item.zh.description ? 'router-link' : 'div'"
@@ -77,24 +77,24 @@
           v-for="item of sessionData.sessions.filter(x => new Date(x.start).toString() == time)"
           :class="{ hoverable: item.zh.description }">
           <div class="session-title">
-            {{ item.zh.title }}
+            {{  item.zh.title  }}
           </div>
           <div class="speakers" v-if="item.speakers.length > 0">
             <span v-for="speaker of item.speakers" :key="speaker.id">
-              {{ sessionData.speakers.filter(x => x.id == speaker)[0].zh.name }}
+              {{  sessionData.speakers.filter(x => x.id == speaker)[0].zh.name  }}
             </span>
           </div>
           <div class="footer">
             <div class="tags">
               <span v-if="getTypeById(item.type)" :data-type="item.type">
-                #{{ getTypeById(item.type).zh.name }}
+                #{{  getTypeById(item.type).zh.name  }}
               </span>
               <span v-for="tag of item.tags" :key="tag">
-                #{{ getTagById(tag).zh.name }}
+                #{{  getTagById(tag).zh.name  }}
               </span>
             </div>
             <div class="room">
-              {{ item.room }} / {{ Math.floor((new Date(item.end) - new Date(item.start)) / 1000 / 60) }}mins
+              {{  item.room  }} / {{  Math.floor((new Date(item.end) - new Date(item.start)) / 1000 / 60)  }}mins
             </div>
           </div>
         </Component>
@@ -104,22 +104,22 @@
       <div class="agenda-dialog" v-if="activeSession">
         <div class="agenda-dialog-header">
           <div class="agenda-info">
-            {{ activeSession.type }}
+            {{  activeSession.type  }}
           </div>
           <div class="agenda-title">
-            {{ activeSession.zh.title }}
+            {{  activeSession.zh.title  }}
           </div>
           <div class="agenda-info">
-            {{ activeSession.room }} •
-            {{ new Date(activeSession.start).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
-            ~{{ new Date(activeSession.end).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, }) }}
+            {{  activeSession.room  }} •
+            {{  new Date(activeSession.start).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, })  }}
+            ~{{  new Date(activeSession.end).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false, })  }}
           </div>
         </div>
         <div class="agenda-dialog-content">
           <div class="agenda-dialog-content-description">
             <div class="tags" v-if="activeSession.tags.length > 0">
-              <span class="tags-title">Tags</span>: <span class="tags-content">{{ activeSession.tags.map(x => getTagById(x).zh.name).join(', ')
-              }}</span>
+              <span class="tags-title">Tags</span>: <span class="tags-content">{{  activeSession.tags.map(x => getTagById(x).zh.name).join(', ') 
+                }}</span>
             </div>
             <div class="description">
               <Markdown :content="activeSession.zh.description" />
@@ -137,13 +137,13 @@
               <btn v-if="activeSession.slide" :href="activeSession.slide">簡報連結</btn>
               <btn v-if="activeSession.co_write" :href="activeSession.co_write">共筆連結</btn>
               <btn v-if="activeSession.record || activeSession.live" :href="activeSession.record || activeSession.live">
-                {{ activeSession.record ? '錄影' : '直播' }}連結</btn>
+                {{  activeSession.record ? '錄影' : '直播'  }}連結</btn>
             </div>
           </div>
         </div>
         <div class="agenda-speaker" v-for="speaker of activeSession.speakers">
           <div class="content">
-            <div class="agenda-speaker-name"> {{ speaker.zh.name }}</div>
+            <div class="agenda-speaker-name"> {{  speaker.zh.name  }}</div>
             <div class="agenda-speaker-bio">
               <Markdown :content="speaker.zh.bio" />
             </div>
