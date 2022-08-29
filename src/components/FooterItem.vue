@@ -29,25 +29,25 @@
 
           <div class="title">社群媒體</div>
           <div class="social-media-items">
-            <a href="https://sitcon.org/fb" target="_blank" class="social-media-item reverse-color">
+            <a href="https://sitcon.org/fb" target="_blank" class="social-media-item">
               <img :src="'/2022/imgs/social-media/facebook.svg'" alt="Facebook" />
             </a>
             <a href="https://sitcon.org/instagram" target="_blank" class="social-media-item">
               <img :src="'/2022/imgs/social-media/instagram.svg'" alt="Instagram" />
             </a>
-            <a href="https://sitcon.org/tg" target="_blank" class="social-media-item reverse-color">
+            <a href="https://sitcon.org/tg" target="_blank" class="social-media-item">
               <img :src="'/2022/imgs/social-media/telegram.svg'" alt="Telegram" />
             </a>
-            <a href="https://sitcon.org/twitter" target="_blank" class="social-media-item reverse-color">
+            <a href="https://sitcon.org/twitter" target="_blank" class="social-media-item">
               <img :src="'/2022/imgs/social-media/twitter.svg'" alt="Twitter" />
             </a>
             <a href="https://sitcon.org/plurk" target="_blank" class="social-media-item">
               <img :src="'/2022/imgs/social-media/plurk.svg'" alt="Plurk" />
             </a>
-            <a href="https://sitcon.org/yt" target="_blank" class="social-media-item reverse-color">
+            <a href="https://sitcon.org/yt" target="_blank" class="social-media-item">
               <img :src="'/2022/imgs/social-media/youtube.svg'" alt="YouTube" />
             </a>
-            <a href="https://sitcon.org/flickr" target="_blank" class="social-media-item reverse-color">
+            <a href="https://sitcon.org/flickr" target="_blank" class="social-media-item">
               <img :src="'/2022/imgs/social-media/flickr.svg'" alt="Flickr" />
             </a>
             <a href="https://sitcon.org/odysee" target="_blank" class="social-media-item">
@@ -171,12 +171,6 @@ const websites = ref(Array.from({ length: 9 }, (_, i) => ({ name: i + 2013, url:
         justify-content: center
         align-items: center
         transition: all .2s ease
-        &.reverse-color
-          img
-            filter: invert(.8)
-        &:not(.reverse-color)
-          img
-            opacity: .8
         img
           width: var(--size)
           height: var(--size)
