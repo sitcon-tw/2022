@@ -341,18 +341,19 @@ export default {
       gap: 8px
       @media (max-width: 768px)
         display: none
-    .links.mobile:not(:empty)
+    .links.mobile
       display: none
       margin-bottom: 4px
       @media (max-width: 768px)
-        display: flex
-        flex-wrap: wrap
-        gap: 8px
-        background-color: rgba(255,255,255,.4)
-        padding: 4px
-        border-radius: 12px
-      .btn
-        font-size: 12px
+        &:not(:empty)
+          display: flex
+          flex-wrap: wrap
+          gap: 8px
+          background-color: rgba(255,255,255,.4)
+          padding: 4px
+          border-radius: 12px
+          .btn
+            font-size: 12px
 
   .agenda-speaker
     display: flex
