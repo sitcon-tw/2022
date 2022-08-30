@@ -1,6 +1,6 @@
 <template>
   <ArrowDialog v-model="dialogStore.signUpDialogOpened">
-    <h2 class="title">報名資訊</h2>
+    <h2 class="title">活動資訊</h2>
     <div class="content">
       <p class="text">
         SITCON 年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助，若您也認同 SITCON 的理念，歡迎 <router-link to="/sponsor"  @click="dialogStore.signUpDialogOpened = false">支持我們</router-link>。<br><br>
@@ -13,7 +13,7 @@
         </ul>
       </p>
       <div class="btns">
-        <btn href="https://sitcon.kktix.cc/events/sitcon2022">KKTIX 報名頁面</btn>
+        <btn href="https://sitcon.org/yt">議程直播</btn>
         <btn href="https://www.facebook.com/groups/sitcon.tw/posts/4253256531466140/">FB 社團換票樓</btn>
         <btn href="https://oscvpass.ocf.tw">OSCVPass 申請</btn>
         <btn to="/sponsor" @click="dialogStore.signUpDialogOpened = false">

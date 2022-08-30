@@ -17,7 +17,7 @@
         </div>
       </button>
       <a class="link hide-desktop" @click="dialogStore.signUpDialogOpened = true">
-        報名取票
+        參與活動
       </a>
     </div>
   </arrow-box>
