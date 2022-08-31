@@ -7,13 +7,13 @@
       image="https://sitcon.org/2022/imgs/og.jpg" />
     <arrow-box>
       <block-title>大會活動</block-title>
-      <!-- <mint-box>
-        <h1>不得不做的 25 件事</h1>
-        <p>按按鈕開賓果</p>
+      <mint-box>
+        <h1>「在 SITCON 不得不做的 25 件事」賓果</h1>
+        <p>我們精心準備了賓果遊戲，每個格子列出了以往在年會中都有的、在 SITCON X 限定的、以及為了十週年特別舉辦的活動。年會當天還不知道要做什麼事情嗎？趕快製作屬於自己的「在 SITCON 不得不做的 25 件事」賓果吧！</p>
         <div style="display: flex">
-          <btn @click.native="dialogStore.thingsDialogOpened = true">按我按我按我按我按我</btn>
+          <btn @click.native="dialogStore.thingsDialogOpened = true">按我玩賓果</btn>
         </div>
-      </mint-box> -->
+      </mint-box>
       <mint-box>
         <h1>Activity</h1>
         <h3>你是第一次參加 SITCON 年會嗎？</h3>
@@ -63,7 +63,8 @@
           </li>
           <li>
             <strong>程式碼拼圖</strong><br>
-            <span>沒有議程的時候不知道要做什麼？想跟現場攤位互動卻又不知道從什麼話題開始？那就打開 OPass 參加程式碼拼圖吧！不只考驗自身的解題邏輯，更需要互相合作、四處探索才能解開所有謎題！您能找到在會場各個攤位散落的碎片，與同伴一起解開小石與貓貓設下的五個關卡嗎？<br />今年程式碼拼圖全部解開的人可以獲得一份精美獎品，並獲得抽獎資格喔！獎品數量有限，採先到先得、換完為止！</span>
+            <span>沒有議程的時候不知道要做什麼？想跟現場攤位互動卻又不知道從什麼話題開始？那就打開 OPass
+              參加程式碼拼圖吧！不只考驗自身的解題邏輯，更需要互相合作、四處探索才能解開所有謎題！您能找到在會場各個攤位散落的碎片，與同伴一起解開小石與貓貓設下的五個關卡嗎？<br />今年程式碼拼圖全部解開的人可以獲得一份精美獎品，並獲得抽獎資格喔！獎品數量有限，採先到先得、換完為止！</span>
           </li>
         </ul>
       </mint-box>
