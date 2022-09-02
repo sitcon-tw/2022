@@ -22,8 +22,8 @@
               @click="toggleBingoItem(item)"
               :class="{ done: item.done }"
               v-html="item.text" />
+            <div class="all-done" :class="{ show: allDone }" />
           </div>
-          <div class="all-done" :class="{ show: allDone }" />
         </div>
       </div>
     </transition>
@@ -141,8 +141,12 @@ export default {
 .content
   position: relative
   padding: 16px
-  max-height: 100vh
   overflow-y: auto
+  overflow-x: hidden
+  width: 100%
+  height: 100%
+  display: grid
+  place-content: center
   .all-done
     --size: 128px
     height: var(--size)
@@ -155,8 +159,8 @@ export default {
     filter: blur(5px)
     opacity: 0
     transition: all .2s ease
-    bottom: 0
-    right: 0
+    bottom: calc(var(--size) / -4)
+    right:  calc(var(--size) / -4)
     pointer-events: none
     @media (max-width: 768px)
       --size: 64px
@@ -174,7 +178,6 @@ h2.title
   grid-template-columns: repeat(5, 1fr)
   border-radius: 16px
   max-width: 640px
-  overflow: hidden
   border: var(--border)
   background-image: url('/imgs/25-things-must-do/cat.svg')
   background-size: 90% 90%
@@ -182,6 +185,7 @@ h2.title
   background-repeat: no-repeat
   background-color: #F4EEE1
   color: #333
+  position: relative
   .bingo-item
     aspect-ratio: 1/1
     display: flex
