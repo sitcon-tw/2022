@@ -214,9 +214,9 @@ h2.title
       border-top-left-radius: 16px
     &:nth-child(5)
       border-top-right-radius: 16px
-    &:nth-last-child(5)
+    &:nth-last-child(6)
       border-bottom-left-radius: 16px
-    &:last-child
+    &:nth-last-child(2)
       border-bottom-right-radius: 16px
     &.done
       background-color: rgba(0, 0, 0, .1)
