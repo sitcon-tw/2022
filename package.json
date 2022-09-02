@@ -1,0 +1,33 @@
+{
+  "name": "sitcon-2022",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite-ssg build",
+    "build:netlify": "vite-ssg build && mv dist dist_netlify/2022",
+    "preview": "vite preview --port 5050"
+  },
+  "dependencies": {
+    "@ccip-app/session-table": "^1.1.0",
+    "@vueuse/head": "^0.7.6",
+    "d3": "^7.4.4",
+    "konami-code-js": "^0.8.1",
+    "pinia": "^2.0.14",
+    "sass": "^1.52.1",
+    "showdown": "^2.1.0",
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.14",
+    "vue3-openlayers": "^0.1.68"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "unplugin-vue-components": "^0.19.5",
+    "vite": "^2.9.5",
+    "vite-ssg": "^0.20.0"
+  }
+}

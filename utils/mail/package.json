@@ -1,0 +1,15 @@
+{
+  "name": "sitcon-2022-mail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "heml develop SITCON-2022.heml",
+    "build": "heml build SITCON-2022.heml; heml build SITCON-2022-speaker.heml"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "heml": "^1.1.3"
+  }
+}

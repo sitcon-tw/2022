@@ -1,0 +1,345 @@
+<heml>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://sitcon.org/2022/mail/SITCON-2022.html" />
+    <style>
+      body {
+        background: #F4EEE1;
+        color: #383838;
+        font-size: 14px;
+        line-height: 1.5em;
+      }
+
+      strong {
+        color: #82D357;
+      }
+
+      a {
+        color: #82D357;
+      }
+
+      .btn {
+        background-color: #82D357;
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 8px;
+      }
+
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0;
+        background-color: #82D357;
+        color: #fff;
+        display: inline-block;
+        padding: 8px 24px;
+        border-radius: 16px;
+        transform: translateY(-1em);
+        margin-bottom: -1em;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        display: inline-block;
+        border-bottom: 2px solid #A89B85;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      h1+p {
+        margin-top: 0;
+      }
+
+      ul {
+        margin: 4px 8px;
+      }
+
+      .white-box {
+        background-color: #fbfbfb;
+        padding: 8px 16px;
+        border-radius: 16px;
+      }
+
+      .white-box+.white-box {
+        margin-top: 64px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .text-right {
+        text-align: right;
+      }
+
+      .with-border {
+        border: 2px solid #A89B85;
+      }
+
+      .mt {
+        margin-top: 16px;
+      }
+
+      .mb {
+        margin-bottom: 16px;
+      }
+
+      .my {
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .pa {
+        padding: 16px;
+      }
+
+      .social-media-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .social-media-link {
+        display: inline-block;
+        margin: 0 4px;
+      }
+
+      .social-media-link img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      .footer-img {
+        display: inline-block;
+        width: 80px;
+      }
+
+      .footer-text {
+        font-weight: 700;
+        line-height: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <container>
+      <img src="./assets/header.png" infer="retina" />
+      <div class="white-box text-center with-border my">
+        若您無法順利閱讀此信件，請參閱 <a href="https://sitcon.org/2022/mail/SITCON-2022.html" target="_blank">線上版本</a>。
+      </div>
+      <p class="pa my">Hi *|Name|*，<br />
+        很高興能在 SITCON Ｘ 看到您！年會即將在下週日（09/04）揭開序幕，若您臨時有事無法來到現場一起共襄盛舉，請至 <a
+          href="https://www.facebook.com/groups/sitcon.tw/posts/4253256531466140/">官方換票樓</a> 將您的票卷釋出，讓其他有興趣參與但沒有票的朋友也能有機會一起參加活動。<br /><br />
+        我們整理了一些實用的資訊，還請花 5 分鐘詳細閱讀：
+      </p>
+      <div class="white-box">
+        <h1>交通</h1>
+        <div></div>
+        <h2>活動地點</h2>
+        <p>年會地點位於<strong>中央研究院 人文社會科學館</strong>（台北市南港區研究院路二段 128 號），詳細位置可以參考 <a href="https://sitcon.org/2022/traffic">SITCON X 官方網站</a> 或中央研究院 <a
+            href="https://www.sinica.edu.tw/downloadFile_m.php?file=0003p1.pdf&_downloadName=asmap_c_20210813.pdf">院區導覽圖</a>。 </p>
+        <h2>接駁車</h2>
+        <p>今年提供了自捷運南港展覽館站往返中研院人文館的免費接駁車</p>
+        <div class="white-box with-border mb">
+          <ul>
+            <li>發車時間：07:45～10:00，班距約 15～20 分鐘</li>
+            <li>上車地點：捷運南港展覽館站 2A 出口公車停靠區</li>
+            <li><strong>請務必全程配戴口罩。</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="white-box">
+        <h1>報到</h1>
+        <div></div>
+        <h2>報到時間及方式</h2>
+        <p>年會將於早上 <strong>8 點半</strong>開放領取迎賓袋，活動於 <strong>9 點</strong>準時開始。進入會場前，<strong>請務必配戴口罩</strong>。在到達會場後，連上年會現場的 Wi-Fi，即可用「OPass」App
+          進行報到，並到會場四樓依工作人員指示排隊領取迎賓袋。</p>
+        <div class="text-center">
+          <strong>請透過以下專屬連結下載、啟動 OPass</strong><br />
+          <!-- 這邊一定要特別注意！ Build 的時候會被加上 Base，記得刪掉不然會燒起來 🔥 -->
+          <a href="https://opass.app/r/SITCON_2022/" class="btn" style="margin-top: 4px;display: inline-block;">安裝 / 開啟 OPass</a>
+          <!-- <a href="*|Inviter|*" class="btn" style="margin-top: 4px;display: inline-block;">安裝 / 開啟 OPass</a> -->
+        </div>
+        <p>若您無法使用 App 報到，請向服務台的工作人員出示 KKTIX 提供的 QR Code 以完成手動報到。</p>
+        <div class="white-box with-border mb">
+          <h3>請注意</h3>
+          <ul>
+            <li><strong>請務必在領取迎賓袋前再依工作人員指示按下領取按鈕。</strong></li>
+            <li>迎賓袋內有您的識別證，必須領取並且配戴後才能進入會議廳內。</li>
+            <li>若您於 09:30 後才完成報到，恕不提供便當。</li>
+          </ul>
+        </div>
+        <h2>持學生票者，請出示相關證件</h2>
+        <p>持有學生票的朋友，也請於<strong>報到前</strong>備妥學生證或相關證明（在學證明、繳費完成之繳費單等），以節省您寶貴的時間。</p>
+      </div>
+
+      <div class="white-box">
+        <h1>防疫注意事項</h1>
+        <div></div>
+        <h2>自我健康狀況評估</h2>
+        <div class="white-box with-border mt">
+          請您在來到 SITCON X 的會場之前，進行自我健康狀況評估，<strong>若您正在進行居家隔離、自主防疫或是感到任何身體上的不適，請不要來到現場；若在活動期間感到任何身體上的不適，請不要忍耐並立即向工作人員尋求幫助</strong>，我們會視您的需求提供協助。
+        </div>
+        <p>現場於各議程廳門口皆會放置酒精瓶，若有需求可直接使用。</p>
+        <h2>參與年會全程配戴口罩</h2>
+        <p>參與年會活動全程（於指定區域用餐時除外），<strong>請隨時配戴口罩</strong>，勿任意取下；若因為天氣炎熱而需將口罩取下透透氣，請移至 4F 露天區域再行取下。</p>
+        <p>若您的口罩因為天氣炎熱的因素而濕掉，或者遇到口罩繩斷裂等情形，可以至服務台以一片換一片的方式換領口罩。</p>
+      </div>
+
+      <div class="white-box">
+        <h1>年會活動</h1>
+        <p>除了一整天 <a href="https://sitcon.org/2022/agenda">精彩的議程</a>，今年的 SITCON 也有許多有趣的活動可以參加！不論是抓緊機會表現自己，或是想在年會認識新朋友，都千萬別錯過囉！</p>
+
+        <h2>紀念品販售</h2>
+        <p>今年，我們製作了十周年紀念電子票證、可愛的貓貓票卡夾、杯墊、拭鏡布與紀念款 T-shirt。</p>
+
+        <div class="text-center mb">
+          <strong>現場紀念品販售價格</strong>
+        </div>
+        <table class="with-border mx-auto white-box mb">
+          <tr>
+            <th>品項</th>
+            <th>價格</th>
+          </tr>
+          <tr>
+            <td>小石復刻抱枕套</td>
+            <td class="text-right">350 / 個</td>
+          </tr>
+          <tr>
+            <td>十週年紀念電子票證</td>
+            <td class="text-right">500 / 張</td>
+          </tr>
+          <tr>
+            <td>年會紀念票卡夾</td>
+            <td class="text-right">120 / 個</td>
+          </tr>
+          <tr>
+            <td>年會紀念杯墊</td>
+            <td class="text-right">120 / 個</td>
+          </tr>
+          <tr>
+            <td>年會紀念拭鏡布</td>
+            <td class="text-right">40 / 條</td>
+          </tr>
+          <tr>
+            <td>年會紀念 T shirt</td>
+            <td class="text-right">350 / 件</td>
+          </tr>
+          <tr>
+            <td>十週年紀念 T shirt（盲鳥）</td>
+            <td class="text-right">400 / 件</td>
+          </tr>
+        </table>
+        <ul>
+          <li>請於當日攜帶足夠的現金，才能在年會當日把充滿可愛貓貓的年會紀念品帶回家呦！</li>
+          <li>請記得於年會當日 14：30 前來紀念品攤位領取預購的小石抱枕套！</li>
+        </ul>
+        <br />
+        <div class="text-center">
+          <strong>想要擁有獨特的 SITCON X 紀念衫嗎？想要讓生活中充滿小石的身影嗎？<br />那您一定不能錯過紀念品攤位！</strong>
+        </div>
+
+        <h2>SITCON 導遊團</h2>
+        <p>第一次參加研討會，總覺得眼花撩亂嗎？年會當天有經驗的導遊們將帶大家拜訪年會志工、回憶展、社群攤位，實地了解 SITCON 的運作方式以及與會的各路夥伴！</p>
+        <p>有興趣參加 SITCON 導遊團的朋友，可以在<strong>早上 11 點整</strong> 以及 <strong>下午 2 點 20 分</strong>到 R2 東側側門旁牆壁現場尋找拿著旗子的導遊，導覽時間約 45 分鐘。</p>
+
+        <h2>Lightning Talk 閃電秀</h2>
+        <p>Lightning Talk 中文譯為「<strong>閃電秀</strong>」，顧名思義即為「閃電一般短的演講」。有什麼想展現給全場所有人的技術、想法、甚至經驗談，都能把握這短短的 <strong>3 分鐘</strong>，在 SITCON X
+          的大舞台上讓大家看見你！</p>
+        <div class="white-box with-border mt mb">
+          Lightning Talk 安排於年會閉幕前，於國際會議廳 (R0) 進行。於年會當天 8:30 開放在 OPass 與 SITCON 官網上投稿，且於 12:30 截止投稿後，開放與會者投票，選出最終能上場的十位講者。
+        </div>
+
+        <h2>程式碼拼圖</h2>
+        <p>沒有議程的時候不知道要做什麼？想跟現場攤位互動卻又不知道從什麼話題開始？那就打開 OPass 參加程式碼拼圖吧！不只考驗自身的解題邏輯，更需要互相合作、四處探索才能解開所有謎題！您能找到在會場各個攤位散落的碎片，與夥伴一起解開小石與貓貓設下的五個關卡嗎？</p>
+        <p>今年程式碼拼圖全部解開的人可以獲得一份精美獎品，並獲得抽獎資格喔！獎品數量有限，採先到先得、換完為止！</p>
+
+        <h2>天使計劃</h2>
+        <p>天使計劃是一個提供會眾、工作人員、講者們之間交流機會的活動，在主辦方配對後，讓有經驗的天使帶領初心者，協助他們更加瞭解這個年會。</p>
+        <p><strong>小提醒</strong>：報名時有完整填寫天使計劃報名資料者會在 08/29 前收到配對通知信件，如未收到信件者，請確認是否掉在垃圾郵箱內。</p>
+
+        <h2>白板大戰</h2>
+        <p>不論您是要宣傳社團、推廣 Vim、畫一隻貓、還是只是想說個嗨，白板大戰就是您的天空，透過揮灑創意的墨水，讓不同想法穿越時間進行對話，相互交織。</p>
+        <div class="text-center">
+          <strong>歡迎加入，白板大戰！</strong>
+        </div>
+
+        <h2>回憶展</h2>
+        <p>十周年！我們在年會各處展出了 SITCON 十年來留下的點點滴滴！</p>
+        <p>展覽內容包含往年的照片精選、年會的裝置藝術以及各件活動紀念衫等等，甚至會復刻一件當天呼聲最高的絕版紀念衫！</p>
+        <p>透過參與展覽，您能夠了解 SITCON 一路走來的相關事蹟，更能夠和具有經驗的工作人員、與會者們一同交流與分享展覽品背後的故事。</p>
+        <p>歡迎在年會當天逛逛回憶展，並善用 IG 照片列印機臺，在當天一起留下屬於大家的 SITCON X 記憶。</p>
+
+        <h2>共筆與議程線上討論區</h2>
+        <p>今年年會延續往年傳統，為各議程開設「共筆（HackMD）」與「議程線上討論區（Sli.do）」，共筆供聽眾一起編輯議程筆記，議程線上討論區則供講者與各位聽眾進行即時交流。各連結將公告於 <a href="https://sitcon.org/2022/">年會官方網站</a>
+          與 OPass。您可以在議程中隨時使用議程線上討論區匿名提問，講者能自由選擇時間解答及互動。籌辦團隊雖開設此平台，但並非強制所有與會者及講者必須使用，僅供各位利用參考。</p>
+        <div class="text-right mb">
+          <a href="https://hackmd.io/@SITCON/2022/" class="btn">共筆傳送門</a>
+        </div>
+      </div>
+
+      <div class="white-box">
+        <h1>食物</h1>
+        <p>為了讓大家能愉快的交流，年會為各位準備了午餐與各式點心。場地內除了用餐區以外，皆禁止飲食，只能<strong>帶有蓋水瓶</strong>進出，並<strong>全程配戴口罩</strong>，還請各位多多配合了 (´・ω・`) </p>
+        <h2>午餐</h2>
+        <p>美味的午餐將從<strong>上午 11 點</strong>開始，於 4F 國際會議廳（R0）後方兩側的轉角處發放；<strong>素食</strong>則在 4F 北側領取，請各位不要跑錯囉！</p>
+        <p>領餐時，請準備好您的 OPass App，等待工作人員指示後，按下按鈕領取午餐。（若您報到時未使用 App，請出示手動報到時取得的午餐券）</p>
+        <p>領取完午餐可至 4F 走廊旁的戶外用餐區用餐～</p>
+        <h2>點心</h2>
+        <p><strong>下午 3 點 15 分</strong>開始，4F 兩側的社群攤位走廊上將提供精緻茶點，您可以在享用下午茶的同時，與現場的會眾以及攤位交流。</p>
+        <h2>冰淇淋</h2>
+        <p><strong>早上 10 點 55 分</strong>開始，按照慣例，今年在 4F 南側有個神祕攤位默默發放著冰淇淋哦，歡迎各位在議程間的短暫休息時，多去吃點冰淇淋補充足夠的糖分！🍦</p>
+        <div class="text-center mb">
+          <strong>如果您有環保餐具，也請別忘記隨身攜帶，為地球盡一份心力。</strong>
+        </div>
+      </div>
+
+      <div class="white-box">
+        <h1>網路</h1>
+        <p>現場可使用年會提供的無線網路，SSID 為「<strong>SITCON X via Klickklack</strong>」，密碼為「<strong>20220904</strong>」，也可以透過 OPass 的會場 Wi-Fi 功能加入。</p>
+        <p>請勿於會場私自架設無線基地台（AP），或進行任何干擾公眾網路之行為。</p>
+        <p>若您需要使用個人行動網路熱點，請使用 USB 分享網路連線。</p>
+      </div>
+
+      <div class="white-box">
+        <h1>其他</h1>
+        <p>年會當天的線上聊天室十分精彩，您可以和其他與會者抬槓、甚至找到志同道合的夥伴！除了加入 <a href="https://sitcon.org/tg">Telegram @SITCONgeneral 群組</a> 以外，也可以到 <a
+            href="https://sitcon.org/dc">Discord SITCON 伺服器</a>
+          和大家互相切磋。</p>
+        <p>最後，也請您務必閱讀並一同遵守 <a href="https://sitcon.org/code-of-conduct/">SITCON 行為準則</a>，讓大家都能開心的在 SITCON 齊聚一堂，彼此激盪、傳承、啟發。</p>
+      </div>
+
+      <p class="pa footer-text">
+        感謝您讀完這份行前簡介，期待在 SITCON X 與您見面～
+        <br>
+        SITCON X 籌備團隊
+      </p>
+
+      <center class="white-box text-center with-border my social-media-links">
+        <a class="social-media-link" href="https://sitcon.org/twitter"><img infer="retina" src="./assets/twitter.png" alt="Twitter"></a>
+        <a class="social-media-link" href="https://sitcon.org/fb"><img infer="retina" src="./assets/facebook.png" alt="Facebook"></a>
+        <a class="social-media-link" href="https://sitcon.org/flickr"><img infer="retina" src="./assets/flickr.png" alt="Flickr"></a>
+        <a class="social-media-link" href="https://sitcon.org/instagram"><img infer="retina" src="./assets/instagram.png" alt="Instagram"></a>
+        <a class="social-media-link" href="https://sitcon.org/tg"><img infer="retina" src="./assets/telegram.png" alt="Telegram"></a>
+        <a class="social-media-link" href="https://sitcon.org/yt"><img infer="retina" src="./assets/youtube.png" alt="YouTube"></a>
+      </center>
+      <div class="text-center mb">
+        <img src="./assets/footer.png" infer="retina" class="footer-img">
+      </div>
+    </container>
+  </body>
+</heml>

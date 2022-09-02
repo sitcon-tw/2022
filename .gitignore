@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
+
+/cypress/videos/
+/cypress/screenshots/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vite-ssg-temp
+
+utils/SITCON 2022 工作人員通訊錄 - 工作表1.csv
+utils/teams.json
+utils/SITCON 2022 工作人員登錄狀況 - 工人名單（已刪除移除工人）.csv
+dist_netlify/2022/*
+utils/teams_parser/SITCON 2022 工作人員登錄狀況 - 工人名單（已刪除移除工人）.csv
+utils/preview_generator/result/*.png
+utils/preview_generator/result/*.jpg
+utils/preview_generator/src/prepros.config
+public/imgs/sessions/*.png
+public/imgs/sessions/*.jpg
+utils/mail/SITCON-2022.html
