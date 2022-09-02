@@ -141,6 +141,8 @@ export default {
 .content
   position: relative
   padding: 16px
+  max-height: 100vh
+  overflow-y: auto
   .all-done
     --size: 128px
     height: var(--size)
