@@ -15,6 +15,17 @@
         </div>
       </mint-box>
       <mint-box>
+        <h1>Lightning Talk</h1>
+        <p>Lightning Talk，中文譯為「閃電秀」，又稱 data blitz（資料閃電戰），顧名思義即為「閃電一般短的演講」， 包含準備與連接投影機的時間在內，每位講者僅有 3 分鐘的時間。 講者必須以飛快的速度，進行簡潔扼要的分享。要是沒能在 3 分鐘結束，將被直接切斷訊號！對於講者，以及聽眾，都是十分刺激又轟動全場的體驗唷！</p>
+        <ul>
+          <li>08:30 ~ 12:30 開放投稿</li>
+          <li>12:30 ~ 15:15 開放投票，每人有十個投票點數，別忘記投票支持自己想聽的閃電秀！</li>
+        </ul>
+        <div style="display: flex">
+          <btn href="https://sitcon.org/2022-lightning-talk/">我要投稿/投票</btn>
+        </div>
+      </mint-box>
+      <mint-box>
         <h1>Activity</h1>
         <h3>你是第一次參加 SITCON 年會嗎？</h3>
         <ul>
