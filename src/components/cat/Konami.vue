@@ -79,13 +79,10 @@ export default {
   animation-duration: 3s
   animation-direction: alternate
   animation-easing-function: ease
-  animation-timeline: show-cat-timeline
+  animation-timeline: scroll()
 @keyframes show-cat
     0%
         transform: translateY(70%)
     100%
         transform: translateY(50%)
-@scroll-timeline show-cat-timeline
-    source: selector(".konami-code-cat")
-
 </style>
