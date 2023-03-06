@@ -16,6 +16,12 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
+### Put "session.json" to assets directory
+
+```sh
+wget https://sitcon.org/2022/json/session.json -O src/assets/session.json
+```
+
 ### Compile and Hot-Reload for Development
 
 ```sh
