@@ -120,12 +120,15 @@
             <btn v-if="activeSession.qa" :href="activeSession.qa">即時提問</btn>
             <btn v-if="activeSession.slide" :href="activeSession.slide">簡報連結</btn>
             <btn v-if="activeSession.co_write" :href="activeSession.co_write">共筆連結</btn>
-            <btn v-if="activeSession.record || activeSession.live" :href="activeSession.record || activeSession.live">
-              {{  activeSession.record ? '錄影' : '直播'  }}連結</btn>
+            <!-- <btn v-if="activeSession.record || activeSession.live" :href="activeSession.record || activeSession.live">
+              {{  activeSession.record ? '錄影' : '直播'  }}連結</btn> -->
           </div>
+          <a class="record-cover mobile" v-if="activeSession.record" :href="activeSession.record" target="_blank">
+            <img :src="`https://sitcon.org/2022/imgs/sessions/${activeSession.id}.png`" />
+          </a>
           <div class="agenda-dialog-content-description">
             <div class="tags" v-if="activeSession.tags.length > 0">
-              <span class="tags-title">Tags</span>: <span class="tags-content">{{  activeSession.tags.map(x => getTagById(x).zh.name).join(', ') 
+              <span class="tags-title">Tags</span>: <span class="tags-content">{{  activeSession.tags.map(x => getTagById(x).zh.name).join(', ')
                 }}</span>
             </div>
             <div class="description">
@@ -143,9 +146,12 @@
               <btn v-if="activeSession.qa" :href="activeSession.qa">即時提問</btn>
               <btn v-if="activeSession.slide" :href="activeSession.slide">簡報連結</btn>
               <btn v-if="activeSession.co_write" :href="activeSession.co_write">共筆連結</btn>
-              <btn v-if="activeSession.record || activeSession.live" :href="activeSession.record || activeSession.live">
-                {{  activeSession.record ? '錄影' : '直播'  }}連結</btn>
+              <!-- <btn v-if="activeSession.record || activeSession.live" :href="activeSession.record || activeSession.live">
+                {{  activeSession.record ? '錄影' : '直播'  }}連結</btn> -->
             </div>
+            <a class="record-cover" v-if="activeSession.record" :href="activeSession.record" target="_blank">
+              <img :src="`https://sitcon.org/2022/imgs/sessions/${activeSession.id}.png`" />
+            </a>
           </div>
         </div>
         <div class="agenda-speaker" v-for="speaker of activeSession.speakers">
@@ -341,6 +347,57 @@ export default {
       gap: 8px
       @media (max-width: 768px)
         display: none
+    .record-cover
+      display: block
+      margin: 8px 0
+      position: relative
+      border-radius: 12px
+      border: 2px solid #A89B85
+      overflow: hidden
+      background-color: #A89B85
+      aspect-ratio: 16/8
+      &::before
+        content: ''
+        --size: 64px
+        display: block
+        background-image: url('/2022/imgs/social-media/youtube.svg')
+        background-size: var(--size) var(--size)
+        background-repeat: no-repeat
+        background-position: center
+        width: var(--size)
+        height: var(--size)
+        margin: auto
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 1
+        transition: all .2s ease
+      img
+        width: 100%
+        display: block
+        opacity: .5
+        transition: all .2s ease
+      &:hover
+        border-color: color-mix(in srgb,#A89B85 80%, #000)
+        img
+          opacity: .4
+          transform: scale(1.025)
+        &::before
+          transform: scale(1.05)
+      &:active
+        border-color: color-mix(in srgb,#A89B85 60%, #000)
+        img
+          transform: scale(1)
+        &::before
+          transform: scale(.95)
+      @media (max-width: 768px)
+        display: none
+    .record-cover.mobile
+      display: none
+      @media (max-width: 768px)
+        display: block
     .links.mobile
       display: none
       margin-bottom: 4px
