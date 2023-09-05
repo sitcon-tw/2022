@@ -37,7 +37,7 @@
         <p>若你想進一步了解過往討論的內容，也歡迎到 GitLab 上查看 SITCON 2022 的籌備歷程。</p>
         <div class="rad-btns">
           <cfp-rad-btn href="https://groups.google.com/g/sitcon-general/" content="SITCON 郵件論壇" />
-          <cfp-rad-btn href="https://gitlab.com/sitcon-tw/2022/2022-board/-/issues" content="籌備歷程紀錄" />
+          <cfp-rad-btn href="https://gitlab.com/sitcon-tw/2022/board/-/issues" content="籌備歷程紀錄" />
         </div>
       </cfp-rounded-glass-box>
 

@@ -83,7 +83,7 @@
           </p>
           <div class="btns">
             <btn href="https://groups.google.com/g/sitcon-general/">郵件論壇</btn>
-            <btn href="https://gitlab.com/sitcon-tw/2022/2022-board/-/issues">籌備紀錄</btn>
+            <btn href="https://gitlab.com/sitcon-tw/2022/board/-/issues">籌備紀錄</btn>
           </div>
         </div>
       </mint-box>
